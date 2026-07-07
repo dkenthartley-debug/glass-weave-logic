@@ -5,12 +5,10 @@ import { Menu, X } from "lucide-react";
 const NAV = [
   { to: "/", label: "Home" },
   { to: "/capabilities", label: "Capabilities" },
-  { to: "/conductive-interlayers", label: "Conductive Interlayers" },
-  { to: "/aircraft-sensors", label: "Aircraft Sensors & Heated Glass" },
-  { to: "/emi-shielding", label: "EMI / RFI / SCIF Shielding" },
-  { to: "/specialty-films", label: "Specialty Films" },
+  { to: "/technologies", label: "Technologies" },
   { to: "/applications", label: "Applications" },
-  { to: "/about", label: "About HLG" },
+  { to: "/resources", label: "Resources" },
+  { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
 ];
 

@@ -6,11 +6,13 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Layout from "./components/Layout";
 import Index from "./pages/Index";
 import Capabilities from "./pages/Capabilities";
+import Technologies from "./pages/Technologies";
 import ConductiveInterlayers from "./pages/ConductiveInterlayers";
 import AircraftSensors from "./pages/AircraftSensors";
 import EmiShielding from "./pages/EmiShielding";
 import SpecialtyFilms from "./pages/SpecialtyFilms";
 import Applications from "./pages/Applications";
+import Resources from "./pages/Resources";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
@@ -27,7 +29,9 @@ const App = () => (
           <Route element={<Layout />}>
             <Route path="/" element={<Index />} />
             <Route path="/capabilities" element={<Capabilities />} />
+            <Route path="/technologies" element={<Technologies />} />
             <Route path="/conductive-interlayers" element={<ConductiveInterlayers />} />
+            <Route path="/resources" element={<Resources />} />
             <Route path="/aircraft-sensors" element={<AircraftSensors />} />
             <Route path="/emi-shielding" element={<EmiShielding />} />
             <Route path="/specialty-films" element={<SpecialtyFilms />} />

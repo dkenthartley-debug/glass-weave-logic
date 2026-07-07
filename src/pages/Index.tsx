@@ -1,32 +1,49 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Zap, Plane, ShieldCheck, Layers, Radio, Thermometer, Cpu, Workflow, CircuitBoard, Wrench } from "lucide-react";
+import {
+  ArrowRight,
+  Plane,
+  ShieldCheck,
+  Layers,
+  Radio,
+  Thermometer,
+  Cpu,
+  Workflow,
+  CircuitBoard,
+  Wrench,
+  Zap,
+  FileText,
+  ClipboardCheck,
+  FlaskConical,
+  Wand2,
+  Rocket,
+  BookOpen,
+} from "lucide-react";
 import { Section, SectionHeading, Eyebrow } from "@/components/Section";
-import heroImg from "@/assets/hero-glass.jpg";
 import interlayerImg from "@/assets/conductive-interlayer.jpg";
 import aircraftImg from "@/assets/aircraft-sensor.jpg";
 import emiImg from "@/assets/emi-shielding.jpg";
 
 const solutions = [
   {
-    to: "/conductive-interlayers",
+    to: "/technologies#interlayers",
     title: "Conductive Interlayers",
-    desc: "Embedded wire, conductive mesh, ITO film and bus bar integration engineered for laminated glass.",
+    desc: "Embedded wire, conductive mesh, ITO film, and bus bar integration engineered to survive lamination and perform in the field.",
     img: interlayerImg,
     icon: Layers,
     tag: "01 / Interlayers",
   },
   {
-    to: "/aircraft-sensors",
+    to: "/technologies#aircraft",
     title: "Aircraft Sensors & Heated Glass",
-    desc: "Windshield heater mats, overheat protection sensors, and sensor mat subassemblies for transparencies.",
+    desc: "Windshield heater mats, overheat protection sensor concepts, and sensor mat subassemblies for aerospace transparencies.",
     img: aircraftImg,
     icon: Plane,
     tag: "02 / Aerospace",
   },
   {
-    to: "/emi-shielding",
+    to: "/technologies#shielding",
     title: "EMI / RFI / SCIF Shielding",
-    desc: "Shielded glass insert concepts and conductive mesh integration for SCIF and TEMPEST glazing.",
+    desc: "Shielded glass insert concepts and conductive mesh integration developed for SCIF, TEMPEST, and secure facility glazing.",
     img: emiImg,
     icon: ShieldCheck,
     tag: "03 / Defense",
@@ -34,36 +51,66 @@ const solutions = [
 ];
 
 const applications = [
-  "Aerospace transparencies",
-  "Aircraft windshields & windows",
-  "Defense glazing",
-  "Transparent armor",
-  "SCIF rooms & secure facilities",
-  "Command centers",
-  "Naval & military shelters",
-  "Specialty transportation glazing",
-  "Industrial heated glass",
-  "ADAS & sensor-enabled glazing",
-  "Switchable & variable-tint glass",
-  "Specialty laminated assemblies",
+  "Aerospace Transparencies",
+  "Defense Glazing",
+  "SCIF / Secure Facilities",
+  "Transparent Armor",
+  "Transportation Glass",
+  "Medical Imaging Rooms",
+  "Industrial Heated Glass",
+  "ADAS & Sensor-Enabled Glazing",
+];
+
+const why = [
+  {
+    n: "01",
+    t: "Laminated Glass Process Knowledge",
+    d: "Practical understanding of interlayer behavior, edge sealing, and pre-lamination preparation across production lines.",
+  },
+  {
+    n: "02",
+    t: "Conductive Integration Experience",
+    d: "Embedded wire, mesh, ITO, and printed conductors integrated into repeatable, drop-in subassembly formats.",
+  },
+  {
+    n: "03",
+    t: "Prototype-to-Production Support",
+    d: "Feasibility samples, iteration, and a development path toward repeatable, production-ready supply.",
+  },
+  {
+    n: "04",
+    t: "Practical Manufacturing Focus",
+    d: "We work the way engineering and manufacturing teams actually work — technical, honest, and process-driven.",
+  },
 ];
 
 const capabilities = [
   { icon: CircuitBoard, label: "Embedded wire interlayers" },
-  { icon: Thermometer, label: "Transparent heating & defrost" },
-  { icon: Radio, label: "EMI / RFI shielding inserts" },
-  { icon: Cpu, label: "Conductive bus bar integration" },
-  { icon: Zap, label: "Heater & sensor mats" },
-  { icon: Layers, label: "ITO film & ITO glass" },
-  { icon: Workflow, label: "Laser deletion / patterning" },
-  { icon: Wrench, label: "Prototype to production" },
+  { icon: Thermometer, label: "Transparent heating" },
+  { icon: Zap, label: "Sensor mats" },
+  { icon: Cpu, label: "Bus bar integration" },
+  { icon: Layers, label: "Conductive films" },
+  { icon: Radio, label: "EMI shielding layers" },
+  { icon: Wand2, label: "Laser deletion / patterned coatings" },
+  { icon: Workflow, label: "Pre-lamination development" },
+  { icon: FlaskConical, label: "Custom sample builds" },
+  { icon: Rocket, label: "Production path planning" },
 ];
 
-const why = [
-  { n: "01", t: "Practical Process Knowledge", d: "Real-world experience with the steps that determine whether an electrically active interlayer survives lamination and performs in the field." },
-  { n: "02", t: "Laminated Glass Experience", d: "Material selection, edge sealing, bus bar routing, and pre-lamination preparation that matches your fabrication line." },
-  { n: "03", t: "Conductive Integration", d: "Embedded wire, mesh, ITO and printed conductors integrated into a repeatable subassembly format." },
-  { n: "04", t: "Prototype to Production", d: "Feasibility samples, iteration, and a development path toward repeatable, production-ready supply." },
+const process = [
+  { n: "01", t: "Specification Review", icon: ClipboardCheck },
+  { n: "02", t: "Material Selection", icon: Layers },
+  { n: "03", t: "Prototype Build", icon: Wrench },
+  { n: "04", t: "Electrical / Optical Testing", icon: FlaskConical },
+  { n: "05", t: "Qualification Support", icon: ShieldCheck },
+  { n: "06", t: "Production Launch", icon: Rocket },
+];
+
+const resources = [
+  { t: "Heated Glass Design Guide", d: "Bus bar routing, power density, and lamination considerations for electrically heated laminated glass." },
+  { t: "Conductive Interlayer Overview", d: "Embedded wire, mesh, ITO film, and printed conductor formats for advanced laminated glass." },
+  { t: "EMI Shielding Glass Primer", d: "Mesh integration concepts and construction options for SCIF and secure facility glazing." },
+  { t: "Aircraft Sensor Application Brief", d: "Heater mat and sensor mat subassembly development for aerospace transparencies." },
 ];
 
 const Index = () => {
@@ -71,84 +118,64 @@ const Index = () => {
     <>
       {/* HERO */}
       <section className="relative overflow-hidden border-b border-border bg-navy-deep">
-        <div className="absolute inset-0">
-          <img
-            src={heroImg}
-            alt=""
-            width={1920}
-            height={1080}
-            className="w-full h-full object-cover opacity-40"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-navy-deep via-navy-deep/85 to-transparent" />
-          <div className="absolute inset-0 grid-bg opacity-20" />
-        </div>
+        <div className="absolute inset-0 grid-bg opacity-25" />
+        <div className="absolute inset-0 bg-gradient-to-br from-navy-deep via-navy-deep to-[hsl(205_80%_14%/0.5)]" />
 
-        <div className="container relative py-24 md:py-36 lg:py-44">
-          <div className="max-w-4xl animate-fade-up">
-            <Eyebrow>HLG · Specialty Glass Technology</Eyebrow>
-            <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.02] tracking-tight">
-              Conductive Interlayers <span className="text-primary">&</span> Specialty Films
-              <span className="block text-steel font-medium text-3xl md:text-4xl lg:text-5xl mt-4">for Advanced Laminated Glass Systems</span>
-            </h1>
-            <p className="mt-8 text-lg md:text-xl text-muted-foreground max-w-3xl leading-relaxed">
-              HLG develops and supplies specialty interlayers, embedded wire products, conductive films,
-              sensor mats, and electrically active glass components that help customers build heated,
-              shielded, sensing, and specialty laminated glass systems in a practical, repeatable,
-              production-ready format.
-            </p>
-            <div className="mt-10 flex flex-col sm:flex-row gap-4">
-              <Link
-                to="/contact"
-                className="group inline-flex items-center justify-center gap-2 px-7 py-4 bg-primary text-primary-foreground font-medium tracking-wide hover:bg-primary-glow transition-colors shadow-glow"
-              >
-                Discuss a Project
-                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                to="/capabilities"
-                className="inline-flex items-center justify-center gap-2 px-7 py-4 border border-border bg-surface/50 text-foreground font-medium tracking-wide hover:border-primary hover:text-primary transition-colors"
-              >
-                View Capabilities
-              </Link>
+        <div className="container relative py-20 md:py-28 lg:py-32">
+          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            <div className="lg:col-span-7 animate-fade-up">
+              <Eyebrow>HLG · Specialty Glass Technology</Eyebrow>
+              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-tight">
+                Conductive Interlayers <span className="text-primary">&</span> Specialty Films
+                <span className="block text-steel font-medium text-2xl md:text-3xl lg:text-4xl mt-4">
+                  for Advanced Laminated Glass Systems
+                </span>
+              </h1>
+              <p className="mt-8 text-lg text-muted-foreground max-w-2xl leading-relaxed">
+                HLG helps customers integrate electrical, thermal, sensing, and shielding capability
+                into laminated glass through practical, repeatable, production-ready interlayer and
+                specialty film solutions.
+              </p>
+              <div className="mt-10 flex flex-col sm:flex-row gap-4">
+                <Link
+                  to="/contact"
+                  className="group inline-flex items-center justify-center gap-2 px-7 py-4 bg-primary text-primary-foreground font-medium tracking-wide hover:bg-primary-glow transition-colors shadow-glow"
+                >
+                  Discuss a Project
+                  <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                </Link>
+                <Link
+                  to="/capabilities"
+                  className="inline-flex items-center justify-center gap-2 px-7 py-4 border border-border bg-surface/50 text-foreground font-medium tracking-wide hover:border-primary hover:text-primary transition-colors"
+                >
+                  View Capabilities
+                </Link>
+              </div>
             </div>
 
-            <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-px bg-border max-w-3xl">
-              {[
-                ["Aerospace", "Transparencies"],
-                ["Defense", "Shielding"],
-                ["SCIF", "TEMPEST"],
-                ["Industrial", "Heated Glass"],
-              ].map(([a, b]) => (
-                <div key={a} className="bg-navy-deep p-4">
-                  <div className="mono text-primary">{a}</div>
-                  <div className="text-sm text-muted-foreground mt-1">{b}</div>
-                </div>
-              ))}
+            {/* Technical cross-section diagram */}
+            <div className="lg:col-span-5">
+              <GlassCrossSection />
             </div>
           </div>
         </div>
         <div className="absolute inset-x-0 bottom-0 edge-line" />
       </section>
 
-      {/* WHAT WE DO */}
+      {/* WHAT HLG DOES */}
       <Section>
         <div className="grid lg:grid-cols-12 gap-10 items-start">
           <div className="lg:col-span-5">
             <Eyebrow>What HLG Does</Eyebrow>
             <h2 className="font-display text-3xl md:text-4xl font-bold leading-tight">
-              We help customers integrate <span className="text-primary">electrical capability</span> into laminated glass systems.
+              Specialty subassemblies for <span className="text-primary">advanced laminated glass</span>.
             </h2>
           </div>
-          <div className="lg:col-span-7 space-y-5 text-muted-foreground leading-relaxed text-lg">
+          <div className="lg:col-span-7 text-muted-foreground leading-relaxed text-lg">
             <p>
-              HLG is not a commodity glass fabricator. We develop and supply specialty interlayers,
-              conductive films, embedded wire products, sensor mats, heater mats, bus bar systems,
-              and production-ready laminated glass subassemblies.
-            </p>
-            <p>
-              Our customers include advanced glazing manufacturers, aerospace suppliers, defense programs,
-              SCIF and security contractors, transportation glazing companies, and industrial OEMs that
-              need conductive, embedded, engineered solutions that survive lamination and perform in the field.
+              Hotlineglass USA develops and supplies specialty interlayers, embedded wire products,
+              conductive films, sensor mats, heater mats, bus bar systems, and production-ready
+              laminated glass subassemblies for advanced glazing applications.
             </p>
           </div>
         </div>
@@ -159,7 +186,7 @@ const Index = () => {
         <SectionHeading
           eyebrow="Core Solutions"
           title="Three integration paths into advanced glass"
-          subtitle="Specialty subassemblies and films engineered to drop into your laminated glass process."
+          subtitle="Specialty subassemblies and films developed to drop into your laminated glass process."
         />
         <div className="grid md:grid-cols-3 gap-6">
           {solutions.map((s) => (
@@ -169,13 +196,20 @@ const Index = () => {
               className="group panel relative overflow-hidden hover:border-primary/60 transition-colors"
             >
               <div className="aspect-[4/3] overflow-hidden relative">
-                <img src={s.img} alt={s.title} loading="lazy" className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" />
+                <img
+                  src={s.img}
+                  alt={s.title}
+                  loading="lazy"
+                  className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-card via-card/40 to-transparent" />
                 <div className="absolute top-4 left-4 mono text-primary">{s.tag}</div>
                 <s.icon className="absolute top-4 right-4 text-primary/80" size={22} />
               </div>
               <div className="p-6">
-                <h3 className="font-display text-xl font-semibold group-hover:text-primary transition-colors">{s.title}</h3>
+                <h3 className="font-display text-xl font-semibold group-hover:text-primary transition-colors">
+                  {s.title}
+                </h3>
                 <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
                 <div className="mt-5 inline-flex items-center gap-2 text-primary mono">
                   Explore <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
@@ -189,15 +223,17 @@ const Index = () => {
       {/* APPLICATIONS */}
       <Section>
         <SectionHeading
-          eyebrow="Markets & Applications"
+          eyebrow="Applications"
           title="Where HLG components are used"
           subtitle="Target applications across aerospace, defense, secure facilities, and specialty transportation glazing."
         />
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-px bg-border">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-border">
           {applications.map((a, i) => (
-            <div key={a} className="bg-background p-5 hover:bg-surface transition-colors group">
+            <div key={a} className="bg-background p-6 hover:bg-surface transition-colors group">
               <div className="mono text-primary/70 text-[10px]">A.{String(i + 1).padStart(2, "0")}</div>
-              <div className="mt-2 text-sm font-medium text-foreground group-hover:text-primary transition-colors">{a}</div>
+              <div className="mt-3 text-sm font-medium text-foreground group-hover:text-primary transition-colors">
+                {a}
+              </div>
             </div>
           ))}
         </div>
@@ -210,7 +246,6 @@ const Index = () => {
           <SectionHeading
             eyebrow="Why HLG"
             title="Operator-driven, integration-focused"
-            subtitle="We work the way engineering teams actually work — practical, technical, repeatable."
           />
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-border">
             {why.map((w) => (
@@ -230,22 +265,76 @@ const Index = () => {
           eyebrow="Technical Capabilities"
           title="Components, materials, and process knowledge"
         />
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-border">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-px bg-border">
           {capabilities.map((c) => (
-            <div key={c.label} className="bg-background p-6 flex flex-col gap-4 hover:bg-surface transition-colors">
-              <c.icon className="text-primary" size={26} />
-              <div className="text-sm font-medium">{c.label}</div>
+            <div
+              key={c.label}
+              className="bg-background p-6 flex flex-col gap-4 hover:bg-surface transition-colors"
+            >
+              <c.icon className="text-primary" size={24} />
+              <div className="text-sm font-medium leading-snug">{c.label}</div>
             </div>
           ))}
         </div>
         <div className="mt-10">
-          <Link to="/capabilities" className="mono text-primary inline-flex items-center gap-2 hover:gap-3 transition-all">
+          <Link
+            to="/capabilities"
+            className="mono text-primary inline-flex items-center gap-2 hover:gap-3 transition-all"
+          >
             Full capability list <ArrowRight size={14} />
           </Link>
         </div>
       </Section>
 
-      {/* CTA */}
+      {/* ENGINEERING PROCESS */}
+      <Section className="bg-surface/50 border-y border-border">
+        <SectionHeading
+          eyebrow="Engineering Process"
+          title="From specification to production"
+          subtitle="A structured development path from concept feasibility through repeatable supply."
+        />
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-px bg-border">
+          {process.map((p) => (
+            <div key={p.n} className="bg-background p-6 relative">
+              <div className="flex items-center justify-between">
+                <span className="mono text-primary">{p.n}</span>
+                <p.icon className="text-primary/70" size={18} />
+              </div>
+              <div className="mt-5 text-sm font-medium leading-snug">{p.t}</div>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      {/* RESOURCES PREVIEW */}
+      <Section>
+        <SectionHeading
+          eyebrow="Resources"
+          title="Technical briefs & design references"
+          subtitle="Overviews of the constructions, materials, and integration paths HLG works with."
+        />
+        <div className="grid md:grid-cols-2 gap-6">
+          {resources.map((r, i) => (
+            <div
+              key={r.t}
+              className="panel p-6 group hover:border-primary/60 transition-colors flex gap-5"
+            >
+              <div className="shrink-0 h-12 w-12 grid place-items-center border border-border bg-surface group-hover:border-primary/60 group-hover:text-primary transition-colors">
+                {i % 2 === 0 ? <FileText size={20} /> : <BookOpen size={20} />}
+              </div>
+              <div className="flex-1">
+                <div className="mono text-primary/70 text-[10px]">R.{String(i + 1).padStart(2, "0")}</div>
+                <div className="mt-2 font-display text-lg font-semibold group-hover:text-primary transition-colors">
+                  {r.t}
+                </div>
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{r.d}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      {/* FINAL CTA */}
       <Section className="border-t border-border bg-surface">
         <div className="panel p-10 md:p-14 relative overflow-hidden">
           <div className="absolute inset-0 grid-bg-fine opacity-30" />
@@ -254,24 +343,105 @@ const Index = () => {
             <div className="lg:col-span-2">
               <Eyebrow>Engineering & Project Inquiries</Eyebrow>
               <h2 className="font-display text-3xl md:text-4xl font-bold leading-tight">
-                Have a conductive glass, heated glass, sensor, or shielding requirement?
+                Have a conductive, heated, sensing, or shielding glass requirement?
               </h2>
               <p className="mt-5 text-muted-foreground text-lg max-w-2xl">
-                Contact HLG to discuss feasibility, materials, samples, and production path.
+                HLG can help evaluate materials, construction, sample builds, testing paths, and
+                production feasibility.
               </p>
             </div>
             <div className="flex flex-col gap-3">
-              <Link to="/contact" className="inline-flex items-center justify-center gap-2 px-6 py-4 bg-primary text-primary-foreground font-medium hover:bg-primary-glow transition-colors">
-                Contact HLG <ArrowRight size={18} />
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center gap-2 px-6 py-4 bg-primary text-primary-foreground font-medium hover:bg-primary-glow transition-colors"
+              >
+                Discuss a Project <ArrowRight size={18} />
               </Link>
-              <Link to="/capabilities" className="inline-flex items-center justify-center gap-2 px-6 py-4 border border-border text-foreground hover:border-primary hover:text-primary transition-colors">
-                Review Capabilities
+              <Link
+                to="/contact?type=review"
+                className="inline-flex items-center justify-center gap-2 px-6 py-4 border border-border text-foreground hover:border-primary hover:text-primary transition-colors"
+              >
+                Request Technical Review
               </Link>
             </div>
           </div>
         </div>
       </Section>
     </>
+  );
+};
+
+/* --- Technical layered-glass cross-section diagram --- */
+const GlassCrossSection = () => {
+  const layers = [
+    { label: "Outer Glass Ply", h: 22, tone: "bg-[hsl(210_30%_75%/0.18)]" },
+    { label: "Interlayer · Bus Bar", h: 14, tone: "bg-[hsl(205_90%_55%/0.20)]", accent: "busbar" as const },
+    { label: "Conductive Trace Layer", h: 10, tone: "bg-[hsl(200_90%_60%/0.28)]", accent: "traces" as const },
+    { label: "Sensor / Heater Mat", h: 12, tone: "bg-[hsl(190_80%_55%/0.18)]", accent: "sensor" as const },
+    { label: "Shielding Mesh", h: 10, tone: "bg-[hsl(210_30%_75%/0.10)]", accent: "mesh" as const },
+    { label: "Inner Glass Ply", h: 22, tone: "bg-[hsl(210_30%_75%/0.18)]" },
+  ];
+  return (
+    <div className="panel p-5 md:p-6 relative">
+      <div className="flex items-center justify-between mb-4">
+        <div className="mono text-primary">FIG.01 / Laminated Stack</div>
+        <div className="mono text-muted-foreground text-[10px]">Cross-Section</div>
+      </div>
+      <div className="relative border border-border bg-navy-deep/60">
+        <div className="grid-bg-fine absolute inset-0 opacity-40" />
+        <div className="relative">
+          {layers.map((l, i) => (
+            <div
+              key={i}
+              className={`relative border-b border-border/60 last:border-b-0 ${l.tone}`}
+              style={{ height: `${l.h * 3}px` }}
+            >
+              {l.accent === "busbar" && (
+                <>
+                  <div className="absolute left-0 top-1/2 -translate-y-1/2 h-1.5 w-8 bg-primary shadow-glow" />
+                  <div className="absolute right-0 top-1/2 -translate-y-1/2 h-1.5 w-8 bg-primary shadow-glow" />
+                </>
+              )}
+              {l.accent === "traces" && (
+                <div className="absolute inset-x-4 top-1/2 -translate-y-1/2 flex justify-between">
+                  {Array.from({ length: 18 }).map((_, k) => (
+                    <div key={k} className="w-px h-4 bg-primary/70" />
+                  ))}
+                </div>
+              )}
+              {l.accent === "sensor" && (
+                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex gap-1">
+                  {Array.from({ length: 6 }).map((_, k) => (
+                    <div key={k} className="h-2 w-2 border border-primary/70 bg-primary/20" />
+                  ))}
+                </div>
+              )}
+              {l.accent === "mesh" && (
+                <div
+                  className="absolute inset-2 opacity-60"
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(to right, hsl(var(--primary)/0.5) 1px, transparent 1px), linear-gradient(to bottom, hsl(var(--primary)/0.5) 1px, transparent 1px)",
+                    backgroundSize: "10px 10px",
+                  }}
+                />
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Callouts */}
+      <ul className="mt-5 space-y-2">
+        {layers.map((l, i) => (
+          <li key={i} className="flex items-center justify-between gap-4 text-xs">
+            <span className="mono text-muted-foreground">L.{String(i + 1).padStart(2, "0")}</span>
+            <span className="flex-1 border-b border-dashed border-border/60" />
+            <span className="text-foreground">{l.label}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 };
 
