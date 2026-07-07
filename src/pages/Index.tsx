@@ -17,6 +17,7 @@ import {
   Wand2,
   Rocket,
   BookOpen,
+  Antenna,
 } from "lucide-react";
 import { Section, SectionHeading, Eyebrow } from "@/components/Section";
 import interlayerImg from "@/assets/conductive-interlayer.jpg";
@@ -86,6 +87,7 @@ const why = [
 
 const capabilities = [
   { icon: CircuitBoard, label: "Embedded wire interlayers" },
+  { icon: Antenna, label: "Antenna wire integration" },
   { icon: Thermometer, label: "Transparent heating" },
   { icon: Zap, label: "Sensor mats" },
   { icon: Cpu, label: "Bus bar integration" },
@@ -173,9 +175,9 @@ const Index = () => {
           </div>
           <div className="lg:col-span-7 text-muted-foreground leading-relaxed text-lg">
             <p>
-              Hotlineglass USA develops and supplies specialty interlayers, embedded wire products,
-              conductive films, sensor mats, heater mats, bus bar systems, and production-ready
-              laminated glass subassemblies for advanced glazing applications.
+            Hotlineglass USA develops and supplies specialty interlayers, embedded wire products,
+            antenna wire products, conductive films, sensor mats, heater mats, bus bar systems, and
+            production-ready laminated glass subassemblies for advanced glazing applications.
             </p>
           </div>
         </div>
