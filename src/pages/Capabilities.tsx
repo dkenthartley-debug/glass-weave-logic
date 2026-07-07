@@ -7,6 +7,7 @@ const groups = [
     icon: CircuitBoard,
     items: [
       "Embedded wire interlayers",
+      "Antenna wire integration",
       "Conductive mesh integration",
       "ITO film and ITO glass handling",
       "Conductive bus bar integration",
