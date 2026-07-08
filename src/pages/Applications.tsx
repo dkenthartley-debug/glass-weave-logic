@@ -57,7 +57,7 @@ const Applications = () => (
       subtitle="Target applications across aerospace, defense, secure facilities, transportation, and industrial environments. HLG provides the conductive layer; customers build the finished glazing."
     />
     <Section>
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-border">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border">
         {groups.map((g) => (
           <div key={g.title} className="bg-background p-7">
             <g.icon className="text-primary" size={26} />
