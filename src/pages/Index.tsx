@@ -214,10 +214,10 @@ const Index = () => {
       <Section className="bg-surface/50 border-y border-border">
         <SectionHeading
           eyebrow="Core Solutions"
-          title="Three integration paths into advanced glass"
+          title="Four integration paths into advanced glass"
           subtitle="Specialty subassemblies and films developed to drop into your laminated glass process."
         />
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {solutions.map((s) => (
             <Link
               key={s.to}
