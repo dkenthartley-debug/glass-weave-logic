@@ -20,6 +20,7 @@ import {
   Antenna,
 } from "lucide-react";
 import { Section, SectionHeading, Eyebrow } from "@/components/Section";
+import laminatedStackImg from "@/assets/laminated-stack-iso.jpg";
 import interlayerImg from "@/assets/conductive-interlayer.jpg";
 import aircraftImg from "@/assets/aircraft-sensor.jpg";
 import emiImg from "@/assets/emi-shielding.jpg";
@@ -155,9 +156,24 @@ const Index = () => {
               </div>
             </div>
 
-            {/* Technical cross-section diagram */}
+            {/* Isometric laminated glass stack */}
             <div className="lg:col-span-5">
-              <GlassCrossSection />
+              <div className="panel p-3 md:p-4 relative overflow-hidden">
+                <div className="flex items-center justify-between mb-3 px-2 pt-1">
+                  <div className="mono text-primary">FIG.01 / Laminated Stack</div>
+                  <div className="mono text-muted-foreground text-[10px]">Isometric Section</div>
+                </div>
+                <div className="relative overflow-hidden border border-border bg-navy-deep">
+                  <img
+                    src={laminatedStackImg}
+                    alt="Isometric cutaway of an advanced laminated glass stack showing embedded wire, conductive film, bus bar, and shielding mesh layers"
+                    width={1280}
+                    height={1280}
+                    className="w-full h-auto block"
+                  />
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-navy-deep/60 via-transparent to-transparent" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -373,78 +389,5 @@ const Index = () => {
   );
 };
 
-/* --- Technical layered-glass cross-section diagram --- */
-const GlassCrossSection = () => {
-  const layers = [
-    { label: "Outer Glass Ply", h: 22, tone: "bg-[hsl(210_30%_75%/0.18)]" },
-    { label: "Interlayer · Bus Bar", h: 14, tone: "bg-[hsl(205_90%_55%/0.20)]", accent: "busbar" as const },
-    { label: "Conductive Trace Layer", h: 10, tone: "bg-[hsl(200_90%_60%/0.28)]", accent: "traces" as const },
-    { label: "Sensor / Heater Mat", h: 12, tone: "bg-[hsl(190_80%_55%/0.18)]", accent: "sensor" as const },
-    { label: "Shielding Mesh", h: 10, tone: "bg-[hsl(210_30%_75%/0.10)]", accent: "mesh" as const },
-    { label: "Inner Glass Ply", h: 22, tone: "bg-[hsl(210_30%_75%/0.18)]" },
-  ];
-  return (
-    <div className="panel p-5 md:p-6 relative">
-      <div className="flex items-center justify-between mb-4">
-        <div className="mono text-primary">FIG.01 / Laminated Stack</div>
-        <div className="mono text-muted-foreground text-[10px]">Cross-Section</div>
-      </div>
-      <div className="relative border border-border bg-navy-deep/60">
-        <div className="grid-bg-fine absolute inset-0 opacity-40" />
-        <div className="relative">
-          {layers.map((l, i) => (
-            <div
-              key={i}
-              className={`relative border-b border-border/60 last:border-b-0 ${l.tone}`}
-              style={{ height: `${l.h * 3}px` }}
-            >
-              {l.accent === "busbar" && (
-                <>
-                  <div className="absolute left-0 top-1/2 -translate-y-1/2 h-1.5 w-8 bg-primary shadow-glow" />
-                  <div className="absolute right-0 top-1/2 -translate-y-1/2 h-1.5 w-8 bg-primary shadow-glow" />
-                </>
-              )}
-              {l.accent === "traces" && (
-                <div className="absolute inset-x-4 top-1/2 -translate-y-1/2 flex justify-between">
-                  {Array.from({ length: 18 }).map((_, k) => (
-                    <div key={k} className="w-px h-4 bg-primary/70" />
-                  ))}
-                </div>
-              )}
-              {l.accent === "sensor" && (
-                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex gap-1">
-                  {Array.from({ length: 6 }).map((_, k) => (
-                    <div key={k} className="h-2 w-2 border border-primary/70 bg-primary/20" />
-                  ))}
-                </div>
-              )}
-              {l.accent === "mesh" && (
-                <div
-                  className="absolute inset-2 opacity-60"
-                  style={{
-                    backgroundImage:
-                      "linear-gradient(to right, hsl(var(--primary)/0.5) 1px, transparent 1px), linear-gradient(to bottom, hsl(var(--primary)/0.5) 1px, transparent 1px)",
-                    backgroundSize: "10px 10px",
-                  }}
-                />
-              )}
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Callouts */}
-      <ul className="mt-5 space-y-2">
-        {layers.map((l, i) => (
-          <li key={i} className="flex items-center justify-between gap-4 text-xs">
-            <span className="mono text-muted-foreground">L.{String(i + 1).padStart(2, "0")}</span>
-            <span className="flex-1 border-b border-dashed border-border/60" />
-            <span className="text-foreground">{l.label}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-};
 
 export default Index;
