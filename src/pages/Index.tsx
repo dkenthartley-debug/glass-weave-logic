@@ -43,12 +43,12 @@ const solutions = [
     tag: "02 / Aerospace",
   },
   {
-    to: "/technologies#shielding",
-    title: "EMI / RFI / SCIF Shielding",
-    desc: "Shielded glass insert concepts and conductive mesh integration developed for SCIF, TEMPEST, and secure facility glazing.",
+    to: "/technologies#security-defense",
+    title: "Security & Defense Systems",
+    desc: "Heated mats, secure antenna systems, embedded temperature sensors, and EMI / RFI / SCIF / TEMPEST shielding integration for defense and secure facility glazing.",
     img: emiImg,
     icon: ShieldCheck,
-    tag: "03 / Defense",
+    tag: "03 / Security and Defense",
   },
 ];
 
