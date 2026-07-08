@@ -52,7 +52,14 @@ const solutions = [
     icon: ShieldCheck,
     tag: "03 / Security and Defense",
   },
-];
+  {
+    to: "/technologies#automotive",
+    title: "Automotive Glass Products",
+    desc: "Heated mats, heated camera areas, heated wiper parks, embedded antenna, PDLC, and pre-laminated assemblies for automotive glazing programs.",
+    img: automotiveImg,
+    icon: Car,
+    tag: "04 / Automotive",
+  },
 
 const applications = [
   "Aerospace Transparencies",
