@@ -20,6 +20,7 @@ import {
   Antenna,
 } from "lucide-react";
 import { Section, SectionHeading, Eyebrow } from "@/components/Section";
+import laminatedStackImg from "@/assets/laminated-stack-iso.jpg";
 import interlayerImg from "@/assets/conductive-interlayer.jpg";
 import aircraftImg from "@/assets/aircraft-sensor.jpg";
 import emiImg from "@/assets/emi-shielding.jpg";
