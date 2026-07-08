@@ -1,11 +1,16 @@
 import { PageHero, Section, Eyebrow } from "@/components/Section";
-import { Plane, Shield, Lock, Building2, Truck, Factory, Eye, Layers } from "lucide-react";
+import { Plane, Shield, Lock, Building2, Truck, Factory, Eye, Layers, Car } from "lucide-react";
 
 const groups = [
   {
     icon: Plane,
     title: "Aerospace",
     items: ["Aerospace transparencies", "Aircraft windshields", "Aircraft windows", "Heated windshield programs", "Sensor-instrumented transparencies"],
+  },
+  {
+    icon: Car,
+    title: "Automotive",
+    items: ["Heated mats", "Heated camera areas", "Heated wiper parks", "Embedded automotive antenna", "PDLC and pre-laminated assemblies"],
   },
   {
     icon: Shield,
