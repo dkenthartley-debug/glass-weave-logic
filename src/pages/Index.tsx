@@ -64,7 +64,7 @@ const solutions = [
 
 const applications = [
   "Aerospace Transparencies",
-  "Defense Glazing",
+  "Automotive Glass Products",
   "SCIF / Secure Facilities",
   "Transparent Armor",
   "Transportation Glass",
