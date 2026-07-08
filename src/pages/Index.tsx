@@ -156,9 +156,24 @@ const Index = () => {
               </div>
             </div>
 
-            {/* Technical cross-section diagram */}
+            {/* Isometric laminated glass stack */}
             <div className="lg:col-span-5">
-              <GlassCrossSection />
+              <div className="panel p-3 md:p-4 relative overflow-hidden">
+                <div className="flex items-center justify-between mb-3 px-2 pt-1">
+                  <div className="mono text-primary">FIG.01 / Laminated Stack</div>
+                  <div className="mono text-muted-foreground text-[10px]">Isometric Section</div>
+                </div>
+                <div className="relative overflow-hidden border border-border bg-navy-deep">
+                  <img
+                    src={laminatedStackImg}
+                    alt="Isometric cutaway of an advanced laminated glass stack showing embedded wire, conductive film, bus bar, and shielding mesh layers"
+                    width={1280}
+                    height={1280}
+                    className="w-full h-auto block"
+                  />
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-navy-deep/60 via-transparent to-transparent" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
