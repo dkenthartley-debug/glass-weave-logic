@@ -67,7 +67,7 @@ const Contact = () => {
                 <Field label="Role / Title" name="role" />
               </div>
               <Select label="Inquiry Type" name="type" options={["Engineering", "Supplier Development", "Project Inquiry", "General"]} />
-              <Select label="Application Area" name="area" options={["Aerospace", "Defense", "SCIF / TEMPEST", "Transportation", "Industrial", "ADAS / Variable Tint", "Other"]} />
+              <Select label="Application Area" name="area" options={["Aerospace", "Automotive", "Defense", "SCIF / TEMPEST", "Transportation", "Industrial", "ADAS / Variable Tint", "Other"]} />
               <div>
                 <label className="mono text-muted-foreground block mb-2">Project Description</label>
                 <textarea
