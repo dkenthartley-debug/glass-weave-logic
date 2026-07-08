@@ -60,6 +60,7 @@ const solutions = [
     icon: Car,
     tag: "04 / Automotive",
   },
+];
 
 const applications = [
   "Aerospace Transparencies",
