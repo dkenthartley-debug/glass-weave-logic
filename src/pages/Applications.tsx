@@ -1,11 +1,16 @@
 import { PageHero, Section, Eyebrow } from "@/components/Section";
-import { Plane, Shield, Lock, Building2, Truck, Factory, Eye, Layers } from "lucide-react";
+import { Plane, Shield, Lock, Building2, Truck, Factory, Eye, Layers, Car } from "lucide-react";
 
 const groups = [
   {
     icon: Plane,
     title: "Aerospace",
     items: ["Aerospace transparencies", "Aircraft windshields", "Aircraft windows", "Heated windshield programs", "Sensor-instrumented transparencies"],
+  },
+  {
+    icon: Car,
+    title: "Automotive",
+    items: ["Heated mats", "Heated camera areas", "Heated wiper parks", "Embedded automotive antenna", "PDLC and pre-laminated assemblies"],
   },
   {
     icon: Shield,
@@ -52,7 +57,7 @@ const Applications = () => (
       subtitle="Target applications across aerospace, defense, secure facilities, transportation, and industrial environments. HLG provides the conductive layer; customers build the finished glazing."
     />
     <Section>
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-border">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border">
         {groups.map((g) => (
           <div key={g.title} className="bg-background p-7">
             <g.icon className="text-primary" size={26} />

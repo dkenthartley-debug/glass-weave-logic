@@ -18,12 +18,14 @@ import {
   Rocket,
   BookOpen,
   Antenna,
+  Car,
 } from "lucide-react";
 import { Section, SectionHeading, Eyebrow } from "@/components/Section";
 import laminatedStackImg from "@/assets/laminated-stack-iso.jpg";
 import interlayerImg from "@/assets/conductive-interlayer.jpg";
 import aircraftImg from "@/assets/aircraft-sensor.jpg";
 import emiImg from "@/assets/emi-shielding.jpg";
+import automotiveImg from "@/assets/automotive-glass.jpg";
 
 const solutions = [
   {
@@ -50,11 +52,19 @@ const solutions = [
     icon: ShieldCheck,
     tag: "03 / Security and Defense",
   },
+  {
+    to: "/technologies#automotive",
+    title: "Automotive Glass Products",
+    desc: "Heated mats, heated camera areas, heated wiper parks, embedded antenna, PDLC, and pre-laminated assemblies for automotive glazing programs.",
+    img: automotiveImg,
+    icon: Car,
+    tag: "04 / Automotive",
+  },
 ];
 
 const applications = [
   "Aerospace Transparencies",
-  "Defense Glazing",
+  "Automotive Glass Products",
   "SCIF / Secure Facilities",
   "Transparent Armor",
   "Transportation Glass",
@@ -192,8 +202,9 @@ const Index = () => {
           <div className="lg:col-span-7 text-muted-foreground leading-relaxed text-lg">
             <p>
             Hotlineglass USA develops and supplies specialty interlayers, embedded wire products,
-            antenna wire products, conductive films, sensor mats, heater mats, bus bar systems, and
-            production-ready laminated glass subassemblies for advanced glazing applications.
+            antenna wire products, conductive films, sensor mats, heater mats, bus bar systems,
+            PDLC and pre-laminated assemblies, and production-ready laminated glass subassemblies
+            for advanced glazing applications.
             </p>
           </div>
         </div>
@@ -203,10 +214,10 @@ const Index = () => {
       <Section className="bg-surface/50 border-y border-border">
         <SectionHeading
           eyebrow="Core Solutions"
-          title="Three integration paths into advanced glass"
+          title="Four integration paths into advanced glass"
           subtitle="Specialty subassemblies and films developed to drop into your laminated glass process."
         />
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {solutions.map((s) => (
             <Link
               key={s.to}
