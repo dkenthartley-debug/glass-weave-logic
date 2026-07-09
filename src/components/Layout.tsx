@@ -98,7 +98,7 @@ const Layout = () => {
         <div className="container py-14 grid md:grid-cols-4 gap-10">
           <div className="md:col-span-2">
             <img
-              src={logoAsset.url}
+              src="/logo.png"
               alt="Hotlineglass USA"
               className="h-12 w-auto object-contain"
             />
