@@ -98,8 +98,12 @@ const Layout = () => {
       <footer className="border-t border-border bg-navy-deep mt-24">
         <div className="container py-14 grid md:grid-cols-4 gap-10">
           <div className="md:col-span-2">
-            <div className="font-display font-bold text-lg">HOTLINEGLASS USA</div>
-            <p className="mono text-muted-foreground mt-2">Conductive Interlayers · Specialty Films · Embedded Wire</p>
+            <img
+              src={logoAsset.url}
+              alt="Hotlineglass USA"
+              className="h-12 w-auto object-contain"
+            />
+            <p className="mono text-muted-foreground mt-3">Conductive Interlayers · Specialty Films · Embedded Wire</p>
             <p className="text-sm text-muted-foreground mt-4 max-w-md leading-relaxed">
               HLG develops and supplies specialty interlayers, embedded wire products, conductive films,
               sensor mats, and electrically active glass components for advanced glazing manufacturers.
