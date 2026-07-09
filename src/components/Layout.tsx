@@ -23,14 +23,14 @@ const Layout = () => {
       <header className="sticky top-0 z-50 border-b border-border bg-navy-deep/85 backdrop-blur-md">
         <div className="container flex items-center justify-between h-16">
           <Link to="/" className="flex items-center gap-3 group">
-            <div className="relative h-8 w-8 grid place-items-center border border-primary/60 bg-primary/10">
-              <div className="h-3 w-3 bg-primary shadow-glow group-hover:bg-primary-glow transition-colors" />
-              <span className="absolute -inset-px border border-primary/20 pointer-events-none" />
-            </div>
-            <div className="leading-tight">
-              <div className="font-display font-bold text-foreground tracking-tight">HOTLINEGLASS<span className="text-primary">·</span>USA</div>
-              <div className="mono text-muted-foreground text-[10px]">HLG / Specialty Glass Technology</div>
-            </div>
+            <img
+              src={logoAsset.url}
+              alt="Hotlineglass USA"
+              className="h-9 md:h-10 w-auto object-contain"
+            />
+            <span className="hidden sm:block text-[10px] text-muted-foreground leading-tight max-w-[140px]">
+              HLG / Specialty Glass Technology
+            </span>
           </Link>
 
           <nav className="hidden xl:flex items-center gap-1">
