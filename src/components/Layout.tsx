@@ -22,14 +22,14 @@ const Layout = () => {
       <header className="sticky top-0 z-50 border-b border-border bg-navy-deep/85 backdrop-blur-md">
         <div className="container flex items-center justify-between h-16">
           <Link to="/" className="flex items-center gap-3 group">
-            <div className="relative h-8 w-8 grid place-items-center border border-primary/60 bg-primary/10">
-              <div className="h-3 w-3 bg-primary shadow-glow group-hover:bg-primary-glow transition-colors" />
-              <span className="absolute -inset-px border border-primary/20 pointer-events-none" />
-            </div>
-            <div className="leading-tight">
-              <div className="font-display font-bold text-foreground tracking-tight">HOTLINEGLASS<span className="text-primary">·</span>USA</div>
-              <div className="mono text-muted-foreground text-[10px]">HLG / Specialty Glass Technology</div>
-            </div>
+            <img
+              src="/logo.png"
+              alt="Hotlineglass USA"
+              className="h-9 md:h-10 w-auto object-contain"
+            />
+            <span className="hidden sm:block text-[10px] text-muted-foreground leading-tight max-w-[140px]">
+              HLG / Specialty Glass Technology
+            </span>
           </Link>
 
           <nav className="hidden xl:flex items-center gap-1">
@@ -97,8 +97,12 @@ const Layout = () => {
       <footer className="border-t border-border bg-navy-deep mt-24">
         <div className="container py-14 grid md:grid-cols-4 gap-10">
           <div className="md:col-span-2">
-            <div className="font-display font-bold text-lg">HOTLINEGLASS USA</div>
-            <p className="mono text-muted-foreground mt-2">Conductive Interlayers · Specialty Films · Embedded Wire</p>
+            <img
+              src="/logo.png"
+              alt="Hotlineglass USA"
+              className="h-12 w-auto object-contain"
+            />
+            <p className="mono text-muted-foreground mt-3">Conductive Interlayers · Specialty Films · Embedded Wire</p>
             <p className="text-sm text-muted-foreground mt-4 max-w-md leading-relaxed">
               HLG develops and supplies specialty interlayers, embedded wire products, conductive films,
               sensor mats, and electrically active glass components for advanced glazing manufacturers.
