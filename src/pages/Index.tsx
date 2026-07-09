@@ -170,7 +170,7 @@ const Index = () => {
             <div className="lg:col-span-5">
               <div className="panel p-3 md:p-4 relative overflow-hidden">
                 <div className="flex items-center justify-between mb-3 px-2 pt-1">
-                  <div className="mono text-primary">FIG.01 / Laminated Stack</div>
+                  <div className="mono text-primary">FIG.01 / Pre-Lamination Stack</div>
                   <div className="mono text-muted-foreground text-[10px]">Isometric Section</div>
                 </div>
                 <div className="relative overflow-hidden border border-border bg-navy-deep">
