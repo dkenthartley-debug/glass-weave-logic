@@ -23,7 +23,7 @@ const Layout = () => {
         <div className="container flex items-center justify-between h-16">
           <Link to="/" className="flex items-center gap-3 group">
             <img
-              src={logoAsset.url}
+              src="/logo.png"
               alt="Hotlineglass USA"
               className="h-9 md:h-10 w-auto object-contain"
             />
