@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
 import {
   ArrowRight,
   Plane,
@@ -126,7 +127,41 @@ const resources = [
   { t: "Aircraft Sensor Application Brief", d: "Heater mat and sensor mat subassembly development for aerospace transparencies." },
 ];
 
+const specs = [
+  { v: "±0.05", u: "mm", l: "Wire placement tolerance", d: "Typical embedded wire positional accuracy in interlayer format." },
+  { v: "100", u: "openings/in", l: "Shielding mesh density", d: "Fine copper mesh construction for EMI / RFI / SCIF applications." },
+  { v: "12–48", u: "V DC", l: "Heater operating range", d: "Common bus bar voltage range for transparent heating subassemblies." },
+  { v: ">85", u: "% VLT", l: "Optical transmission target", d: "Development target for conductive interlayer visible light transmission." },
+  { v: "6", u: "step process", l: "Prototype to production", d: "Structured path from specification review through repeatable supply." },
+  { v: "4", u: "integration paths", l: "Interlayer · Aero · Defense · Auto", d: "Core solution families supported across advanced glazing programs." },
+];
+
 const Index = () => {
+  const stackRef = useRef<HTMLDivElement>(null);
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    let raf = 0;
+    const onScroll = () => {
+      if (raf) return;
+      raf = requestAnimationFrame(() => {
+        raf = 0;
+        if (!stackRef.current) return;
+        const rect = stackRef.current.getBoundingClientRect();
+        const vh = window.innerHeight || 1;
+        // progress: 0 when element top at viewport bottom, 1 when top scrolled past top
+        const p = Math.max(0, Math.min(1, 1 - (rect.top + rect.height / 2) / vh + 0.3));
+        setScrollY(p);
+      });
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      if (raf) cancelAnimationFrame(raf);
+    };
+  }, []);
+
   return (
     <>
       {/* HERO */}
@@ -168,7 +203,14 @@ const Index = () => {
 
             {/* Isometric laminated glass stack */}
             <div className="lg:col-span-5">
-              <div className="panel p-3 md:p-4 relative overflow-hidden">
+              <div
+                ref={stackRef}
+                className="panel p-3 md:p-4 relative overflow-hidden"
+                style={{
+                  transform: `translate3d(0, ${scrollY * -40}px, 0)`,
+                  willChange: "transform",
+                }}
+              >
                 <div className="flex items-center justify-between mb-3 px-2 pt-1">
                   <div className="mono text-primary">FIG.01 / Pre-Lamination Stack</div>
                   <div className="mono text-muted-foreground text-[10px]">Isometric Section</div>
@@ -179,9 +221,37 @@ const Index = () => {
                     alt="Isometric cutaway of an advanced laminated glass stack showing embedded wire, conductive film, bus bar, and shielding mesh layers"
                     width={1280}
                     height={1280}
-                    className="w-full h-auto block"
+                    className="w-full h-auto block transition-transform duration-300 ease-out"
+                    style={{
+                      transform: `scale(${1 + scrollY * 0.08}) translate3d(0, ${scrollY * -20}px, 0)`,
+                    }}
                   />
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-navy-deep/60 via-transparent to-transparent" />
+                  <div
+                    className="pointer-events-none absolute inset-0 bg-gradient-to-t from-navy-deep/60 via-transparent to-transparent"
+                    style={{ opacity: 0.6 + scrollY * 0.35 }}
+                  />
+                  {/* Scan line sweep driven by scroll */}
+                  <div
+                    className="pointer-events-none absolute inset-x-0 h-px bg-primary/70"
+                    style={{
+                      top: `${10 + scrollY * 80}%`,
+                      boxShadow: "0 0 24px hsl(var(--primary) / 0.6)",
+                      opacity: scrollY > 0.02 ? 1 : 0,
+                    }}
+                  />
+                </div>
+                {/* Progress rail */}
+                <div className="mt-3 px-2 pb-1 flex items-center gap-3">
+                  <div className="mono text-[10px] text-muted-foreground">SECTION DEPTH</div>
+                  <div className="flex-1 h-px bg-border relative overflow-hidden">
+                    <div
+                      className="absolute inset-y-0 left-0 bg-primary"
+                      style={{ width: `${Math.round(scrollY * 100)}%` }}
+                    />
+                  </div>
+                  <div className="mono text-[10px] text-primary tabular-nums">
+                    {String(Math.round(scrollY * 100)).padStart(2, "0")}%
+                  </div>
                 </div>
               </div>
             </div>
@@ -189,6 +259,40 @@ const Index = () => {
         </div>
         <div className="absolute inset-x-0 bottom-0 edge-line" />
       </section>
+
+      {/* SPEC STRIP */}
+      <section className="border-b border-border bg-navy-deep relative overflow-hidden">
+        <div className="absolute inset-0 grid-bg-fine opacity-20" />
+        <div className="container relative py-10 md:py-14">
+          <div className="flex items-baseline justify-between mb-6">
+            <Eyebrow>Engineering Signals</Eyebrow>
+            <div className="mono text-muted-foreground text-[10px]">
+              Typical target ranges · development / integration
+            </div>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-px bg-border">
+            {specs.map((s, i) => (
+              <div
+                key={s.l}
+                className="bg-navy-deep p-5 md:p-6 flex flex-col gap-2 hover:bg-surface/60 transition-colors group"
+              >
+                <div className="mono text-primary/70 text-[10px]">
+                  S.{String(i + 1).padStart(2, "0")}
+                </div>
+                <div className="flex items-baseline gap-1.5">
+                  <span className="font-display text-2xl md:text-3xl font-bold tabular-nums text-foreground group-hover:text-primary transition-colors">
+                    {s.v}
+                  </span>
+                  <span className="mono text-[10px] text-muted-foreground uppercase">{s.u}</span>
+                </div>
+                <div className="text-xs font-medium text-foreground/90 leading-snug">{s.l}</div>
+                <div className="text-[11px] text-muted-foreground leading-snug">{s.d}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
 
       {/* WHAT HLG DOES */}
       <Section>
