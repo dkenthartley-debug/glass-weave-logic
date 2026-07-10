@@ -137,6 +137,31 @@ const specs = [
 ];
 
 const Index = () => {
+  const stackRef = useRef<HTMLDivElement>(null);
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    let raf = 0;
+    const onScroll = () => {
+      if (raf) return;
+      raf = requestAnimationFrame(() => {
+        raf = 0;
+        if (!stackRef.current) return;
+        const rect = stackRef.current.getBoundingClientRect();
+        const vh = window.innerHeight || 1;
+        // progress: 0 when element top at viewport bottom, 1 when top scrolled past top
+        const p = Math.max(0, Math.min(1, 1 - (rect.top + rect.height / 2) / vh + 0.3));
+        setScrollY(p);
+      });
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      if (raf) cancelAnimationFrame(raf);
+    };
+  }, []);
+
   return (
     <>
       {/* HERO */}
