@@ -14,12 +14,11 @@ const SHEET = { x: 40, y: 80, w: 920, h: 440 };
 
 const GlassLaminate = ({ children }: { children: React.ReactNode }) => (
   <>
-    {/* Top glass ply (edge shown at top) */}
-    <rect x={SHEET.x} y={40} width={SHEET.w} height={40} fill="url(#glassEdge)" />
-    <rect x={SHEET.x} y={40} width={SHEET.w} height={2} fill="hsl(200 40% 85% / 0.5)" />
-    <rect x={SHEET.x} y={78} width={SHEET.w} height={2} fill="hsl(220 30% 5% / 0.6)" />
+    {/* Top glass edge trim */}
+    <rect x={SHEET.x} y={64} width={SHEET.w} height={14} fill="url(#glassEdge)" />
+    <rect x={SHEET.x} y={78} width={SHEET.w} height={1.5} fill="hsl(220 30% 5% / 0.6)" />
 
-    {/* Interlayer sheet (light grey, translucent) */}
+    {/* Interlayer sheet (light grey, translucent) — face-on view */}
     <rect
       x={SHEET.x}
       y={SHEET.y}
@@ -31,10 +30,9 @@ const GlassLaminate = ({ children }: { children: React.ReactNode }) => (
     {/* Interlayer content (patterns) — clipped to sheet */}
     <g clipPath="url(#sheetClip)">{children}</g>
 
-    {/* Bottom glass ply (edge shown at bottom) */}
-    <rect x={SHEET.x} y={520} width={SHEET.w} height={2} fill="hsl(220 30% 5% / 0.6)" />
-    <rect x={SHEET.x} y={522} width={SHEET.w} height={38} fill="url(#glassEdge)" />
-    <rect x={SHEET.x} y={558} width={SHEET.w} height={2} fill="hsl(200 40% 85% / 0.5)" />
+    {/* Bottom glass edge trim */}
+    <rect x={SHEET.x} y={520} width={SHEET.w} height={1.5} fill="hsl(220 30% 5% / 0.6)" />
+    <rect x={SHEET.x} y={521.5} width={SHEET.w} height={14} fill="url(#glassEdge)" />
   </>
 );
 
@@ -231,11 +229,43 @@ const ConductiveGlassPattern = () => (
   </>
 );
 
+const SensorsPattern = () => {
+  // Placeholder: fine wire trace routing to a small sensor pad — pending reference imagery
+  const y = SHEET.y + SHEET.h / 2;
+  const padX = SHEET.x + SHEET.w - 120;
+  return (
+    <>
+      <path
+        d={`M ${SHEET.x + 20} ${y} Q ${SHEET.x + 200} ${y - 40}, ${SHEET.x + 400} ${y} T ${padX} ${y}`}
+        stroke="hsl(220 15% 8%)"
+        strokeWidth={0.8}
+        fill="none"
+        opacity={0.9}
+      />
+      <path
+        d={`M ${SHEET.x + 20} ${y + 10} Q ${SHEET.x + 200} ${y - 30}, ${SHEET.x + 400} ${y + 10} T ${padX} ${y + 10}`}
+        stroke="hsl(220 15% 8%)"
+        strokeWidth={0.8}
+        fill="none"
+        opacity={0.9}
+      />
+      {/* Sensor pad */}
+      <rect x={padX} y={y - 14} width={40} height={30} fill="hsl(220 25% 10%)" stroke="#b06a2c" strokeWidth={0.8} />
+      <rect x={padX + 4} y={y - 10} width={32} height={4} fill="#b06a2c" opacity={0.9} />
+      <rect x={padX + 4} y={y + 8} width={32} height={4} fill="#b06a2c" opacity={0.9} />
+      {/* Bus terminations at left edge */}
+      <rect x={SHEET.x + 14} y={y - 4} width={10} height={3} fill="#b06a2c" />
+      <rect x={SHEET.x + 14} y={y + 8} width={10} height={3} fill="#b06a2c" />
+    </>
+  );
+};
+
 const variants: Variant[] = [
   { id: "heating", label: "Heating", short: "Transparent heater grid", desc: "~21 µm black tungsten wire, sinusoidal wiggle at ~1–2 mm pitch, terminated on copper bus bars.", render: () => <HeatingPattern /> },
   { id: "wiper", label: "Wiper Park", short: "Localized heated zone", desc: "Dense wire wiggle confined to wiper rest zone, driven by dedicated bus bar pair.", render: () => <WiperParkPattern /> },
   { id: "antenna", label: "Antenna", short: "Embedded meander", desc: "~44 µm black-coated copper meander along the A-pillar edge with feed point at the top corner.", render: () => <AntennaPattern /> },
   { id: "camera", label: "Heated Camera", short: "Camera zone de-ice", desc: "~44 µm black-coated copper wire in a compact patch behind the black frit around the forward camera.", render: () => <HeatedCameraPattern /> },
+  { id: "sensors", label: "Sensors", short: "Embedded sensor mats", desc: "Fine embedded traces routed to a sensor pad — overheat, temperature, and health-monitoring elements laminated into the interlayer. Reference imagery pending.", render: () => <SensorsPattern /> },
   { id: "mesh", label: "Conductive Mesh", short: "Shielding weave", desc: "Black-coated copper mesh, ~100 openings/in, oriented ~30° off-axis to suppress moiré.", render: () => <ConductiveMeshPattern /> },
   { id: "ito", label: "ITO Film", short: "Transparent conductive film", desc: "Sputtered ITO on PET carrier — near-clear with a subtle bronze-to-blue iridescent shift at angle.", render: () => <ItoPattern /> },
   { id: "conductive-glass", label: "Conductive Glass", short: "TCO-coated ply", desc: "Transparent conductive oxide coating deposited directly on a glass ply, contacted at the edges.", render: () => <ConductiveGlassPattern /> },
@@ -306,11 +336,11 @@ const InterlayerShowcase = () => {
 
           <GlassLaminate>{v.render()}</GlassLaminate>
 
-          {/* Layer callouts */}
+          {/* Layer callouts — face-on view */}
           <g className="mono" fill="hsl(215 15% 60%)" fontSize="10">
-            <text x={SHEET.x - 6} y={60} textAnchor="end">GLASS · outer ply</text>
-            <text x={SHEET.x - 6} y={SHEET.y + SHEET.h / 2 + 3} textAnchor="end">INTERLAYER</text>
-            <text x={SHEET.x - 6} y={545} textAnchor="end">GLASS · inner ply</text>
+            <text x={SHEET.x - 6} y={74} textAnchor="end">GLASS EDGE</text>
+            <text x={SHEET.x - 6} y={SHEET.y + SHEET.h / 2 + 3} textAnchor="end">INTERLAYER · face view</text>
+            <text x={SHEET.x - 6} y={531} textAnchor="end">GLASS EDGE</text>
           </g>
         </svg>
 
