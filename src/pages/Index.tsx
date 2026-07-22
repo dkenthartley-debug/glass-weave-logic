@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { useEffect, useRef, useState } from "react";
 import {
   ArrowRight,
   Plane,
@@ -22,7 +21,7 @@ import {
   Car,
 } from "lucide-react";
 import { Section, SectionHeading, Eyebrow } from "@/components/Section";
-import laminatedStackImg from "@/assets/laminated-stack-iso.jpg";
+import InterlayerShowcase from "@/components/InterlayerShowcase";
 import interlayerImg from "@/assets/conductive-interlayer.jpg";
 import aircraftImg from "@/assets/aircraft-sensor.jpg";
 import emiImg from "@/assets/emi-shielding.jpg";
