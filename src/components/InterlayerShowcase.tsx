@@ -336,11 +336,11 @@ const InterlayerShowcase = () => {
 
           <GlassLaminate>{v.render()}</GlassLaminate>
 
-          {/* Layer callouts */}
+          {/* Layer callouts — face-on view */}
           <g className="mono" fill="hsl(215 15% 60%)" fontSize="10">
-            <text x={SHEET.x - 6} y={60} textAnchor="end">GLASS · outer ply</text>
-            <text x={SHEET.x - 6} y={SHEET.y + SHEET.h / 2 + 3} textAnchor="end">INTERLAYER</text>
-            <text x={SHEET.x - 6} y={545} textAnchor="end">GLASS · inner ply</text>
+            <text x={SHEET.x - 6} y={74} textAnchor="end">GLASS EDGE</text>
+            <text x={SHEET.x - 6} y={SHEET.y + SHEET.h / 2 + 3} textAnchor="end">INTERLAYER · face view</text>
+            <text x={SHEET.x - 6} y={531} textAnchor="end">GLASS EDGE</text>
           </g>
         </svg>
 
