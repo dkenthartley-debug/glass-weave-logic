@@ -14,12 +14,11 @@ const SHEET = { x: 40, y: 80, w: 920, h: 440 };
 
 const GlassLaminate = ({ children }: { children: React.ReactNode }) => (
   <>
-    {/* Top glass ply (edge shown at top) */}
-    <rect x={SHEET.x} y={40} width={SHEET.w} height={40} fill="url(#glassEdge)" />
-    <rect x={SHEET.x} y={40} width={SHEET.w} height={2} fill="hsl(200 40% 85% / 0.5)" />
-    <rect x={SHEET.x} y={78} width={SHEET.w} height={2} fill="hsl(220 30% 5% / 0.6)" />
+    {/* Top glass edge trim */}
+    <rect x={SHEET.x} y={64} width={SHEET.w} height={14} fill="url(#glassEdge)" />
+    <rect x={SHEET.x} y={78} width={SHEET.w} height={1.5} fill="hsl(220 30% 5% / 0.6)" />
 
-    {/* Interlayer sheet (light grey, translucent) */}
+    {/* Interlayer sheet (light grey, translucent) — face-on view */}
     <rect
       x={SHEET.x}
       y={SHEET.y}
@@ -31,10 +30,9 @@ const GlassLaminate = ({ children }: { children: React.ReactNode }) => (
     {/* Interlayer content (patterns) — clipped to sheet */}
     <g clipPath="url(#sheetClip)">{children}</g>
 
-    {/* Bottom glass ply (edge shown at bottom) */}
-    <rect x={SHEET.x} y={520} width={SHEET.w} height={2} fill="hsl(220 30% 5% / 0.6)" />
-    <rect x={SHEET.x} y={522} width={SHEET.w} height={38} fill="url(#glassEdge)" />
-    <rect x={SHEET.x} y={558} width={SHEET.w} height={2} fill="hsl(200 40% 85% / 0.5)" />
+    {/* Bottom glass edge trim */}
+    <rect x={SHEET.x} y={520} width={SHEET.w} height={1.5} fill="hsl(220 30% 5% / 0.6)" />
+    <rect x={SHEET.x} y={521.5} width={SHEET.w} height={14} fill="url(#glassEdge)" />
   </>
 );
 
