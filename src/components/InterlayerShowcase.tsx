@@ -230,32 +230,84 @@ const ConductiveGlassPattern = () => (
 );
 
 const SensorsPattern = () => {
-  // Placeholder: fine wire trace routing to a small sensor pad — pending reference imagery
-  const y = SHEET.y + SHEET.h / 2;
-  const padX = SHEET.x + SHEET.w - 120;
+  // Square serpentine sensor mat: parallel vertical traces joined by hairpin
+  // turns at alternating top/bottom, with two terminal tabs at the bottom
+  // corners and copper lead wires exiting toward the sheet edges.
+  const padSize = 320;
+  const cx = SHEET.x + SHEET.w / 2;
+  const cy = SHEET.y + SHEET.h / 2;
+  const x0 = cx - padSize / 2;
+  const y0 = cy - padSize / 2;
+  const x1 = x0 + padSize;
+  const y1 = y0 + padSize;
+
+  const pitch = 12;
+  const inset = 12;
+  const topY = y0 + inset;
+  const botY = y1 - inset;
+
+  // Continuous serpentine path
+  let d = `M ${x0 + inset} ${botY}`;
+  let x = x0 + inset;
+  let goingUp = true;
+  while (x + pitch <= x1 - inset) {
+    if (goingUp) {
+      d += ` L ${x} ${topY}`;
+      const nx = x + pitch;
+      d += ` A ${pitch / 2} ${pitch / 2} 0 0 1 ${nx} ${topY}`;
+      d += ` L ${nx} ${botY}`;
+      x = nx;
+    } else {
+      const nx = x + pitch;
+      d += ` A ${pitch / 2} ${pitch / 2} 0 0 0 ${nx} ${botY}`;
+      x = nx;
+    }
+    goingUp = !goingUp;
+  }
+
+  const padW = 20;
+  const padH = 14;
+  const leftPadX = x0 - 6;
+  const rightPadX = x1 - padW + 6;
+  const padY = botY + 10;
+
   return (
     <>
+      {/* Faint mat substrate */}
+      <rect
+        x={x0 - 8}
+        y={y0 - 8}
+        width={padSize + 16}
+        height={padSize + 16}
+        fill="hsl(210 15% 90% / 0.10)"
+        stroke="hsl(205 40% 60% / 0.20)"
+        strokeWidth={0.4}
+      />
+      {/* Serpentine trace */}
       <path
-        d={`M ${SHEET.x + 20} ${y} Q ${SHEET.x + 200} ${y - 40}, ${SHEET.x + 400} ${y} T ${padX} ${y}`}
-        stroke="hsl(220 15% 8%)"
-        strokeWidth={0.8}
+        d={d}
+        stroke="hsl(210 18% 55%)"
+        strokeWidth={1.1}
         fill="none"
-        opacity={0.9}
+        opacity={0.92}
+        strokeLinecap="round"
+      />
+      {/* Terminal tabs */}
+      <rect x={leftPadX} y={padY} width={padW} height={padH} fill="hsl(220 15% 35%)" stroke="hsl(210 20% 72%)" strokeWidth={0.5} />
+      <rect x={rightPadX} y={padY} width={padW} height={padH} fill="hsl(220 15% 35%)" stroke="hsl(210 20% 72%)" strokeWidth={0.5} />
+      {/* Copper lead wires */}
+      <path
+        d={`M ${leftPadX + padW / 2} ${padY + padH} Q ${leftPadX - 50} ${padY + padH + 50}, ${SHEET.x + 20} ${SHEET.y + SHEET.h - 20}`}
+        stroke="#b06a2c"
+        strokeWidth={1.4}
+        fill="none"
       />
       <path
-        d={`M ${SHEET.x + 20} ${y + 10} Q ${SHEET.x + 200} ${y - 30}, ${SHEET.x + 400} ${y + 10} T ${padX} ${y + 10}`}
-        stroke="hsl(220 15% 8%)"
-        strokeWidth={0.8}
+        d={`M ${rightPadX + padW / 2} ${padY + padH} Q ${rightPadX + 50} ${padY + padH + 50}, ${SHEET.x + SHEET.w - 20} ${SHEET.y + SHEET.h - 20}`}
+        stroke="#b06a2c"
+        strokeWidth={1.4}
         fill="none"
-        opacity={0.9}
       />
-      {/* Sensor pad */}
-      <rect x={padX} y={y - 14} width={40} height={30} fill="hsl(220 25% 10%)" stroke="#b06a2c" strokeWidth={0.8} />
-      <rect x={padX + 4} y={y - 10} width={32} height={4} fill="#b06a2c" opacity={0.9} />
-      <rect x={padX + 4} y={y + 8} width={32} height={4} fill="#b06a2c" opacity={0.9} />
-      {/* Bus terminations at left edge */}
-      <rect x={SHEET.x + 14} y={y - 4} width={10} height={3} fill="#b06a2c" />
-      <rect x={SHEET.x + 14} y={y + 8} width={10} height={3} fill="#b06a2c" />
     </>
   );
 };
@@ -265,7 +317,7 @@ const variants: Variant[] = [
   { id: "wiper", label: "Wiper Park", short: "Localized heated zone", desc: "Dense wire wiggle confined to wiper rest zone, driven by dedicated bus bar pair.", render: () => <WiperParkPattern /> },
   { id: "antenna", label: "Antenna", short: "Embedded meander", desc: "~44 µm black-coated copper meander along the A-pillar edge with feed point at the top corner.", render: () => <AntennaPattern /> },
   { id: "camera", label: "Heated Camera", short: "Camera zone de-ice", desc: "~44 µm black-coated copper wire in a compact patch behind the black frit around the forward camera.", render: () => <HeatedCameraPattern /> },
-  { id: "sensors", label: "Sensors", short: "Embedded sensor mats", desc: "Fine embedded traces routed to a sensor pad — overheat, temperature, and health-monitoring elements laminated into the interlayer. Reference imagery pending.", render: () => <SensorsPattern /> },
+  { id: "sensors", label: "Sensors", short: "Serpentine sensor mat", desc: "Square serpentine trace laid on a translucent carrier with two terminal tabs at the bottom corners and copper lead wires exiting to the edge — typical overheat / temperature sensor element laminated into the interlayer.", render: () => <SensorsPattern /> },
   { id: "mesh", label: "Conductive Mesh", short: "Shielding weave", desc: "Black-coated copper mesh, ~100 openings/in, oriented ~30° off-axis to suppress moiré.", render: () => <ConductiveMeshPattern /> },
   { id: "ito", label: "ITO Film", short: "Transparent conductive film", desc: "Sputtered ITO on PET carrier — near-clear with a subtle bronze-to-blue iridescent shift at angle.", render: () => <ItoPattern /> },
   { id: "conductive-glass", label: "Conductive Glass", short: "TCO-coated ply", desc: "Transparent conductive oxide coating deposited directly on a glass ply, contacted at the edges.", render: () => <ConductiveGlassPattern /> },
