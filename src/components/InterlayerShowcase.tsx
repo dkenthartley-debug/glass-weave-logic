@@ -380,7 +380,7 @@ const Schematic = ({ v, labels = true }: { v: Variant; labels?: boolean }) => (
     role="img"
     aria-label={`Interlayer schematic: ${v.label}`}
   >
-    {labels && <Defs />}
+    <Defs />
     <GlassLaminate>{v.render()}</GlassLaminate>
     {labels && (
       <g className="mono" fill="hsl(215 15% 60%)" fontSize="10">
