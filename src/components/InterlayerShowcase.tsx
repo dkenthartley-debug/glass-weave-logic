@@ -36,14 +36,15 @@ const GlassLaminate = ({ children }: { children: React.ReactNode }) => (
   </>
 );
 
-// Sinusoidal wiggle path across the sheet
-const wigglePath = (y: number, amp = 2.2, wavelength = 14) => {
-  const x0 = SHEET.x + 8;
-  const x1 = SHEET.x + SHEET.w - 8;
-  let d = `M ${x0} ${y}`;
-  for (let x = x0; x <= x1; x += wavelength / 2) {
-    const dir = ((x - x0) / (wavelength / 2)) % 2 < 1 ? 1 : -1;
-    d += ` Q ${x + wavelength / 4} ${y + dir * amp}, ${x + wavelength / 2} ${y}`;
+
+
+// Vertical wiggle run between two y bounds — used where wires must run
+// perpendicular to horizontal bus bars.
+const wigglePathV = (x: number, yStart: number, yEnd: number, amp = 1.8, wavelength = 12) => {
+  let d = `M ${x} ${yStart}`;
+  for (let y = yStart; y <= yEnd; y += wavelength / 2) {
+    const dir = ((y - yStart) / (wavelength / 2)) % 2 < 1 ? 1 : -1;
+    d += ` Q ${x + dir * amp} ${y + wavelength / 4}, ${x} ${y + wavelength / 2}`;
   }
   return d;
 };
@@ -51,11 +52,13 @@ const wigglePath = (y: number, amp = 2.2, wavelength = 14) => {
 const HeatingPattern = () => {
   const lines = [];
   const pitch = 10; // ~1.5mm scaled
-  for (let y = SHEET.y + 20; y < SHEET.y + SHEET.h - 20; y += pitch) {
+  const barTop = SHEET.y + 10;
+  const barBot = SHEET.y + SHEET.h - 14;
+  for (let x = SHEET.x + 20; x < SHEET.x + SHEET.w - 20; x += pitch) {
     lines.push(
       <path
-        key={y}
-        d={wigglePath(y, 1.8, 12)}
+        key={x}
+        d={wigglePathV(x, barTop + 4, barBot, 1.8, 12)}
         stroke="hsl(220 15% 8%)"
         strokeWidth={0.6}
         fill="none"
@@ -66,9 +69,9 @@ const HeatingPattern = () => {
   return (
     <>
       {lines}
-      {/* Copper bus bars top/bottom of active zone */}
-      <rect x={SHEET.x + 8} y={SHEET.y + 10} width={SHEET.w - 16} height={4} fill="#b06a2c" />
-      <rect x={SHEET.x + 8} y={SHEET.y + SHEET.h - 14} width={SHEET.w - 16} height={4} fill="#b06a2c" />
+      {/* Copper bus bars top/bottom — wires terminate perpendicular into them */}
+      <rect x={SHEET.x + 8} y={barTop} width={SHEET.w - 16} height={4} fill="#b06a2c" />
+      <rect x={SHEET.x + 8} y={barBot} width={SHEET.w - 16} height={4} fill="#b06a2c" />
     </>
   );
 };
@@ -78,11 +81,11 @@ const WiperParkPattern = () => {
   const pitch = 8;
   const zoneY0 = SHEET.y + SHEET.h - 110;
   const zoneY1 = SHEET.y + SHEET.h - 20;
-  for (let y = zoneY0; y < zoneY1; y += pitch) {
+  for (let x = SHEET.x + 66; x < SHEET.x + SHEET.w - 66; x += pitch) {
     lines.push(
       <path
-        key={y}
-        d={wigglePath(y, 1.6, 10)}
+        key={x}
+        d={wigglePathV(x, zoneY0 + 3, zoneY1 - 3, 1.4, 10)}
         stroke="hsl(220 15% 8%)"
         strokeWidth={0.6}
         fill="none"
@@ -109,6 +112,7 @@ const WiperParkPattern = () => {
     </>
   );
 };
+
 
 const AntennaPattern = () => {
   // Meander loop along left edge (A-pillar area)
@@ -146,16 +150,18 @@ const HeatedCameraPattern = () => {
   const zy = SHEET.y + 30;
   const lines = [];
   const pitch = 5;
-  for (let y = zy + 6; y < zy + zoneH - 6; y += pitch) {
-    const x0 = zx + 6;
-    const x1 = zx + zoneW - 6;
-    let d = `M ${x0} ${y}`;
-    for (let x = x0; x <= x1; x += 6) {
-      const dir = ((x - x0) / 6) % 2 < 1 ? 1 : -1;
-      d += ` Q ${x + 1.5} ${y + dir * 1.2}, ${x + 3} ${y}`;
-    }
+  const barTop = zy + 6;
+  const barBot = zy + zoneH - 6;
+  for (let x = zx + 8; x < zx + zoneW - 8; x += pitch) {
     lines.push(
-      <path key={y} d={d} stroke="hsl(220 15% 8%)" strokeWidth={0.55} fill="none" opacity={0.9} />
+      <path
+        key={x}
+        d={wigglePathV(x, barTop + 2, barBot - 2, 1.1, 6)}
+        stroke="hsl(220 15% 8%)"
+        strokeWidth={0.55}
+        fill="none"
+        opacity={0.9}
+      />
     );
   }
   return (
@@ -168,11 +174,15 @@ const HeatedCameraPattern = () => {
         height={zoneH + 20}
         fill="hsl(220 25% 5% / 0.6)"
       />
+      {lines}
+      {/* Bus bars perpendicular to the wire run */}
+      <rect x={zx + 6} y={barTop} width={zoneW - 12} height={2.5} fill="#b06a2c" />
+      <rect x={zx + 6} y={barBot} width={zoneW - 12} height={2.5} fill="#b06a2c" />
       {/* Camera aperture */}
       <circle cx={cx} cy={zy + zoneH / 2} r={10} fill="hsl(220 30% 3%)" stroke="hsl(205 95% 55% / 0.4)" strokeWidth={0.6} />
-      {lines}
     </>
   );
+
 };
 
 const ConductiveMeshPattern = () => {
