@@ -36,17 +36,8 @@ const GlassLaminate = ({ children }: { children: React.ReactNode }) => (
   </>
 );
 
-// Sinusoidal wiggle path across the sheet (horizontal run)
-const wigglePath = (y: number, amp = 2.2, wavelength = 14) => {
-  const x0 = SHEET.x + 8;
-  const x1 = SHEET.x + SHEET.w - 8;
-  let d = `M ${x0} ${y}`;
-  for (let x = x0; x <= x1; x += wavelength / 2) {
-    const dir = ((x - x0) / (wavelength / 2)) % 2 < 1 ? 1 : -1;
-    d += ` Q ${x + wavelength / 4} ${y + dir * amp}, ${x + wavelength / 2} ${y}`;
-  }
-  return d;
-};
+// Vertical wiggle run between two y bounds — wires always run perpendicular
+
 
 // Vertical wiggle run between two y bounds — used where wires must run
 // perpendicular to horizontal bus bars.
