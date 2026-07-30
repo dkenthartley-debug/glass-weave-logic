@@ -36,7 +36,7 @@ const GlassLaminate = ({ children }: { children: React.ReactNode }) => (
   </>
 );
 
-// Sinusoidal wiggle path across the sheet
+// Sinusoidal wiggle path across the sheet (horizontal run)
 const wigglePath = (y: number, amp = 2.2, wavelength = 14) => {
   const x0 = SHEET.x + 8;
   const x1 = SHEET.x + SHEET.w - 8;
@@ -48,14 +48,27 @@ const wigglePath = (y: number, amp = 2.2, wavelength = 14) => {
   return d;
 };
 
+// Vertical wiggle run between two y bounds — used where wires must run
+// perpendicular to horizontal bus bars.
+const wigglePathV = (x: number, yStart: number, yEnd: number, amp = 1.8, wavelength = 12) => {
+  let d = `M ${x} ${yStart}`;
+  for (let y = yStart; y <= yEnd; y += wavelength / 2) {
+    const dir = ((y - yStart) / (wavelength / 2)) % 2 < 1 ? 1 : -1;
+    d += ` Q ${x + dir * amp} ${y + wavelength / 4}, ${x} ${y + wavelength / 2}`;
+  }
+  return d;
+};
+
 const HeatingPattern = () => {
   const lines = [];
   const pitch = 10; // ~1.5mm scaled
-  for (let y = SHEET.y + 20; y < SHEET.y + SHEET.h - 20; y += pitch) {
+  const barTop = SHEET.y + 10;
+  const barBot = SHEET.y + SHEET.h - 14;
+  for (let x = SHEET.x + 20; x < SHEET.x + SHEET.w - 20; x += pitch) {
     lines.push(
       <path
-        key={y}
-        d={wigglePath(y, 1.8, 12)}
+        key={x}
+        d={wigglePathV(x, barTop + 4, barBot, 1.8, 12)}
         stroke="hsl(220 15% 8%)"
         strokeWidth={0.6}
         fill="none"
@@ -66,9 +79,9 @@ const HeatingPattern = () => {
   return (
     <>
       {lines}
-      {/* Copper bus bars top/bottom of active zone */}
-      <rect x={SHEET.x + 8} y={SHEET.y + 10} width={SHEET.w - 16} height={4} fill="#b06a2c" />
-      <rect x={SHEET.x + 8} y={SHEET.y + SHEET.h - 14} width={SHEET.w - 16} height={4} fill="#b06a2c" />
+      {/* Copper bus bars top/bottom — wires terminate perpendicular into them */}
+      <rect x={SHEET.x + 8} y={barTop} width={SHEET.w - 16} height={4} fill="#b06a2c" />
+      <rect x={SHEET.x + 8} y={barBot} width={SHEET.w - 16} height={4} fill="#b06a2c" />
     </>
   );
 };
@@ -78,11 +91,11 @@ const WiperParkPattern = () => {
   const pitch = 8;
   const zoneY0 = SHEET.y + SHEET.h - 110;
   const zoneY1 = SHEET.y + SHEET.h - 20;
-  for (let y = zoneY0; y < zoneY1; y += pitch) {
+  for (let x = SHEET.x + 66; x < SHEET.x + SHEET.w - 66; x += pitch) {
     lines.push(
       <path
-        key={y}
-        d={wigglePath(y, 1.6, 10)}
+        key={x}
+        d={wigglePathV(x, zoneY0 + 3, zoneY1 - 3, 1.4, 10)}
         stroke="hsl(220 15% 8%)"
         strokeWidth={0.6}
         fill="none"
@@ -109,6 +122,7 @@ const WiperParkPattern = () => {
     </>
   );
 };
+
 
 const AntennaPattern = () => {
   // Meander loop along left edge (A-pillar area)
