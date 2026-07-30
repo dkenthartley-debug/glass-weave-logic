@@ -36,7 +36,6 @@ const GlassLaminate = ({ children }: { children: React.ReactNode }) => (
   </>
 );
 
-// Vertical wiggle run between two y bounds — wires always run perpendicular
 
 
 // Vertical wiggle run between two y bounds — used where wires must run
