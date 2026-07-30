@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { interlayerPhotos } from "@/data/interlayerPhotos";
+
 
 type Variant = {
   id: string;
