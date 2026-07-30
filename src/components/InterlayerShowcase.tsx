@@ -333,9 +333,117 @@ const variants: Variant[] = [
   { id: "conductive-glass", label: "Conductive Glass", short: "TCO-coated ply", desc: "Transparent conductive oxide coating deposited directly on a glass ply, contacted at the edges.", render: () => <ConductiveGlassPattern /> },
 ];
 
+const Defs = () => (
+  <defs>
+    <clipPath id="sheetClip">
+      <rect x={SHEET.x} y={SHEET.y} width={SHEET.w} height={SHEET.h} />
+    </clipPath>
+    <linearGradient id="glassEdge" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stopColor="hsl(200 30% 70% / 0.35)" />
+      <stop offset="50%" stopColor="hsl(200 30% 55% / 0.15)" />
+      <stop offset="100%" stopColor="hsl(200 30% 70% / 0.35)" />
+    </linearGradient>
+    <linearGradient id="interlayerFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stopColor="hsl(210 10% 78% / 0.22)" />
+      <stop offset="50%" stopColor="hsl(210 10% 82% / 0.30)" />
+      <stop offset="100%" stopColor="hsl(210 10% 78% / 0.22)" />
+    </linearGradient>
+    <linearGradient id="glassSheen" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stopColor="hsl(200 60% 90% / 0)" />
+      <stop offset="50%" stopColor="hsl(200 60% 90% / 0.35)" />
+      <stop offset="100%" stopColor="hsl(200 60% 90% / 0)" />
+    </linearGradient>
+    <pattern id="meshPattern" x="0" y="0" width="6" height="6" patternUnits="userSpaceOnUse">
+      <path d="M 0 0 L 6 0 M 0 0 L 0 6" stroke="hsl(220 15% 8%)" strokeWidth="0.5" opacity="0.8" />
+    </pattern>
+    <linearGradient id="itoIridescent" x1="0" y1="0" x2="1" y2="0.4">
+      <stop offset="0%" stopColor="hsl(28 60% 55%)" />
+      <stop offset="30%" stopColor="hsl(50 70% 60%)" />
+      <stop offset="55%" stopColor="hsl(0 60% 55%)" />
+      <stop offset="80%" stopColor="hsl(210 70% 55%)" />
+      <stop offset="100%" stopColor="hsl(28 60% 55%)" />
+    </linearGradient>
+    <linearGradient id="itoSheen" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stopColor="hsl(200 80% 85% / 0)" />
+      <stop offset="50%" stopColor="hsl(200 80% 90% / 0.5)" />
+      <stop offset="100%" stopColor="hsl(200 80% 85% / 0)" />
+    </linearGradient>
+  </defs>
+);
+
+const Schematic = ({ v, labels = true }: { v: Variant; labels?: boolean }) => (
+  <svg
+    viewBox="0 0 1000 600"
+    className="w-full h-auto block"
+    role="img"
+    aria-label={`Interlayer schematic: ${v.label}`}
+  >
+    {labels && <Defs />}
+    <GlassLaminate>{v.render()}</GlassLaminate>
+    {labels && (
+      <g className="mono" fill="hsl(215 15% 60%)" fontSize="10">
+        <text x={SHEET.x - 6} y={74} textAnchor="end">GLASS EDGE</text>
+        <text x={SHEET.x - 6} y={SHEET.y + SHEET.h / 2 + 3} textAnchor="end">INTERLAYER · face view</text>
+        <text x={SHEET.x - 6} y={531} textAnchor="end">GLASS EDGE</text>
+      </g>
+    )}
+  </svg>
+);
+
+type Mode = "schematic" | "photo";
+
+const Tile = ({
+  v,
+  active,
+  onSelect,
+}: {
+  v: Variant;
+  active: boolean;
+  onSelect: () => void;
+}) => {
+  const photos = interlayerPhotos[v.id] ?? [];
+  const [hover, setHover] = useState(false);
+  const showPhoto = photos.length > 0 && hover;
+
+  return (
+    <button
+      type="button"
+      onClick={onSelect}
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+      className={`group relative text-left border transition-colors overflow-hidden bg-navy-deep ${
+        active ? "border-primary" : "border-border hover:border-primary/60"
+      }`}
+    >
+      <div className="relative aspect-[5/3] overflow-hidden">
+        <div className={`absolute inset-0 transition-opacity duration-300 ${showPhoto ? "opacity-0" : "opacity-100"}`}>
+          <Schematic v={v} labels={false} />
+        </div>
+        {photos.length > 0 && (
+          <img
+            src={photos[0].src}
+            alt={`${v.label} — ${photos[0].caption}`}
+            loading="lazy"
+            className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-300 ${
+              showPhoto ? "opacity-100" : "opacity-0"
+            }`}
+          />
+        )}
+      </div>
+      <div className="flex items-center justify-between gap-2 px-2.5 py-2 border-t border-border">
+        <span className="mono text-[10px] text-foreground">{v.label}</span>
+        <span className={`mono text-[9px] ${photos.length ? "text-primary" : "text-muted-foreground"}`}>
+          {photos.length ? `${photos.length} PHOTO${photos.length > 1 ? "S" : ""}` : "SCHEMATIC"}
+        </span>
+      </div>
+    </button>
+  );
+};
+
 const InterlayerShowcase = () => {
   const [idx, setIdx] = useState(0);
   const [paused, setPaused] = useState(false);
+  const [mode, setMode] = useState<Mode>("schematic");
 
   useEffect(() => {
     if (paused) return;
@@ -344,6 +452,12 @@ const InterlayerShowcase = () => {
   }, [paused]);
 
   const v = variants[idx];
+  const photos = interlayerPhotos[v.id] ?? [];
+  const showPhoto = mode === "photo" && photos.length > 0;
+
+  useEffect(() => {
+    if (mode === "photo" && photos.length === 0) setMode("schematic");
+  }, [mode, photos.length]);
 
   return (
     <div
@@ -351,62 +465,52 @@ const InterlayerShowcase = () => {
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
-      <div className="flex items-center justify-between mb-3 px-2 pt-1">
+      <div className="flex items-center justify-between gap-3 mb-3 px-2 pt-1">
         <div className="mono text-primary text-xs">FIG.01 / Interlayer Library</div>
-        <div className="mono text-muted-foreground text-[10px]">
-          {String(idx + 1).padStart(2, "0")} / {String(variants.length).padStart(2, "0")}
+        <div className="flex items-center gap-2">
+          <div className="flex border border-border">
+            {(["schematic", "photo"] as Mode[]).map((m) => (
+              <button
+                key={m}
+                type="button"
+                disabled={m === "photo" && photos.length === 0}
+                onClick={() => setMode(m)}
+                className={`mono text-[9px] px-2 py-1 transition-colors disabled:opacity-35 disabled:cursor-not-allowed ${
+                  mode === m ? "bg-primary/15 text-primary" : "text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                {m}
+              </button>
+            ))}
+          </div>
+          <div className="mono text-muted-foreground text-[10px]">
+            {String(idx + 1).padStart(2, "0")} / {String(variants.length).padStart(2, "0")}
+          </div>
         </div>
       </div>
 
       <div className="relative overflow-hidden border border-border bg-navy-deep">
-        <svg viewBox="0 0 1000 600" className="w-full h-auto block" role="img" aria-label={`Laminate cross-section: ${v.label}`}>
-          <defs>
-            <clipPath id="sheetClip">
-              <rect x={SHEET.x} y={SHEET.y} width={SHEET.w} height={SHEET.h} />
-            </clipPath>
-            <linearGradient id="glassEdge" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="hsl(200 30% 70% / 0.35)" />
-              <stop offset="50%" stopColor="hsl(200 30% 55% / 0.15)" />
-              <stop offset="100%" stopColor="hsl(200 30% 70% / 0.35)" />
-            </linearGradient>
-            <linearGradient id="interlayerFill" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="hsl(210 10% 78% / 0.22)" />
-              <stop offset="50%" stopColor="hsl(210 10% 82% / 0.30)" />
-              <stop offset="100%" stopColor="hsl(210 10% 78% / 0.22)" />
-            </linearGradient>
-            <linearGradient id="glassSheen" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0%" stopColor="hsl(200 60% 90% / 0)" />
-              <stop offset="50%" stopColor="hsl(200 60% 90% / 0.35)" />
-              <stop offset="100%" stopColor="hsl(200 60% 90% / 0)" />
-            </linearGradient>
-            <pattern id="meshPattern" x="0" y="0" width="6" height="6" patternUnits="userSpaceOnUse">
-              <path d="M 0 0 L 6 0 M 0 0 L 0 6" stroke="hsl(220 15% 8%)" strokeWidth="0.5" opacity="0.8" />
-            </pattern>
-            <linearGradient id="itoIridescent" x1="0" y1="0" x2="1" y2="0.4">
-              <stop offset="0%" stopColor="hsl(28 60% 55%)" />
-              <stop offset="30%" stopColor="hsl(50 70% 60%)" />
-              <stop offset="55%" stopColor="hsl(0 60% 55%)" />
-              <stop offset="80%" stopColor="hsl(210 70% 55%)" />
-              <stop offset="100%" stopColor="hsl(28 60% 55%)" />
-            </linearGradient>
-            <linearGradient id="itoSheen" x1="0" y1="1" x2="1" y2="0">
-              <stop offset="0%" stopColor="hsl(200 80% 85% / 0)" />
-              <stop offset="50%" stopColor="hsl(200 80% 90% / 0.5)" />
-              <stop offset="100%" stopColor="hsl(200 80% 85% / 0)" />
-            </linearGradient>
-          </defs>
+        {showPhoto ? (
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-border">
+            {photos.map((p) => (
+              <figure key={p.src} className="relative bg-navy-deep">
+                <img src={p.src} alt={`${v.label} — ${p.caption}`} className="w-full h-full object-cover" />
+                <figcaption className="mono text-[9px] text-muted-foreground px-2 py-1.5 border-t border-border">
+                  {p.caption}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        ) : (
+          <Schematic v={v} />
+        )}
 
-          <GlassLaminate>{v.render()}</GlassLaminate>
+        {!showPhoto && photos.length === 0 && (
+          <div className="absolute top-2 right-2 mono text-[9px] text-muted-foreground border border-border bg-navy-deep/80 px-2 py-1">
+            PHOTO PENDING
+          </div>
+        )}
 
-          {/* Layer callouts — face-on view */}
-          <g className="mono" fill="hsl(215 15% 60%)" fontSize="10">
-            <text x={SHEET.x - 6} y={74} textAnchor="end">GLASS EDGE</text>
-            <text x={SHEET.x - 6} y={SHEET.y + SHEET.h / 2 + 3} textAnchor="end">INTERLAYER · face view</text>
-            <text x={SHEET.x - 6} y={531} textAnchor="end">GLASS EDGE</text>
-          </g>
-        </svg>
-
-        {/* Fade edges */}
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-navy-deep/40 via-transparent to-transparent" />
       </div>
 
@@ -416,36 +520,28 @@ const InterlayerShowcase = () => {
           <div className="font-display text-lg font-semibold text-foreground">{v.label}</div>
           <div className="mono text-[10px] text-primary/80 uppercase">{v.short}</div>
         </div>
-        <p className="mt-1.5 text-xs text-muted-foreground leading-relaxed min-h-[2.5rem]">
-          {v.desc}
-        </p>
+        <p className="mt-1.5 text-xs text-muted-foreground leading-relaxed min-h-[2.5rem]">{v.desc}</p>
       </div>
 
-      {/* Tabs */}
-      <div className="mt-3 px-2 pb-1 flex flex-wrap gap-1.5">
+      {/* Gallery */}
+      <div className="mt-3 px-2 pb-1 grid grid-cols-2 sm:grid-cols-4 gap-2">
         {variants.map((vv, i) => (
-          <button
+          <Tile
             key={vv.id}
-            onClick={() => {
+            v={vv}
+            active={i === idx}
+            onSelect={() => {
               setIdx(i);
               setPaused(true);
+              setMode((interlayerPhotos[vv.id] ?? []).length > 0 ? "photo" : "schematic");
             }}
-            className={`mono text-[10px] px-2.5 py-1.5 border transition-colors ${
-              i === idx
-                ? "border-primary text-primary bg-primary/10"
-                : "border-border text-muted-foreground hover:border-primary/60 hover:text-foreground"
-            }`}
-          >
-            {String(i + 1).padStart(2, "0")} · {vv.label}
-          </button>
+          />
         ))}
       </div>
 
       {/* Progress */}
-      <div className="mt-2 px-2 pb-1 flex items-center gap-3">
-        <div className="mono text-[10px] text-muted-foreground">
-          {paused ? "PAUSED" : "AUTO · 3S"}
-        </div>
+      <div className="mt-3 px-2 pb-1 flex items-center gap-3">
+        <div className="mono text-[10px] text-muted-foreground">{paused ? "PAUSED" : "AUTO · 3S"}</div>
         <div className="flex-1 h-px bg-border relative overflow-hidden">
           <div
             key={`${idx}-${paused}`}
@@ -469,3 +565,4 @@ const InterlayerShowcase = () => {
 };
 
 export default InterlayerShowcase;
+
