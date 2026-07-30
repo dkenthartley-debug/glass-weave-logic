@@ -160,16 +160,18 @@ const HeatedCameraPattern = () => {
   const zy = SHEET.y + 30;
   const lines = [];
   const pitch = 5;
-  for (let y = zy + 6; y < zy + zoneH - 6; y += pitch) {
-    const x0 = zx + 6;
-    const x1 = zx + zoneW - 6;
-    let d = `M ${x0} ${y}`;
-    for (let x = x0; x <= x1; x += 6) {
-      const dir = ((x - x0) / 6) % 2 < 1 ? 1 : -1;
-      d += ` Q ${x + 1.5} ${y + dir * 1.2}, ${x + 3} ${y}`;
-    }
+  const barTop = zy + 6;
+  const barBot = zy + zoneH - 6;
+  for (let x = zx + 8; x < zx + zoneW - 8; x += pitch) {
     lines.push(
-      <path key={y} d={d} stroke="hsl(220 15% 8%)" strokeWidth={0.55} fill="none" opacity={0.9} />
+      <path
+        key={x}
+        d={wigglePathV(x, barTop + 2, barBot - 2, 1.1, 6)}
+        stroke="hsl(220 15% 8%)"
+        strokeWidth={0.55}
+        fill="none"
+        opacity={0.9}
+      />
     );
   }
   return (
@@ -182,11 +184,15 @@ const HeatedCameraPattern = () => {
         height={zoneH + 20}
         fill="hsl(220 25% 5% / 0.6)"
       />
+      {lines}
+      {/* Bus bars perpendicular to the wire run */}
+      <rect x={zx + 6} y={barTop} width={zoneW - 12} height={2.5} fill="#b06a2c" />
+      <rect x={zx + 6} y={barBot} width={zoneW - 12} height={2.5} fill="#b06a2c" />
       {/* Camera aperture */}
       <circle cx={cx} cy={zy + zoneH / 2} r={10} fill="hsl(220 30% 3%)" stroke="hsl(205 95% 55% / 0.4)" strokeWidth={0.6} />
-      {lines}
     </>
   );
+
 };
 
 const ConductiveMeshPattern = () => {
