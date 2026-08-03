@@ -60,7 +60,7 @@ const TechnicalLibrary = () => (
               <p className="text-muted-foreground mt-2 max-w-2xl">{s.purpose}</p>
             </div>
           </div>
-          <div className="grid md:grid-cols-2 gap-px bg-border">
+          <div className={`grid gap-px bg-border ${s.docs.length > 1 ? "md:grid-cols-2" : ""}`}>
             {s.docs.map((d) => (
               <div key={d.id} className="bg-background p-6">
                 <div className="mono text-[10px] text-primary">{d.id} · {d.revision}</div>
