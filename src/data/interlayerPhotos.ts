@@ -28,7 +28,6 @@ export const interlayerPhotos: Record<string, InterlayerPhoto[]> = {
     },
     {
 
-    {
       src: aircraftHeaterConnectors.url,
       caption: "Aircraft heated interlayer edge — copper bus bar, connectors and braided lead exits",
     },
