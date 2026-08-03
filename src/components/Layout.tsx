@@ -8,6 +8,7 @@ const NAV = [
   { to: "/products", label: "Products" },
   { to: "/markets", label: "Markets" },
   { to: "/engineering-resources", label: "Resources" },
+  { to: "/technical-library", label: "Technical Library" },
   { to: "/case-studies", label: "Case Studies" },
   { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
@@ -123,6 +124,7 @@ const Layout = () => {
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li><Link to="/engineering-resources" className="hover:text-primary">Resource Center</Link></li>
               <li><Link to="/engineering-resources/faq" className="hover:text-primary">FAQ Library</Link></li>
+              <li><Link to="/technical-library" className="hover:text-primary">Engineering Standards &amp; Technical Library</Link></li>
               <li><Link to="/case-studies" className="hover:text-primary">Case Studies</Link></li>
               <li><Link to="/downloads" className="hover:text-primary">Downloads</Link></li>
               <li><Link to="/about" className="hover:text-primary">About HLG</Link></li>

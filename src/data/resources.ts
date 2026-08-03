@@ -1,4 +1,7 @@
 import whitePaperAtpd2352 from "@/assets/documents/atpd-2352-rev-u-sensor-white-paper.pdf.asset.json";
+import tb001Pdf from "@/assets/documents/hlg-tb-001.pdf.asset.json";
+import qs1724Pdf from "@/assets/documents/hlg-qs-1724.pdf.asset.json";
+import ag001Pdf from "@/assets/documents/hlg-ag-001.pdf.asset.json";
 
 export type ResourceItem = {
   title: string;
@@ -11,7 +14,7 @@ export type ResourceItem = {
 
 
 export const resources: ResourceItem[] = [
-  { title: "Designing Heated Laminated Glass", kind: "Design Guide", topic: "Heated Glass", summary: "End-to-end approach: clearing requirement, power density target, conductor selection, uniformity, and validation." },
+  { title: "Designing Heated Laminated Glass", kind: "Design Guide", topic: "Heated Glass", summary: "End-to-end approach: clearing requirement, power density target, conductor selection, uniformity, and validation.", href: ag001Pdf.url },
   { title: "Choosing Wire Diameter", kind: "Design Guide", topic: "Embedded Wire", summary: "How diameter trades against resistance, power density, and perceived visibility at the intended viewing distance." },
   { title: "Wire Spacing and Pitch Guide", kind: "Design Guide", topic: "Embedded Wire", summary: "Pitch selection for temperature uniformity, total circuit resistance, and optical acceptability." },
   { title: "Voltage Selection for Electrically Active Glazing", kind: "Design Guide", topic: "Power", summary: "Why supply voltage is the first decision in a heated glass program and how it constrains the conductor design." },
@@ -28,8 +31,8 @@ export const resources: ResourceItem[] = [
   { title: "Functional Laminated Glass", kind: "White Paper", topic: "Multi-Function", summary: "Combining heating, sensing, shielding, and antenna functions in one transparency without unintended interaction." },
   { title: "Ensuring ATPD-2352 Revision U Durability Gains Are Preserved in Operational Service", kind: "White Paper", topic: "Heated Transparent Armor", summary: "Why embedded laminate temperature sensing is the practical next step for heated transparent armor windshields after ATPD-2352 Rev U qualification.", href: whitePaperAtpd2352.url, path: "/white-papers/atpd-2352-rev-u-sensor" },
 
-  { title: "Optical Performance Under Electrical Load", kind: "Technical Bulletin", topic: "Heated Glass", summary: "Why dynamic optical qualification under electrical load should be part of every heated transparency approval process.", path: "/technical-bulletins/tb-001-optical-performance-under-electrical-load" },
-  { title: "HLG-QS-1724 Qualification Standard", kind: "Qualification Standard", topic: "Heated Glass", summary: "Public overview of the Hotlineglass proprietary standard for evaluating optical performance of electrically heated transparent systems under electrical load.", path: "/qualification-standards/hlg-qs-1724" },
+  { title: "Optical Performance Under Electrical Load", kind: "Technical Bulletin", topic: "Heated Glass", summary: "Why dynamic optical qualification under electrical load should be part of every heated transparency approval process.", href: tb001Pdf.url, path: "/technical-bulletins/tb-001-optical-performance-under-electrical-load" },
+  { title: "HLG-QS-1724 Qualification Standard", kind: "Qualification Standard", topic: "Heated Glass", summary: "Public overview of the Hotlineglass proprietary standard for evaluating optical performance of electrically heated transparent systems under electrical load.", href: qs1724Pdf.url, path: "/qualification-standards/hlg-qs-1724" },
 
 
   { title: "Aircraft Transparency Heating", kind: "Application Note", topic: "Aerospace", summary: "Heater and sensor mat coordination for thick, curved, multi-ply aerospace builds." },
