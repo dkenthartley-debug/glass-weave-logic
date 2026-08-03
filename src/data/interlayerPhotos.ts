@@ -37,7 +37,12 @@ export const interlayerPhotos: Record<string, InterlayerPhoto[]> = {
   wiper: [],
   antenna: [],
   camera: [],
-  sensors: [],
+  sensors: [
+    {
+      src: sensorDoubleMat.url,
+      caption: "Dual serpentine sensor mats on interlayer — silver terminal pads with copper lead runs",
+    },
+  ],
   mesh: [],
   ito: [],
   "conductive-glass": [],
