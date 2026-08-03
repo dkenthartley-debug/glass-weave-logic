@@ -40,6 +40,45 @@ const About = () => (
     </Section>
 
     <Section className="bg-surface/50 border-y border-border">
+      <div className="grid lg:grid-cols-12 gap-10">
+        <div className="lg:col-span-5">
+          <Eyebrow>Quality & Traceability</Eyebrow>
+          <h2 className="font-display text-3xl md:text-4xl font-bold leading-tight">
+            ISO 9001 certified quality management for demanding markets.
+          </h2>
+        </div>
+        <div className="lg:col-span-7 space-y-5 text-lg text-muted-foreground leading-relaxed">
+          <p>
+            HLG operates under an ISO 9001 certified quality management system. Certification means our
+            processes for design, production, inspection, and record-keeping are documented, repeatable,
+            and independently audited — a baseline requirement for suppliers in aerospace, defense, and
+            secure-facility markets.
+          </p>
+          <p>
+            Lot-number tracking and traceability are built into our workflow from raw interlayer through
+            shipped component. Each part carries an identifiable lot number, so material history,
+            process parameters, and inspection records can be retrieved for a specific production run.
+            This is critical for customers who must demonstrate supply-chain control, conformance, and
+            accountability to their own end users.
+          </p>
+          <p>
+            For aerospace and defense programs, ISO 9001 provides a common language around process control
+            and corrective action that fits alongside OEM and prime-contractor quality systems. For SCIF,
+            TEMPEST, and secure-facility contractors, documented, repeatable production supports
+            compliance with facility-specific material and installation requirements. For transportation
+            and industrial OEMs, it means fewer surprises during qualification and more predictable
+            transitions from prototype to production.
+          </p>
+          <p>
+            The certification does not by itself guarantee a particular performance level or specification
+            compliance. It does give customers a structured, auditable foundation for the quality and
+            traceability their programs require.
+          </p>
+        </div>
+      </div>
+    </Section>
+
+    <Section className="bg-background border-y border-border">
       <Eyebrow>What We Value</Eyebrow>
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-border mt-4">
         {[
