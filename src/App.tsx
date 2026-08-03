@@ -16,6 +16,7 @@ import FaqLibrary from "./pages/FaqLibrary";
 import CaseStudies from "./pages/CaseStudies";
 import Downloads from "./pages/Downloads";
 import WhitePaperAtpd2352 from "./pages/WhitePaperAtpd2352";
+import TechBulletinTb001 from "./pages/TechBulletinTb001";
 
 import ConductiveInterlayers from "./pages/ConductiveInterlayers";
 import AircraftSensors from "./pages/AircraftSensors";
