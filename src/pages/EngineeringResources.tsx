@@ -30,7 +30,16 @@ const EngineeringResources = () => (
     />
 
     <Section>
+      <Link to="/technical-library" className="panel p-7 hover:border-primary/60 transition-colors block mb-6">
+        <div className="mono text-[10px] text-primary">TB · QS · AG · ER Series</div>
+        <div className="font-display text-xl font-semibold mt-1">Engineering Standards &amp; Technical Library</div>
+        <p className="text-sm text-muted-foreground mt-3 max-w-3xl">
+          Downloadable HLG technical bulletins, qualification standards, application guides, and sample engineering reports.
+        </p>
+        <span className="mono text-xs text-primary mt-4 inline-flex items-center gap-2">Open the library <ArrowRight size={12} /></span>
+      </Link>
       <div className="grid md:grid-cols-3 gap-6">
+
         <Link to="/engineering-resources/faq" className="panel p-7 hover:border-primary/60 transition-colors">
           <div className="font-display text-xl font-semibold">FAQ Library</div>
           <p className="text-sm text-muted-foreground mt-3">
