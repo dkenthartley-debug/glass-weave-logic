@@ -7,6 +7,7 @@
 import heaterWireMacro from "@/assets/photos/heater-wire-macro.png.asset.json";
 import heaterWireDrape from "@/assets/photos/heater-wire-drape.jpg.asset.json";
 import aircraftHeaterTightPitch from "@/assets/photos/aircraft-heater-tight-pitch.png.asset.json";
+import aircraftHeaterConnectors from "@/assets/photos/aircraft-heater-connectors-busbar-leads.jpeg.asset.json";
 
 export type InterlayerPhoto = {
   src: string;
@@ -26,6 +27,10 @@ export const interlayerPhotos: Record<string, InterlayerPhoto[]> = {
     {
       src: aircraftHeaterTightPitch.url,
       caption: "Aircraft heated interlayer — sub-1 mm wire pitch, pre-lamination face view",
+    },
+    {
+      src: aircraftHeaterConnectors.url,
+      caption: "Aircraft heated interlayer edge — copper bus bar, connectors and braided lead exits",
     },
   ],
   wiper: [],
