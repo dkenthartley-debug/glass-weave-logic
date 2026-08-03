@@ -148,6 +148,7 @@ export type Download = {
 };
 
 export const downloads: Download[] = [
+  { title: "Optical Performance Under Electrical Load", kind: "Technical Bulletin", audience: "Engineering" },
   { title: "Conductive Interlayer Product Overview", kind: "Brochure", audience: "General" },
   { title: "Embedded Wire Technology Datasheet", kind: "Datasheet", audience: "Engineering" },
   { title: "Heater Mat Datasheet", kind: "Datasheet", audience: "Aerospace" },
@@ -161,5 +162,4 @@ export const downloads: Download[] = [
   { title: "Lead Exit and Termination Details", kind: "Drawing Set", audience: "Engineering" },
   { title: "Interlayer Subassembly Handling Guide", kind: "Installation Guide", audience: "Fabrication" },
   { title: "Electrical Verification Checklist", kind: "Testing Information", audience: "Fabrication" },
-
 ];
