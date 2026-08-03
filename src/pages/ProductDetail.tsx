@@ -1,5 +1,6 @@
 import { Link, Navigate, useParams } from "react-router-dom";
-import { getProduct, getMarket, technologies } from "@/data/products-helpers";
+import { getProduct, getMarket } from "@/data/products";
+import { technologies } from "@/data/technologies";
 import { Section, Eyebrow } from "@/components/Section";
 import Seo, { breadcrumbSchema, faqSchema, productSchema } from "@/components/Seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
