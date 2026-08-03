@@ -3,13 +3,14 @@ import { resources } from "@/data/resources";
 import { PageHero, Section } from "@/components/Section";
 import Seo, { breadcrumbSchema, orgSchema } from "@/components/Seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import { ArrowRight, BookOpen, FileDown, FileText, Notebook } from "lucide-react";
+import { ArrowRight, BookOpen, FileDown, FileText, Notebook, FileStack } from "lucide-react";
 
 
 const kinds = [
   { kind: "Design Guide", icon: BookOpen, blurb: "Step-by-step engineering guidance for specifying conductive and heated laminated glass." },
   { kind: "White Paper", icon: FileText, blurb: "Comparative and analytical pieces on conductor selection, reliability, and system design." },
   { kind: "Application Note", icon: Notebook, blurb: "Sector-specific notes covering the constraints that shape real builds." },
+  { kind: "Technical Bulletin", icon: FileStack, blurb: "Focused technical position pieces on emerging qualification and engineering practices." },
 ] as const;
 
 const EngineeringResources = () => (
