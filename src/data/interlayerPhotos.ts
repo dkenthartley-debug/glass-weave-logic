@@ -27,9 +27,7 @@ export const interlayerPhotos: Record<string, InterlayerPhoto[]> = {
       caption: "Wired interlayer roll stock showing wire pitch and drape",
     },
     {
-      src: aircraftHeaterTightPitch.url,
-      caption: "Aircraft heated interlayer — sub-1 mm wire pitch, pre-lamination face view",
-    },
+
     {
       src: aircraftHeaterConnectors.url,
       caption: "Aircraft heated interlayer edge — copper bus bar, connectors and braided lead exits",
