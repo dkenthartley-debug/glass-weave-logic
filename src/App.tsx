@@ -15,6 +15,8 @@ import EngineeringResources from "./pages/EngineeringResources";
 import FaqLibrary from "./pages/FaqLibrary";
 import CaseStudies from "./pages/CaseStudies";
 import Downloads from "./pages/Downloads";
+import WhitePaperAtpd2352 from "./pages/WhitePaperAtpd2352";
+
 import ConductiveInterlayers from "./pages/ConductiveInterlayers";
 import AircraftSensors from "./pages/AircraftSensors";
 import EmiShielding from "./pages/EmiShielding";
@@ -48,6 +50,8 @@ const App = () => (
             <Route path="/engineering-resources/faq" element={<FaqLibrary />} />
             <Route path="/case-studies" element={<CaseStudies />} />
             <Route path="/downloads" element={<Downloads />} />
+            <Route path="/white-papers/atpd-2352-rev-u-sensor" element={<WhitePaperAtpd2352 />} />
+
 
             {/* Existing pages */}
             <Route path="/capabilities" element={<Capabilities />} />
