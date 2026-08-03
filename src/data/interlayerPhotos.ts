@@ -8,6 +8,7 @@ import heaterWireMacro from "@/assets/photos/heater-wire-macro.png.asset.json";
 import heaterWireDrape from "@/assets/photos/heater-wire-drape.jpg.asset.json";
 import aircraftHeaterTightPitch from "@/assets/photos/aircraft-heater-tight-pitch.png.asset.json";
 import aircraftHeaterConnectors from "@/assets/photos/aircraft-heater-connectors-busbar-leads.jpeg.asset.json";
+import sensorDoubleMat from "@/assets/photos/sensor-double-mat.jpg.asset.json";
 
 export type InterlayerPhoto = {
   src: string;
@@ -36,7 +37,12 @@ export const interlayerPhotos: Record<string, InterlayerPhoto[]> = {
   wiper: [],
   antenna: [],
   camera: [],
-  sensors: [],
+  sensors: [
+    {
+      src: sensorDoubleMat.url,
+      caption: "Dual serpentine sensor mats on interlayer — silver terminal pads with copper lead runs",
+    },
+  ],
   mesh: [],
   ito: [],
   "conductive-glass": [],
