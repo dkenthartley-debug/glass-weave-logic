@@ -1,3 +1,5 @@
+import whitePaperAtpd2352 from "@/assets/documents/atpd-2352-rev-u-sensor-white-paper.pdf.asset.json";
+
 export type ResourceItem = {
   title: string;
   kind: "Design Guide" | "White Paper" | "Application Note";
@@ -5,6 +7,7 @@ export type ResourceItem = {
   topic: string;
   href?: string;
 };
+
 
 export const resources: ResourceItem[] = [
   { title: "Designing Heated Laminated Glass", kind: "Design Guide", topic: "Heated Glass", summary: "End-to-end approach: clearing requirement, power density target, conductor selection, uniformity, and validation." },
@@ -22,6 +25,8 @@ export const resources: ResourceItem[] = [
   { title: "Power Distribution in Laminated Glass", kind: "White Paper", topic: "Power", summary: "Supply, harness, protection, and grounding considerations for electrically active transparencies." },
   { title: "Heated Glass Reliability", kind: "White Paper", topic: "Reliability", summary: "Common failure modes, why most originate at terminations, and design practices that reduce them." },
   { title: "Functional Laminated Glass", kind: "White Paper", topic: "Multi-Function", summary: "Combining heating, sensing, shielding, and antenna functions in one transparency without unintended interaction." },
+  { title: "Ensuring ATPD-2352 Revision U Durability Gains Are Preserved in Operational Service", kind: "White Paper", topic: "Heated Transparent Armor", summary: "Why embedded laminate temperature sensing is the practical next step for heated transparent armor windshields after ATPD-2352 Rev U qualification.", href: whitePaperAtpd2352.url },
+
 
   { title: "Aircraft Transparency Heating", kind: "Application Note", topic: "Aerospace", summary: "Heater and sensor mat coordination for thick, curved, multi-ply aerospace builds." },
   { title: "Military Vehicle Glazing", kind: "Application Note", topic: "Defense", summary: "Combining heating and shielding in a single vehicle window, with grounding and isolation notes." },
@@ -149,7 +154,9 @@ export const downloads: Download[] = [
   { title: "Bus Bar Design Guide", kind: "Design Guide", audience: "Engineering" },
   { title: "Voltage Selection Guide", kind: "Design Guide", audience: "Engineering" },
   { title: "Embedded Wire vs ITO", kind: "White Paper", audience: "Engineering" },
+  { title: "Ensuring ATPD-2352 Revision U Durability Gains Are Preserved in Operational Service", kind: "White Paper", audience: "Defense / Engineering" },
   { title: "Lead Exit and Termination Details", kind: "Drawing Set", audience: "Engineering" },
   { title: "Interlayer Subassembly Handling Guide", kind: "Installation Guide", audience: "Fabrication" },
   { title: "Electrical Verification Checklist", kind: "Testing Information", audience: "Fabrication" },
+
 ];

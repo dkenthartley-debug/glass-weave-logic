@@ -3,7 +3,8 @@ import { resources } from "@/data/resources";
 import { PageHero, Section } from "@/components/Section";
 import Seo, { breadcrumbSchema, orgSchema } from "@/components/Seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import { ArrowRight, BookOpen, FileText, Notebook } from "lucide-react";
+import { ArrowRight, BookOpen, FileDown, FileText, Notebook } from "lucide-react";
+
 
 const kinds = [
   { kind: "Design Guide", icon: BookOpen, blurb: "Step-by-step engineering guidance for specifying conductive and heated laminated glass." },
@@ -67,13 +68,42 @@ const EngineeringResources = () => (
             .map((r) => (
               <div key={r.title} className="bg-background p-6">
                 <div className="mono text-[10px] text-primary">{r.topic}</div>
-                <h3 className="font-display font-semibold mt-2">{r.title}</h3>
+                {r.href ? (
+                  <Link
+                    to="/white-papers/atpd-2352-rev-u-sensor"
+                    className="font-display font-semibold mt-2 inline-block hover:text-primary transition-colors"
+                  >
+                    {r.title}
+                  </Link>
+                ) : (
+                  <h3 className="font-display font-semibold mt-2">{r.title}</h3>
+                )}
                 <p className="text-sm text-muted-foreground mt-2 leading-relaxed">{r.summary}</p>
-                <Link to="/contact" className="mono text-[10px] text-primary mt-3 inline-block">
-                  Request this document
-                </Link>
+                {r.href ? (
+                  <div className="flex items-center gap-4 mt-3">
+                    <Link
+                      to="/white-papers/atpd-2352-rev-u-sensor"
+                      className="mono text-[10px] text-primary inline-flex items-center gap-2"
+                    >
+                      Read summary <ArrowRight size={12} />
+                    </Link>
+                    <a
+                      href={r.href}
+                      download
+                      className="mono text-[10px] text-primary inline-flex items-center gap-2"
+                    >
+                      <FileDown size={12} /> Download PDF
+                    </a>
+                  </div>
+                ) : (
+                  <Link to="/contact" className="mono text-[10px] text-primary mt-3 inline-block">
+                    Request this document
+                  </Link>
+                )}
               </div>
+
             ))}
+
         </div>
       </Section>
     ))}
