@@ -31,6 +31,10 @@ const About = () => (
             We help these customers integrate electrical capability into laminated glass systems in a
             practical, repeatable, production-ready format — not as a one-off lab project.
           </p>
+          <p>
+            HLG operates under an ISO 9001 certified quality management system, with lot-number tracking
+            and traceability built into our production workflow.
+          </p>
         </div>
       </div>
     </Section>
