@@ -52,6 +52,8 @@ const App = () => (
             <Route path="/case-studies" element={<CaseStudies />} />
             <Route path="/downloads" element={<Downloads />} />
             <Route path="/white-papers/atpd-2352-rev-u-sensor" element={<WhitePaperAtpd2352 />} />
+            <Route path="/technical-bulletins/tb-001-optical-performance-under-electrical-load" element={<TechBulletinTb001 />} />
+
 
 
             {/* Existing pages */}
