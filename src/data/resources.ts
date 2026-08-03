@@ -2,10 +2,11 @@ import whitePaperAtpd2352 from "@/assets/documents/atpd-2352-rev-u-sensor-white-
 
 export type ResourceItem = {
   title: string;
-  kind: "Design Guide" | "White Paper" | "Application Note";
+  kind: "Design Guide" | "White Paper" | "Application Note" | "Technical Bulletin";
   summary: string;
   topic: string;
   href?: string;
+  path?: string;
 };
 
 
@@ -25,7 +26,9 @@ export const resources: ResourceItem[] = [
   { title: "Power Distribution in Laminated Glass", kind: "White Paper", topic: "Power", summary: "Supply, harness, protection, and grounding considerations for electrically active transparencies." },
   { title: "Heated Glass Reliability", kind: "White Paper", topic: "Reliability", summary: "Common failure modes, why most originate at terminations, and design practices that reduce them." },
   { title: "Functional Laminated Glass", kind: "White Paper", topic: "Multi-Function", summary: "Combining heating, sensing, shielding, and antenna functions in one transparency without unintended interaction." },
-  { title: "Ensuring ATPD-2352 Revision U Durability Gains Are Preserved in Operational Service", kind: "White Paper", topic: "Heated Transparent Armor", summary: "Why embedded laminate temperature sensing is the practical next step for heated transparent armor windshields after ATPD-2352 Rev U qualification.", href: whitePaperAtpd2352.url },
+  { title: "Ensuring ATPD-2352 Revision U Durability Gains Are Preserved in Operational Service", kind: "White Paper", topic: "Heated Transparent Armor", summary: "Why embedded laminate temperature sensing is the practical next step for heated transparent armor windshields after ATPD-2352 Rev U qualification.", href: whitePaperAtpd2352.url, path: "/white-papers/atpd-2352-rev-u-sensor" },
+
+  { title: "Optical Performance Under Electrical Load", kind: "Technical Bulletin", topic: "Heated Glass", summary: "Why dynamic optical qualification under electrical load should be part of every heated transparency approval process.", path: "/technical-bulletins/tb-001-optical-performance-under-electrical-load" },
 
 
   { title: "Aircraft Transparency Heating", kind: "Application Note", topic: "Aerospace", summary: "Heater and sensor mat coordination for thick, curved, multi-ply aerospace builds." },
@@ -145,6 +148,7 @@ export type Download = {
 };
 
 export const downloads: Download[] = [
+  { title: "Optical Performance Under Electrical Load", kind: "Technical Bulletin", audience: "Engineering" },
   { title: "Conductive Interlayer Product Overview", kind: "Brochure", audience: "General" },
   { title: "Embedded Wire Technology Datasheet", kind: "Datasheet", audience: "Engineering" },
   { title: "Heater Mat Datasheet", kind: "Datasheet", audience: "Aerospace" },
@@ -158,5 +162,4 @@ export const downloads: Download[] = [
   { title: "Lead Exit and Termination Details", kind: "Drawing Set", audience: "Engineering" },
   { title: "Interlayer Subassembly Handling Guide", kind: "Installation Guide", audience: "Fabrication" },
   { title: "Electrical Verification Checklist", kind: "Testing Information", audience: "Fabrication" },
-
 ];

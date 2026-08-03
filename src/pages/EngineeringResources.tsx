@@ -3,13 +3,14 @@ import { resources } from "@/data/resources";
 import { PageHero, Section } from "@/components/Section";
 import Seo, { breadcrumbSchema, orgSchema } from "@/components/Seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import { ArrowRight, BookOpen, FileDown, FileText, Notebook } from "lucide-react";
+import { ArrowRight, BookOpen, FileDown, FileText, Notebook, FileStack } from "lucide-react";
 
 
 const kinds = [
   { kind: "Design Guide", icon: BookOpen, blurb: "Step-by-step engineering guidance for specifying conductive and heated laminated glass." },
   { kind: "White Paper", icon: FileText, blurb: "Comparative and analytical pieces on conductor selection, reliability, and system design." },
   { kind: "Application Note", icon: Notebook, blurb: "Sector-specific notes covering the constraints that shape real builds." },
+  { kind: "Technical Bulletin", icon: FileStack, blurb: "Focused technical position pieces on emerging qualification and engineering practices." },
 ] as const;
 
 const EngineeringResources = () => (
@@ -68,9 +69,9 @@ const EngineeringResources = () => (
             .map((r) => (
               <div key={r.title} className="bg-background p-6">
                 <div className="mono text-[10px] text-primary">{r.topic}</div>
-                {r.href ? (
+                {r.path ? (
                   <Link
-                    to="/white-papers/atpd-2352-rev-u-sensor"
+                    to={r.path}
                     className="font-display font-semibold mt-2 inline-block hover:text-primary transition-colors"
                   >
                     {r.title}
@@ -79,14 +80,16 @@ const EngineeringResources = () => (
                   <h3 className="font-display font-semibold mt-2">{r.title}</h3>
                 )}
                 <p className="text-sm text-muted-foreground mt-2 leading-relaxed">{r.summary}</p>
-                {r.href ? (
-                  <div className="flex items-center gap-4 mt-3">
+                <div className="flex items-center gap-4 mt-3">
+                  {r.path && (
                     <Link
-                      to="/white-papers/atpd-2352-rev-u-sensor"
+                      to={r.path}
                       className="mono text-[10px] text-primary inline-flex items-center gap-2"
                     >
                       Read summary <ArrowRight size={12} />
                     </Link>
+                  )}
+                  {r.href && (
                     <a
                       href={r.href}
                       download
@@ -94,12 +97,13 @@ const EngineeringResources = () => (
                     >
                       <FileDown size={12} /> Download PDF
                     </a>
-                  </div>
-                ) : (
-                  <Link to="/contact" className="mono text-[10px] text-primary mt-3 inline-block">
-                    Request this document
-                  </Link>
-                )}
+                  )}
+                  {!r.path && !r.href && (
+                    <Link to="/contact" className="mono text-[10px] text-primary inline-block">
+                      Request this document
+                    </Link>
+                  )}
+                </div>
               </div>
 
             ))}

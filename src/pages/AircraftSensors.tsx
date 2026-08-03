@@ -57,6 +57,18 @@ const AircraftSensors = () => (
     </Section>
 
     <Section>
+      <div className="panel p-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
+        <div>
+          <div className="font-display text-2xl md:text-3xl font-bold">Optical performance under electrical load?</div>
+          <p className="text-muted-foreground mt-2">
+            Read HLG Technical Bulletin TB-001 on why energized optical qualification should be part of every heated transparency approval process.
+          </p>
+        </div>
+        <Link to="/technical-bulletins/tb-001-optical-performance-under-electrical-load" className="inline-flex items-center gap-2 px-6 py-4 bg-surface border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors">Read TB-001 <ArrowRight size={18} /></Link>
+      </div>
+    </Section>
+
+    <Section className="bg-surface/50 border-y border-border">
       <div className="panel p-10 md:p-14 flex flex-col md:flex-row md:items-center justify-between gap-6">
         <div>
           <div className="font-display text-2xl md:text-3xl font-bold">Aerospace transparency program?</div>
