@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { PageHero, Section } from "@/components/Section";
 import Seo, { breadcrumbSchema, orgSchema } from "@/components/Seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import { Zap, Eye, Activity, ShieldCheck, FileText, Award } from "lucide-react";
+import { Zap, Eye, Activity, ShieldCheck, Award } from "lucide-react";
 
 const crumbs = [
   { name: "Home", path: "/" },
