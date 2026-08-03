@@ -16,7 +16,9 @@ import FaqLibrary from "./pages/FaqLibrary";
 import CaseStudies from "./pages/CaseStudies";
 import Downloads from "./pages/Downloads";
 import WhitePaperAtpd2352 from "./pages/WhitePaperAtpd2352";
+import WhitePaperAtpd2352 from "./pages/WhitePaperAtpd2352";
 import TechBulletinTb001 from "./pages/TechBulletinTb001";
+import QualificationStandardHlgQs1724 from "./pages/QualificationStandardHlgQs1724";
 
 import ConductiveInterlayers from "./pages/ConductiveInterlayers";
 import AircraftSensors from "./pages/AircraftSensors";
@@ -53,6 +55,7 @@ const App = () => (
             <Route path="/downloads" element={<Downloads />} />
             <Route path="/white-papers/atpd-2352-rev-u-sensor" element={<WhitePaperAtpd2352 />} />
             <Route path="/technical-bulletins/tb-001-optical-performance-under-electrical-load" element={<TechBulletinTb001 />} />
+            <Route path="/qualification-standards/hlg-qs-1724" element={<QualificationStandardHlgQs1724 />} />
 
 
 

@@ -2,7 +2,7 @@ import whitePaperAtpd2352 from "@/assets/documents/atpd-2352-rev-u-sensor-white-
 
 export type ResourceItem = {
   title: string;
-  kind: "Design Guide" | "White Paper" | "Application Note" | "Technical Bulletin";
+  kind: "Design Guide" | "White Paper" | "Application Note" | "Technical Bulletin" | "Qualification Standard";
   summary: string;
   topic: string;
   href?: string;
@@ -29,6 +29,7 @@ export const resources: ResourceItem[] = [
   { title: "Ensuring ATPD-2352 Revision U Durability Gains Are Preserved in Operational Service", kind: "White Paper", topic: "Heated Transparent Armor", summary: "Why embedded laminate temperature sensing is the practical next step for heated transparent armor windshields after ATPD-2352 Rev U qualification.", href: whitePaperAtpd2352.url, path: "/white-papers/atpd-2352-rev-u-sensor" },
 
   { title: "Optical Performance Under Electrical Load", kind: "Technical Bulletin", topic: "Heated Glass", summary: "Why dynamic optical qualification under electrical load should be part of every heated transparency approval process.", path: "/technical-bulletins/tb-001-optical-performance-under-electrical-load" },
+  { title: "HLG-QS-1724 Qualification Standard", kind: "Qualification Standard", topic: "Heated Glass", summary: "Public overview of the Hotlineglass proprietary standard for evaluating optical performance of electrically heated transparent systems under electrical load.", path: "/qualification-standards/hlg-qs-1724" },
 
 
   { title: "Aircraft Transparency Heating", kind: "Application Note", topic: "Aerospace", summary: "Heater and sensor mat coordination for thick, curved, multi-ply aerospace builds." },
@@ -149,6 +150,7 @@ export type Download = {
 
 export const downloads: Download[] = [
   { title: "Optical Performance Under Electrical Load", kind: "Technical Bulletin", audience: "Engineering" },
+  { title: "HLG-QS-1724 Qualification Standard", kind: "Qualification Standard", audience: "Engineering" },
   { title: "Conductive Interlayer Product Overview", kind: "Brochure", audience: "General" },
   { title: "Embedded Wire Technology Datasheet", kind: "Datasheet", audience: "Engineering" },
   { title: "Heater Mat Datasheet", kind: "Datasheet", audience: "Aerospace" },
