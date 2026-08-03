@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
 import { PageHero, Section } from "@/components/Section";
 import Seo, { breadcrumbSchema, orgSchema } from "@/components/Seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import { Zap, Eye, Activity, ShieldCheck, FileText } from "lucide-react";
+import { Zap, Eye, Activity, ShieldCheck, Award } from "lucide-react";
 
 const crumbs = [
   { name: "Home", path: "/" },
@@ -110,17 +111,17 @@ const TechBulletinTb001 = () => (
           <div className="mt-10 pt-8 border-t border-border">
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <div>
-                <div className="font-display text-lg font-semibold">Discuss qualification support</div>
+                <div className="font-display text-lg font-semibold">HLG-QS-1724 qualification standard</div>
                 <p className="text-sm text-muted-foreground mt-1">
-                  HLG-QS-1724 methodology and proprietary test procedures are available through engineering engagement.
+                  TB-001 is based on the HLG-QS-1724 engineering framework. Read the public overview for the full qualification philosophy.
                 </p>
               </div>
-              <a
-                href="/contact"
+              <Link
+                to="/qualification-standards/hlg-qs-1724"
                 className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 py-2.5 rounded-md font-medium text-sm hover:bg-primary/90 transition-colors"
               >
-                <FileText size={16} /> Contact Engineering
-              </a>
+                <Award size={16} /> Read HLG-QS-1724
+              </Link>
             </div>
           </div>
         </div>
