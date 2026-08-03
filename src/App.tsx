@@ -12,6 +12,7 @@ import ProductsIndex from "./pages/ProductsIndex";
 import ProductDetail from "./pages/ProductDetail";
 import { MarketsIndex, MarketDetail } from "./pages/Markets";
 import EngineeringResources from "./pages/EngineeringResources";
+import TechnicalLibrary from "./pages/TechnicalLibrary";
 import FaqLibrary from "./pages/FaqLibrary";
 import CaseStudies from "./pages/CaseStudies";
 import Downloads from "./pages/Downloads";
@@ -49,6 +50,7 @@ const App = () => (
             <Route path="/markets" element={<MarketsIndex />} />
             <Route path="/markets/:slug" element={<MarketDetail />} />
             <Route path="/engineering-resources" element={<EngineeringResources />} />
+            <Route path="/technical-library" element={<TechnicalLibrary />} />
             <Route path="/engineering-resources/faq" element={<FaqLibrary />} />
             <Route path="/case-studies" element={<CaseStudies />} />
             <Route path="/downloads" element={<Downloads />} />
