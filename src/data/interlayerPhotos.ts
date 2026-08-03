@@ -8,6 +8,7 @@ import heaterWireMacro from "@/assets/photos/heater-wire-macro.png.asset.json";
 import heaterWireDrape from "@/assets/photos/heater-wire-drape.jpg.asset.json";
 import aircraftHeaterTightPitch from "@/assets/photos/aircraft-heater-tight-pitch.png.asset.json";
 import aircraftHeaterConnectors from "@/assets/photos/aircraft-heater-connectors-busbar-leads.jpeg.asset.json";
+import sensorDoubleMat from "@/assets/photos/sensor-double-mat.jpg.asset.json";
 
 export type InterlayerPhoto = {
   src: string;
