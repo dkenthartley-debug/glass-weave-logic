@@ -1,7 +1,9 @@
 import { PageHero, Section, Eyebrow } from "@/components/Section";
 import img from "@/assets/emi-shielding.jpg";
+import bulletinAsset from "@/assets/documents/emi-rfi-technical-bulletin.docx.asset.json";
 import { Link } from "react-router-dom";
-import { ArrowRight, Radio, Lock, Building2, Network } from "lucide-react";
+import { ArrowRight, Radio, Lock, Building2, Network, FileDown, Layers, Zap, Plug, CheckCircle2 } from "lucide-react";
+
 
 const EmiShielding = () => (
   <>
