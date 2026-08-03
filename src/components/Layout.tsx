@@ -4,10 +4,11 @@ import { Menu, X } from "lucide-react";
 
 const NAV = [
   { to: "/", label: "Home" },
-  { to: "/capabilities", label: "Capabilities" },
   { to: "/technologies", label: "Technologies" },
-  { to: "/applications", label: "Applications" },
-  { to: "/resources", label: "Resources" },
+  { to: "/products", label: "Products" },
+  { to: "/markets", label: "Markets" },
+  { to: "/engineering-resources", label: "Resources" },
+  { to: "/case-studies", label: "Case Studies" },
   { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
 ];
@@ -109,20 +110,22 @@ const Layout = () => {
             </p>
           </div>
           <div>
-            <div className="mono text-foreground mb-3">Solutions</div>
+            <div className="mono text-foreground mb-3">Technologies</div>
             <ul className="space-y-2 text-sm text-muted-foreground">
+              <li><Link to="/technologies" className="hover:text-primary">All Technologies</Link></li>
+              <li><Link to="/products" className="hover:text-primary">Products</Link></li>
+              <li><Link to="/markets" className="hover:text-primary">Markets</Link></li>
               <li><Link to="/conductive-interlayers" className="hover:text-primary">Conductive Interlayers</Link></li>
-              <li><Link to="/aircraft-sensors" className="hover:text-primary">Aircraft Sensors & Heated Glass</Link></li>
-              <li><Link to="/emi-shielding" className="hover:text-primary">EMI / RFI / SCIF Shielding</Link></li>
-              <li><Link to="/specialty-films" className="hover:text-primary">Specialty Films</Link></li>
             </ul>
           </div>
           <div>
-            <div className="mono text-foreground mb-3">Company</div>
+            <div className="mono text-foreground mb-3">Engineering</div>
             <ul className="space-y-2 text-sm text-muted-foreground">
+              <li><Link to="/engineering-resources" className="hover:text-primary">Resource Center</Link></li>
+              <li><Link to="/engineering-resources/faq" className="hover:text-primary">FAQ Library</Link></li>
+              <li><Link to="/case-studies" className="hover:text-primary">Case Studies</Link></li>
+              <li><Link to="/downloads" className="hover:text-primary">Downloads</Link></li>
               <li><Link to="/about" className="hover:text-primary">About HLG</Link></li>
-              <li><Link to="/capabilities" className="hover:text-primary">Capabilities</Link></li>
-              <li><Link to="/applications" className="hover:text-primary">Applications</Link></li>
               <li><Link to="/contact" className="hover:text-primary">Contact</Link></li>
             </ul>
           </div>

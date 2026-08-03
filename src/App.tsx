@@ -6,7 +6,15 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Layout from "./components/Layout";
 import Index from "./pages/Index";
 import Capabilities from "./pages/Capabilities";
-import Technologies from "./pages/Technologies";
+import TechnologiesIndex from "./pages/TechnologiesIndex";
+import TechnologyDetail from "./pages/TechnologyDetail";
+import ProductsIndex from "./pages/ProductsIndex";
+import ProductDetail from "./pages/ProductDetail";
+import { MarketsIndex, MarketDetail } from "./pages/Markets";
+import EngineeringResources from "./pages/EngineeringResources";
+import FaqLibrary from "./pages/FaqLibrary";
+import CaseStudies from "./pages/CaseStudies";
+import Downloads from "./pages/Downloads";
 import ConductiveInterlayers from "./pages/ConductiveInterlayers";
 import AircraftSensors from "./pages/AircraftSensors";
 import EmiShielding from "./pages/EmiShielding";
@@ -28,16 +36,32 @@ const App = () => (
         <Routes>
           <Route element={<Layout />}>
             <Route path="/" element={<Index />} />
+
+            {/* Engineering Knowledge Center IA */}
+            <Route path="/technologies" element={<TechnologiesIndex />} />
+            <Route path="/technologies/:slug" element={<TechnologyDetail />} />
+            <Route path="/products" element={<ProductsIndex />} />
+            <Route path="/products/:slug" element={<ProductDetail />} />
+            <Route path="/markets" element={<MarketsIndex />} />
+            <Route path="/markets/:slug" element={<MarketDetail />} />
+            <Route path="/engineering-resources" element={<EngineeringResources />} />
+            <Route path="/engineering-resources/faq" element={<FaqLibrary />} />
+            <Route path="/case-studies" element={<CaseStudies />} />
+            <Route path="/downloads" element={<Downloads />} />
+
+            {/* Existing pages */}
             <Route path="/capabilities" element={<Capabilities />} />
-            <Route path="/technologies" element={<Technologies />} />
-            <Route path="/conductive-interlayers" element={<ConductiveInterlayers />} />
-            <Route path="/resources" element={<Resources />} />
-            <Route path="/aircraft-sensors" element={<AircraftSensors />} />
-            <Route path="/emi-shielding" element={<EmiShielding />} />
-            <Route path="/specialty-films" element={<SpecialtyFilms />} />
             <Route path="/applications" element={<Applications />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+
+            {/* Legacy solution routes */}
+            <Route path="/conductive-interlayers" element={<ConductiveInterlayers />} />
+            <Route path="/aircraft-sensors" element={<AircraftSensors />} />
+            <Route path="/emi-shielding" element={<EmiShielding />} />
+            <Route path="/specialty-films" element={<SpecialtyFilms />} />
+            <Route path="/resources" element={<Resources />} />
+
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
