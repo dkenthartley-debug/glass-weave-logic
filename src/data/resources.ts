@@ -2,10 +2,11 @@ import whitePaperAtpd2352 from "@/assets/documents/atpd-2352-rev-u-sensor-white-
 
 export type ResourceItem = {
   title: string;
-  kind: "Design Guide" | "White Paper" | "Application Note";
+  kind: "Design Guide" | "White Paper" | "Application Note" | "Technical Bulletin";
   summary: string;
   topic: string;
   href?: string;
+  path?: string;
 };
 
 
