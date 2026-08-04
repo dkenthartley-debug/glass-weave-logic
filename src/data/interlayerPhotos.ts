@@ -38,12 +38,24 @@ export const interlayerPhotos: Record<string, InterlayerPhoto[]> = {
       caption: "Wired interlayer roll stock showing wire pitch and drape",
     },
     {
+      src: heaterWireFieldWide.url,
+      caption: "Full-field wiggle-wire pattern across a large interlayer sheet",
+    },
+    {
       src: aircraftHeaterConnectors.url,
       caption: "Aircraft heated interlayer edge — copper bus bar, connectors and braided lead exits",
     },
     {
+      src: heaterMatBusbarLeads.url,
+      caption: "Heater mat edge detail — copper bus bar, lead attachment, and braided power harness",
+    },
+    {
       src: heaterLotTracking.url,
       caption: "Heated interlayer with lot-number tracking and branded edge — part of HLG's ISO 9001 traceability system",
+    },
+    {
+      src: heaterLotTrackingP126134.url,
+      caption: "Hotlineglass USA branded edge with part number P1-26134-5 and wiggle-wire field",
     },
   ],
   wiper: [
