@@ -11,6 +11,7 @@ import heaterLotTracking from "@/assets/photos/heater-lot-tracking.jpg.asset.jso
 import sensorDoubleMat from "@/assets/photos/sensor-double-mat.jpg.asset.json";
 import wiperParkHeaterZone from "@/assets/photos/wiper-park-heater-zone.jpg.asset.json";
 import wiperParkConnectorTraceability from "@/assets/photos/wiper-park-connector-traceability.jpg.asset.json";
+import tungstenWirePatternScale from "@/assets/photos/tungsten-wire-pattern-scale.jpg.asset.json";
 
 export type InterlayerPhoto = {
   src: string;
