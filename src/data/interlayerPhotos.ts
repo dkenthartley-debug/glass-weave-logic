@@ -9,6 +9,7 @@ import heaterWireDrape from "@/assets/photos/heater-wire-drape.jpg.asset.json";
 import aircraftHeaterConnectors from "@/assets/photos/aircraft-heater-connectors-busbar-leads.jpeg.asset.json";
 import heaterLotTracking from "@/assets/photos/heater-lot-tracking.jpg.asset.json";
 import sensorDoubleMat from "@/assets/photos/sensor-double-mat.jpg.asset.json";
+import wiperParkHeaterZone from "@/assets/photos/wiper-park-heater-zone.jpg.asset.json";
 
 export type InterlayerPhoto = {
   src: string;
@@ -35,7 +36,12 @@ export const interlayerPhotos: Record<string, InterlayerPhoto[]> = {
       caption: "Heated interlayer with lot-number tracking and branded edge — part of HLG's ISO 9001 traceability system",
     },
   ],
-  wiper: [],
+  wiper: [
+    {
+      src: wiperParkHeaterZone.url,
+      caption: "Wiper park heater zone — tungsten wire field, dual bus bar contacts, and silver terminal pads on a laminated aircraft transparency",
+    },
+  ],
   antenna: [],
   camera: [],
   sensors: [
