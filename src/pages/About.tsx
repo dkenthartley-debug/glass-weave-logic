@@ -1,6 +1,38 @@
 import { PageHero, Section, Eyebrow } from "@/components/Section";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import cleanroomFloor from "@/assets/cleanroom-lamination-floor.jpg.asset.json";
+import cleanroomLightTable from "@/assets/cleanroom-light-table-inspection.jpg.asset.json";
+import cleanroomBagging from "@/assets/cleanroom-vacuum-bagging.jpg.asset.json";
+import cleanroomPrep from "@/assets/cleanroom-interlayer-prep.jpg.asset.json";
+
+const facilityPhotos = [
+  {
+    src: cleanroomFloor.url,
+    title: "Interlayer layup floor",
+    caption:
+      "Controlled-environment layup tables where interlayer, wire mats, and film stacks are built up before lamination.",
+  },
+  {
+    src: cleanroomLightTable.url,
+    title: "Light table inspection & electrical check",
+    caption:
+      "Backlit inspection of a heater mat with in-process continuity and resistance measurement before the assembly moves forward.",
+  },
+  {
+    src: cleanroomPrep.url,
+    title: "Interlayer prep and bus bar work",
+    caption:
+      "Trimming, bus bar placement, and lead attachment on interlayer assemblies ahead of stack build.",
+  },
+  {
+    src: cleanroomBagging.url,
+    title: "Vacuum bagging",
+    caption:
+      "Assemblies bagged and sealed for the de-air and autoclave cycle — the step that determines optical and bond quality.",
+  },
+];
+
 
 const About = () => (
   <>
