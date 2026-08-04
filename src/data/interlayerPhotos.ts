@@ -21,6 +21,11 @@ export type InterlayerPhoto = {
 export const interlayerPhotos: Record<string, InterlayerPhoto[]> = {
   heating: [
     {
+      src: tungstenWirePatternScale.url,
+      caption:
+        "Sinusoidal tungsten wire (~21 µm) at typical non-aerospace pitch (~2.5 mm), shown with millimeter scale",
+    },
+    {
       src: heaterWireMacro.url,
       caption: "Sinusoidal tungsten heater wire on interlayer — macro, pre-lamination",
     },
@@ -29,7 +34,6 @@ export const interlayerPhotos: Record<string, InterlayerPhoto[]> = {
       caption: "Wired interlayer roll stock showing wire pitch and drape",
     },
     {
-
       src: aircraftHeaterConnectors.url,
       caption: "Aircraft heated interlayer edge — copper bus bar, connectors and braided lead exits",
     },
