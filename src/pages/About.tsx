@@ -5,6 +5,10 @@ import cleanroomFloor from "@/assets/cleanroom-lamination-floor.jpg.asset.json";
 import cleanroomLightTable from "@/assets/cleanroom-light-table-inspection.jpg.asset.json";
 import cleanroomBagging from "@/assets/cleanroom-vacuum-bagging.jpg.asset.json";
 import cleanroomPrep from "@/assets/cleanroom-interlayer-prep.jpg.asset.json";
+import drumRoomLayup from "@/assets/drum-room-2-layup-line.jpg.asset.json";
+import drumRoomDrum from "@/assets/drum-room-2-interlayer-drum.jpg.asset.json";
+import drumRoomBay from "@/assets/drum-room-2-exterior-bay.jpg.asset.json";
+import drumRoomMasterRoll from "@/assets/drum-room-2-master-roll.jpg.asset.json";
 
 const facilityPhotos = [
   {
