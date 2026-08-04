@@ -8,9 +8,14 @@ import heaterWireMacro from "@/assets/photos/heater-wire-macro.png.asset.json";
 import heaterWireDrape from "@/assets/photos/heater-wire-drape.jpg.asset.json";
 import aircraftHeaterConnectors from "@/assets/photos/aircraft-heater-connectors-busbar-leads.jpeg.asset.json";
 import heaterLotTracking from "@/assets/photos/heater-lot-tracking.jpg.asset.json";
+import heaterLotTrackingP126134 from "@/assets/photos/heater-lot-tracking-p1-26134.jpg.asset.json";
+import heaterWireFieldWide from "@/assets/photos/heater-wire-field-wide.jpg.asset.json";
+import heaterMatBusbarLeads from "@/assets/photos/heater-mat-busbar-leads.jpg.asset.json";
 import sensorDoubleMat from "@/assets/photos/sensor-double-mat.jpg.asset.json";
+import sensorMatDualZone from "@/assets/photos/sensor-mat-dual-zone.jpg.asset.json";
 import wiperParkHeaterZone from "@/assets/photos/wiper-park-heater-zone.jpg.asset.json";
 import wiperParkConnectorTraceability from "@/assets/photos/wiper-park-connector-traceability.jpg.asset.json";
+import tungstenWirePatternScale from "@/assets/photos/tungsten-wire-pattern-scale.jpg.asset.json";
 
 export type InterlayerPhoto = {
   src: string;
@@ -20,6 +25,11 @@ export type InterlayerPhoto = {
 export const interlayerPhotos: Record<string, InterlayerPhoto[]> = {
   heating: [
     {
+      src: tungstenWirePatternScale.url,
+      caption:
+        "Sinusoidal tungsten wire (~21 µm) at typical non-aerospace pitch (~2.5 mm), shown with millimeter scale",
+    },
+    {
       src: heaterWireMacro.url,
       caption: "Sinusoidal tungsten heater wire on interlayer — macro, pre-lamination",
     },
@@ -28,13 +38,24 @@ export const interlayerPhotos: Record<string, InterlayerPhoto[]> = {
       caption: "Wired interlayer roll stock showing wire pitch and drape",
     },
     {
-
+      src: heaterWireFieldWide.url,
+      caption: "Full-field wiggle-wire pattern across a large interlayer sheet",
+    },
+    {
       src: aircraftHeaterConnectors.url,
       caption: "Aircraft heated interlayer edge — copper bus bar, connectors and braided lead exits",
     },
     {
+      src: heaterMatBusbarLeads.url,
+      caption: "Heater mat edge detail — copper bus bar, lead attachment, and braided power harness",
+    },
+    {
       src: heaterLotTracking.url,
       caption: "Heated interlayer with lot-number tracking and branded edge — part of HLG's ISO 9001 traceability system",
+    },
+    {
+      src: heaterLotTrackingP126134.url,
+      caption: "Hotlineglass USA branded edge with part number P1-26134-5 and wiggle-wire field",
     },
   ],
   wiper: [
@@ -53,6 +74,10 @@ export const interlayerPhotos: Record<string, InterlayerPhoto[]> = {
     {
       src: sensorDoubleMat.url,
       caption: "Dual serpentine sensor mats on interlayer — silver terminal pads with copper lead runs",
+    },
+    {
+      src: sensorMatDualZone.url,
+      caption: "Dual-zone sensor mat detail — independent serpentine elements with copper lead runs to each pad",
     },
   ],
   mesh: [],
