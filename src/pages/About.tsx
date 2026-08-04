@@ -5,6 +5,10 @@ import cleanroomFloor from "@/assets/cleanroom-lamination-floor.jpg.asset.json";
 import cleanroomLightTable from "@/assets/cleanroom-light-table-inspection.jpg.asset.json";
 import cleanroomBagging from "@/assets/cleanroom-vacuum-bagging.jpg.asset.json";
 import cleanroomPrep from "@/assets/cleanroom-interlayer-prep.jpg.asset.json";
+import drumRoomLayup from "@/assets/drum-room-2-layup-line.jpg.asset.json";
+import drumRoomDrum from "@/assets/drum-room-2-interlayer-drum.jpg.asset.json";
+import drumRoomBay from "@/assets/drum-room-2-exterior-bay.jpg.asset.json";
+import drumRoomMasterRoll from "@/assets/drum-room-2-master-roll.jpg.asset.json";
 
 const facilityPhotos = [
   {
@@ -31,7 +35,32 @@ const facilityPhotos = [
     caption:
       "Assemblies bagged and sealed for the de-air and autoclave cycle — the step that determines optical and bond quality.",
   },
+  {
+    src: drumRoomLayup.url,
+    title: "Drum Room #2 — layup line",
+    caption:
+      "Cleanroom Drum Room #2: full-length layup tables with glass staged alongside the interlayer drum for continuous stack build.",
+  },
+  {
+    src: drumRoomMasterRoll.url,
+    title: "Drum Room #2 — master roll and stack layout",
+    caption:
+      "Master interlayer roll feeding the layup table, with taped layout references marking cut lines and stack positions.",
+  },
+  {
+    src: drumRoomDrum.url,
+    title: "Drum Room #2 — interlayer drum station",
+    caption:
+      "Temperature- and humidity-controlled interlayer drum with automated traverse for repeatable sheet pull and cutting.",
+  },
+  {
+    src: drumRoomBay.url,
+    title: "Cleanroom envelope and material bay",
+    caption:
+      "Exterior of the cleanroom envelope inside the production building — staging, glass handling, and controlled material transfer.",
+  },
 ];
+
 
 
 const About = () => (
