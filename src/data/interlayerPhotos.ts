@@ -75,6 +75,10 @@ export const interlayerPhotos: Record<string, InterlayerPhoto[]> = {
       src: sensorDoubleMat.url,
       caption: "Dual serpentine sensor mats on interlayer — silver terminal pads with copper lead runs",
     },
+    {
+      src: sensorMatDualZone.url,
+      caption: "Dual-zone sensor mat detail — independent serpentine elements with copper lead runs to each pad",
+    },
   ],
   mesh: [],
   ito: [],
