@@ -110,8 +110,39 @@ const About = () => (
       </div>
     </Section>
 
+    <Section>
+      <div className="max-w-3xl">
+        <Eyebrow>Inside the Facility</Eyebrow>
+        <h2 className="font-display text-3xl md:text-4xl font-bold leading-tight mt-3">
+          Cleanroom production at Hotlineglass USA.
+        </h2>
+        <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
+          Conductive interlayers, heater mats, and sensor assemblies are built, inspected, and bagged in
+          controlled cleanroom space. Gowning, dedicated layup tables, backlit inspection, and in-process
+          electrical checks are part of the normal production flow.
+        </p>
+      </div>
+      <div className="grid md:grid-cols-2 gap-px bg-border mt-10">
+        {facilityPhotos.map((p) => (
+          <figure key={p.title} className="bg-background">
+            <img
+              src={p.src}
+              alt={`${p.title} — Hotlineglass USA cleanroom`}
+              loading="lazy"
+              className="w-full aspect-[16/10] object-cover"
+            />
+            <figcaption className="p-6">
+              <div className="font-display text-lg font-semibold text-primary">{p.title}</div>
+              <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{p.caption}</p>
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+    </Section>
+
     <Section className="bg-background border-y border-border">
       <Eyebrow>What We Value</Eyebrow>
+
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-border mt-4">
         {[
           ["Practical", "We work the way engineering teams work. Real materials, real lamination cycles, real tolerances."],
