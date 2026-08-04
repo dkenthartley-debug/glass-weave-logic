@@ -10,6 +10,7 @@ import aircraftHeaterConnectors from "@/assets/photos/aircraft-heater-connectors
 import heaterLotTracking from "@/assets/photos/heater-lot-tracking.jpg.asset.json";
 import sensorDoubleMat from "@/assets/photos/sensor-double-mat.jpg.asset.json";
 import wiperParkHeaterZone from "@/assets/photos/wiper-park-heater-zone.jpg.asset.json";
+import wiperParkConnectorTraceability from "@/assets/photos/wiper-park-connector-traceability.jpg.asset.json";
 
 export type InterlayerPhoto = {
   src: string;
@@ -40,6 +41,10 @@ export const interlayerPhotos: Record<string, InterlayerPhoto[]> = {
     {
       src: wiperParkHeaterZone.url,
       caption: "Wiper park heater zone — tungsten wire field, dual bus bar contacts, and silver terminal pads on a laminated aircraft transparency",
+    },
+    {
+      src: wiperParkConnectorTraceability.url,
+      caption: "Close-up of wiper park heater edge — connector termination, bus bar contacts, and HLG traceability identifier with part number P1-24134-50",
     },
   ],
   antenna: [],
