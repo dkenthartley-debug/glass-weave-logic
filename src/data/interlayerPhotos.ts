@@ -9,6 +9,7 @@ import heaterWireDrape from "@/assets/photos/heater-wire-drape.jpg.asset.json";
 import aircraftHeaterConnectors from "@/assets/photos/aircraft-heater-connectors-busbar-leads.jpeg.asset.json";
 import heaterLotTracking from "@/assets/photos/heater-lot-tracking.jpg.asset.json";
 import sensorDoubleMat from "@/assets/photos/sensor-double-mat.jpg.asset.json";
+import wiperParkHeaterZone from "@/assets/photos/wiper-park-heater-zone.jpg.asset.json";
 
 export type InterlayerPhoto = {
   src: string;
