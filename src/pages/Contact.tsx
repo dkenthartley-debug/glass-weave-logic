@@ -37,7 +37,16 @@ const Contact = () => {
       return;
     }
     setSending(true);
-    const { error } = await supabase.from("contact_inquiries").insert(parsed.data);
+    const d = parsed.data;
+    const { error } = await supabase.from("contact_inquiries").insert({
+      name: d.name,
+      company: d.company,
+      email: d.email,
+      role: d.role,
+      inquiry_type: d.inquiry_type,
+      application_area: d.application_area,
+      message: d.message,
+    });
     setSending(false);
     if (error) {
       toast.error("Could not send inquiry. Please email Hgil@Hotlineglassusa.com directly.");
