@@ -353,7 +353,7 @@ const Index = () => {
         <SectionHeading
           eyebrow="Applications"
           title="Where HLG components are used"
-          subtitle="Target applications across aerospace, defense, secure facilities, and specialty transportation glazing."
+          subtitle="Target applications across aerospace, defense, secure facilities, automotive, and off-road and commercial equipment glazing — interlayer subassemblies through complete heated glass."
         />
         <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-border">
           {applications.map((a, i) => (
