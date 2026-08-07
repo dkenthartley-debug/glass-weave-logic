@@ -50,8 +50,6 @@ const App = () => (
             <Route path="/engineering-resources" element={<EngineeringResources />} />
             <Route path="/technical-library" element={<TechnicalLibrary />} />
             <Route path="/engineering-resources/faq" element={<FaqLibrary />} />
-            <Route path="/case-studies" element={<CaseStudies />} />
-            <Route path="/downloads" element={<Downloads />} />
             <Route path="/white-papers/atpd-2352-rev-u-sensor" element={<WhitePaperAtpd2352 />} />
             <Route path="/technical-bulletins/tb-001-optical-performance-under-electrical-load" element={<TechBulletinTb001 />} />
             <Route path="/qualification-standards/hlg-qs-1724" element={<QualificationStandardHlgQs1724 />} />
@@ -69,7 +67,6 @@ const App = () => (
             <Route path="/aircraft-sensors" element={<AircraftSensors />} />
             <Route path="/emi-shielding" element={<EmiShielding />} />
             <Route path="/specialty-films" element={<SpecialtyFilms />} />
-            <Route path="/resources" element={<Resources />} />
 
             <Route path="*" element={<NotFound />} />
           </Route>

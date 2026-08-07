@@ -163,7 +163,7 @@ const TechnologyDetail = () => {
                   </li>
                 ))}
               </ul>
-              <Link to="/downloads" className="mono text-xs text-primary mt-5 inline-flex items-center gap-2">
+              <Link to="/technical-library" className="mono text-xs text-primary mt-5 inline-flex items-center gap-2">
                 Download center <ArrowRight size={12} />
               </Link>
             </div>
