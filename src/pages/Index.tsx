@@ -26,6 +26,7 @@ import interlayerImg from "@/assets/conductive-interlayer.jpg";
 import aircraftImg from "@/assets/aircraft-sensor.jpg";
 import emiImg from "@/assets/emi-shielding.jpg";
 import automotiveImg from "@/assets/automotive-glass.jpg";
+import offroadImg from "@/assets/offroad-heated-glass.jpg";
 
 const solutions = [
   {
