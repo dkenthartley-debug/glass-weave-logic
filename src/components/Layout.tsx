@@ -124,8 +124,7 @@ const Layout = () => {
               <li><Link to="/engineering-resources" className="hover:text-primary">Resource Center</Link></li>
               <li><Link to="/engineering-resources/faq" className="hover:text-primary">FAQ Library</Link></li>
               <li><Link to="/technical-library" className="hover:text-primary">Engineering Standards &amp; Technical Library</Link></li>
-              <li><Link to="/case-studies" className="hover:text-primary">Case Studies</Link></li>
-              <li><Link to="/downloads" className="hover:text-primary">Downloads</Link></li>
+              <li><Link to="/capabilities" className="hover:text-primary">Capabilities</Link></li>
               <li><Link to="/about" className="hover:text-primary">About HLG</Link></li>
               <li><Link to="/contact" className="hover:text-primary">Contact</Link></li>
             </ul>
