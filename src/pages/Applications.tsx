@@ -1,5 +1,6 @@
 import { PageHero, Section, Eyebrow } from "@/components/Section";
 import { Plane, Shield, Lock, Building2, Truck, Factory, Eye, Layers, Car } from "lucide-react";
+import Seo, { orgSchema } from "@/components/Seo";
 
 const groups = [
   {
@@ -51,6 +52,12 @@ const groups = [
 
 const Applications = () => (
   <>
+    <Seo
+      title={"Applications — Aerospace, Defense, SCIF & Industrial Glazing | HLG"}
+      description={"Target applications for HLG conductive interlayers and specialty films: aerospace transparencies, transparent armor, SCIF glazing, transit, ADAS, and industrial heated glass."}
+      path="/applications"
+      schema={orgSchema}
+    />
     <PageHero
       eyebrow="Applications"
       title="Where HLG components are deployed"

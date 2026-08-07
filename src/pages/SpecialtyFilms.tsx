@@ -1,6 +1,7 @@
 import { PageHero, Section, Eyebrow } from "@/components/Section";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import Seo, { orgSchema } from "@/components/Seo";
 
 const films = [
   { t: "ITO Film", d: "Transparent conductive oxide film handled and incorporated into laminated stacks for heating, sensing, and shielding functions." },
@@ -15,6 +16,12 @@ const films = [
 
 const SpecialtyFilms = () => (
   <>
+    <Seo
+      title={"Specialty Films — ITO, Mesh & Film Encapsulation | HLG"}
+      description={"Specialty conductive film formats, ITO film and glass, patterned coatings, and film encapsulation for electrically active laminated glass systems."}
+      path="/specialty-films"
+      schema={orgSchema}
+    />
     <PageHero
       eyebrow="04 / Solutions"
       title="Specialty Films & Coatings"

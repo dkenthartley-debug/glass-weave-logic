@@ -3,10 +3,17 @@ import img from "@/assets/emi-shielding.jpg";
 import bulletinAsset from "@/assets/documents/emi-rfi-technical-bulletin.docx.asset.json";
 import { Link } from "react-router-dom";
 import { ArrowRight, Radio, Lock, Building2, Network, FileDown, Layers, Zap, Plug, CheckCircle2 } from "lucide-react";
+import Seo, { orgSchema } from "@/components/Seo";
 
 
 const EmiShielding = () => (
   <>
+    <Seo
+      title={"EMI / RFI / SCIF Shielding Glass Inserts & Concepts | HLG"}
+      description={"Conductive mesh shielding inserts and construction concepts supporting EMI/RFI attenuation, SCIF and TEMPEST glazing, command centers, and secure facilities."}
+      path="/emi-shielding"
+      schema={orgSchema}
+    />
     <PageHero
       eyebrow="03 / Solutions"
       title="EMI / RFI / SCIF Shielding Glass Inserts"

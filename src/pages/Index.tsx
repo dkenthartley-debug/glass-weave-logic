@@ -21,7 +21,7 @@ import {
   Car,
 } from "lucide-react";
 import { Section, SectionHeading, Eyebrow } from "@/components/Section";
-import InterlayerShowcase from "@/components/InterlayerShowcase";
+import Seo, { orgSchema } from "@/components/Seo";
 import interlayerImg from "@/assets/conductive-interlayer.jpg";
 import aircraftImg from "@/assets/aircraft-sensor.jpg";
 import emiImg from "@/assets/emi-shielding.jpg";
@@ -138,6 +138,12 @@ const specs = [
 const Index = () => {
   return (
     <>
+      <Seo
+        title="Conductive Interlayers & Specialty Films for Laminated Glass | HLG"
+        description="Hotlineglass USA develops embedded wire interlayers, heater and sensor mats, bus bar systems, conductive films, and EMI/RFI shielding subassemblies for advanced laminated glass."
+        path="/"
+        schema={orgSchema}
+      />
       {/* HERO */}
       <section className="relative overflow-hidden border-b border-border bg-navy-deep">
         <div className="absolute inset-0 grid-bg opacity-25" />
@@ -175,9 +181,34 @@ const Index = () => {
               </div>
             </div>
 
-            {/* Interlayer library — auto-rotating */}
+            {/* Capability index panel */}
             <div className="lg:col-span-5">
-              <InterlayerShowcase />
+              <div className="panel relative overflow-hidden">
+                <div className="absolute inset-0 grid-bg-fine opacity-20" />
+                <div className="relative p-7 border-b border-border flex items-baseline justify-between">
+                  <div className="mono text-primary text-[10px]">Capability Index</div>
+                  <div className="mono text-muted-foreground text-[10px]">HLG / 2026</div>
+                </div>
+                <ul className="relative divide-y divide-border/70">
+                  {capabilities.slice(0, 8).map((c, i) => (
+                    <li key={c.label} className="flex items-center gap-4 px-7 py-3.5">
+                      <span className="mono text-primary/60 text-[10px] w-6">
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
+                      <c.icon className="text-primary shrink-0" size={16} />
+                      <span className="text-sm text-foreground/90 leading-snug">{c.label}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="relative p-7 border-t border-border bg-surface/40">
+                  <Link
+                    to="/technical-library"
+                    className="mono text-primary inline-flex items-center gap-2 hover:gap-3 transition-all text-xs"
+                  >
+                    Engineering Standards &amp; Technical Library <ArrowRight size={14} />
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>

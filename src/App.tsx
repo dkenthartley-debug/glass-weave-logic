@@ -14,8 +14,6 @@ import { MarketsIndex, MarketDetail } from "./pages/Markets";
 import EngineeringResources from "./pages/EngineeringResources";
 import TechnicalLibrary from "./pages/TechnicalLibrary";
 import FaqLibrary from "./pages/FaqLibrary";
-import CaseStudies from "./pages/CaseStudies";
-import Downloads from "./pages/Downloads";
 import WhitePaperAtpd2352 from "./pages/WhitePaperAtpd2352";
 import TechBulletinTb001 from "./pages/TechBulletinTb001";
 import QualificationStandardHlgQs1724 from "./pages/QualificationStandardHlgQs1724";
@@ -25,7 +23,7 @@ import AircraftSensors from "./pages/AircraftSensors";
 import EmiShielding from "./pages/EmiShielding";
 import SpecialtyFilms from "./pages/SpecialtyFilms";
 import Applications from "./pages/Applications";
-import Resources from "./pages/Resources";
+
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
@@ -52,8 +50,6 @@ const App = () => (
             <Route path="/engineering-resources" element={<EngineeringResources />} />
             <Route path="/technical-library" element={<TechnicalLibrary />} />
             <Route path="/engineering-resources/faq" element={<FaqLibrary />} />
-            <Route path="/case-studies" element={<CaseStudies />} />
-            <Route path="/downloads" element={<Downloads />} />
             <Route path="/white-papers/atpd-2352-rev-u-sensor" element={<WhitePaperAtpd2352 />} />
             <Route path="/technical-bulletins/tb-001-optical-performance-under-electrical-load" element={<TechBulletinTb001 />} />
             <Route path="/qualification-standards/hlg-qs-1724" element={<QualificationStandardHlgQs1724 />} />
@@ -71,7 +67,6 @@ const App = () => (
             <Route path="/aircraft-sensors" element={<AircraftSensors />} />
             <Route path="/emi-shielding" element={<EmiShielding />} />
             <Route path="/specialty-films" element={<SpecialtyFilms />} />
-            <Route path="/resources" element={<Resources />} />
 
             <Route path="*" element={<NotFound />} />
           </Route>
