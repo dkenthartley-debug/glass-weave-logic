@@ -290,7 +290,7 @@ const Index = () => {
             <p>
             Hotlineglass USA develops and supplies specialty interlayers, embedded wire products,
             antenna wire products, conductive films, sensor mats, heater mats, bus bar systems,
-            PDLC and pre-laminated assemblies, and production-ready laminated glass subassemblies
+            PDLC, pre-laminated assemblies, and production-ready laminated glass subassemblies
             for advanced glazing applications.
             </p>
           </div>
