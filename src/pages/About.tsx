@@ -9,6 +9,7 @@ import drumRoomLayup from "@/assets/drum-room-2-layup-line.jpg.asset.json";
 import drumRoomDrum from "@/assets/drum-room-2-interlayer-drum.jpg.asset.json";
 import drumRoomBay from "@/assets/drum-room-2-exterior-bay.jpg.asset.json";
 import drumRoomMasterRoll from "@/assets/drum-room-2-master-roll.jpg.asset.json";
+import Seo, { orgSchema } from "@/components/Seo";
 
 const facilityPhotos = [
   {
@@ -65,6 +66,12 @@ const facilityPhotos = [
 
 const About = () => (
   <>
+    <Seo
+      title={"About Hotlineglass USA (HLG) — Specialty Glass Technology"}
+      description={"HLG develops conductive interlayers, embedded wire products, heater and sensor mats, and specialty films for advanced laminated glass manufacturers in aerospace, defense, and industrial markets."}
+      path="/about"
+      schema={orgSchema}
+    />
     <PageHero
       eyebrow="About HLG"
       title="Specialty interlayers, embedded wire, and electrically active glass components"

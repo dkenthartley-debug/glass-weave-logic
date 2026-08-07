@@ -2,9 +2,16 @@ import { PageHero, Section, Eyebrow } from "@/components/Section";
 import img from "@/assets/conductive-interlayer.jpg";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import Seo, { orgSchema } from "@/components/Seo";
 
 const ConductiveInterlayers = () => (
   <>
+    <Seo
+      title={"Conductive Interlayers — Embedded Wire, Mesh & ITO | HLG"}
+      description={"Embedded wire interlayers, conductive mesh, ITO film, and printed conductor formats engineered to survive lamination and perform in production laminated glass."}
+      path="/conductive-interlayers"
+      schema={orgSchema}
+    />
     <PageHero
       eyebrow="01 / Solutions"
       title="Conductive Interlayers for Laminated Glass"

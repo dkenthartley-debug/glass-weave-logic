@@ -2,9 +2,16 @@ import { PageHero, Section, Eyebrow } from "@/components/Section";
 import img from "@/assets/aircraft-sensor.jpg";
 import { Link } from "react-router-dom";
 import { ArrowRight, Thermometer, AlertTriangle, Activity, Layers } from "lucide-react";
+import Seo, { orgSchema } from "@/components/Seo";
 
 const AircraftSensors = () => (
   <>
+    <Seo
+      title={"Aircraft Heater Mats & Windshield Sensor Mats | HLG"}
+      description={"Heater mat and overheat-protection sensor mat subassemblies developed for aircraft windshields and aerospace laminated transparencies."}
+      path="/aircraft-sensors"
+      schema={orgSchema}
+    />
     <PageHero
       eyebrow="02 / Solutions"
       title="Aircraft Sensors & Heated Glass"
