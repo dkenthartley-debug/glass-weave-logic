@@ -316,13 +316,19 @@ const Index = () => {
               className="group panel relative overflow-hidden hover:border-primary/60 transition-colors flex flex-col"
             >
               <div className="aspect-[4/3] overflow-hidden relative">
-                <img
-                  src={s.img}
-                  alt={s.title}
-                  loading="lazy"
-                  className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/40 to-transparent" />
+                {s.diagram ? (
+                  <AutomotiveDiagram className="w-full h-full object-contain" />
+                ) : (
+                  <img
+                    src={s.img}
+                    alt={s.title}
+                    loading="lazy"
+                    className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                  />
+                )}
+                {!s.diagram && (
+                  <div className="absolute inset-0 bg-gradient-to-t from-card via-card/40 to-transparent" />
+                )}
                 <div className="absolute top-4 left-4 mono text-primary">{s.tag}</div>
                 <s.icon className="absolute top-4 right-4 text-primary/80" size={22} />
               </div>
