@@ -372,7 +372,8 @@ var markets = [
   { slug: "aerospace", name: "Aerospace", blurb: "Windshield heating, cockpit transparencies, helicopter windows, and embedded sensor systems." },
   { slug: "defense", name: "Defense", blurb: "Heated transparent armor, vision blocks, vehicle windows, and EMI shielded glazing." },
   { slug: "architectural", name: "Architectural & Secure Facilities", blurb: "EMI glass, SCIF windows, RF shielding glass, and conductive laminates for secure buildings." },
-  { slug: "transportation", name: "Transportation", blurb: "Rail, marine, transit, heavy equipment, and specialty vehicle glazing." }
+  { slug: "transportation", name: "Transportation", blurb: "Rail, marine, transit, heavy equipment, and specialty vehicle glazing." },
+  { slug: "off-road-commercial", name: "Off-Road & Commercial Equipment", blurb: "Complete heated laminated glass and interlayer subassemblies for airport ground support, snow removal equipment, commercial boats, and recreational vehicles." }
 ];
 var f = (q, a) => ({ q, a });
 var products = [
