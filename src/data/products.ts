@@ -472,6 +472,86 @@ export const products: Product[] = [
     faqs: [f("Is there a minimum order for custom builds?", "Requirements vary by configuration. Prototype and low-volume work is a normal part of HLG's engagement model — contact us with the aperture and electrical requirement to discuss.")],
     technologies: ["conductive-interlayers", "embedded-wire-technology"],
   },
+  {
+    slug: "airport-ground-support-heated-glass",
+    name: "Airport Ground Support Heated Glass",
+    market: "off-road-commercial",
+    summary: "Finished heated glass for airport tugs, belt loaders, de-icers, and ground support cabs.",
+    overview: [
+      "Ground support equipment works outdoors in freezing, high-humidity ramp conditions where fogged or iced cab glass stops the operation.",
+      "HLG supplies the heated interlayer subassembly or the complete laminated heated glass part, depending on whether the customer laminates in-house.",
+      "Layouts are built around the cab aperture, the available 12 V or 24 V supply, and a serviceable harness connection at the frame.",
+    ],
+    highlights: [
+      "Complete heated glass parts or interlayer subassemblies",
+      "12 V / 24 V equipment electrical systems",
+      "Rapid defrost across the operator vision area",
+      "Rugged terminations for ramp duty cycles",
+    ],
+    specs: [
+      { label: "Supply", value: "12 V / 24 V" },
+      { label: "Function", value: "Defrost, de-ice, defog" },
+      { label: "Format", value: "Finished laminate or interlayer" },
+    ],
+    faqs: [
+      f("Can HLG supply the finished glass, not just the interlayer?", "Yes. For off-road and commercial equipment programs HLG can supply the complete heated laminated glass part as well as the interlayer subassembly."),
+    ],
+    technologies: ["heated-interlayers", "bus-bar-technology", "power-distribution"],
+  },
+  {
+    slug: "snow-removal-equipment-heated-glass",
+    name: "Snow Removal Equipment Heated Glass",
+    market: "off-road-commercial",
+    summary: "Heated windshields and side glass for plows, blowers, loaders, and municipal snow fleets.",
+    overview: [
+      "Snow removal cabs face continuous ice loading, blowing snow, and long night shifts, so clearing performance and uniformity are the driving requirements.",
+      "Higher power density layouts and zoned heating keep the primary vision area clear without exceeding the machine's available current.",
+    ],
+    highlights: ["High power density layouts", "Zoned clearing priority areas", "Cold-soak start performance"],
+    specs: [
+      { label: "Supply", value: "12 V / 24 V" },
+      { label: "Function", value: "De-ice, defrost" },
+      { label: "Format", value: "Finished laminate or interlayer" },
+    ],
+    faqs: [f("How fast will the glass clear?", "Clearing time depends on aperture size, power density, and ambient conditions. Targets are set with the customer and confirmed on a representative sample.")],
+    technologies: ["heated-interlayers", "power-distribution"],
+  },
+  {
+    slug: "commercial-marine-heated-glass",
+    name: "Commercial Marine Heated Glass",
+    market: "off-road-commercial",
+    summary: "Heated pilothouse and bridge glass for commercial boats and workboats.",
+    overview: [
+      "Wheelhouse glazing needs clear forward vision through spray, fog, and freezing conditions, often with wiper systems running at the same time.",
+      "Marine builds emphasize sealed lead exits, corrosion-aware terminations, and layouts coordinated with mullions and wiper sweep.",
+    ],
+    highlights: ["Sealed, strain-relieved lead exits", "Corrosion-aware terminations", "Wiper-sweep coordinated layouts"],
+    specs: [
+      { label: "Supply", value: "12 V / 24 V / vessel systems" },
+      { label: "Function", value: "Defog, de-ice" },
+      { label: "Format", value: "Finished laminate or interlayer" },
+    ],
+    faqs: [f("Are marine heated panes supplied glazed?", "HLG supplies the heated laminated pane or the interlayer subassembly; frame glazing is handled by the window fabricator or builder.")],
+    technologies: ["heated-interlayers", "bus-bar-technology"],
+  },
+  {
+    slug: "recreational-vehicle-heated-glass",
+    name: "Recreational Vehicle Heated Glass",
+    market: "off-road-commercial",
+    summary: "Heated windshields and cab glass for motorhomes, RVs, and specialty recreational platforms.",
+    overview: [
+      "RV windshields are large, often split, and used in cold-weather travel where defrost coverage and appearance both matter.",
+      "Fine conductor pitch keeps the heating unobtrusive across a large aperture while zoning holds current draw within the chassis supply.",
+    ],
+    highlights: ["Large-aperture and split-pane layouts", "Low-visibility conductor pitch", "Chassis supply-constrained zoning"],
+    specs: [
+      { label: "Supply", value: "12 V / 24 V chassis systems" },
+      { label: "Function", value: "Defrost, defog" },
+      { label: "Format", value: "Finished laminate or interlayer" },
+    ],
+    faqs: [f("Can a split RV windshield be heated on both halves?", "Yes. Each pane carries its own circuit, coordinated so the pair delivers consistent clearing across the full vision area.")],
+    technologies: ["heated-interlayers", "power-distribution"],
+  },
 ];
 
 export const getProduct = (slug?: string) => products.find((p) => p.slug === slug);
