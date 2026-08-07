@@ -57,7 +57,8 @@ const ANT_EXIT = "M 152 316 L 148 338";
 export default function AutomotiveDiagram({ className = "" }: { className?: string }) {
   return (
     <svg
-      viewBox={`0 0 ${W} ${H}`}
+      viewBox="-40 -10 880 660"
+      preserveAspectRatio="xMidYMid meet"
       className={className}
       role="img"
       aria-label="Automotive windshield schematic showing heated camera zone, wiggle-wire heating field, A-pillar transparent antenna and continuous heated wiper park"
@@ -77,8 +78,8 @@ export default function AutomotiveDiagram({ className = "" }: { className?: stri
         </pattern>
       </defs>
 
-      <rect width={W} height={H} fill="hsl(var(--card))" />
-      <rect width={W} height={H} fill="url(#hlg-grid)" />
+      <rect x="-40" y="-10" width="880" height="660" fill="hsl(var(--card))" />
+      <rect x="-40" y="-10" width="880" height="660" fill="url(#hlg-grid)" />
 
       {/* Glass body */}
       <path d={OUTLINE} fill="hsl(var(--primary) / 0.05)" stroke="hsl(var(--foreground) / 0.45)" strokeWidth="1.6" />
@@ -178,11 +179,11 @@ export default function AutomotiveDiagram({ className = "" }: { className?: stri
         fontSize="11"
         letterSpacing="0.12em"
       >
-        <text x="28" y="40">FIG. A / AUTOMOTIVE GLAZING — INTEGRATED PRODUCT SET</text>
+        <text x="-24" y="632">FIG. A / AUTOMOTIVE GLAZING — INTEGRATED PRODUCT SET</text>
       </g>
       <text
-        x={W - 28}
-        y="40"
+        x="824"
+        y="632"
         textAnchor="end"
         fill="hsl(var(--muted-foreground) / 0.7)"
         fontFamily="ui-monospace, SFMono-Regular, Menlo, monospace"
