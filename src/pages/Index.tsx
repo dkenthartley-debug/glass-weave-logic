@@ -20,6 +20,7 @@ import {
   Antenna,
   Car,
   Truck,
+  type LucideIcon,
 } from "lucide-react";
 import { Section, SectionHeading, Eyebrow } from "@/components/Section";
 import Seo, { orgSchema } from "@/components/Seo";
@@ -28,8 +29,18 @@ import aircraftImg from "@/assets/aircraft-sensor.jpg";
 import emiImg from "@/assets/emi-shielding.jpg";
 import automotiveImg from "@/assets/automotive-glass.jpg";
 import offroadImg from "@/assets/offroad-heated-glass.jpg";
+import AutomotiveDiagram from "@/components/AutomotiveDiagram";
 
-const solutions = [
+const solutions: Array<{
+  to: string;
+  title: string;
+  desc: string;
+  items: string[];
+  img: string;
+  diagram?: boolean;
+  icon: LucideIcon;
+  tag: string;
+}> = [
   {
     to: "/technologies#interlayers",
     title: "Conductive Interlayers",
@@ -70,6 +81,7 @@ const solutions = [
     desc: "Heated mats, heated camera areas, heated wiper parks, embedded antenna, PDLC, and pre-laminated assemblies for automotive glazing programs.",
     items: ["Heated mats & camera areas", "Heated wiper parks", "Embedded antenna", "PDLC", "Pre-laminated assemblies"],
     img: automotiveImg,
+    diagram: true,
     icon: Car,
     tag: "04 / Automotive",
   },
