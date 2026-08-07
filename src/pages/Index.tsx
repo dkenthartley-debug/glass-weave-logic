@@ -19,6 +19,7 @@ import {
   BookOpen,
   Antenna,
   Car,
+  Truck,
 } from "lucide-react";
 import { Section, SectionHeading, Eyebrow } from "@/components/Section";
 import Seo, { orgSchema } from "@/components/Seo";
@@ -26,12 +27,14 @@ import interlayerImg from "@/assets/conductive-interlayer.jpg";
 import aircraftImg from "@/assets/aircraft-sensor.jpg";
 import emiImg from "@/assets/emi-shielding.jpg";
 import automotiveImg from "@/assets/automotive-glass.jpg";
+import offroadImg from "@/assets/offroad-heated-glass.jpg";
 
 const solutions = [
   {
     to: "/technologies#interlayers",
     title: "Conductive Interlayers",
     desc: "Embedded wire, conductive mesh, ITO film, and bus bar integration engineered to survive lamination and perform in the field.",
+    items: ["Embedded wire interlayers", "Conductive mesh & ITO film", "Bus bar integration", "Pre-lamination subassemblies"],
     img: interlayerImg,
     icon: Layers,
     tag: "01 / Interlayers",
@@ -40,6 +43,7 @@ const solutions = [
     to: "/technologies#aircraft",
     title: "Aircraft Sensors & Heated Glass",
     desc: "Windshield heater mats, overheat protection sensor concepts, and sensor mat subassemblies for aerospace transparencies.",
+    items: ["Windshield heater mats", "Sensor mat subassemblies", "Overheat protection concepts", "Lot-traceable builds"],
     img: aircraftImg,
     icon: Plane,
     tag: "02 / Aerospace",
@@ -47,7 +51,15 @@ const solutions = [
   {
     to: "/technologies#security-defense",
     title: "Security & Defense Systems",
-    desc: "Heated mats, secure antenna systems, embedded temperature sensors, and EMI / RFI / SCIF / TEMPEST shielding integration for defense and secure facility glazing.",
+    desc: "Heated mats, antenna systems, sensor mats, EMI / RFI / SCIF / TEMPEST shielding, PDLC, and pre-laminated assemblies for defense and secure facility glazing.",
+    items: [
+      "Heated mats",
+      "Antenna systems",
+      "Sensor mats",
+      "EMI / RFI / SCIF / TEMPEST shielding",
+      "PDLC",
+      "Pre-laminated assemblies",
+    ],
     img: emiImg,
     icon: ShieldCheck,
     tag: "03 / Security and Defense",
@@ -56,9 +68,25 @@ const solutions = [
     to: "/technologies#automotive",
     title: "Automotive Glass Products",
     desc: "Heated mats, heated camera areas, heated wiper parks, embedded antenna, PDLC, and pre-laminated assemblies for automotive glazing programs.",
+    items: ["Heated mats & camera areas", "Heated wiper parks", "Embedded antenna", "PDLC", "Pre-laminated assemblies"],
     img: automotiveImg,
     icon: Car,
     tag: "04 / Automotive",
+  },
+  {
+    to: "/markets/off-road-commercial",
+    title: "Off-Road & Commercial Equipment",
+    desc: "Complete heated laminated glass — not just the interlayer — for airport tugs, snow removal equipment, commercial boats, and recreational vehicles.",
+    items: [
+      "Airport ground support & tugs",
+      "Snow removal equipment",
+      "Commercial boats & workboats",
+      "Recreational vehicles",
+      "Finished heated glass or interlayer",
+    ],
+    img: offroadImg,
+    icon: Truck,
+    tag: "05 / Off-Road & Commercial",
   },
 ];
 
@@ -71,6 +99,10 @@ const applications = [
   "Medical Imaging Rooms",
   "Industrial Heated Glass",
   "ADAS & Sensor-Enabled Glazing",
+  "Airport Ground Support Equipment",
+  "Snow Removal Equipment",
+  "Commercial Boats & Workboats",
+  "Recreational Vehicles",
 ];
 
 const why = [
@@ -127,12 +159,12 @@ const resources = [
 ];
 
 const specs = [
-  { v: "±0.05", u: "mm", l: "Wire placement tolerance", d: "Typical embedded wire positional accuracy in interlayer format." },
+  { v: "±0.5", u: "mm", l: "Wire placement tolerance", d: "Typical embedded wire positional accuracy in interlayer format." },
   { v: "100", u: "openings/in", l: "Shielding mesh density", d: "Fine copper mesh construction for EMI / RFI / SCIF applications." },
   { v: "12–48", u: "V DC", l: "Heater operating range", d: "Common bus bar voltage range for transparent heating subassemblies." },
   { v: ">85", u: "% VLT", l: "Optical transmission target", d: "Development target for conductive interlayer visible light transmission." },
   { v: "6", u: "step process", l: "Prototype to production", d: "Structured path from specification review through repeatable supply." },
-  { v: "4", u: "integration paths", l: "Interlayer · Aero · Defense · Auto", d: "Core solution families supported across advanced glazing programs." },
+  { v: "5", u: "integration paths", l: "Interlayer · Aero · Defense · Auto · Off-Road", d: "Core solution families supported across advanced glazing programs." },
 ];
 
 const Index = () => {
@@ -262,7 +294,7 @@ const Index = () => {
             <p>
             Hotlineglass USA develops and supplies specialty interlayers, embedded wire products,
             antenna wire products, conductive films, sensor mats, heater mats, bus bar systems,
-            PDLC and pre-laminated assemblies, and production-ready laminated glass subassemblies
+            PDLC, pre-laminated assemblies, and production-ready laminated glass subassemblies
             for advanced glazing applications.
             </p>
           </div>
@@ -273,15 +305,15 @@ const Index = () => {
       <Section className="bg-surface/50 border-y border-border">
         <SectionHeading
           eyebrow="Core Solutions"
-          title="Four integration paths into advanced glass"
-          subtitle="Specialty subassemblies and films developed to drop into your laminated glass process."
+          title="Five integration paths into advanced glass"
+          subtitle="Specialty subassemblies, films, and finished heated laminates developed to drop into your glazing process — from interlayer format through complete glass parts."
         />
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {solutions.map((s) => (
             <Link
               key={s.to}
               to={s.to}
-              className="group panel relative overflow-hidden hover:border-primary/60 transition-colors"
+              className="group panel relative overflow-hidden hover:border-primary/60 transition-colors flex flex-col"
             >
               <div className="aspect-[4/3] overflow-hidden relative">
                 <img
@@ -294,12 +326,20 @@ const Index = () => {
                 <div className="absolute top-4 left-4 mono text-primary">{s.tag}</div>
                 <s.icon className="absolute top-4 right-4 text-primary/80" size={22} />
               </div>
-              <div className="p-6">
+              <div className="p-6 flex flex-col flex-1">
                 <h3 className="font-display text-xl font-semibold group-hover:text-primary transition-colors">
                   {s.title}
                 </h3>
                 <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
-                <div className="mt-5 inline-flex items-center gap-2 text-primary mono">
+                <ul className="mt-5 space-y-2 border-t border-border/70 pt-5">
+                  {s.items.map((it) => (
+                    <li key={it} className="flex items-start gap-2.5 text-[13px] text-foreground/85 leading-snug">
+                      <span className="mt-[7px] h-1 w-1 shrink-0 bg-primary" />
+                      {it}
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-6 inline-flex items-center gap-2 text-primary mono">
                   Explore <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
@@ -313,7 +353,7 @@ const Index = () => {
         <SectionHeading
           eyebrow="Applications"
           title="Where HLG components are used"
-          subtitle="Target applications across aerospace, defense, secure facilities, and specialty transportation glazing."
+          subtitle="Target applications across aerospace, defense, secure facilities, automotive, and off-road and commercial equipment glazing — interlayer subassemblies through complete heated glass."
         />
         <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-border">
           {applications.map((a, i) => (
