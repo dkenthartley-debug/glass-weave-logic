@@ -1,0 +1,132 @@
+{
+  "version": 1,
+  "sdk_version": "0.26.1",
+  "path": "/mcp",
+  "auth": {
+    "type": "none"
+  },
+  "mcp": {
+    "server": {
+      "name": "hlg-glass-innovations",
+      "version": "0.1.0",
+      "title": "HLG Glass Innovations"
+    },
+    "tools": [
+      {
+        "name": "search_technical_library",
+        "title": "Search technical library",
+        "description": "Search the HLG Engineering Standards & Technical Library (TB, QS, AG, ER series) by keyword and/or series code. Returns matching document ids, titles, revisions, summaries, PDF URLs, and site paths.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "query": {
+              "type": "string",
+              "description": "Keyword matched against document id, title, and summary. Omit to list everything."
+            },
+            "series": {
+              "type": "string",
+              "enum": [
+                "TB",
+                "QS",
+                "AG",
+                "ER"
+              ],
+              "description": "Restrict results to one series: TB (technical bulletins), QS (qualification standards), AG (application guides), ER (engineering reports)."
+            }
+          },
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "get_document",
+        "title": "Get document / bulletin PDF",
+        "description": "Retrieve a single HLG library document by id (e.g. TB-001, HLG-QS-1724, AG-001, ER-001) including its downloadable PDF URL, revision, summary, and on-site page path. Also lists other published resources when no id matches.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Document identifier, e.g. 'TB-001', 'HLG-QS-1724', 'AG-001', 'ER-001'."
+            }
+          },
+          "required": [
+            "id"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "list_gallery_photos",
+        "title": "List gallery photos",
+        "description": "List the real-product photography used in the Fig.01 interlayer gallery, grouped by variant (heating, wiper, sensors, antenna, camera, mesh, ito). Returns image URLs and technical captions, and flags variants that currently have no photography.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "variant": {
+              "type": "string",
+              "enum": [
+                "heating",
+                "wiper",
+                "sensors",
+                "antenna",
+                "camera",
+                "mesh",
+                "ito"
+              ],
+              "description": "Restrict to a single gallery variant. Omit to return all variants."
+            }
+          },
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "get_application_mapping",
+        "title": "Get application mapping",
+        "description": "Check how HLG markets, products, and technologies map to each other. Filter by market slug (automotive, aerospace, defense, architectural, transportation) or technology slug to see which products serve it and which technologies they use.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "market": {
+              "type": "string",
+              "description": "Market slug or name, e.g. 'aerospace'. Omit for all markets."
+            },
+            "technology": {
+              "type": "string",
+              "description": "Technology slug or name fragment, e.g. 'embedded-wire-technology'. Omit for all."
+            }
+          },
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      }
+    ]
+  }
+}
