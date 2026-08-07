@@ -155,7 +155,7 @@ const resources = [
 ];
 
 const specs = [
-  { v: "±0.05", u: "mm", l: "Wire placement tolerance", d: "Typical embedded wire positional accuracy in interlayer format." },
+  { v: "±0.5", u: "mm", l: "Wire placement tolerance", d: "Typical embedded wire positional accuracy in interlayer format." },
   { v: "100", u: "openings/in", l: "Shielding mesh density", d: "Fine copper mesh construction for EMI / RFI / SCIF applications." },
   { v: "12–48", u: "V DC", l: "Heater operating range", d: "Common bus bar voltage range for transparent heating subassemblies." },
   { v: ">85", u: "% VLT", l: "Optical transmission target", d: "Development target for conductive interlayer visible light transmission." },
