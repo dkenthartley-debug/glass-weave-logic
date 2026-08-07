@@ -301,15 +301,15 @@ const Index = () => {
       <Section className="bg-surface/50 border-y border-border">
         <SectionHeading
           eyebrow="Core Solutions"
-          title="Four integration paths into advanced glass"
-          subtitle="Specialty subassemblies and films developed to drop into your laminated glass process."
+          title="Five integration paths into advanced glass"
+          subtitle="Specialty subassemblies, films, and finished heated laminates developed to drop into your glazing process — from interlayer format through complete glass parts."
         />
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {solutions.map((s) => (
             <Link
               key={s.to}
               to={s.to}
-              className="group panel relative overflow-hidden hover:border-primary/60 transition-colors"
+              className="group panel relative overflow-hidden hover:border-primary/60 transition-colors flex flex-col"
             >
               <div className="aspect-[4/3] overflow-hidden relative">
                 <img
@@ -322,12 +322,20 @@ const Index = () => {
                 <div className="absolute top-4 left-4 mono text-primary">{s.tag}</div>
                 <s.icon className="absolute top-4 right-4 text-primary/80" size={22} />
               </div>
-              <div className="p-6">
+              <div className="p-6 flex flex-col flex-1">
                 <h3 className="font-display text-xl font-semibold group-hover:text-primary transition-colors">
                   {s.title}
                 </h3>
                 <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
-                <div className="mt-5 inline-flex items-center gap-2 text-primary mono">
+                <ul className="mt-5 space-y-2 border-t border-border/70 pt-5">
+                  {s.items.map((it) => (
+                    <li key={it} className="flex items-start gap-2.5 text-[13px] text-foreground/85 leading-snug">
+                      <span className="mt-[7px] h-1 w-1 shrink-0 bg-primary" />
+                      {it}
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-6 inline-flex items-center gap-2 text-primary mono">
                   Explore <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
