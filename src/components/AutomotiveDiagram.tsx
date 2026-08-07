@@ -145,11 +145,11 @@ export default function AutomotiveDiagram({ className = "" }: { className?: stri
         strokeWidth="0.8"
         fill="none"
       >
-        <path d="M 448 118 L 640 118" />
-        <path d="M 620 250 L 700 250" />
-        <path d="M 160 220 L 60 220" />
+        <path d="M 448 118 L 630 118" />
+        <path d="M 620 250 L 660 250" />
+        <path d="M 160 220 L 116 220" />
         <path d="M 300 428 L 120 560 L 210 560" />
-        <path d="M 420 503 L 600 560" />
+        <path d="M 420 503 L 594 556" />
       </g>
       <g
         fill="hsl(var(--muted-foreground))"
@@ -157,19 +157,19 @@ export default function AutomotiveDiagram({ className = "" }: { className?: stri
         fontSize="11"
         letterSpacing="0.08em"
       >
-        <text x="646" y="114">01 / HEATED CAMERA ZONE</text>
-        <text x="646" y="128" fill="hsl(var(--muted-foreground) / 0.7)">DENSE WIRE FIELD</text>
+        <text x="636" y="114">01 / CAMERA ZONE HEAT</text>
+        <text x="636" y="128" fill="hsl(var(--muted-foreground) / 0.7)">DENSE WIRE FIELD</text>
 
-        <text x="706" y="246">02 / WIGGLE-WIRE HEATING</text>
-        <text x="706" y="260" fill="hsl(var(--muted-foreground) / 0.7)">2.5 mm PITCH · UNIFORM PHASE</text>
+        <text x="666" y="246">02 / WIGGLE-WIRE HEAT</text>
+        <text x="666" y="260" fill="hsl(var(--muted-foreground) / 0.7)">2.5 mm PITCH</text>
 
-        <text x="54" y="216" textAnchor="end">03 / TRANSPARENT ANTENNA</text>
-        <text x="54" y="230" textAnchor="end" fill="hsl(var(--muted-foreground) / 0.7)">A-PILLAR · 1-PIN EXIT</text>
+        <text x="110" y="216" textAnchor="end">03 / ANTENNA</text>
+        <text x="110" y="230" textAnchor="end" fill="hsl(var(--muted-foreground) / 0.7)">A-PILLAR · 1-PIN</text>
 
         <text x="216" y="556">04 / HEATED WIPER PARK</text>
         <text x="216" y="570" fill="hsl(var(--muted-foreground) / 0.7)">CONTINUOUS SINGLE WIRE · 4 PASSES</text>
 
-        <text x="606" y="564">2-PIN AUTOMOTIVE CONNECTOR</text>
+        <text x="600" y="564">2-PIN CONNECTOR</text>
       </g>
 
       {/* Frame label */}
