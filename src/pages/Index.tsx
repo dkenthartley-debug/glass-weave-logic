@@ -19,6 +19,7 @@ import {
   BookOpen,
   Antenna,
   Car,
+  Truck,
 } from "lucide-react";
 import { Section, SectionHeading, Eyebrow } from "@/components/Section";
 import Seo, { orgSchema } from "@/components/Seo";
