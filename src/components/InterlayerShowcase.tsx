@@ -445,7 +445,10 @@ const Tile = ({
 const InterlayerShowcase = () => {
   const [idx, setIdx] = useState(0);
   const [paused, setPaused] = useState(false);
-  const [mode, setMode] = useState<Mode>("schematic");
+  const [mode, setMode] = useState<Mode>(
+    (interlayerPhotos[variants[0].id] ?? []).length > 0 ? "photo" : "schematic"
+  );
+  const [photoIdx, setPhotoIdx] = useState(0);
 
   useEffect(() => {
     if (paused) return;
@@ -457,9 +460,13 @@ const InterlayerShowcase = () => {
   const photos = interlayerPhotos[v.id] ?? [];
   const showPhoto = mode === "photo" && photos.length > 0;
 
+  // Reset the photo cursor and prefer photography whenever the variant changes.
   useEffect(() => {
-    if (mode === "photo" && photos.length === 0) setMode("schematic");
-  }, [mode, photos.length]);
+    setPhotoIdx(0);
+    setMode((interlayerPhotos[variants[idx].id] ?? []).length > 0 ? "photo" : "schematic");
+  }, [idx]);
+
+  const active = photos[Math.min(photoIdx, Math.max(photos.length - 1, 0))];
 
   return (
     <div
@@ -492,17 +499,22 @@ const InterlayerShowcase = () => {
       </div>
 
       <div className="relative overflow-hidden border border-border bg-navy-deep">
-        {showPhoto ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-border">
-            {photos.map((p) => (
-              <figure key={p.src} className="relative bg-navy-deep">
-                <img src={p.src} alt={`${v.label} — ${p.caption}`} className="w-full h-full object-cover" />
-                <figcaption className="mono text-[9px] text-muted-foreground px-2 py-1.5 border-t border-border">
-                  {p.caption}
-                </figcaption>
-              </figure>
-            ))}
-          </div>
+        {showPhoto && active ? (
+          <figure className="relative">
+            <div className="relative aspect-[16/10] overflow-hidden bg-navy-deep">
+              <img
+                src={active.src}
+                alt={`${v.label} — ${active.caption}`}
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+              <div className="absolute top-2 left-2 mono text-[9px] text-primary border border-primary/40 bg-navy-deep/80 px-2 py-1">
+                REAL PRODUCT · {String(photoIdx + 1).padStart(2, "0")}/{String(photos.length).padStart(2, "0")}
+              </div>
+            </div>
+            <figcaption className="mono text-[9px] text-muted-foreground px-2 py-2 border-t border-border min-h-[2.75rem]">
+              {active.caption}
+            </figcaption>
+          </figure>
         ) : (
           <Schematic v={v} />
         )}
@@ -515,6 +527,26 @@ const InterlayerShowcase = () => {
 
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-navy-deep/40 via-transparent to-transparent" />
       </div>
+
+      {/* Photo filmstrip */}
+      {showPhoto && photos.length > 1 && (
+        <div className="mt-2 flex gap-1.5 overflow-x-auto pb-1">
+          {photos.map((p, i) => (
+            <button
+              key={p.src}
+              type="button"
+              onClick={() => setPhotoIdx(i)}
+              aria-label={p.caption}
+              className={`shrink-0 h-11 w-16 overflow-hidden border transition-colors ${
+                i === photoIdx ? "border-primary" : "border-border hover:border-primary/60"
+              }`}
+            >
+              <img src={p.src} alt="" loading="lazy" className="h-full w-full object-cover" />
+            </button>
+          ))}
+        </div>
+      )}
+
 
       {/* Caption */}
       <div className="mt-4 px-2">
