@@ -38,8 +38,7 @@ const EngineeringResources = () => (
         </p>
         <span className="mono text-xs text-primary mt-4 inline-flex items-center gap-2">Open the library <ArrowRight size={12} /></span>
       </Link>
-      <div className="grid md:grid-cols-3 gap-6">
-
+      <div className="grid md:grid-cols-2 gap-6">
         <Link to="/engineering-resources/faq" className="panel p-7 hover:border-primary/60 transition-colors">
           <div className="font-display text-xl font-semibold">FAQ Library</div>
           <p className="text-sm text-muted-foreground mt-3">
@@ -47,19 +46,12 @@ const EngineeringResources = () => (
           </p>
           <span className="mono text-xs text-primary mt-4 inline-flex items-center gap-2">Browse FAQs <ArrowRight size={12} /></span>
         </Link>
-        <Link to="/downloads" className="panel p-7 hover:border-primary/60 transition-colors">
-          <div className="font-display text-xl font-semibold">Download Center</div>
+        <Link to="/capabilities" className="panel p-7 hover:border-primary/60 transition-colors">
+          <div className="font-display text-xl font-semibold">Capabilities Overview</div>
           <p className="text-sm text-muted-foreground mt-3">
-            Datasheets, design guides, drawing sets, and handling documentation available on request.
+            Materials, conductor formats, bus bar integration, laser deletion, and pre-lamination process development.
           </p>
-          <span className="mono text-xs text-primary mt-4 inline-flex items-center gap-2">Open downloads <ArrowRight size={12} /></span>
-        </Link>
-        <Link to="/case-studies" className="panel p-7 hover:border-primary/60 transition-colors">
-          <div className="font-display text-xl font-semibold">Case Studies</div>
-          <p className="text-sm text-muted-foreground mt-3">
-            Sanitized development stories from aerospace, defense, transit, marine, and automotive programs.
-          </p>
-          <span className="mono text-xs text-primary mt-4 inline-flex items-center gap-2">Read case studies <ArrowRight size={12} /></span>
+          <span className="mono text-xs text-primary mt-4 inline-flex items-center gap-2">View capabilities <ArrowRight size={12} /></span>
         </Link>
       </div>
     </Section>
