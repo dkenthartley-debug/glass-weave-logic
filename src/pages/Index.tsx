@@ -138,6 +138,12 @@ const specs = [
 const Index = () => {
   return (
     <>
+      <Seo
+        title="Conductive Interlayers & Specialty Films for Laminated Glass | HLG"
+        description="Hotlineglass USA develops embedded wire interlayers, heater and sensor mats, bus bar systems, conductive films, and EMI/RFI shielding subassemblies for advanced laminated glass."
+        path="/"
+        schema={orgSchema}
+      />
       {/* HERO */}
       <section className="relative overflow-hidden border-b border-border bg-navy-deep">
         <div className="absolute inset-0 grid-bg opacity-25" />

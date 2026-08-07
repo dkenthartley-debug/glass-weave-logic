@@ -4,12 +4,11 @@ import { Menu, X } from "lucide-react";
 
 const NAV = [
   { to: "/", label: "Home" },
+  { to: "/capabilities", label: "Capabilities" },
   { to: "/technologies", label: "Technologies" },
   { to: "/products", label: "Products" },
   { to: "/markets", label: "Markets" },
-  { to: "/engineering-resources", label: "Resources" },
   { to: "/technical-library", label: "Technical Library" },
-  { to: "/case-studies", label: "Case Studies" },
   { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
 ];
