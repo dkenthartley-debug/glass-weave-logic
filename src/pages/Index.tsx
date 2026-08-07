@@ -20,6 +20,7 @@ import {
   Antenna,
   Car,
   Truck,
+  type LucideIcon,
 } from "lucide-react";
 import { Section, SectionHeading, Eyebrow } from "@/components/Section";
 import Seo, { orgSchema } from "@/components/Seo";
@@ -28,8 +29,18 @@ import aircraftImg from "@/assets/aircraft-sensor.jpg";
 import emiImg from "@/assets/emi-shielding.jpg";
 import automotiveImg from "@/assets/automotive-glass.jpg";
 import offroadImg from "@/assets/offroad-heated-glass.jpg";
+import AutomotiveDiagram from "@/components/AutomotiveDiagram";
 
-const solutions = [
+const solutions: Array<{
+  to: string;
+  title: string;
+  desc: string;
+  items: string[];
+  img: string;
+  diagram?: boolean;
+  icon: LucideIcon;
+  tag: string;
+}> = [
   {
     to: "/technologies#interlayers",
     title: "Conductive Interlayers",
@@ -70,6 +81,7 @@ const solutions = [
     desc: "Heated mats, heated camera areas, heated wiper parks, embedded antenna, PDLC, and pre-laminated assemblies for automotive glazing programs.",
     items: ["Heated mats & camera areas", "Heated wiper parks", "Embedded antenna", "PDLC", "Pre-laminated assemblies"],
     img: automotiveImg,
+    diagram: true,
     icon: Car,
     tag: "04 / Automotive",
   },
@@ -316,13 +328,19 @@ const Index = () => {
               className="group panel relative overflow-hidden hover:border-primary/60 transition-colors flex flex-col"
             >
               <div className="aspect-[4/3] overflow-hidden relative">
-                <img
-                  src={s.img}
-                  alt={s.title}
-                  loading="lazy"
-                  className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/40 to-transparent" />
+                {s.diagram ? (
+                  <AutomotiveDiagram className="w-full h-full object-contain" />
+                ) : (
+                  <img
+                    src={s.img}
+                    alt={s.title}
+                    loading="lazy"
+                    className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                  />
+                )}
+                {!s.diagram && (
+                  <div className="absolute inset-0 bg-gradient-to-t from-card via-card/40 to-transparent" />
+                )}
                 <div className="absolute top-4 left-4 mono text-primary">{s.tag}</div>
                 <s.icon className="absolute top-4 right-4 text-primary/80" size={22} />
               </div>
