@@ -99,6 +99,10 @@ const applications = [
   "Medical Imaging Rooms",
   "Industrial Heated Glass",
   "ADAS & Sensor-Enabled Glazing",
+  "Airport Ground Support Equipment",
+  "Snow Removal Equipment",
+  "Commercial Boats & Workboats",
+  "Recreational Vehicles",
 ];
 
 const why = [
