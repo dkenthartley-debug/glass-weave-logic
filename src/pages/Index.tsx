@@ -455,6 +455,58 @@ const Index = () => {
         </div>
       </Section>
 
+      {/* THERMAL VALIDATION */}
+      <Section>
+        <div className="grid lg:grid-cols-12 gap-10 items-start">
+          <div className="lg:col-span-7">
+            <img
+              src={thermalTest.url}
+              alt="Laminated heater mat instrumented with thermocouples for in-house thermal testing"
+              loading="lazy"
+              className="w-full aspect-[3/2] object-cover border border-border"
+            />
+          </div>
+          <div className="lg:col-span-5">
+            <Eyebrow>Thermal Validation</Eyebrow>
+            <h2 className="font-display text-3xl md:text-4xl font-bold leading-tight mt-3">
+              Tested on the bench before it goes to the field.
+            </h2>
+            <div className="mt-5 space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                Every heater design is thermally validated in-house: surface thermocouples log warm-up
+                rate, steady-state temperature, and zone-to-zone uniformity while the assembly is powered
+                at its intended operating voltage.
+              </p>
+              <p>
+                Build-to-build data comparison lets HLG refine wire pitch, bus bar placement, and
+                termination routing before a design is frozen for qualification or production.
+              </p>
+            </div>
+            <div className="grid grid-cols-2 gap-px bg-border mt-8">
+              {[
+                ["Warm-up rate", "Time to target temperature"],
+                ["Steady state", "Long-term equilibrium logging"],
+                ["Uniformity", "Zone-to-zone distribution"],
+                ["Repeatability", "Build-to-build comparison"],
+              ].map(([t, d]) => (
+                <div key={t} className="bg-background p-5">
+                  <div className="mono text-[11px] uppercase tracking-wide text-primary">{t}</div>
+                  <div className="mt-1 text-sm text-muted-foreground">{d}</div>
+                </div>
+              ))}
+            </div>
+            <div className="mt-8">
+              <Link
+                to="/facility"
+                className="mono text-primary inline-flex items-center gap-2 hover:gap-3 transition-all text-xs"
+              >
+                See the facility and test setup <ArrowRight size={14} />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </Section>
+
       {/* RESOURCES PREVIEW */}
       <Section>
         <SectionHeading
