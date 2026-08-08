@@ -1,134 +1,36 @@
 import { PageHero, Section, Eyebrow } from "@/components/Section";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import cleanroomFloor from "@/assets/cleanroom-lamination-floor.jpg.asset.json";
-import cleanroomLightTable from "@/assets/cleanroom-light-table-inspection.jpg.asset.json";
-import cleanroomBagging from "@/assets/cleanroom-vacuum-bagging.jpg.asset.json";
-import cleanroomPrep from "@/assets/cleanroom-interlayer-prep.jpg.asset.json";
 import drumRoomLayup from "@/assets/drum-room-2-layup-line.jpg.asset.json";
-import drumRoomDrum from "@/assets/drum-room-2-interlayer-drum.jpg.asset.json";
-import drumRoomBay from "@/assets/drum-room-2-exterior-bay.jpg.asset.json";
-import drumRoomMasterRoll from "@/assets/drum-room-2-master-roll.jpg.asset.json";
 import dispenseCells from "@/assets/cleanroom-dispense-cells.jpg.asset.json";
-import dispenseStation from "@/assets/cleanroom-dispense-station.jpg.asset.json";
-import backlitInspection from "@/assets/cleanroom-backlit-inspection.jpg.asset.json";
 import leadAttach from "@/assets/cleanroom-lead-attach.jpg.asset.json";
 import floorWide from "@/assets/cleanroom-production-floor-wide.jpg.asset.json";
-import drumBusBarBench from "@/assets/cleanroom-drum-bus-bar-bench.jpg.asset.json";
-import busBarLayout from "@/assets/cleanroom-bus-bar-layout-table.jpg.asset.json";
-import materialBay from "@/assets/shop-material-bay-dock.jpg.asset.json";
-import teamEntrance from "@/assets/hlg-team-entrance.jpg.asset.json";
-import facilityExterior from "@/assets/hlg-facility-exterior.jpg.asset.json";
 import Seo, { orgSchema } from "@/components/Seo";
 
 const facilityPhotos = [
   {
-    src: cleanroomFloor.url,
-    title: "Interlayer layup floor",
-    caption:
-      "Controlled-environment layup tables where interlayer, wire mats, and film stacks are built up before lamination.",
-  },
-  {
-    src: cleanroomLightTable.url,
-    title: "Light table inspection & electrical check",
-    caption:
-      "Backlit inspection of a heater mat with in-process continuity and resistance measurement before the assembly moves forward.",
-  },
-  {
-    src: cleanroomPrep.url,
-    title: "Interlayer prep and bus bar work",
-    caption:
-      "Trimming, bus bar placement, and lead attachment on interlayer assemblies ahead of stack build.",
-  },
-  {
-    src: cleanroomBagging.url,
-    title: "Vacuum bagging",
-    caption:
-      "Assemblies bagged and sealed for the de-air and autoclave cycle — the step that determines optical and bond quality.",
-  },
-  {
-    src: drumRoomLayup.url,
-    title: "Drum Room #2 — layup line",
-    caption:
-      "Cleanroom Drum Room #2: full-length layup tables with glass staged alongside the interlayer drum for continuous stack build.",
-  },
-  {
-    src: drumRoomMasterRoll.url,
-    title: "Drum Room #2 — master roll and stack layout",
-    caption:
-      "Master interlayer roll feeding the layup table, with taped layout references marking cut lines and stack positions.",
-  },
-  {
-    src: drumRoomDrum.url,
-    title: "Drum Room #2 — interlayer drum station",
-    caption:
-      "Temperature- and humidity-controlled interlayer drum with automated traverse for repeatable sheet pull and cutting.",
-  },
-  {
-    src: drumRoomBay.url,
-    title: "Cleanroom envelope and material bay",
-    caption:
-      "Exterior of the cleanroom envelope inside the production building — staging, glass handling, and controlled material transfer.",
-  },
-  {
     src: floorWide.url,
     title: "Cleanroom production floor",
     caption:
-      "Multiple gowned build cells operating in parallel across the controlled production floor — each station dedicated to a separate program.",
+      "Multiple gowned build cells operating in parallel across the controlled production floor.",
   },
   {
     src: dispenseCells.url,
     title: "Automated dispense cells",
     caption:
-      "Gantry dispense stations A and B running programmed paths over staged interlayer stacks for repeatable bead and wire placement.",
-  },
-  {
-    src: dispenseStation.url,
-    title: "Gantry station — patterned layup",
-    caption:
-      "Single-cell gantry tracing a windshield profile on the layup table, with bus bar tape staged along the perimeter.",
+      "Gantry dispense stations running programmed paths over staged interlayer stacks for repeatable wire placement.",
   },
   {
     src: leadAttach.url,
     title: "Lead attach and in-process soldering",
     caption:
-      "Operator attaching leads and terminations at the gantry table while the assembly is still flat and fully accessible.",
+      "Leads and terminations attached at the layup table while the assembly is still flat and fully accessible.",
   },
   {
-    src: backlitInspection.url,
-    title: "Backlit inspection bay",
+    src: drumRoomLayup.url,
+    title: "Drum Room #2 — layup line",
     caption:
-      "High-intensity light table used for debris, wire, and bond-line inspection before the stack is bagged.",
-  },
-  {
-    src: drumBusBarBench.url,
-    title: "Drum station and bus bar bench",
-    caption:
-      "Interlayer drum in operation alongside the bus bar bench where terminations and braid assemblies are prepared and inspected.",
-  },
-  {
-    src: busBarLayout.url,
-    title: "Bus bar and lead kitting",
-    caption:
-      "Formed bus bar and lead sets laid out to a printed template so every assembly is built to the same routing and length.",
-  },
-  {
-    src: materialBay.url,
-    title: "Material receiving and transfer bay",
-    caption:
-      "Controlled transfer bay used for glass handling, incoming material staging, and outbound crating.",
-  },
-  {
-    src: teamEntrance.url,
-    title: "The HLG team",
-    caption:
-      "The production and engineering team at the Hotlineglass USA facility.",
-  },
-  {
-    src: facilityExterior.url,
-    title: "Hotlineglass USA facility",
-    caption:
-      "The HLG production building housing the cleanroom envelope, drum rooms, and lamination operations.",
+      "Full-length layup tables with glass staged alongside the interlayer drum for continuous stack build.",
   },
 ];
 
@@ -244,6 +146,11 @@ const About = () => (
             </figcaption>
           </figure>
         ))}
+      </div>
+      <div className="mt-8">
+        <Link to="/facility" className="inline-flex items-center gap-2 mono text-sm text-primary hover:text-primary-glow transition-colors">
+          See the full facility <ArrowRight size={16} />
+        </Link>
       </div>
     </Section>
 
