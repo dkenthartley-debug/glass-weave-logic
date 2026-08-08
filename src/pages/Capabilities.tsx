@@ -1,5 +1,5 @@
 import { PageHero, Section } from "@/components/Section";
-import { CircuitBoard, Thermometer, Plane, Shield, Cpu, Radio, Layers, Workflow, FlaskConical, Wrench } from "lucide-react";
+import { CircuitBoard, Thermometer, Plane, Shield, Cpu, Radio, Layers, Workflow, FlaskConical, Wrench, Activity } from "lucide-react";
 import Seo, { orgSchema } from "@/components/Seo";
 
 const groups = [
