@@ -12,7 +12,7 @@ type Marker = {
 
 const markers: Marker[] = [
   { id: "A", label: "Camera heat", x: 55, y: 28, side: "right" },
-  { id: "B", label: "Antenna", x: 84, y: 22, side: "left" },
+  { id: "B", label: "Antenna", x: 92, y: 14, side: "left" },
   { id: "C", label: "Wiggle wire heat", x: 26, y: 45, side: "right" },
   { id: "D", label: "Wiper park heat", x: 44, y: 68, side: "right" },
   { id: "E", label: "Connectors", x: 9, y: 61, side: "right" },
