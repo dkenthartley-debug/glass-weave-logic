@@ -20,6 +20,7 @@ import {
   Antenna,
   Car,
   Truck,
+  Activity,
   type LucideIcon,
 } from "lucide-react";
 import { Section, SectionHeading, Eyebrow } from "@/components/Section";
@@ -29,6 +30,7 @@ import aircraftImg from "@/assets/aircraft-sensor.jpg";
 import emiImg from "@/assets/emi-shielding.jpg";
 import automotiveImg from "@/assets/automotive-glass.jpg";
 import offroadImg from "@/assets/offroad-heated-glass.jpg";
+import thermalTest from "@/assets/heater-mat-thermal-test.jpg.asset.json";
 import AutomotiveDiagram from "@/components/AutomotiveDiagram";
 
 const solutions: Array<{
