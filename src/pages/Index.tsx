@@ -20,6 +20,7 @@ import {
   Antenna,
   Car,
   Truck,
+  Activity,
   type LucideIcon,
 } from "lucide-react";
 import { Section, SectionHeading, Eyebrow } from "@/components/Section";
@@ -29,6 +30,7 @@ import aircraftImg from "@/assets/aircraft-sensor.jpg";
 import emiImg from "@/assets/emi-shielding.jpg";
 import automotiveImg from "@/assets/automotive-glass.jpg";
 import offroadImg from "@/assets/offroad-heated-glass.jpg";
+import thermalTest from "@/assets/heater-mat-thermal-test.jpg.asset.json";
 import AutomotiveDiagram from "@/components/AutomotiveDiagram";
 
 const solutions: Array<{
@@ -148,6 +150,7 @@ const capabilities = [
   { icon: Cpu, label: "Bus bar integration" },
   { icon: Layers, label: "Conductive films" },
   { icon: Radio, label: "EMI shielding layers" },
+  { icon: Activity, label: "In-house thermal validation" },
   { icon: Wand2, label: "Laser deletion / patterned coatings" },
   { icon: Workflow, label: "Pre-lamination development" },
   { icon: FlaskConical, label: "Custom sample builds" },
@@ -158,7 +161,7 @@ const process = [
   { n: "01", t: "Specification Review", icon: ClipboardCheck },
   { n: "02", t: "Material Selection", icon: Layers },
   { n: "03", t: "Prototype Build", icon: Wrench },
-  { n: "04", t: "Electrical / Optical Testing", icon: FlaskConical },
+  { n: "04", t: "Thermal, Electrical & Optical Testing", icon: FlaskConical },
   { n: "05", t: "Qualification Support", icon: ShieldCheck },
   { n: "06", t: "Production Launch", icon: Rocket },
 ];
@@ -175,8 +178,8 @@ const specs = [
   { v: "100", u: "openings/in", l: "Shielding mesh density", d: "Fine copper mesh construction for EMI / RFI / SCIF applications." },
   { v: "12–48", u: "V DC", l: "Heater operating range", d: "Common bus bar voltage range for transparent heating subassemblies." },
   { v: ">85", u: "% VLT", l: "Optical transmission target", d: "Development target for conductive interlayer visible light transmission." },
+  { v: "Each", u: "design", l: "Thermal validation", d: "In-house warm-up, steady-state, and uniformity testing per engineered design." },
   { v: "6", u: "step process", l: "Prototype to production", d: "Structured path from specification review through repeatable supply." },
-  { v: "5", u: "integration paths", l: "Interlayer · Aero · Defense · Auto · Off-Road", d: "Core solution families supported across advanced glazing programs." },
 ];
 
 const Index = () => {
@@ -205,8 +208,8 @@ const Index = () => {
               </h1>
               <p className="mt-8 text-lg text-muted-foreground max-w-2xl leading-relaxed">
                 HLG helps customers integrate electrical, thermal, sensing, and shielding capability
-                into laminated glass through practical, repeatable, production-ready interlayer and
-                specialty film solutions.
+                into laminated glass — then validates each engineered design in-house through thermal,
+                electrical, and optical testing before it moves forward.
               </p>
               <div className="mt-10 flex flex-col sm:flex-row gap-4">
                 <Link
@@ -449,6 +452,58 @@ const Index = () => {
               <div className="mt-5 text-sm font-medium leading-snug">{p.t}</div>
             </div>
           ))}
+        </div>
+      </Section>
+
+      {/* THERMAL VALIDATION */}
+      <Section>
+        <div className="grid lg:grid-cols-12 gap-10 items-start">
+          <div className="lg:col-span-7">
+            <img
+              src={thermalTest.url}
+              alt="Laminated heater mat instrumented with thermocouples for in-house thermal testing"
+              loading="lazy"
+              className="w-full aspect-[3/2] object-cover border border-border"
+            />
+          </div>
+          <div className="lg:col-span-5">
+            <Eyebrow>Thermal Validation</Eyebrow>
+            <h2 className="font-display text-3xl md:text-4xl font-bold leading-tight mt-3">
+              Tested on the bench before it goes to the field.
+            </h2>
+            <div className="mt-5 space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                Every heater design is thermally validated in-house: surface thermocouples log warm-up
+                rate, steady-state temperature, and zone-to-zone uniformity while the assembly is powered
+                at its intended operating voltage.
+              </p>
+              <p>
+                Build-to-build data comparison lets HLG refine wire pitch, bus bar placement, and
+                termination routing before a design is frozen for qualification or production.
+              </p>
+            </div>
+            <div className="grid grid-cols-2 gap-px bg-border mt-8">
+              {[
+                ["Warm-up rate", "Time to target temperature"],
+                ["Steady state", "Long-term equilibrium logging"],
+                ["Uniformity", "Zone-to-zone distribution"],
+                ["Repeatability", "Build-to-build comparison"],
+              ].map(([t, d]) => (
+                <div key={t} className="bg-background p-5">
+                  <div className="mono text-[11px] uppercase tracking-wide text-primary">{t}</div>
+                  <div className="mt-1 text-sm text-muted-foreground">{d}</div>
+                </div>
+              ))}
+            </div>
+            <div className="mt-8">
+              <Link
+                to="/facility"
+                className="mono text-primary inline-flex items-center gap-2 hover:gap-3 transition-all text-xs"
+              >
+                See the facility and test setup <ArrowRight size={14} />
+              </Link>
+            </div>
+          </div>
         </div>
       </Section>
 

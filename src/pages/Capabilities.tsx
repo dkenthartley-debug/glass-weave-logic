@@ -1,5 +1,5 @@
 import { PageHero, Section } from "@/components/Section";
-import { CircuitBoard, Thermometer, Plane, Shield, Cpu, Radio, Layers, Workflow, FlaskConical, Wrench } from "lucide-react";
+import { CircuitBoard, Thermometer, Plane, Shield, Cpu, Radio, Layers, Workflow, FlaskConical, Wrench, Activity } from "lucide-react";
 import Seo, { orgSchema } from "@/components/Seo";
 
 const groups = [
@@ -70,13 +70,24 @@ const groups = [
       "Prototype-to-production transition",
     ],
   },
+  {
+    title: "Testing & Validation",
+    icon: Activity,
+    items: [
+      "In-house thermal testing per design",
+      "Warm-up and steady-state logging",
+      "Zone-to-zone temperature uniformity",
+      "Electrical continuity and resistance checks",
+      "Build-to-build repeatability comparison",
+    ],
+  },
 ];
 
 const Capabilities = () => (
   <>
     <Seo
-      title={"Capabilities — Embedded Wire, Heating, Shielding & Bus Bars | HLG"}
-      description={"HLG capabilities across embedded wire interlayers, transparent heating and de-icing, bus bar integration, conductive mesh and ITO films, laser deletion, and pre-lamination development."}
+      title={"Capabilities — Embedded Wire, Heating, Shielding, Testing & Bus Bars | HLG"}
+      description={"HLG capabilities across embedded wire interlayers, transparent heating and de-icing, bus bar integration, conductive mesh and ITO films, laser deletion, in-house thermal testing, and pre-lamination development."}
       path="/capabilities"
       schema={orgSchema}
     />
