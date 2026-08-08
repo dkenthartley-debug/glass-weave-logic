@@ -153,6 +153,7 @@ const capabilities = [
   { icon: Wand2, label: "Laser deletion / patterned coatings" },
   { icon: Workflow, label: "Pre-lamination development" },
   { icon: FlaskConical, label: "Custom sample builds" },
+  { icon: Activity, label: "In-house thermal validation" },
   { icon: Rocket, label: "Production path planning" },
 ];
 
