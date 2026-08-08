@@ -70,6 +70,17 @@ const groups = [
       "Prototype-to-production transition",
     ],
   },
+  {
+    title: "Testing & Validation",
+    icon: Activity,
+    items: [
+      "In-house thermal testing per design",
+      "Warm-up and steady-state logging",
+      "Zone-to-zone temperature uniformity",
+      "Electrical continuity and resistance checks",
+      "Build-to-build repeatability comparison",
+    ],
+  },
 ];
 
 const Capabilities = () => (
