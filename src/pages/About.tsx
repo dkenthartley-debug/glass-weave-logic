@@ -112,35 +112,36 @@ const About = () => (
         <div className="lg:col-span-5">
           <Eyebrow>Quality & Traceability</Eyebrow>
           <h2 className="font-display text-3xl md:text-4xl font-bold leading-tight">
-            ISO 9001 certified quality management for demanding markets.
+            Quality management and traceability built into production.
           </h2>
         </div>
         <div className="lg:col-span-7 space-y-5 text-lg text-muted-foreground leading-relaxed">
           <p>
-            HLG operates under an ISO 9001 certified quality management system. Certification means our
-            processes for design, production, inspection, and record-keeping are documented, repeatable,
-            and independently audited — a baseline requirement for suppliers in aerospace, defense, and
-            secure-facility markets.
+            HLG operates under a quality management system certified to ISO 9001. The certification
+            applies to the way we document, control, and improve our design, production, inspection, and
+            record-keeping processes — not to guarantees about any specific product performance or customer
+            specification.
           </p>
           <p>
-            Lot-number tracking and traceability are built into our workflow from raw interlayer through
-            shipped component. Each part carries an identifiable lot number, so material history,
-            process parameters, and inspection records can be retrieved for a specific production run.
-            This is critical for customers who must demonstrate supply-chain control, conformance, and
-            accountability to their own end users.
+            Lot-number tracking and material traceability are part of our normal workflow, from raw
+            interlayer through shipped component. Each production run carries identifiable lot
+            information, so we can retrieve material history, process parameters, and inspection records
+            for a specific batch when needed. This supports customers who must demonstrate supply-chain
+            control, conformance, and accountability to their own end users or certifying bodies.
           </p>
           <p>
-            For aerospace and defense programs, ISO 9001 provides a common language around process control
-            and corrective action that fits alongside OEM and prime-contractor quality systems. For SCIF,
-            TEMPEST, and secure-facility contractors, documented, repeatable production supports
-            compliance with facility-specific material and installation requirements. For transportation
-            and industrial OEMs, it means fewer surprises during qualification and more predictable
-            transitions from prototype to production.
+            For aerospace and defense programs, an ISO 9001-based system provides a common framework for
+            process control, corrective action, and documentation that can work alongside OEM and
+            prime-contractor quality systems. For SCIF, TEMPEST, and secure-facility contractors,
+            repeatable, documented production helps support compliance with facility-specific material and
+            installation requirements. For transportation and industrial OEMs, it can reduce qualification
+            risk and make transitions from prototype to production more predictable.
           </p>
           <p>
-            The certification does not by itself guarantee a particular performance level or specification
-            compliance. It does give customers a structured, auditable foundation for the quality and
-            traceability their programs require.
+            ISO 9001 certification is not a claim that every product meets every possible specification
+            or is suitable for every application. It is a statement that our quality management processes
+            are structured, audited, and capable of supporting the traceability and process control that
+            demanding markets require.
           </p>
         </div>
       </div>
