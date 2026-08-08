@@ -25,6 +25,7 @@ import SpecialtyFilms from "./pages/SpecialtyFilms";
 import Applications from "./pages/Applications";
 
 import About from "./pages/About";
+import Facility from "./pages/Facility";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
@@ -60,6 +61,7 @@ const App = () => (
             <Route path="/capabilities" element={<Capabilities />} />
             <Route path="/applications" element={<Applications />} />
             <Route path="/about" element={<About />} />
+            <Route path="/facility" element={<Facility />} />
             <Route path="/contact" element={<Contact />} />
 
             {/* Legacy solution routes */}
