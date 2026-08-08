@@ -161,7 +161,7 @@ const process = [
   { n: "01", t: "Specification Review", icon: ClipboardCheck },
   { n: "02", t: "Material Selection", icon: Layers },
   { n: "03", t: "Prototype Build", icon: Wrench },
-  { n: "04", t: "Electrical / Optical Testing", icon: FlaskConical },
+  { n: "04", t: "Thermal, Electrical & Optical Testing", icon: FlaskConical },
   { n: "05", t: "Qualification Support", icon: ShieldCheck },
   { n: "06", t: "Production Launch", icon: Rocket },
 ];
