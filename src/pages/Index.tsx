@@ -31,7 +31,7 @@ import emiImg from "@/assets/emi-shielding.jpg";
 import automotiveImg from "@/assets/automotive-glass.jpg";
 import offroadImg from "@/assets/offroad-heated-glass.jpg";
 import thermalTest from "@/assets/heater-mat-thermal-test.jpg.asset.json";
-import AutomotiveDiagram from "@/components/AutomotiveDiagram";
+import AutomotiveFeatureMap from "@/components/AutomotiveFeatureMap";
 
 const solutions: Array<{
   to: string;
@@ -332,7 +332,7 @@ const Index = () => {
             >
               <div className="aspect-[4/3] overflow-hidden relative">
                 {s.diagram ? (
-                  <AutomotiveDiagram className="w-full h-full object-contain" />
+                  <AutomotiveFeatureMap className="w-full h-full" />
                 ) : (
                   <img
                     src={s.img}
