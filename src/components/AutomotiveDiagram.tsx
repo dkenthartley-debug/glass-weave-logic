@@ -55,6 +55,13 @@ const CONNECTOR_H = 22;
 const CONN_X = 112;
 const CONN_Y = 494;
 
+// --- A-pillar transparent antenna ------------------------------------------
+// Double-line trace bridged at the top, single wire exit to a 1-pin connector.
+const ANT_A = "M 197 126 L 152 316";
+const ANT_B = "M 208 129 L 163 319";
+const ANT_BRIDGE = "M 197 126 Q 203 120 208 129";
+const ANT_EXIT = "M 152 316 L 148 338";
+
 export default function AutomotiveDiagram({ className = "" }: { className?: string }) {
   return (
     <svg
