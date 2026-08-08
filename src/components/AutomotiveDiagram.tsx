@@ -41,21 +41,13 @@ for (let x = CAM.x + 4; x <= CAM.x + CAM.w - 4; x += 4.5) {
   camWires.push(sineWire(x, CAM.y + 4, CAM.y + CAM.h - 4, 3));
 }
 
-// --- Heated wiper park (bottom corner, automotive connector) ----------------
-// Based on real PVB mat layout: single continuous wire, multiple passes in the
-// bottom-left corner, entering and exiting a single automotive connector on
-// the bottom edge.
+// --- Heated wiper park ----------------------------------------------------
+// One continuous wire: enters left pin, four full passes, exits right pin.
 const WIPER =
-  "M 140 494 L 140 458 L 352 458 L 352 444 L 140 444 L 140 430 L 332 430 " +
-  "L 332 416 L 140 416 L 140 402 L 312 402 L 312 388 L 140 388 L 140 494";
+  "M 392 494 L 392 464 L 170 464 L 170 410 L 630 410 L 630 428 L 190 428 " +
+  "L 190 446 L 610 446 L 610 464 L 406 464 L 406 494";
 
-// --- Typical automotive connector on bottom edge ----------------------------
-const CONNECTOR_W = 56;
-const CONNECTOR_H = 22;
-const CONN_X = 112;
-const CONN_Y = 494;
-
-// --- A-pillar transparent antenna ------------------------------------------
+// --- A-pillar transparent antenna ----------------------------------------
 // Double-line trace bridged at the top, single wire exit to a 1-pin connector.
 const ANT_A = "M 197 126 L 152 316";
 const ANT_B = "M 208 129 L 163 319";
@@ -132,7 +124,7 @@ export default function AutomotiveDiagram({ className = "" }: { className?: stri
         <line x1="148" y1="350" x2="148" y2="356" stroke="hsl(var(--primary))" strokeWidth="1.2" />
       </g>
 
-      {/* Heated wiper park — single continuous wire, bottom corner */}
+      {/* Heated wiper park — single continuous wire */}
       <path
         d={WIPER}
         fill="none"
@@ -142,30 +134,10 @@ export default function AutomotiveDiagram({ className = "" }: { className?: stri
         strokeLinecap="round"
       />
 
-      {/* Automotive connector on bottom edge */}
-      <g>
-        {/* Connector body */}
-        <rect
-          x={CONN_X}
-          y={CONN_Y}
-          width={CONNECTOR_W}
-          height={CONNECTOR_H}
-          rx="4"
-          fill="hsl(var(--card))"
-          stroke="hsl(var(--primary))"
-          strokeWidth="1.4"
-        />
-        {/* Sealing ribs */}
-        <line x1={CONN_X + 10} y1={CONN_Y + 4} x2={CONN_X + 10} y2={CONN_Y + CONNECTOR_H - 4} stroke="hsl(var(--primary) / 0.5)" strokeWidth="1" />
-        <line x1={CONN_X + 20} y1={CONN_Y + 4} x2={CONN_X + 20} y2={CONN_Y + CONNECTOR_H - 4} stroke="hsl(var(--primary) / 0.5)" strokeWidth="1" />
-        <line x1={CONN_X + 30} y1={CONN_Y + 4} x2={CONN_X + 30} y2={CONN_Y + CONNECTOR_H - 4} stroke="hsl(var(--primary) / 0.5)" strokeWidth="1" />
-        <line x1={CONN_X + 40} y1={CONN_Y + 4} x2={CONN_X + 40} y2={CONN_Y + CONNECTOR_H - 4} stroke="hsl(var(--primary) / 0.5)" strokeWidth="1" />
-        {/* Wire exit to connector — two pins */}
-        <line x1={CONN_X + 16} y1={CONN_Y + CONNECTOR_H} x2={CONN_X + 16} y2={CONN_Y + CONNECTOR_H + 12} stroke="hsl(var(--primary))" strokeWidth="1.4" />
-        <line x1={CONN_X + 40} y1={CONN_Y + CONNECTOR_H} x2={CONN_X + 40} y2={CONN_Y + CONNECTOR_H + 12} stroke="hsl(var(--primary))" strokeWidth="1.4" />
-        {/* Locking tab */}
-        <rect x={CONN_X + 20} y={CONN_Y - 6} width={16} height={6} rx="1" fill="hsl(var(--primary) / 0.2)" stroke="hsl(var(--primary))" strokeWidth="1" />
-      </g>
+      {/* Wiper park connector (2-pin) */}
+      <rect x="378" y="494" width="42" height="18" rx="3" fill="hsl(var(--card))" stroke="hsl(var(--primary))" strokeWidth="1.4" />
+      <line x1="392" y1="512" x2="392" y2="520" stroke="hsl(var(--primary))" strokeWidth="1.4" />
+      <line x1="406" y1="512" x2="406" y2="520" stroke="hsl(var(--primary))" strokeWidth="1.4" />
 
       {/* Callouts */}
       <g
