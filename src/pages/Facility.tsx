@@ -132,15 +132,15 @@ const PhotoGrid = ({ photos }: { photos: Photo[] }) => (
 const Facility = () => (
   <>
     <Seo
-      title="Facility & Cleanroom Production — Hotlineglass USA (HLG)"
-      description="Inside the HLG facility: cleanroom layup cells, automated dispense gantries, interlayer drum rooms, bus bar and lead attach benches, backlit inspection, and controlled material handling."
+      title="Facility, Cleanroom Production & Thermal Testing — Hotlineglass USA (HLG)"
+      description="Inside the HLG facility: cleanroom layup cells, automated dispense gantries, interlayer drum rooms, bus bar and lead attach benches, backlit inspection, controlled material handling, and in-house thermal testing of engineered heater designs."
       path="/facility"
       schema={orgSchema}
     />
     <PageHero
       eyebrow="Facility"
-      title="Cleanroom production, drum rooms, and controlled material handling"
-      subtitle="HLG builds conductive interlayers, heater mats, sensor mats, and bus bar assemblies inside a controlled production envelope — gowned build cells, automated dispense gantries, temperature- and humidity-controlled interlayer drums, and in-process electrical and optical inspection."
+      title="Cleanroom production, drum rooms, and in-house thermal testing"
+      subtitle="HLG builds conductive interlayers, heater mats, sensor mats, and bus bar assemblies inside a controlled production envelope — and thermally validates each engineered design on the bench before a program moves forward."
     />
 
     <Section>
@@ -186,6 +186,51 @@ const Facility = () => (
     </Section>
 
     <Section className="bg-surface/50 border-y border-border">
+      <div className="grid lg:grid-cols-12 gap-10 items-start">
+        <div className="lg:col-span-7">
+          <img
+            src={thermalTest.url}
+            alt="Laminated heater mat instrumented with thermocouples for in-house thermal testing"
+            loading="lazy"
+            className="w-full aspect-[3/2] object-cover border border-border"
+          />
+        </div>
+        <div className="lg:col-span-5">
+          <Eyebrow>In-House Thermal Testing</Eyebrow>
+          <h2 className="font-display text-3xl md:text-4xl font-bold leading-tight mt-3">
+            Each engineered design is thermally validated on the bench.
+          </h2>
+          <div className="mt-5 space-y-4 text-muted-foreground leading-relaxed">
+            <p>
+              Every heater mat, wiper park, camera zone, and heated glass concept is instrumented with
+              surface thermocouples across the active area, powered at the intended operating voltage,
+              and logged over time to observe warm-up rate, steady-state temperature, and zone-to-zone
+              distribution.
+            </p>
+            <p>
+              Multi-channel logging and timed runs let us compare zones against each other and against a
+              previous build, so wire pitch, bus bar placement, and termination changes can be evaluated
+              on real assemblies before a program moves into qualification or production.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 gap-px bg-border mt-8">
+            {[
+              ["Instrumentation", "Multi-channel surface thermocouples"],
+              ["Power-up", "Operating-voltage bench supply"],
+              ["Logged", "Warm-up, steady state, and uniformity"],
+              ["Compared", "Zone-to-zone and build-to-build"],
+            ].map(([t, d]) => (
+              <div key={t} className="bg-background p-5">
+                <div className="mono text-[11px] uppercase tracking-wide text-primary">{t}</div>
+                <div className="mt-1 text-sm text-muted-foreground">{d}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </Section>
+
+    <Section>
       <div className="max-w-3xl">
         <Eyebrow>Production Floor</Eyebrow>
         <h2 className="font-display text-3xl md:text-4xl font-bold leading-tight mt-3">
@@ -197,89 +242,6 @@ const Facility = () => (
         </p>
       </div>
       <PhotoGrid photos={productionFloor} />
-    </Section>
-
-    <Section>
-      <div className="max-w-3xl">
-        <Eyebrow>Build, Terminate, Inspect</Eyebrow>
-        <h2 className="font-display text-3xl md:text-4xl font-bold leading-tight mt-3">
-          Bus bars, leads, and in-process verification.
-        </h2>
-        <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
-          Terminations are built to template and verified while the assembly is still flat — continuity,
-          resistance, debris, and bond-line checks happen before the stack is bagged, not after
-          lamination.
-        </p>
-      </div>
-      <PhotoGrid photos={buildAndTerminate} />
-    </Section>
-
-    <Section className="bg-surface/50 border-y border-border">
-      <div className="max-w-3xl">
-        <Eyebrow>Interlayer Drum Rooms</Eyebrow>
-        <h2 className="font-display text-3xl md:text-4xl font-bold leading-tight mt-3">
-          Controlled interlayer handling from master roll to stack.
-        </h2>
-        <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
-          Interlayer is stored and dispensed under controlled temperature and humidity, with automated
-          traverse for repeatable sheet pull and cutting directly onto the layup line.
-        </p>
-      </div>
-      <PhotoGrid photos={drumRooms} />
-    </Section>
-
-    <Section>
-      <div className="max-w-3xl">
-        <Eyebrow>Bagging & Material Handling</Eyebrow>
-        <h2 className="font-display text-3xl md:text-4xl font-bold leading-tight mt-3">
-          Controlled transfer in and out of the envelope.
-        </h2>
-      </div>
-      <PhotoGrid photos={supportAreas} />
-    </Section>
-
-    <Section className="bg-surface/50 border-y border-border">
-      <div className="grid lg:grid-cols-12 gap-10 items-start">
-        <div className="lg:col-span-7">
-          <img
-            src={thermalTest.url}
-            alt="Laminated heater mat instrumented with thermocouples on the bench for in-house thermal testing"
-            loading="lazy"
-            className="w-full aspect-[3/2] object-cover border border-border"
-          />
-        </div>
-        <div className="lg:col-span-5">
-          <Eyebrow>In-House Thermal Testing</Eyebrow>
-          <h2 className="font-display text-3xl md:text-4xl font-bold leading-tight mt-3">
-            Mat prepared for thermal testing in house.
-          </h2>
-          <div className="mt-5 space-y-4 text-muted-foreground leading-relaxed">
-            <p>
-              A laminated heater mat is instrumented with surface thermocouples across the active area,
-              powered at the intended operating voltage, and logged over time to observe warm-up rate,
-              steady-state temperature, and distribution across the pattern.
-            </p>
-            <p>
-              Multi-channel logging and timed runs let us compare zones against each other and against a
-              previous build, so wire pitch, bus bar placement, and termination changes can be evaluated
-              on real assemblies before a program moves forward.
-            </p>
-          </div>
-          <div className="grid grid-cols-2 gap-px bg-border mt-8">
-            {[
-              ["Instrumentation", "Multi-channel surface thermocouples"],
-              ["Power-up", "Operating-voltage bench supply"],
-              ["Logged", "Warm-up rate and steady state"],
-              ["Compared", "Zone-to-zone and build-to-build"],
-            ].map(([t, d]) => (
-              <div key={t} className="bg-background p-5">
-                <div className="mono text-[11px] uppercase tracking-wide text-primary">{t}</div>
-                <div className="mt-1 text-sm text-muted-foreground">{d}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
     </Section>
 
     <Section>
