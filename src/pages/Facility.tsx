@@ -17,6 +17,7 @@ import drumRoomDrum from "@/assets/drum-room-2-interlayer-drum.jpg.asset.json";
 import drumRoomMasterRoll from "@/assets/drum-room-2-master-roll.jpg.asset.json";
 import materialBay from "@/assets/shop-material-bay-dock.jpg.asset.json";
 import cleanroomBagging from "@/assets/cleanroom-vacuum-bagging.jpg.asset.json";
+import thermalTest from "@/assets/heater-mat-thermal-test.jpg.asset.json";
 
 type Photo = { src: string; title: string; caption: string; wide?: boolean };
 
@@ -238,6 +239,50 @@ const Facility = () => (
     </Section>
 
     <Section className="bg-surface/50 border-y border-border">
+      <div className="grid lg:grid-cols-12 gap-10 items-start">
+        <div className="lg:col-span-7">
+          <img
+            src={thermalTest.url}
+            alt="Laminated heater mat instrumented with thermocouples on the bench for in-house thermal testing"
+            loading="lazy"
+            className="w-full aspect-[3/2] object-cover border border-border"
+          />
+        </div>
+        <div className="lg:col-span-5">
+          <Eyebrow>In-House Thermal Testing</Eyebrow>
+          <h2 className="font-display text-3xl md:text-4xl font-bold leading-tight mt-3">
+            Mat prepared for thermal testing in house.
+          </h2>
+          <div className="mt-5 space-y-4 text-muted-foreground leading-relaxed">
+            <p>
+              A laminated heater mat is instrumented with surface thermocouples across the active area,
+              powered at the intended operating voltage, and logged over time to observe warm-up rate,
+              steady-state temperature, and distribution across the pattern.
+            </p>
+            <p>
+              Multi-channel logging and timed runs let us compare zones against each other and against a
+              previous build, so wire pitch, bus bar placement, and termination changes can be evaluated
+              on real assemblies before a program moves forward.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 gap-px bg-border mt-8">
+            {[
+              ["Instrumentation", "Multi-channel surface thermocouples"],
+              ["Power-up", "Operating-voltage bench supply"],
+              ["Logged", "Warm-up rate and steady state"],
+              ["Compared", "Zone-to-zone and build-to-build"],
+            ].map(([t, d]) => (
+              <div key={t} className="bg-background p-5">
+                <div className="mono text-[11px] uppercase tracking-wide text-primary">{t}</div>
+                <div className="mt-1 text-sm text-muted-foreground">{d}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </Section>
+
+    <Section>
       <div className="grid lg:grid-cols-12 gap-10 items-center">
         <div className="lg:col-span-7">
           <img
