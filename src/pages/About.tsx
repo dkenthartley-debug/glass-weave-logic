@@ -9,6 +9,16 @@ import drumRoomLayup from "@/assets/drum-room-2-layup-line.jpg.asset.json";
 import drumRoomDrum from "@/assets/drum-room-2-interlayer-drum.jpg.asset.json";
 import drumRoomBay from "@/assets/drum-room-2-exterior-bay.jpg.asset.json";
 import drumRoomMasterRoll from "@/assets/drum-room-2-master-roll.jpg.asset.json";
+import dispenseCells from "@/assets/cleanroom-dispense-cells.jpg.asset.json";
+import dispenseStation from "@/assets/cleanroom-dispense-station.jpg.asset.json";
+import backlitInspection from "@/assets/cleanroom-backlit-inspection.jpg.asset.json";
+import leadAttach from "@/assets/cleanroom-lead-attach.jpg.asset.json";
+import floorWide from "@/assets/cleanroom-production-floor-wide.jpg.asset.json";
+import drumBusBarBench from "@/assets/cleanroom-drum-bus-bar-bench.jpg.asset.json";
+import busBarLayout from "@/assets/cleanroom-bus-bar-layout-table.jpg.asset.json";
+import materialBay from "@/assets/shop-material-bay-dock.jpg.asset.json";
+import teamEntrance from "@/assets/hlg-team-entrance.jpg.asset.json";
+import facilityExterior from "@/assets/hlg-facility-exterior.jpg.asset.json";
 import Seo, { orgSchema } from "@/components/Seo";
 
 const facilityPhotos = [
@@ -59,6 +69,66 @@ const facilityPhotos = [
     title: "Cleanroom envelope and material bay",
     caption:
       "Exterior of the cleanroom envelope inside the production building — staging, glass handling, and controlled material transfer.",
+  },
+  {
+    src: floorWide.url,
+    title: "Cleanroom production floor",
+    caption:
+      "Multiple gowned build cells operating in parallel across the controlled production floor — each station dedicated to a separate program.",
+  },
+  {
+    src: dispenseCells.url,
+    title: "Automated dispense cells",
+    caption:
+      "Gantry dispense stations A and B running programmed paths over staged interlayer stacks for repeatable bead and wire placement.",
+  },
+  {
+    src: dispenseStation.url,
+    title: "Gantry station — patterned layup",
+    caption:
+      "Single-cell gantry tracing a windshield profile on the layup table, with bus bar tape staged along the perimeter.",
+  },
+  {
+    src: leadAttach.url,
+    title: "Lead attach and in-process soldering",
+    caption:
+      "Operator attaching leads and terminations at the gantry table while the assembly is still flat and fully accessible.",
+  },
+  {
+    src: backlitInspection.url,
+    title: "Backlit inspection bay",
+    caption:
+      "High-intensity light table used for debris, wire, and bond-line inspection before the stack is bagged.",
+  },
+  {
+    src: drumBusBarBench.url,
+    title: "Drum station and bus bar bench",
+    caption:
+      "Interlayer drum in operation alongside the bus bar bench where terminations and braid assemblies are prepared and inspected.",
+  },
+  {
+    src: busBarLayout.url,
+    title: "Bus bar and lead kitting",
+    caption:
+      "Formed bus bar and lead sets laid out to a printed template so every assembly is built to the same routing and length.",
+  },
+  {
+    src: materialBay.url,
+    title: "Material receiving and transfer bay",
+    caption:
+      "Controlled transfer bay used for glass handling, incoming material staging, and outbound crating.",
+  },
+  {
+    src: teamEntrance.url,
+    title: "The HLG team",
+    caption:
+      "The production and engineering team at the Hotlineglass USA facility.",
+  },
+  {
+    src: facilityExterior.url,
+    title: "Hotlineglass USA facility",
+    caption:
+      "The HLG production building housing the cleanroom envelope, drum rooms, and lamination operations.",
   },
 ];
 
