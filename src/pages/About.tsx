@@ -9,6 +9,16 @@ import drumRoomLayup from "@/assets/drum-room-2-layup-line.jpg.asset.json";
 import drumRoomDrum from "@/assets/drum-room-2-interlayer-drum.jpg.asset.json";
 import drumRoomBay from "@/assets/drum-room-2-exterior-bay.jpg.asset.json";
 import drumRoomMasterRoll from "@/assets/drum-room-2-master-roll.jpg.asset.json";
+import dispenseCells from "@/assets/cleanroom-dispense-cells.jpg.asset.json";
+import dispenseStation from "@/assets/cleanroom-dispense-station.jpg.asset.json";
+import backlitInspection from "@/assets/cleanroom-backlit-inspection.jpg.asset.json";
+import leadAttach from "@/assets/cleanroom-lead-attach.jpg.asset.json";
+import floorWide from "@/assets/cleanroom-production-floor-wide.jpg.asset.json";
+import drumBusBarBench from "@/assets/cleanroom-drum-bus-bar-bench.jpg.asset.json";
+import busBarLayout from "@/assets/cleanroom-bus-bar-layout-table.jpg.asset.json";
+import materialBay from "@/assets/shop-material-bay-dock.jpg.asset.json";
+import teamEntrance from "@/assets/hlg-team-entrance.jpg.asset.json";
+import facilityExterior from "@/assets/hlg-facility-exterior.jpg.asset.json";
 import Seo, { orgSchema } from "@/components/Seo";
 
 const facilityPhotos = [
