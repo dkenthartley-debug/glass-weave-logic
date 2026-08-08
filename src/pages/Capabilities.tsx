@@ -86,8 +86,8 @@ const groups = [
 const Capabilities = () => (
   <>
     <Seo
-      title={"Capabilities — Embedded Wire, Heating, Shielding & Bus Bars | HLG"}
-      description={"HLG capabilities across embedded wire interlayers, transparent heating and de-icing, bus bar integration, conductive mesh and ITO films, laser deletion, and pre-lamination development."}
+      title={"Capabilities — Embedded Wire, Heating, Shielding, Testing & Bus Bars | HLG"}
+      description={"HLG capabilities across embedded wire interlayers, transparent heating and de-icing, bus bar integration, conductive mesh and ITO films, laser deletion, in-house thermal testing, and pre-lamination development."}
       path="/capabilities"
       schema={orgSchema}
     />
