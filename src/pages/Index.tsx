@@ -208,8 +208,8 @@ const Index = () => {
               </h1>
               <p className="mt-8 text-lg text-muted-foreground max-w-2xl leading-relaxed">
                 HLG helps customers integrate electrical, thermal, sensing, and shielding capability
-                into laminated glass through practical, repeatable, production-ready interlayer and
-                specialty film solutions.
+                into laminated glass — then validates each engineered design in-house through thermal,
+                electrical, and optical testing before it moves forward.
               </p>
               <div className="mt-10 flex flex-col sm:flex-row gap-4">
                 <Link
