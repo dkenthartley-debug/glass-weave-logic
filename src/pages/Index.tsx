@@ -178,8 +178,8 @@ const specs = [
   { v: "100", u: "openings/in", l: "Shielding mesh density", d: "Fine copper mesh construction for EMI / RFI / SCIF applications." },
   { v: "12–48", u: "V DC", l: "Heater operating range", d: "Common bus bar voltage range for transparent heating subassemblies." },
   { v: ">85", u: "% VLT", l: "Optical transmission target", d: "Development target for conductive interlayer visible light transmission." },
+  { v: "Each", u: "design", l: "Thermal validation", d: "In-house warm-up, steady-state, and uniformity testing per engineered design." },
   { v: "6", u: "step process", l: "Prototype to production", d: "Structured path from specification review through repeatable supply." },
-  { v: "5", u: "integration paths", l: "Interlayer · Aero · Defense · Auto · Off-Road", d: "Core solution families supported across advanced glazing programs." },
 ];
 
 const Index = () => {
