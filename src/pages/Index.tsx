@@ -150,10 +150,10 @@ const capabilities = [
   { icon: Cpu, label: "Bus bar integration" },
   { icon: Layers, label: "Conductive films" },
   { icon: Radio, label: "EMI shielding layers" },
+  { icon: Activity, label: "In-house thermal validation" },
   { icon: Wand2, label: "Laser deletion / patterned coatings" },
   { icon: Workflow, label: "Pre-lamination development" },
   { icon: FlaskConical, label: "Custom sample builds" },
-  { icon: Activity, label: "In-house thermal validation" },
   { icon: Rocket, label: "Production path planning" },
 ];
 
