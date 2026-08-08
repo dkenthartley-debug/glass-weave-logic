@@ -332,7 +332,7 @@ const Index = () => {
             >
               <div className="aspect-[4/3] overflow-hidden relative">
                 {s.diagram ? (
-                  <AutomotiveDiagram className="w-full h-full object-contain" />
+                  <AutomotiveFeatureMap className="w-full h-full" />
                 ) : (
                   <img
                     src={s.img}
