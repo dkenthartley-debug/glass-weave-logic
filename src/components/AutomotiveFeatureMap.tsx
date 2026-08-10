@@ -11,15 +11,15 @@ type Marker = {
 };
 
 const markers: Marker[] = [
-  { id: "A", label: "Camera heat", x: 54, y: 22, side: "right" },
-  { id: "B", label: "Antenna", x: 95, y: 34, side: "left" },
-  { id: "C", label: "Wiggle wire heat", x: 22, y: 46, side: "right" },
-  { id: "D", label: "Wiper park heat", x: 40, y: 73, side: "right" },
+  { id: "A", label: "Camera heat", x: 50, y: 22, side: "right" },
+  { id: "B", label: "Antenna", x: 93, y: 30, side: "left" },
+  { id: "C", label: "Wiggle wire heat", x: 20, y: 46, side: "right" },
+  { id: "D", label: "Wiper park heat", x: 42, y: 72, side: "right" },
   { id: "E", label: "Connectors", x: 8, y: 62, side: "right" },
 ];
 
 /** Glass viewing area (in % of the image box) that the wire field covers */
-const FIELD = { left: 12, right: 92, top: 15, bottom: 68 };
+const FIELD = { left: 12, right: 92, top: 18, bottom: 70 };
 
 /** Vertical sinusoidal ("wiggle") wire run, drawn in the 0-100 SVG space */
 function wiggleWire(x: number, top: number, bottom: number) {
