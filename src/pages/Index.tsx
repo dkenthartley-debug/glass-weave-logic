@@ -330,9 +330,9 @@ const Index = () => {
               to={s.to}
               className="group panel relative overflow-hidden hover:border-primary/60 transition-colors flex flex-col"
             >
-              <div className="aspect-[4/3] overflow-hidden relative">
+              <div className={`overflow-hidden relative ${s.diagram ? "" : "aspect-[4/3]"}`}>
                 {s.diagram ? (
-                  <AutomotiveFeatureMap className="w-full h-full" />
+                  <AutomotiveFeatureMap className="w-full" />
                 ) : (
                   <img
                     src={s.img}
