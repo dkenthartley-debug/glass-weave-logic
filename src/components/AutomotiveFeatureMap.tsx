@@ -13,7 +13,6 @@ const markers: Marker[] = [
   { n: 2, label: "Antenna", x: 87, y: 31 },
   { n: 3, label: "Wiggle wire heat", x: 24, y: 44 },
   { n: 4, label: "Wiper park heat", x: 58, y: 69 },
-  { n: 5, label: "Connectors", x: 11, y: 62 },
 ];
 
 export default function AutomotiveFeatureMap({
@@ -26,7 +25,7 @@ export default function AutomotiveFeatureMap({
       <div className="relative">
         <img
           src={automotiveWindshield}
-          alt="Automotive windshield showing potential locations for HLG camera heat, antenna, wiggle wire heat, wiper park heat, and connectors"
+          alt="Automotive windshield showing potential locations for HLG camera heat, antenna, wiggle wire heat, and wiper park heat"
           loading="lazy"
           width={1280}
           height={960}
@@ -45,7 +44,7 @@ export default function AutomotiveFeatureMap({
         ))}
       </div>
 
-      <ol className="grid grid-cols-2 gap-x-4 gap-y-2 border-t border-border p-5 sm:grid-cols-5">
+      <ol className="grid grid-cols-2 gap-x-4 gap-y-2 border-t border-border p-5 sm:grid-cols-4">
         {markers.map((m) => (
           <li key={m.n} className="flex gap-2 text-[11px] leading-snug">
             <span className="mono mt-px shrink-0 text-primary">{String(m.n).padStart(2, "0")}</span>
@@ -56,3 +55,4 @@ export default function AutomotiveFeatureMap({
     </div>
   );
 }
+
