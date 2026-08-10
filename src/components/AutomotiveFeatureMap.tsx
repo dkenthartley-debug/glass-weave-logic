@@ -19,7 +19,7 @@ const markers: Marker[] = [
   { n: 7, label: "Wiper park heat", detail: "Serpentine band along lower edge", x: 60, y: 68 },
   { n: 8, label: "Bottom bus bar", detail: "Return path, balanced current density", x: 80, y: 70.2 },
   { n: 9, label: "Connectors & leads", detail: "Soldered terminations, strain-relieved exit", x: 9.5, y: 62 },
-  { n: 10, label: "Frit / obscuration band", detail: "Bus bar and lead concealment", x: 86, y: 17 },
+  { n: 10, label: "Frit / obscuration band", detail: "Bus bar and lead concealment", x: 17.5, y: 15.5 },
 ];
 
 /** Glass viewing area (in % of the image box) that the wire field covers */
