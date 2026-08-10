@@ -385,7 +385,8 @@ var products = [
     overview: [
       "Heated windshield interlayers place fine conductor wire within the PVB interlayer so the finished laminate clears ice and fog across the driver vision area.",
       "Wire runs are laid perpendicular to the bus bars so each conductor presents a comparable path length, which is the basis of uniform current sharing and even temperature distribution.",
-      "The interlayer is supplied as a pre-lamination subassembly, so the glass fabricator's bending, stack-up, and autoclave process remain unchanged."
+      "The interlayer is supplied as a pre-lamination subassembly, so the glass fabricator's bending, stack-up, and autoclave process remain unchanged.",
+      "Connectors, lead exits, and terminations can be customer-specified or selected from standard ranges to match the harness or frame interface."
     ],
     highlights: [
       "Full-aperture or zoned heating layouts",
@@ -412,7 +413,8 @@ var products = [
     summary: "Conductive interlayers for laminated side glazing requiring defog or de-ice.",
     overview: [
       "Laminated side glass increasingly carries heating for fog clearing, mirror-area visibility, and cold-climate operation.",
-      "Because side glass apertures are smaller and often irregular, conductor layout and bus bar placement are tailored to the shape rather than adapted from a windshield pattern."
+      "Because side glass apertures are smaller and often irregular, conductor layout and bus bar placement are tailored to the shape rather than adapted from a windshield pattern.",
+      "Connectors, lead exits, and terminations can be customer-specified or selected from standard ranges to match the harness or frame interface."
     ],
     highlights: ["Irregular aperture support", "Low-visibility conductor options", "Compact bus bar routing"],
     specs: [
@@ -430,7 +432,8 @@ var products = [
     summary: "Laminated backlight heating with wire or printed conductor layouts.",
     overview: [
       "Laminated backlights allow heating conductors to be placed inside the laminate rather than printed on the inner surface, which protects the circuit from abrasion.",
-      "Antenna elements are frequently integrated into the same build, which requires coordinated layout to limit interaction between the heating grid and the antenna."
+      "Antenna elements are frequently integrated into the same build, which requires coordinated layout to limit interaction between the heating grid and the antenna.",
+      "Connectors, lead exits, and terminations can be customer-specified or selected from standard ranges to match the harness or frame interface."
     ],
     highlights: ["Wire or printed conductor options", "Antenna co-integration", "Protected internal circuit"],
     specs: [
@@ -448,7 +451,8 @@ var products = [
     summary: "Localized high-density heating zones behind camera and sensor apertures.",
     overview: [
       "Forward-facing camera and sensor apertures fog and ice before the rest of the windshield clears, so they are usually given a dedicated heated zone.",
-      "The zone sits behind the frit border, uses tighter wire pitch than the main aperture, and is typically driven independently so it can be energized on its own."
+      "The zone sits behind the frit border, uses tighter wire pitch than the main aperture, and is typically driven independently so it can be energized on its own.",
+      "Connectors, lead exits, and terminations can be customer-specified or selected from standard ranges to match the harness or frame interface."
     ],
     highlights: ["Dedicated low-power zone", "Tighter pitch for fast clearing", "Concealed behind frit"],
     specs: [
@@ -466,7 +470,8 @@ var products = [
     summary: "Conductive glazing engineered around driver-assistance sensor requirements.",
     overview: [
       "ADAS glazing must keep sensing apertures clear while avoiding optical artifacts in the sensor field of view.",
-      "This means conductor exclusion zones through the sensing path, careful pitch selection near the aperture, and coordination between heating, camera brackets, and any coatings in the stack."
+      "This means conductor exclusion zones through the sensing path, careful pitch selection near the aperture, and coordination between heating, camera brackets, and any coatings in the stack.",
+      "Connectors, lead exits, and terminations can be customer-specified or selected from standard ranges to match the harness or frame interface."
     ],
     highlights: ["Conductor exclusion zones", "Sensor-aware pattern layout", "Coordinated with bracket and frit design"],
     specs: [
@@ -483,7 +488,8 @@ var products = [
     summary: "Heater mats in interlayer format for fixed-wing cockpit windshields.",
     overview: [
       "Aircraft windshields require anti-ice and defog capability across a thick, curved, multi-ply transparency.",
-      "HLG supplies heater mats as pre-lamination subassemblies to transparency manufacturers, typically coordinated with a sensor mat for overheat protection."
+      "HLG supplies heater mats as pre-lamination subassemblies to transparency manufacturers, typically coordinated with a sensor mat for overheat protection.",
+      "Connectors, lead exits, and terminations can be customer-specified or selected from standard ranges to match the harness or frame interface."
     ],
     highlights: ["Curved and multi-ply compatible", "Coordinated sensor mat layout", "Defined lead exit and termination"],
     specs: [
@@ -501,7 +507,8 @@ var products = [
     summary: "Conductive and sensing subassemblies for cockpit window builds.",
     overview: [
       "Cockpit side and quarter windows have differing thermal, optical, and structural requirements from the primary windshield.",
-      "Conductor density, zoning, and sensor placement are set per position rather than reused across the aircraft."
+      "Conductor density, zoning, and sensor placement are set per position rather than reused across the aircraft.",
+      "Connectors, lead exits, and terminations can be customer-specified or selected from standard ranges to match the harness or frame interface."
     ],
     highlights: ["Per-position layout", "Zoned heating", "Sensor placement at the critical point"],
     specs: [
@@ -518,7 +525,8 @@ var products = [
     summary: "Heating and sensing elements for rotorcraft transparencies.",
     overview: [
       "Rotorcraft transparencies combine large curved apertures with tight weight and power budgets.",
-      "Zoned heating focused on the primary vision area is often preferable to full-aperture heating where supply current is limited."
+      "Zoned heating focused on the primary vision area is often preferable to full-aperture heating where supply current is limited.",
+      "Connectors, lead exits, and terminations can be customer-specified or selected from standard ranges to match the harness or frame interface."
     ],
     highlights: ["Weight and power aware layouts", "Large curved aperture support", "Zoned vision-area heating"],
     specs: [
@@ -535,7 +543,8 @@ var products = [
     summary: "Embedded serpentine sensing elements for transparency overheat protection.",
     overview: [
       "HLG's sensor elements are resistance-based serpentine mats with terminal pads and copper lead wires, laminated within the transparency.",
-      "They are positioned to represent the thermally critical part of the heated zone so that protection and control act on a meaningful measurement."
+      "They are positioned to represent the thermally critical part of the heated zone so that protection and control act on a meaningful measurement.",
+      "Connectors, lead exits, and terminations can be customer-specified or selected from standard ranges to match the harness or frame interface."
     ],
     highlights: ["Serpentine resistance element", "Terminal pads and copper leads", "Placement matched to heater layout"],
     specs: [
@@ -553,7 +562,8 @@ var products = [
     summary: "Mission and observation window heating with strict optical requirements.",
     overview: [
       "Observation and mission windows often carry tighter optical requirements than cockpit glazing, which limits acceptable conductor visibility.",
-      "Transparent conductive films or very fine wire at wide pitch are typical starting points, traded against the required power density."
+      "Transparent conductive films or very fine wire at wide pitch are typical starting points, traded against the required power density.",
+      "Connectors, lead exits, and terminations can be customer-specified or selected from standard ranges to match the harness or frame interface."
     ],
     highlights: ["Low-visibility conductor options", "Optical-first design approach", "Film and wire combinations"],
     specs: [
@@ -570,7 +580,8 @@ var products = [
     summary: "Conductive interlayers integrated into thick multi-ply armor glass builds.",
     overview: [
       "Transparent armor stacks are thick and thermally slow, so heating elements are positioned with the thermal path in mind rather than simply at the mid-plane.",
-      "HLG supplies the conductive interlayer subassembly; the armor build, ballistic performance, and qualification remain with the armor manufacturer."
+      "HLG supplies the conductive interlayer subassembly; the armor build, ballistic performance, and qualification remain with the armor manufacturer.",
+      "Connectors, lead exits, and terminations can be customer-specified or selected from standard ranges to match the harness or frame interface."
     ],
     highlights: ["Thick multi-ply compatible", "Thermal path aware placement", "Interlayer-format supply"],
     specs: [
@@ -587,7 +598,8 @@ var products = [
     summary: "Compact heated transparencies for armored vehicle vision devices.",
     overview: [
       "Vision blocks are small, thick, and often deeply recessed, which makes fogging a persistent operational problem.",
-      "Compact wire layouts with concealed bus bars and short lead exits suit the geometry and the vehicle harness."
+      "Compact wire layouts with concealed bus bars and short lead exits suit the geometry and the vehicle harness.",
+      "Connectors, lead exits, and terminations can be customer-specified or selected from standard ranges to match the harness or frame interface."
     ],
     highlights: ["Compact aperture layouts", "Short concealed terminations", "Vehicle supply compatible"],
     specs: [
@@ -604,7 +616,8 @@ var products = [
     summary: "Heated and shielded glazing for tactical and support vehicles.",
     overview: [
       "Vehicle glazing may need to combine heating, shielding, and sometimes antenna functions within a single laminate.",
-      "Because these functions interact, the build is designed as a system with defined isolation and grounding."
+      "Because these functions interact, the build is designed as a system with defined isolation and grounding.",
+      "Connectors, lead exits, and terminations can be customer-specified or selected from standard ranges to match the harness or frame interface."
     ],
     highlights: ["Combined heating and shielding builds", "Defined grounding and bonding", "Rugged lead terminations"],
     specs: [
@@ -621,7 +634,8 @@ var products = [
     summary: "Conductive mesh window inserts for emissions-controlled environments.",
     overview: [
       "Shielded windows use a fine conductive mesh laminated between plies, with a perimeter termination that bonds to the surrounding enclosure.",
-      "Shielding effectiveness is a property of the complete installation \u2014 frame, gasket, bonding, and enclosure \u2014 not of the glass alone."
+      "Shielding effectiveness is a property of the complete installation \u2014 frame, gasket, bonding, and enclosure \u2014 not of the glass alone.",
+      "Connectors, lead exits, and terminations can be customer-specified or selected from standard ranges to match the harness or frame interface."
     ],
     highlights: ["Fine conductive mesh integration", "Perimeter grounding concepts", "Designed with the integrator"],
     specs: [
@@ -638,7 +652,8 @@ var products = [
     summary: "Shielded and conductive glazing for operations rooms and sensitive facilities.",
     overview: [
       "Operations and command spaces often need shielded viewing windows that match the shielding intent of the surrounding wall construction.",
-      "HLG focuses on the glass insert subassembly and works with the facility integrator on termination and bonding."
+      "HLG focuses on the glass insert subassembly and works with the facility integrator on termination and bonding.",
+      "Connectors, lead exits, and terminations can be customer-specified or selected from standard ranges to match the harness or frame interface."
     ],
     highlights: ["Insert subassembly focus", "Integrator coordination", "Matched to wall shielding approach"],
     specs: [
@@ -655,7 +670,8 @@ var products = [
     summary: "Laminated glass with an integrated conductive mesh for electromagnetic attenuation.",
     overview: [
       "EMI glass integrates a fine conductive mesh within a laminated build so that a window aperture does not become the weak point of a shielded envelope.",
-      "Mesh selection balances attenuation against visible light transmission and moir\xE9 behavior at the intended viewing distance."
+      "Mesh selection balances attenuation against visible light transmission and moir\xE9 behavior at the intended viewing distance.",
+      "Connectors, lead exits, and terminations can be customer-specified or selected from standard ranges to match the harness or frame interface."
     ],
     highlights: ["Fine mesh integration", "Transmission and attenuation trade-off review", "Perimeter termination concepts"],
     specs: [
@@ -672,7 +688,8 @@ var products = [
     summary: "Shielded window inserts developed for secure compartmented facility construction.",
     overview: [
       "SCIF window inserts must match the shielding approach of the surrounding secure envelope, including how the frame is bonded to the wall system.",
-      "HLG develops the laminated insert and coordinates termination details with the facility contractor."
+      "HLG develops the laminated insert and coordinates termination details with the facility contractor.",
+      "Connectors, lead exits, and terminations can be customer-specified or selected from standard ranges to match the harness or frame interface."
     ],
     highlights: ["Envelope-matched design", "Frame bonding coordination", "Contractor-facing development"],
     specs: [
@@ -689,7 +706,8 @@ var products = [
     summary: "Conductive laminates for radio frequency attenuation in building apertures.",
     overview: [
       "RF shielding glass is used where signal containment or exclusion is required across a window aperture.",
-      "As with EMI glass, the installed system determines performance; the laminate provides the conductive continuity across the opening."
+      "As with EMI glass, the installed system determines performance; the laminate provides the conductive continuity across the opening.",
+      "Connectors, lead exits, and terminations can be customer-specified or selected from standard ranges to match the harness or frame interface."
     ],
     highlights: ["Continuity across the aperture", "Mesh and film options", "System-level design support"],
     specs: [
@@ -706,7 +724,8 @@ var products = [
     summary: "Conductive laminated glazing for facilities with controlled emissions requirements.",
     overview: [
       "Secure facilities combine shielding requirements with normal architectural constraints on transmission, size, and framing.",
-      "HLG supports the conductive layer, its termination, and the interface with the frame system."
+      "HLG supports the conductive layer, its termination, and the interface with the frame system.",
+      "Connectors, lead exits, and terminations can be customer-specified or selected from standard ranges to match the harness or frame interface."
     ],
     highlights: ["Architectural size support", "Termination interface design", "Transmission-aware mesh selection"],
     specs: [
@@ -723,7 +742,8 @@ var products = [
     summary: "General-purpose conductive laminated builds for specialty architectural requirements.",
     overview: [
       "Some architectural applications need conduction for reasons other than shielding \u2014 heating, static control, sensing, or antenna function.",
-      "These builds start from the same interlayer platform and are engineered to the specific electrical requirement."
+      "These builds start from the same interlayer platform and are engineered to the specific electrical requirement.",
+      "Connectors, lead exits, and terminations can be customer-specified or selected from standard ranges to match the harness or frame interface."
     ],
     highlights: ["Application-specific conductor selection", "Heating, sensing, or shielding", "Standard laminated formats"],
     specs: [
@@ -740,7 +760,8 @@ var products = [
     summary: "Heated cab and passenger glazing for rail and transit vehicles.",
     overview: [
       "Rail cab windshields require reliable de-icing at speed, with large apertures and long service life expectations.",
-      "Wire-based heating suits the aperture size, and bus bar sizing becomes a significant part of the design at these dimensions."
+      "Wire-based heating suits the aperture size, and bus bar sizing becomes a significant part of the design at these dimensions.",
+      "Connectors, lead exits, and terminations can be customer-specified or selected from standard ranges to match the harness or frame interface."
     ],
     highlights: ["Large aperture layouts", "Heavy bus bar engineering", "Long service life focus"],
     specs: [
@@ -757,7 +778,8 @@ var products = [
     summary: "Heated bridge and pilothouse windows for marine environments.",
     overview: [
       "Marine glazing combines heating requirements with a corrosive environment, which puts particular emphasis on termination sealing and lead protection.",
-      "Bus bar material selection and edge seal detail are as important as the heating circuit itself."
+      "Bus bar material selection and edge seal detail are as important as the heating circuit itself.",
+      "Connectors, lead exits, and terminations can be customer-specified or selected from standard ranges to match the harness or frame interface."
     ],
     highlights: ["Corrosion-aware terminations", "Sealed lead exits", "Bridge visibility focus"],
     specs: [
@@ -774,7 +796,8 @@ var products = [
     summary: "Heated cab glazing for construction, mining, and agricultural equipment.",
     overview: [
       "Equipment cabs operate in cold, dusty, high-vibration conditions where fogging and icing directly affect operator safety.",
-      "Robust terminations and simple, serviceable harness interfaces matter more here than minimum conductor visibility."
+      "Robust terminations and simple, serviceable harness interfaces matter more here than minimum conductor visibility.",
+      "Connectors, lead exits, and terminations can be customer-specified or selected from standard ranges to match the harness or frame interface."
     ],
     highlights: ["Vibration-tolerant terminations", "Serviceable harness interface", "Cold-climate power targets"],
     specs: [
@@ -791,7 +814,8 @@ var products = [
     summary: "Bus and coach windshield heating with large-aperture layouts.",
     overview: [
       "Transit windshields are large, often split into multiple panes, and operate on constrained electrical systems.",
-      "Zoned heating and careful voltage selection keep current draw within the vehicle's available supply."
+      "Zoned heating and careful voltage selection keep current draw within the vehicle's available supply.",
+      "Connectors, lead exits, and terminations can be customer-specified or selected from standard ranges to match the harness or frame interface."
     ],
     highlights: ["Multi-pane coordination", "Zoned heating", "Supply-constrained design"],
     specs: [
@@ -808,7 +832,8 @@ var products = [
     summary: "Low-volume and custom heated or conductive glazing builds.",
     overview: [
       "Specialty and low-volume vehicles rarely fit standard heated glass offerings, and the aperture geometry is often unique to the platform.",
-      "The interlayer format suits low volumes because layout changes do not require new coating or glass tooling."
+      "The interlayer format suits low volumes because layout changes do not require new coating or glass tooling.",
+      "Connectors, lead exits, and terminations can be customer-specified or selected from standard ranges to match the harness or frame interface."
     ],
     highlights: ["Low-volume friendly", "Custom aperture layouts", "Fast design iteration"],
     specs: [
@@ -826,7 +851,8 @@ var products = [
     overview: [
       "Ground support equipment works outdoors in freezing, high-humidity ramp conditions where fogged or iced cab glass stops the operation.",
       "HLG supplies the heated interlayer subassembly or the complete laminated heated glass part, depending on whether the customer laminates in-house.",
-      "Layouts are built around the cab aperture, the available 12 V or 24 V supply, and a serviceable harness connection at the frame."
+      "Layouts are built around the cab aperture, the available 12 V or 24 V supply, and a serviceable harness connection at the frame.",
+      "Connectors, lead exits, and terminations can be customer-specified or selected from standard ranges to match the harness or frame interface."
     ],
     highlights: [
       "Complete heated glass parts or interlayer subassemblies",
@@ -851,7 +877,8 @@ var products = [
     summary: "Heated windshields and side glass for plows, blowers, loaders, and municipal snow fleets.",
     overview: [
       "Snow removal cabs face continuous ice loading, blowing snow, and long night shifts, so clearing performance and uniformity are the driving requirements.",
-      "Higher power density layouts and zoned heating keep the primary vision area clear without exceeding the machine's available current."
+      "Higher power density layouts and zoned heating keep the primary vision area clear without exceeding the machine's available current.",
+      "Connectors, lead exits, and terminations can be customer-specified or selected from standard ranges to match the harness or frame interface."
     ],
     highlights: ["High power density layouts", "Zoned clearing priority areas", "Cold-soak start performance"],
     specs: [
@@ -869,7 +896,8 @@ var products = [
     summary: "Heated pilothouse and bridge glass for commercial boats and workboats.",
     overview: [
       "Wheelhouse glazing needs clear forward vision through spray, fog, and freezing conditions, often with wiper systems running at the same time.",
-      "Marine builds emphasize sealed lead exits, corrosion-aware terminations, and layouts coordinated with mullions and wiper sweep."
+      "Marine builds emphasize sealed lead exits, corrosion-aware terminations, and layouts coordinated with mullions and wiper sweep.",
+      "Connectors, lead exits, and terminations can be customer-specified or selected from standard ranges to match the harness or frame interface."
     ],
     highlights: ["Sealed, strain-relieved lead exits", "Corrosion-aware terminations", "Wiper-sweep coordinated layouts"],
     specs: [
@@ -887,7 +915,8 @@ var products = [
     summary: "Heated windshields and cab glass for motorhomes, RVs, and specialty recreational platforms.",
     overview: [
       "RV windshields are large, often split, and used in cold-weather travel where defrost coverage and appearance both matter.",
-      "Fine conductor pitch keeps the heating unobtrusive across a large aperture while zoning holds current draw within the chassis supply."
+      "Fine conductor pitch keeps the heating unobtrusive across a large aperture while zoning holds current draw within the chassis supply.",
+      "Connectors, lead exits, and terminations can be customer-specified or selected from standard ranges to match the harness or frame interface."
     ],
     highlights: ["Large-aperture and split-pane layouts", "Low-visibility conductor pitch", "Chassis supply-constrained zoning"],
     specs: [
