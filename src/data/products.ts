@@ -17,12 +17,12 @@ export type Market = {
 };
 
 export const markets: Market[] = [
-  { slug: "automotive", name: "Automotive", blurb: "Heated windshields, side and rear glass, camera and sensor windows, and ADAS-enabled glazing." },
-  { slug: "aerospace", name: "Aerospace", blurb: "Windshield heating, cockpit transparencies, helicopter windows, and embedded sensor systems." },
-  { slug: "defense", name: "Defense", blurb: "Heated transparent armor, vision blocks, vehicle windows, and EMI shielded glazing." },
-  { slug: "architectural", name: "Architectural & Secure Facilities", blurb: "EMI glass, SCIF windows, RF shielding glass, and conductive laminates for secure buildings." },
-  { slug: "transportation", name: "Transportation", blurb: "Rail, marine, transit, heavy equipment, and specialty vehicle glazing." },
-  { slug: "off-road-commercial", name: "Off-Road & Commercial Equipment", blurb: "Complete heated laminated glass and interlayer subassemblies for airport ground support, snow removal equipment, commercial boats, and recreational vehicles." },
+  { slug: "automotive", name: "Automotive", blurb: "Heated windshields, side and rear glass, camera and sensor windows, and ADAS-enabled glazing, with connector and lead exit options matched to the vehicle harness." },
+  { slug: "aerospace", name: "Aerospace", blurb: "Windshield heating, cockpit transparencies, helicopter windows, and embedded sensor systems, with connector and termination options matched to the aircraft harness." },
+  { slug: "defense", name: "Defense", blurb: "Heated transparent armor, vision blocks, vehicle windows, and EMI shielded glazing, with rugged connectors and grounding options matched to the platform." },
+  { slug: "architectural", name: "Architectural & Secure Facilities", blurb: "EMI glass, SCIF windows, RF shielding glass, and conductive laminates for secure buildings, with termination and bonding options matched to the frame system." },
+  { slug: "transportation", name: "Transportation", blurb: "Rail, marine, transit, heavy equipment, and specialty vehicle glazing, with connector options matched to the vehicle supply and harness." },
+  { slug: "off-road-commercial", name: "Off-Road & Commercial Equipment", blurb: "Complete heated laminated glass and interlayer subassemblies for airport ground support, snow removal equipment, commercial boats, and recreational vehicles, with connector and lead options matched to the equipment harness." },
 ];
 
 const f = (q: string, a: string) => ({ q, a });
