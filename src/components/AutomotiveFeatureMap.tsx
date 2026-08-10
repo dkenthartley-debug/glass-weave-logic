@@ -46,7 +46,13 @@ const wireXs = Array.from(
   (_, i) => FIELD.left + i * 2.6,
 );
 
-export default function AutomotiveFeatureMap({ className = "" }: { className?: string }) {
+export default function AutomotiveFeatureMap({
+  className = "",
+  variant = "compact",
+}: {
+  className?: string;
+  variant?: "compact" | "full";
+}) {
   return (
     <div className={className}>
       <div className="relative">
@@ -163,13 +169,13 @@ export default function AutomotiveFeatureMap({ className = "" }: { className?: s
         ))}
       </div>
 
-      <ol className="grid sm:grid-cols-2 gap-x-6 gap-y-2 border-t border-border p-5">
+      <ol className="grid grid-cols-2 gap-x-4 gap-y-1.5 border-t border-border p-5">
         {markers.map((m) => (
-          <li key={m.n} className="flex gap-2.5 text-xs leading-snug">
+          <li key={m.n} className="flex gap-2 text-[11px] leading-snug">
             <span className="mono mt-px shrink-0 text-primary">{String(m.n).padStart(2, "0")}</span>
             <span>
               <span className="text-foreground">{m.label}</span>
-              <span className="block text-muted-foreground">{m.detail}</span>
+              {variant === "full" && <span className="block text-muted-foreground">{m.detail}</span>}
             </span>
           </li>
         ))}
