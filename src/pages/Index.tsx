@@ -175,10 +175,10 @@ const resources = [
 
 const specs = [
   { v: "±0.5", u: "mm", l: "Wire placement tolerance", d: "Typical embedded wire positional accuracy in interlayer format." },
-  { v: "100", u: "openings/in", l: "Shielding mesh density", d: "Fine copper mesh construction for EMI / RFI / SCIF applications." },
+  { v: "100", u: "openings/in", l: "EMI / RFI / SCIF shielding", d: "Fine copper mesh to printed copper interlayers ready to laminate." },
   { v: "12–440", u: "V DC", l: "Current heated interlayer voltage range", d: "Voltage span supported by HLG embedded-conductor heating subassemblies." },
-  { v: ">85", u: "% VLT", l: "Optical transmission target", d: "Development target for conductive interlayer visible light transmission." },
-  { v: "Each", u: "design", l: "Thermal validation", d: "In-house warm-up, steady-state, and uniformity testing per engineered design." },
+  { v: "Custom", u: "layouts", l: "Sensor mats", d: "Custom layouts for accurate placement and lower-stress laminates." },
+  { v: "Each", u: "design", l: "Thermal validation", d: "Each design is thermally tested in-house for thermal uniformity." },
   { v: "6", u: "step process", l: "Prototype to production", d: "Structured path from specification review through repeatable supply." },
 ];
 
