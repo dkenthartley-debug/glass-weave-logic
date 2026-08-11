@@ -2,10 +2,9 @@ import automotiveWindshield from "@/assets/automotive-windshield-clean.jpg";
 
 const MARKERS = [
   { n: 1, label: "Camera / ADAS heat", x: 45, y: 24 },
-  { n: 2, label: "Embedded antenna", x: 38, y: 40 },
+  { n: 2, label: "Embedded antenna", x: 78, y: 50 },
   { n: 3, label: "Wiggle wire heat", x: 46, y: 50 },
   { n: 4, label: "Wiper park heat", x: 30, y: 65 },
-
 ];
 
 export default function AutomotiveFeatureMap({
