@@ -56,6 +56,8 @@ const App = () => (
             <Route path="/white-papers/atpd-2352-rev-u-sensor" element={<WhitePaperAtpd2352 />} />
             <Route path="/technical-bulletins/tb-001-optical-performance-under-electrical-load" element={<TechBulletinTb001 />} />
             <Route path="/qualification-standards/hlg-qs-1724" element={<QualificationStandardHlgQs1724 />} />
+            <Route path="/specifications/:slug" element={<SpecificationDetail />} />
+
 
 
 
