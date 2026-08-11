@@ -8,17 +8,18 @@ export type LibraryDoc = {
   title: string;
   revision: string;
   summary: string;
-  pdf: string;
+  pdf?: string;
   path?: string;
 };
 
 export type LibrarySeries = {
-  code: "TB" | "QS" | "AG" | "ER";
+  code: "TB" | "QS" | "AG" | "ER" | "S";
   name: string;
   scope: string;
   purpose: string;
   docs: LibraryDoc[];
 };
+
 
 export const librarySeries: LibrarySeries[] = [
   {
