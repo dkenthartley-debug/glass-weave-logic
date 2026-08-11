@@ -3,14 +3,16 @@ import { librarySeries } from "@/data/library";
 import { PageHero, Section } from "@/components/Section";
 import Seo, { breadcrumbSchema, orgSchema } from "@/components/Seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import { ArrowRight, FileDown, FileStack, Award, BookOpen, ClipboardList } from "lucide-react";
+import { ArrowRight, FileDown, FileStack, Award, BookOpen, ClipboardList, FileText } from "lucide-react";
 
 const seriesIcon = {
   TB: FileStack,
   QS: Award,
   AG: BookOpen,
   ER: ClipboardList,
+  S: FileText,
 } as const;
+
 
 const crumbs = [
   { name: "Home", path: "/" },
