@@ -297,21 +297,22 @@ const Index = () => {
       </section>
 
 
-      {/* WHAT HLG DOES */}
+      {/* WHAT HOTLINEGLASS USA DOES */}
       <Section>
         <div className="grid lg:grid-cols-12 gap-10 items-start">
           <div className="lg:col-span-5">
-            <Eyebrow>What HLG Does</Eyebrow>
+            <Eyebrow>What Hotlineglass USA Does</Eyebrow>
             <h2 className="font-display text-3xl md:text-4xl font-bold leading-tight">
-              Specialty subassemblies for <span className="text-primary">advanced laminated glass</span>.
+              Specialty interlayer subassemblies for <span className="text-primary">advanced conductive laminated glass</span>.
             </h2>
           </div>
           <div className="lg:col-span-7 text-muted-foreground leading-relaxed text-lg">
             <p>
-            Hotlineglass USA develops and supplies specialty interlayers, embedded wire products,
-            antenna wire products, conductive films, sensor mats, heater mats, bus bar systems,
-            PDLC, pre-laminated assemblies, and production-ready laminated glass subassemblies
-            for advanced glazing applications.
+              Hotlineglass USA develops and supplies specialty interlayers, embedded wire products,
+              antenna wire products, heated camera areas, conductive films, sensor mats, heated mats,
+              EMI/RFI sub assemblies, TEMPEST interlayers, reliable conductive bus bar systems, PDLC,
+              pre-laminated assemblies, and production-ready conductive laminated glass subassemblies
+              for advanced glazing applications.
             </p>
           </div>
         </div>
