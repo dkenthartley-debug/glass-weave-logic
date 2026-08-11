@@ -69,15 +69,18 @@ const TechnicalLibrary = () => (
                 <h3 className="font-display font-semibold mt-2">{d.title}</h3>
                 <p className="text-sm text-muted-foreground mt-2 leading-relaxed">{d.summary}</p>
                 <div className="flex items-center gap-4 mt-4">
-                  <a href={d.pdf} download className="mono text-[10px] text-primary inline-flex items-center gap-2">
-                    <FileDown size={12} /> Download PDF
-                  </a>
+                  {d.pdf && (
+                    <a href={d.pdf} download className="mono text-[10px] text-primary inline-flex items-center gap-2">
+                      <FileDown size={12} /> Download PDF
+                    </a>
+                  )}
                   {d.path && (
                     <Link to={d.path} className="mono text-[10px] text-primary inline-flex items-center gap-2">
                       Read online <ArrowRight size={12} />
                     </Link>
                   )}
                 </div>
+
               </div>
             ))}
           </div>
