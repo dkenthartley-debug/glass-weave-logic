@@ -76,6 +76,42 @@ var librarySeries = [
         pdf: er001.url
       }
     ]
+  },
+  {
+    code: "S",
+    name: "HLG Product Specifications",
+    scope: "S Series",
+    purpose: "Concise product and design specifications for HLG conductive interlayers, heater mats, sensor mats, and shielding subassemblies.",
+    docs: [
+      {
+        id: "S.02",
+        title: "EMI/RFI SCIF Shielding",
+        revision: "Revision A",
+        summary: "Fine copper mesh to printed copper interlayers ready to laminate.",
+        path: "/specifications/s-02-emi-rfi-scif-shielding"
+      },
+      {
+        id: "S.03",
+        title: "Current Heated Interlayer Voltage Range",
+        revision: "Revision A",
+        summary: "Current heated interlayer voltage range: 12 V to 440 V DC.",
+        path: "/specifications/s-03-heated-interlayer-voltage-range"
+      },
+      {
+        id: "S.04",
+        title: "Sensor Mats \u2014 Custom Layouts for Accurate Placement and Lower-Stress Laminates",
+        revision: "Revision A",
+        summary: "Sensor mats are engineered with custom layouts for accurate placement and lower-stress laminates.",
+        path: "/specifications/s-04-sensor-mat-custom-layouts"
+      },
+      {
+        id: "S.05",
+        title: "Thermal Validation",
+        revision: "Revision A",
+        summary: "Each design is thermally tested in-house for thermal uniformity.",
+        path: "/specifications/s-05-thermal-validation"
+      }
+    ]
   }
 ];
 
