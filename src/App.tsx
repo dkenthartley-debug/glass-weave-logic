@@ -17,6 +17,8 @@ import FaqLibrary from "./pages/FaqLibrary";
 import WhitePaperAtpd2352 from "./pages/WhitePaperAtpd2352";
 import TechBulletinTb001 from "./pages/TechBulletinTb001";
 import QualificationStandardHlgQs1724 from "./pages/QualificationStandardHlgQs1724";
+import SpecificationDetail from "./pages/SpecificationDetail";
+
 
 import ConductiveInterlayers from "./pages/ConductiveInterlayers";
 import AircraftSensors from "./pages/AircraftSensors";
