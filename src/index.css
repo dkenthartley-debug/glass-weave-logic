@@ -2,60 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 
-/* HLG Design System — Industrial Aerospace / Defense */
+/* HLG V1 Design System — light technical / deep navy sections */
 
 @layer base {
   :root {
-    /* Core surfaces — deep navy / charcoal */
-    --background: 220 35% 7%;
-    --foreground: 210 25% 92%;
+    /* Core surfaces — white + very light cool gray */
+    --background: 0 0% 100%;
+    --foreground: 215 45% 13%;
 
-    --surface: 220 30% 10%;
-    --surface-elevated: 220 28% 13%;
+    --surface: 210 24% 97%;
+    --surface-elevated: 210 20% 94%;
 
-    --card: 220 30% 10%;
-    --card-foreground: 210 25% 92%;
+    --card: 0 0% 100%;
+    --card-foreground: 215 45% 13%;
 
-    --popover: 220 32% 9%;
-    --popover-foreground: 210 25% 92%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 45% 13%;
 
-    /* Primary — electric blue accent */
-    --primary: 205 95% 55%;
-    --primary-foreground: 220 40% 6%;
-    --primary-glow: 200 100% 65%;
+    /* Primary — HLG blue */
+    --primary: 205 88% 40%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 202 92% 48%;
 
-    --secondary: 220 20% 18%;
-    --secondary-foreground: 210 25% 92%;
+    --secondary: 210 24% 95%;
+    --secondary-foreground: 215 45% 13%;
 
-    --muted: 220 20% 14%;
-    --muted-foreground: 215 15% 60%;
+    --muted: 210 22% 96%;
+    --muted-foreground: 215 16% 42%;
 
-    --accent: 200 90% 50%;
-    --accent-foreground: 220 40% 6%;
+    /* Accent — HLG orange, used sparingly */
+    --accent: 22 92% 52%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 75% 55%;
+    --destructive: 0 72% 48%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 215 25% 20%;
-    --input: 215 25% 18%;
-    --ring: 205 95% 55%;
+    --border: 213 20% 88%;
+    --input: 213 20% 84%;
+    --ring: 205 88% 40%;
 
-    --radius: 0.25rem;
+    --radius: 0.125rem;
 
     /* Brand tokens */
-    --steel: 215 15% 70%;
-    --silver: 210 10% 82%;
-    --navy-deep: 222 45% 5%;
+    --steel: 215 14% 46%;
+    --silver: 213 18% 78%;
+    --navy-deep: 216 52% 11%;
+    --navy: 215 45% 16%;
+    --graphite: 215 12% 26%;
 
-    --gradient-hero: linear-gradient(135deg, hsl(222 50% 6%) 0%, hsl(218 40% 12%) 60%, hsl(205 80% 20%) 100%);
-    --gradient-panel: linear-gradient(180deg, hsl(220 30% 11%) 0%, hsl(220 32% 8%) 100%);
-    --gradient-accent: linear-gradient(90deg, hsl(205 95% 55%), hsl(195 100% 60%));
-    --gradient-edge: linear-gradient(90deg, transparent, hsl(205 95% 55% / 0.5), transparent);
+    --gradient-hero: linear-gradient(160deg, hsl(0 0% 100%) 0%, hsl(210 30% 97%) 55%, hsl(205 40% 94%) 100%);
+    --gradient-navy: linear-gradient(160deg, hsl(216 52% 11%) 0%, hsl(215 45% 16%) 60%, hsl(207 50% 20%) 100%);
+    --gradient-panel: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 24% 98%) 100%);
+    --gradient-accent: linear-gradient(90deg, hsl(205 88% 40%), hsl(199 92% 50%));
+    --gradient-edge: linear-gradient(90deg, transparent, hsl(205 88% 40% / 0.45), transparent);
+    --gradient-thermal: linear-gradient(90deg, hsl(205 88% 45% / 0.15), hsl(45 95% 55% / 0.25), hsl(22 92% 52% / 0.45));
 
-    --shadow-panel: 0 1px 0 0 hsl(210 30% 100% / 0.04) inset, 0 20px 40px -20px hsl(222 60% 2% / 0.6);
-    --shadow-glow: 0 0 40px -10px hsl(205 95% 55% / 0.4);
-
-    --grid-line: hsl(215 25% 20% / 0.6);
+    --shadow-panel: 0 1px 2px 0 hsl(215 40% 20% / 0.04), 0 12px 28px -18px hsl(215 45% 20% / 0.25);
+    --shadow-glow: 0 0 40px -12px hsl(205 88% 40% / 0.35);
   }
 }
 
@@ -79,7 +82,6 @@
     @apply tracking-tight;
   }
 
-  /* Mono accent for technical labels */
   .mono {
     font-family: 'JetBrains Mono', ui-monospace, monospace;
     @apply uppercase tracking-[0.18em] text-xs;
@@ -87,18 +89,26 @@
 }
 
 @layer components {
+  /* Thin technical grid */
   .grid-bg {
     background-image:
-      linear-gradient(to right, hsl(var(--border) / 0.5) 1px, transparent 1px),
-      linear-gradient(to bottom, hsl(var(--border) / 0.5) 1px, transparent 1px);
-    background-size: 64px 64px;
+      linear-gradient(to right, hsl(var(--border) / 0.7) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--border) / 0.7) 1px, transparent 1px);
+    background-size: 72px 72px;
   }
 
   .grid-bg-fine {
     background-image:
-      linear-gradient(to right, hsl(var(--border) / 0.3) 1px, transparent 1px),
-      linear-gradient(to bottom, hsl(var(--border) / 0.3) 1px, transparent 1px);
+      linear-gradient(to right, hsl(var(--border) / 0.45) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--border) / 0.45) 1px, transparent 1px);
     background-size: 24px 24px;
+  }
+
+  .grid-bg-dark {
+    background-image:
+      linear-gradient(to right, hsl(210 40% 80% / 0.09) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(210 40% 80% / 0.09) 1px, transparent 1px);
+    background-size: 72px 72px;
   }
 
   .panel {
@@ -114,5 +124,38 @@
 
   .accent-bar {
     @apply inline-block h-px w-10 bg-primary align-middle mr-3;
+  }
+
+  /* Hairline conductor field — extremely fine, graphite */
+  .hairline-field {
+    background-image: repeating-linear-gradient(
+      to bottom,
+      hsl(var(--graphite) / 0.55) 0px,
+      hsl(var(--graphite) / 0.55) 0.5px,
+      transparent 0.5px,
+      transparent 9px
+    );
+  }
+
+  .hairline-field-light {
+    background-image: repeating-linear-gradient(
+      to bottom,
+      hsl(210 30% 88% / 0.6) 0px,
+      hsl(210 30% 88% / 0.6) 0.5px,
+      transparent 0.5px,
+      transparent 9px
+    );
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-primary text-primary-foreground mono hover:bg-primary-glow transition-colors;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3.5 border border-border text-foreground mono hover:border-primary hover:text-primary transition-colors;
+  }
+
+  .btn-outline-invert {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3.5 border border-silver/30 text-silver mono hover:border-primary-glow hover:text-primary-glow transition-colors;
   }
 }
