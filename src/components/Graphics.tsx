@@ -77,7 +77,7 @@ export const ConductorField = ({ invert = false }: { invert?: boolean }) => {
         <line key={i} x1="304" y1={48 + i * 12} x2="406" y2={48 + i * 12} stroke={line} strokeWidth="0.7" />
       ))}
       <text x="300" y="164" fill={label} fontSize="6" fontFamily="JetBrains Mono, monospace">
-        ENLARGED DETAIL — CONDUCTOR SPACING
+        ENLARGED DETAIL
       </text>
       <text x="8" y="204" fill={label} fontSize="6" fontFamily="JetBrains Mono, monospace">
         SCHEMATIC ONLY — NOT TO SCALE
