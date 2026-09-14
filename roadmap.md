@@ -1,15 +1,18 @@
-# HLG V1 Rebuild Roadmap
+# HLG V1 Website Rebuild
 
-- [ ] Light/navy visual system (tokens, typography)
-- [ ] V1 data layer (6 technologies, 6 markets, solutions)
-- [ ] Navigation + footer rebuild
-- [ ] Homepage (9 sections per spec)
-- [ ] Six technology pages
-- [ ] Solutions / Integration page
-- [ ] Engineering & Quality page
-- [ ] Six market pages (Aerospace strongest)
-- [ ] About page
-- [ ] Technical Library framework only (no papers)
-- [ ] Engineering Review intake form + NDA link
-- [ ] SEO metadata + schema
-- [ ] Route check, obsolete page removal, mobile check
+- [x] V1 design system (light + navy, HLG blue/orange, fine technical linework)
+- [x] Content model (six technologies, solutions, markets, process, quality, library topics)
+- [x] Navigation + footer
+- [x] Homepage (nine sections in spec order)
+- [x] Six technology pages
+- [x] Solutions / Integration
+- [x] Engineering & Quality
+- [x] Six market pages (Aerospace strongest)
+- [x] About
+- [x] Technical Library (framework only, papers not published)
+- [x] Engineering Review intake form + database table + private drawing uploads
+- [x] Legacy route redirects
+- [x] SEO metadata, Organization schema, sitemap
+- [x] Route + mobile verification, form submission tested end to end
+- [ ] Publish V1 (awaiting owner approval)
+- [ ] Publish technical papers in the Technical Library (deferred by spec)
