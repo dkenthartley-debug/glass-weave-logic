@@ -50,6 +50,72 @@ export type Database = {
         }
         Relationships: []
       }
+      engineering_reviews: {
+        Row: {
+          annual_volume: string | null
+          application: string | null
+          company: string
+          construction: string | null
+          created_at: string
+          description: string
+          dimensions: string | null
+          drawing_path: string | null
+          email: string
+          exit_location: string | null
+          functions: string[]
+          id: string
+          max_current: string | null
+          name: string
+          nda_required: boolean
+          phone: string | null
+          power_target: string | null
+          sensor_requirements: string | null
+          voltage: string | null
+        }
+        Insert: {
+          annual_volume?: string | null
+          application?: string | null
+          company: string
+          construction?: string | null
+          created_at?: string
+          description: string
+          dimensions?: string | null
+          drawing_path?: string | null
+          email: string
+          exit_location?: string | null
+          functions?: string[]
+          id?: string
+          max_current?: string | null
+          name: string
+          nda_required?: boolean
+          phone?: string | null
+          power_target?: string | null
+          sensor_requirements?: string | null
+          voltage?: string | null
+        }
+        Update: {
+          annual_volume?: string | null
+          application?: string | null
+          company?: string
+          construction?: string | null
+          created_at?: string
+          description?: string
+          dimensions?: string | null
+          drawing_path?: string | null
+          email?: string
+          exit_location?: string | null
+          functions?: string[]
+          id?: string
+          max_current?: string | null
+          name?: string
+          nda_required?: boolean
+          phone?: string | null
+          power_target?: string | null
+          sensor_requirements?: string | null
+          voltage?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
