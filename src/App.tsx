@@ -1,34 +1,19 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Layout from "./components/Layout";
-import Index from "./pages/Index";
-import Capabilities from "./pages/Capabilities";
+import Home from "./pages/Home";
 import TechnologiesIndex from "./pages/TechnologiesIndex";
 import TechnologyDetail from "./pages/TechnologyDetail";
-import ProductsIndex from "./pages/ProductsIndex";
-import ProductDetail from "./pages/ProductDetail";
+import Solutions from "./pages/Solutions";
+import EngineeringQuality from "./pages/EngineeringQuality";
 import { MarketsIndex, MarketDetail } from "./pages/Markets";
-import EngineeringResources from "./pages/EngineeringResources";
-import TechnicalLibrary from "./pages/TechnicalLibrary";
-import FaqLibrary from "./pages/FaqLibrary";
-import WhitePaperAtpd2352 from "./pages/WhitePaperAtpd2352";
-import TechBulletinTb001 from "./pages/TechBulletinTb001";
-import QualificationStandardHlgQs1724 from "./pages/QualificationStandardHlgQs1724";
-import SpecificationDetail from "./pages/SpecificationDetail";
-
-
-import ConductiveInterlayers from "./pages/ConductiveInterlayers";
-import AircraftSensors from "./pages/AircraftSensors";
-import EmiShielding from "./pages/EmiShielding";
-import SpecialtyFilms from "./pages/SpecialtyFilms";
-import Applications from "./pages/Applications";
-
+import Aerospace from "./pages/Aerospace";
 import About from "./pages/About";
-import Facility from "./pages/Facility";
-import Contact from "./pages/Contact";
+import TechnicalLibrary from "./pages/TechnicalLibrary";
+import EngineeringReview from "./pages/EngineeringReview";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -41,38 +26,48 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route element={<Layout />}>
-            <Route path="/" element={<Index />} />
+            <Route path="/" element={<Home />} />
 
-            {/* Engineering Knowledge Center IA */}
             <Route path="/technologies" element={<TechnologiesIndex />} />
             <Route path="/technologies/:slug" element={<TechnologyDetail />} />
-            <Route path="/products" element={<ProductsIndex />} />
-            <Route path="/products/:slug" element={<ProductDetail />} />
-            <Route path="/markets" element={<MarketsIndex />} />
-            <Route path="/markets/:slug" element={<MarketDetail />} />
-            <Route path="/engineering-resources" element={<EngineeringResources />} />
+
+            <Route path="/solutions" element={<Solutions />} />
+            <Route path="/engineering-quality" element={<EngineeringQuality />} />
             <Route path="/technical-library" element={<TechnicalLibrary />} />
-            <Route path="/engineering-resources/faq" element={<FaqLibrary />} />
-            <Route path="/white-papers/atpd-2352-rev-u-sensor" element={<WhitePaperAtpd2352 />} />
-            <Route path="/technical-bulletins/tb-001-optical-performance-under-electrical-load" element={<TechBulletinTb001 />} />
-            <Route path="/qualification-standards/hlg-qs-1724" element={<QualificationStandardHlgQs1724 />} />
-            <Route path="/specifications/:slug" element={<SpecificationDetail />} />
+            <Route path="/engineering-review" element={<EngineeringReview />} />
 
+            <Route path="/markets" element={<MarketsIndex />} />
+            <Route path="/markets/aerospace" element={<Aerospace />} />
+            <Route path="/markets/:slug" element={<MarketDetail />} />
 
-
-
-            {/* Existing pages */}
-            <Route path="/capabilities" element={<Capabilities />} />
-            <Route path="/applications" element={<Applications />} />
             <Route path="/about" element={<About />} />
-            <Route path="/facility" element={<Facility />} />
-            <Route path="/contact" element={<Contact />} />
 
-            {/* Legacy solution routes */}
-            <Route path="/conductive-interlayers" element={<ConductiveInterlayers />} />
-            <Route path="/aircraft-sensors" element={<AircraftSensors />} />
-            <Route path="/emi-shielding" element={<EmiShielding />} />
-            <Route path="/specialty-films" element={<SpecialtyFilms />} />
+            {/* Legacy routes → V1 equivalents */}
+            <Route path="/capabilities" element={<Navigate to="/engineering-quality" replace />} />
+            <Route path="/facility" element={<Navigate to="/engineering-quality" replace />} />
+            <Route path="/applications" element={<Navigate to="/markets" replace />} />
+            <Route path="/products" element={<Navigate to="/solutions" replace />} />
+            <Route path="/products/*" element={<Navigate to="/solutions" replace />} />
+            <Route path="/contact" element={<Navigate to="/engineering-review" replace />} />
+            <Route path="/engineering-resources" element={<Navigate to="/technical-library" replace />} />
+            <Route path="/engineering-resources/faq" element={<Navigate to="/technical-library" replace />} />
+            <Route path="/white-papers/*" element={<Navigate to="/technical-library" replace />} />
+            <Route path="/technical-bulletins/*" element={<Navigate to="/technical-library" replace />} />
+            <Route path="/qualification-standards/*" element={<Navigate to="/technical-library" replace />} />
+            <Route path="/specifications/*" element={<Navigate to="/technical-library" replace />} />
+            <Route
+              path="/conductive-interlayers"
+              element={<Navigate to="/technologies/transparent-conductive-films" replace />}
+            />
+            <Route
+              path="/aircraft-sensors"
+              element={<Navigate to="/technologies/embedded-temperature-sensing" replace />}
+            />
+            <Route path="/emi-shielding" element={<Navigate to="/technologies/emi-rfi-shielding" replace />} />
+            <Route
+              path="/specialty-films"
+              element={<Navigate to="/technologies/transparent-conductive-films" replace />}
+            />
 
             <Route path="*" element={<NotFound />} />
           </Route>
