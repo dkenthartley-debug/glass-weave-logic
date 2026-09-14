@@ -27,6 +27,8 @@ export default {
         steel: "hsl(var(--steel))",
         silver: "hsl(var(--silver))",
         "navy-deep": "hsl(var(--navy-deep))",
+        navy: "hsl(var(--navy))",
+        graphite: "hsl(var(--graphite))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -41,6 +43,8 @@ export default {
       },
       backgroundImage: {
         'gradient-hero': 'var(--gradient-hero)',
+        'gradient-navy': 'var(--gradient-navy)',
+        'gradient-thermal': 'var(--gradient-thermal)',
         'gradient-panel': 'var(--gradient-panel)',
         'gradient-accent': 'var(--gradient-accent)',
       },
