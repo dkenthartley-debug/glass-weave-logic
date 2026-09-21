@@ -1,14 +1,15 @@
+// ============= V1: rebuilt on the V1 data model (src/data/hlg.ts) =============
 import { defineMcp } from "@lovable.dev/mcp-js";
+import listTechnologies from "./tools/list-technologies";
+import getTechnology from "./tools/get-technology";
 import searchTechnicalLibrary from "./tools/search-technical-library";
-import getDocument from "./tools/get-document";
-import listGalleryPhotos from "./tools/list-gallery-photos";
 import getApplicationMapping from "./tools/get-application-mapping";
 
 export default defineMcp({
-  name: "hlg-glass-innovations",
-  title: "HLG Glass Innovations",
-  version: "0.1.0",
+  name: "hlg-functional-interlayers",
+  title: "Hotlineglass USA — Functional Interlayers",
+  version: "1.0.0",
   instructions:
-    "Public tools for Hotlineglass USA (HLG). Use `search_technical_library` to find TB/QS/AG/ER documents, `get_document` to fetch a specific bulletin or standard with its PDF URL, `list_gallery_photos` to browse real-product interlayer photography and captions, and `get_application_mapping` to check how markets, products, and technologies relate. All data is public website content.",
-  tools: [searchTechnicalLibrary, getDocument, listGalleryPhotos, getApplicationMapping],
+    "Public tools for Hotlineglass USA (HLG), a U.S. manufacturer of engineered functional interlayers for laminated glass. Use `list_technologies` for the six electrical functions HLG integrates (HEAT, SENSE, SHIELD, CONDUCT, SWITCH, CONNECT), `get_technology` for full detail on one function, `search_technical_library` for engineering-resource topic coverage (papers coming soon), and `get_application_mapping` to see how markets and integration solutions map to the six functions. All data is public website content.",
+  tools: [listTechnologies, getTechnology, searchTechnicalLibrary, getApplicationMapping],
 });

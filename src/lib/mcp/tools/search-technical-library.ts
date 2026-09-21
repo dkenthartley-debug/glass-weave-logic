@@ -1,62 +1,41 @@
 import { defineTool } from "@lovable.dev/mcp-js";
 import { z } from "zod";
-import { librarySeries } from "../../../data/library";
+import { libraryTopics } from "../../../data/hlg";
 
 export default defineTool({
   name: "search_technical_library",
   title: "Search technical library",
   description:
-    "Search the HLG Engineering Standards & Technical Library (TB, QS, AG, ER series) by keyword and/or series code. Returns matching document ids, titles, revisions, summaries, PDF URLs, and site paths.",
+    "Search the HLG Technical Library coverage by keyword. The V1 library is a framework: HLG maintains an expanding library of engineering resources covering the design and integration of electrical functionality into laminated glass, and technical papers and application notes are coming soon. Returns matching resource topics; no papers are published yet.",
   inputSchema: {
     query: z
       .string()
       .trim()
       .optional()
-      .describe("Keyword matched against document id, title, and summary. Omit to list everything."),
-    series: z
-      .enum(["TB", "QS", "AG", "ER"])
-      .optional()
-      .describe("Restrict results to one series: TB (technical bulletins), QS (qualification standards), AG (application guides), ER (engineering reports)."),
+      .describe("Keyword matched against resource topics, e.g. 'busbar', 'RTD', 'EMI'. Omit to list all topics."),
   },
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
-  handler: ({ query, series }) => {
+  handler: ({ query }) => {
     const q = query?.toLowerCase() ?? "";
-    const results = librarySeries
-      .filter((s) => !series || s.code === series)
-      .flatMap((s) =>
-        s.docs
-          .filter(
-            (d) =>
-              !q ||
-              `${d.id} ${d.title} ${d.summary}`.toLowerCase().includes(q),
-          )
-          .map((d) => ({
-            id: d.id,
-            series: s.code,
-            seriesName: s.name,
-            title: d.title,
-            revision: d.revision,
-            summary: d.summary,
-            pdfUrl: d.pdf,
-            sitePath: d.path ?? null,
-          })),
-      );
+    const matches = libraryTopics.filter((t) => !q || t.toLowerCase().includes(q));
+    const status =
+      "TECHNICAL PAPERS AND APPLICATION NOTES COMING SOON — the V1 Technical Library is framework only; no papers are published yet.";
+
+    const text =
+      (matches.length
+        ? `HLG Technical Library — resource topics${query ? ` matching "${query}"` : ""}:\n` +
+          matches.map((t) => `- ${t}`).join("\n")
+        : `No library topics matching "${query}".`) +
+      `\n\n${status}\nFull topic list:\n${libraryTopics.map((t) => `- ${t}`).join("\n")}`;
 
     return {
-      content: [
-        {
-          type: "text" as const,
-          text: results.length
-            ? results
-                .map(
-                  (r) =>
-                    `${r.id} (${r.series}, ${r.revision}) — ${r.title}\n${r.summary}\nPDF: ${r.pdfUrl}${r.sitePath ? `\nPage: ${r.sitePath}` : ""}`,
-                )
-                .join("\n\n")
-            : "No matching documents.",
-        },
-      ],
-      structuredContent: { count: results.length, results },
+      content: [{ type: "text" as const, text }],
+      structuredContent: {
+        status: "coming-soon",
+        query: query ?? null,
+        matches,
+        allTopics: libraryTopics,
+      },
     };
   },
 });
