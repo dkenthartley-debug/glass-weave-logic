@@ -7,15 +7,57 @@
   },
   "mcp": {
     "server": {
-      "name": "hlg-glass-innovations",
-      "version": "0.1.0",
-      "title": "HLG Glass Innovations"
+      "name": "hlg-functional-interlayers",
+      "version": "1.0.0",
+      "title": "Hotlineglass USA — Functional Interlayers"
     },
     "tools": [
       {
+        "name": "list_technologies",
+        "title": "List HLG technologies",
+        "description": "List the six electrical functions HLG engineers into laminated glass — HEAT (electrically heated interlayers), SENSE (embedded RTD temperature sensing), SHIELD (EMI/RFI shielding), CONDUCT (transparent conductors), SWITCH (switchable smart glazing), CONNECT (integrated antennas). Returns slug, headline, lead copy, validated spec ranges, and page path for each.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "get_technology",
+        "title": "Get technology detail",
+        "description": "Retrieve the full public engineering description for one HLG technology function by slug or code — e.g. 'electrically-heated-interlayers' or 'HEAT', 'embedded-temperature-sensing' or 'SENSE'. Returns headline, lead, all page sections with bullets, validated spec ranges, closing position, and the engineering-review CTA.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "slug": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Technology slug or code, e.g. 'electrically-heated-interlayers', 'HEAT', 'embedded-temperature-sensing', 'SENSE'."
+            }
+          },
+          "required": [
+            "slug"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      },
+      {
         "name": "search_technical_library",
         "title": "Search technical library",
-        "description": "Search the HLG Engineering Standards & Technical Library (TB, QS, AG, ER series) by keyword and/or series code. Returns matching document ids, titles, revisions, summaries, PDF URLs, and site paths.",
+        "description": "Search the HLG Technical Library coverage by keyword. The V1 library is a framework: HLG maintains an expanding library of engineering resources covering the design and integration of electrical functionality into laminated glass, and technical papers and application notes are coming soon. Returns matching resource topics; no papers are published yet.",
         "annotations": {
           "readOnlyHint": true,
           "idempotentHint": true,
@@ -26,74 +68,7 @@
           "properties": {
             "query": {
               "type": "string",
-              "description": "Keyword matched against document id, title, and summary. Omit to list everything."
-            },
-            "series": {
-              "type": "string",
-              "enum": [
-                "TB",
-                "QS",
-                "AG",
-                "ER"
-              ],
-              "description": "Restrict results to one series: TB (technical bulletins), QS (qualification standards), AG (application guides), ER (engineering reports)."
-            }
-          },
-          "additionalProperties": false,
-          "$schema": "http://json-schema.org/draft-07/schema#"
-        },
-        "outputSchema": null
-      },
-      {
-        "name": "get_document",
-        "title": "Get document / bulletin PDF",
-        "description": "Retrieve a single HLG library document by id (e.g. TB-001, HLG-QS-1724, AG-001, ER-001) including its downloadable PDF URL, revision, summary, and on-site page path. Also lists other published resources when no id matches.",
-        "annotations": {
-          "readOnlyHint": true,
-          "idempotentHint": true,
-          "openWorldHint": false
-        },
-        "inputSchema": {
-          "type": "object",
-          "properties": {
-            "id": {
-              "type": "string",
-              "minLength": 1,
-              "description": "Document identifier, e.g. 'TB-001', 'HLG-QS-1724', 'AG-001', 'ER-001'."
-            }
-          },
-          "required": [
-            "id"
-          ],
-          "additionalProperties": false,
-          "$schema": "http://json-schema.org/draft-07/schema#"
-        },
-        "outputSchema": null
-      },
-      {
-        "name": "list_gallery_photos",
-        "title": "List gallery photos",
-        "description": "List the real-product photography used in the Fig.01 interlayer gallery, grouped by variant (heating, wiper, sensors, antenna, camera, mesh, ito). Returns image URLs and technical captions, and flags variants that currently have no photography.",
-        "annotations": {
-          "readOnlyHint": true,
-          "idempotentHint": true,
-          "openWorldHint": false
-        },
-        "inputSchema": {
-          "type": "object",
-          "properties": {
-            "variant": {
-              "type": "string",
-              "enum": [
-                "heating",
-                "wiper",
-                "sensors",
-                "antenna",
-                "camera",
-                "mesh",
-                "ito"
-              ],
-              "description": "Restrict to a single gallery variant. Omit to return all variants."
+              "description": "Keyword matched against resource topics, e.g. 'busbar', 'RTD', 'EMI'. Omit to list all topics."
             }
           },
           "additionalProperties": false,
@@ -104,7 +79,7 @@
       {
         "name": "get_application_mapping",
         "title": "Get application mapping",
-        "description": "Check how HLG markets, products, and technologies map to each other. Filter by market slug (automotive, aerospace, defense, architectural, transportation) or technology slug to see which products serve it and which technologies they use.",
+        "description": "Check how HLG markets (Aerospace, Defense, Automotive, Rail & Transportation, Off-Road & Commercial Equipment, Architectural & Smart Glass), integration solutions, and the six technology functions (HEAT, SENSE, SHIELD, CONDUCT, SWITCH, CONNECT) map to each other. Filter by market slug or technology slug/code.",
         "annotations": {
           "readOnlyHint": true,
           "idempotentHint": true,
@@ -115,11 +90,11 @@
           "properties": {
             "market": {
               "type": "string",
-              "description": "Market slug or name, e.g. 'aerospace'. Omit for all markets."
+              "description": "Market slug or name fragment, e.g. 'aerospace', 'rail'. Omit for all markets."
             },
             "technology": {
               "type": "string",
-              "description": "Technology slug or name fragment, e.g. 'embedded-wire-technology'. Omit for all."
+              "description": "Technology slug or code fragment, e.g. 'HEAT', 'electrically-heated-interlayers'. Omit for all."
             }
           },
           "additionalProperties": false,
