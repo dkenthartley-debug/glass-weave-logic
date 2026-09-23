@@ -14,5 +14,6 @@
 - [x] Legacy route redirects
 - [x] SEO metadata, Organization schema, sitemap
 - [x] Route + mobile verification, form submission tested end to end
+- [x] Highlight SENSE as a growth technology with embedded-wire imagery and positioning
 - [ ] Publish V1 (awaiting owner approval)
 - [ ] Publish technical papers in the Technical Library (deferred by spec)

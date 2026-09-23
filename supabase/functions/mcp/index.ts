@@ -62,10 +62,14 @@ var technologies = [
     code: "SENSE",
     slug: "embedded-temperature-sensing",
     name: "Embedded Temperature Sensing",
-    cardCopy: "Thin RTD sensor interlayers engineered for temperature feedback, control and over-temperature protection.",
+    cardCopy: "A growth technology for HLG: thin RTD sensing wire embedded within the interlayer for temperature feedback, control and over-temperature protection.",
     h1: "The sensor is required. How it is integrated matters.",
     lead: "HLG designs and manufactures thin RTD sensor interlayers for heated transparencies. Sensor placement, lead routing and electrical exits are engineered as part of the laminate architecture rather than treated as unrelated components.",
     sections: [
+      {
+        title: "Embedded within the interlayer",
+        body: "Unlike RTDs placed on top of an interlayer, HLG integrates the fine sensing wire within a dedicated interlayer. The sensor location, conductor path and lead routing become part of the laminate architecture."
+      },
       {
         title: "What the sensor interlayer does",
         bullets: [

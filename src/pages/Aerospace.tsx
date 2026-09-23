@@ -64,12 +64,17 @@ const Aerospace = () => (
       <div className="container relative py-24 md:py-32 grid lg:grid-cols-12 gap-14">
         <div className="lg:col-span-6">
           <Eyebrow invert>Embedded RTD sensors</Eyebrow>
+          <div className="mono text-primary-glow mb-5">SENSE · HLG growth technology</div>
           <h2 className="font-display text-3xl md:text-5xl font-bold uppercase leading-[1.05] text-background">
             The sensor is required. How it is integrated matters.
           </h2>
           <p className="mt-7 text-lg text-silver/80 leading-relaxed">
             Sensor location, lead routing, electrical exits and heater interaction can be engineered as part of the
             laminate architecture rather than treated as unrelated components.
+          </p>
+          <p className="mt-5 text-silver/70 leading-relaxed">
+            HLG embeds the fine RTD sensing wire within a dedicated interlayer rather than placing a separate sensor
+            on top of the interlayer.
           </p>
           <div className="mt-9 flex flex-wrap gap-3">
             <CtaLink to="/technologies/embedded-temperature-sensing">Explore SENSE</CtaLink>
