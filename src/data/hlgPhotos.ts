@@ -1,7 +1,7 @@
 // Approved HLG photography and approved engineering-visual concepts.
 // Each entry is a CDN asset pointer plus the caption used on the site.
 
-import heaterMatSection from "@/assets/photos/heater-mat-section-busbar-braided-lead.jpg.asset.json";
+import heaterMatSection from "@/assets/photos/hlg-heater-architecture-real-composite.jpg.asset.json";
 import connectorDualLead from "@/assets/photos/connector-dual-lead-busbar-exit.jpg.asset.json";
 import connectorEdgeAttached from "@/assets/photos/connector-edge-attached-busbar.jpg.asset.json";
 import connectorMoldedHarness from "@/assets/photos/connector-molded-two-pin-harness.jpg.asset.json";
@@ -18,11 +18,11 @@ export type HlgPhoto = {
 
 export const heaterMatSectionPhoto: HlgPhoto = {
   src: heaterMatSection.url,
-  alt: "Section of an HLG heated interlayer showing fine sinusoidal tungsten wire, a low-profile busbar and a braided copper lead exit",
+  alt: "Actual HLG heated interlayer details showing consistently sinusoidal tungsten wire and a braided lead connected to a separate busbar segment",
   caption:
-    "Heated interlayer section — fine sinusoidal tungsten wire, low-profile busbar and braided copper lead exit.",
+    "Actual HLG heater details — fine sinusoidal tungsten wire, low-profile busbar architecture and braided lead exit.",
   label: "Heater architecture",
-  note: "Representative engineering visual — section view only, not a full mat. Construction is program specific.",
+  note: "Actual HLG construction details. Final conductor spacing, busbar geometry and electrical exits are program specific.",
 };
 
 export const sensorMatSectionPhoto: HlgPhoto = {
