@@ -17,4 +17,4 @@
 - [x] Highlight SENSE as a growth technology with embedded-wire imagery and positioning
 - [ ] Publish V1 (awaiting owner approval)
 - [ ] Publish technical papers in the Technical Library (deferred by spec)
-- [ ] Replace the heater architecture visual with an authentic, clean HLG-based detail
+- [x] Replace the heater architecture visual with an authentic, clean HLG-based detail
