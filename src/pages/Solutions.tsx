@@ -3,6 +3,8 @@ import { LaminateStack } from "@/components/Graphics";
 import Seo, { breadcrumbSchema, orgSchema } from "@/components/Seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { solutions } from "@/data/hlg";
+import Figure from "@/components/Figure";
+import { connectorPhotos } from "@/data/hlgPhotos";
 
 const crumbs = [
   { name: "Home", path: "/" },
@@ -60,6 +62,19 @@ const Solutions = () => (
             </div>
           </div>
         </aside>
+      </div>
+    </Section>
+
+    <Section tone="gray">
+      <SectionHeading
+        eyebrow="Connectors & electrical exits"
+        title="The connector is part of the interlayer, not an afterthought."
+        subtitle="HLG attaches connectors directly to the electrified interlayer. Custom connectors are designed and built, common interfaces are stocked, and customer-supplied connectors are applied when provided."
+      />
+      <div className="grid md:grid-cols-3 gap-8">
+        {connectorPhotos.map((p) => (
+          <Figure key={p.src} photo={p} />
+        ))}
       </div>
     </Section>
 

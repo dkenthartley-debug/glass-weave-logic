@@ -4,6 +4,8 @@ import { Section, SectionHeading, Eyebrow, CtaLink } from "@/components/Section"
 import { ConductorField, HeatSenseChain, LaminateStack } from "@/components/Graphics";
 import Seo, { orgSchema, breadcrumbSchema } from "@/components/Seo";
 import { libraryTopics, markets, processSteps, qualityProof, solutions, technologies } from "@/data/hlg";
+import Figure from "@/components/Figure";
+import { heaterMatSectionPhoto } from "@/data/hlgPhotos";
 
 const Home = () => (
   <>
@@ -108,6 +110,7 @@ const Home = () => (
             </div>
           </div>
           <div className="lg:col-span-6 space-y-8">
+            <Figure photo={heaterMatSectionPhoto} invert aspect="aspect-[16/10]" />
             <div>
               <div className="mono text-primary-glow mb-4">System architecture</div>
               <HeatSenseChain />

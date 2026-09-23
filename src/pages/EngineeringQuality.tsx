@@ -3,6 +3,8 @@ import { ThermalBand } from "@/components/Graphics";
 import Seo, { breadcrumbSchema, orgSchema } from "@/components/Seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { processSteps, qualityProof } from "@/data/hlg";
+import Figure from "@/components/Figure";
+import { traceabilityPhoto } from "@/data/hlgPhotos";
 
 const crumbs = [
   { name: "Home", path: "/" },
@@ -35,6 +37,17 @@ const EngineeringQuality = () => (
             <p className="text-sm text-muted-foreground mt-3 leading-relaxed">{q.body}</p>
           </div>
         ))}
+      </div>
+
+      <div className="grid lg:grid-cols-2 gap-10 items-center mt-14">
+        <Figure photo={traceabilityPhoto} aspect="aspect-[16/9]" />
+        <div>
+          <h2 className="font-display text-2xl font-bold uppercase">Part marking and lot traceability</h2>
+          <p className="mt-4 text-muted-foreground leading-relaxed">
+            Interlayers can carry part number and HLG identification marking, and barcodes can be applied for lot
+            number traceability and tracking through production.
+          </p>
+        </div>
       </div>
     </Section>
 
