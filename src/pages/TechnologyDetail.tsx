@@ -5,7 +5,7 @@ import Seo, { breadcrumbSchema, techArticleSchema } from "@/components/Seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { getTech, technologies } from "@/data/hlg";
 import Figure from "@/components/Figure";
-import { connectorPhotos, heaterMatSectionPhoto } from "@/data/hlgPhotos";
+import { connectorPhotos, heaterMatSectionPhoto, sensorMatSectionPhoto } from "@/data/hlgPhotos";
 
 const TechnologyDetail = () => {
   const { slug } = useParams();
@@ -69,6 +69,9 @@ const TechnologyDetail = () => {
                 <ThermalBand />
               </>
             )}
+            {tech.code === "SENSE" && (
+              <Figure photo={sensorMatSectionPhoto} aspect="aspect-[16/10]" />
+            )}
             {tech.code === "CONNECT" && (
               <div className="grid sm:grid-cols-2 gap-6">
                 {connectorPhotos.slice(0, 2).map((p) => (
@@ -92,10 +95,12 @@ const TechnologyDetail = () => {
                 </dl>
               </div>
             )}
-            <div className="panel p-7">
-              <div className="mono text-primary mb-5">Conductor detail</div>
-              <ConductorField />
-            </div>
+            {tech.code !== "SENSE" && (
+              <div className="panel p-7">
+                <div className="mono text-primary mb-5">Conductor detail</div>
+                <ConductorField />
+              </div>
+            )}
             <div className="panel p-7">
               <div className="mono text-primary mb-5">Laminate stack</div>
               <LaminateStack />

@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import { PageHero, Section, SectionHeading, CtaLink, Eyebrow } from "@/components/Section";
-import { ConductorField, HeatSenseChain, LaminateStack, ThermalBand } from "@/components/Graphics";
+import { HeatSenseChain, LaminateStack, ThermalBand } from "@/components/Graphics";
 import Seo, { breadcrumbSchema, orgSchema, techArticleSchema } from "@/components/Seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import Figure from "@/components/Figure";
+import { sensorMatSectionPhoto } from "@/data/hlgPhotos";
 
 const crumbs = [
   { name: "Home", path: "/" },
@@ -79,9 +81,7 @@ const Aerospace = () => (
             <div className="mono text-primary-glow mb-4">Matched system architecture</div>
             <HeatSenseChain />
           </div>
-          <div className="border border-silver/15 p-6">
-            <ConductorField invert />
-          </div>
+          <Figure photo={sensorMatSectionPhoto} invert aspect="aspect-[16/10]" />
         </div>
       </div>
     </section>
