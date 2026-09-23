@@ -108,6 +108,7 @@ const Home = () => (
             </div>
           </div>
           <div className="lg:col-span-6 space-y-8">
+            <Figure photo={heaterMatSectionPhoto} invert aspect="aspect-[16/10]" />
             <div>
               <div className="mono text-primary-glow mb-4">System architecture</div>
               <HeatSenseChain />

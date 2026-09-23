@@ -3,6 +3,8 @@ import { ThermalBand } from "@/components/Graphics";
 import Seo, { breadcrumbSchema, orgSchema } from "@/components/Seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { processSteps, qualityProof } from "@/data/hlg";
+import Figure from "@/components/Figure";
+import { traceabilityPhoto } from "@/data/hlgPhotos";
 
 const crumbs = [
   { name: "Home", path: "/" },

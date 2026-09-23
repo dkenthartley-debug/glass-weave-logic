@@ -4,6 +4,8 @@ import { ConductorField, LaminateStack, ShieldPath, ThermalBand } from "@/compon
 import Seo, { breadcrumbSchema, techArticleSchema } from "@/components/Seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { getTech, technologies } from "@/data/hlg";
+import Figure from "@/components/Figure";
+import { connectorPhotos, heaterMatSectionPhoto } from "@/data/hlgPhotos";
 
 const TechnologyDetail = () => {
   const { slug } = useParams();
@@ -61,7 +63,19 @@ const TechnologyDetail = () => {
                 <ShieldPath />
               </div>
             )}
-            {tech.code === "HEAT" && <ThermalBand />}
+            {tech.code === "HEAT" && (
+              <>
+                <Figure photo={heaterMatSectionPhoto} aspect="aspect-[16/10]" />
+                <ThermalBand />
+              </>
+            )}
+            {tech.code === "CONNECT" && (
+              <div className="grid sm:grid-cols-2 gap-6">
+                {connectorPhotos.slice(0, 2).map((p) => (
+                  <Figure key={p.src} photo={p} />
+                ))}
+              </div>
+            )}
           </div>
 
           <aside className="lg:col-span-5 space-y-8">
