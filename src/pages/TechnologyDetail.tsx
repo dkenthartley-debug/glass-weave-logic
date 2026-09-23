@@ -37,6 +37,17 @@ const TechnologyDetail = () => {
         <CtaLink to={tech.cta?.to ?? "/engineering-review"}>{tech.cta?.label ?? "Start an Engineering Review"}</CtaLink>
       </PageHero>
 
+      {tech.code === "SENSE" && (
+        <section className="border-b border-border bg-surface">
+          <div className="container py-5 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6">
+            <span className="mono text-primary">HLG growth technology</span>
+            <p className="text-sm text-muted-foreground">
+              A newly featured HLG capability for integrating temperature feedback directly within the laminate.
+            </p>
+          </div>
+        </section>
+      )}
+
       <Section>
         <div className="grid lg:grid-cols-12 gap-14">
           <div className="lg:col-span-7 space-y-12">
@@ -70,7 +81,13 @@ const TechnologyDetail = () => {
               </>
             )}
             {tech.code === "SENSE" && (
-              <Figure photo={sensorMatSectionPhoto} aspect="aspect-[16/10]" />
+              <div className="space-y-5">
+                <Figure photo={sensorMatSectionPhoto} aspect="aspect-[16/10]" />
+                <p className="border-l-2 border-primary pl-5 text-sm text-muted-foreground leading-relaxed">
+                  The sensing wire is encapsulated within the interlayer material—not applied as a separate RTD on
+                  top of it.
+                </p>
+              </div>
             )}
             {tech.code === "CONNECT" && (
               <div className="grid sm:grid-cols-2 gap-6">

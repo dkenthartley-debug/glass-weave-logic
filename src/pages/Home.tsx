@@ -92,6 +92,7 @@ const Home = () => (
         <div className="grid lg:grid-cols-12 gap-14">
           <div className="lg:col-span-6">
             <Eyebrow invert>Heat + Sense</Eyebrow>
+            <div className="mono text-primary-glow mb-5">SENSE · HLG growth technology</div>
             <h2 className="font-display text-3xl md:text-5xl font-bold uppercase leading-[1.05] text-background">
               Heat the glass. Know its temperature.
             </h2>
@@ -99,6 +100,10 @@ const Home = () => (
               HLG can engineer the heating and temperature-sensing functions as a matched interlayer system. For
               applications requiring temperature feedback, multiple RTD sensing locations can be integrated into a
               dedicated sensor mat and engineered together with the heater architecture.
+            </p>
+            <p className="mt-5 text-silver/70 leading-relaxed">
+              The fine RTD sensing wire is embedded within the interlayer rather than simply placed on its surface,
+              making sensing part of the engineered laminate architecture.
             </p>
             <p className="mt-5 text-silver/70 leading-relaxed">
               This is particularly relevant for aerospace and other controlled electrothermal applications where
