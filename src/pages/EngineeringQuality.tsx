@@ -38,6 +38,17 @@ const EngineeringQuality = () => (
           </div>
         ))}
       </div>
+
+      <div className="grid lg:grid-cols-2 gap-10 items-center mt-14">
+        <Figure photo={traceabilityPhoto} aspect="aspect-[16/9]" />
+        <div>
+          <h2 className="font-display text-2xl font-bold uppercase">Part marking and lot traceability</h2>
+          <p className="mt-4 text-muted-foreground leading-relaxed">
+            Interlayers can carry part number and HLG identification marking, and barcodes can be applied for lot
+            number traceability and tracking through production.
+          </p>
+        </div>
+      </div>
     </Section>
 
     <Section tone="gray">

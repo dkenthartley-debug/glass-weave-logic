@@ -4,6 +4,8 @@ import { Section, SectionHeading, Eyebrow, CtaLink } from "@/components/Section"
 import { ConductorField, HeatSenseChain, LaminateStack } from "@/components/Graphics";
 import Seo, { orgSchema, breadcrumbSchema } from "@/components/Seo";
 import { libraryTopics, markets, processSteps, qualityProof, solutions, technologies } from "@/data/hlg";
+import Figure from "@/components/Figure";
+import { heaterMatSectionPhoto } from "@/data/hlgPhotos";
 
 const Home = () => (
   <>
