@@ -18,3 +18,4 @@
 - [ ] Publish V1 (awaiting owner approval)
 - [ ] Publish technical papers in the Technical Library (deferred by spec)
 - [x] Replace the heater architecture visual with an authentic, clean HLG-based detail
+- [ ] Review and improve website images one at a time, using actual HLG photos as the controlling visual reference
