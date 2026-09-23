@@ -6,6 +6,7 @@ import connectorDualLead from "@/assets/photos/connector-dual-lead-busbar-exit.j
 import connectorEdgeAttached from "@/assets/photos/connector-edge-attached-busbar.jpg.asset.json";
 import connectorMoldedHarness from "@/assets/photos/connector-molded-two-pin-harness.jpg.asset.json";
 import partMarking from "@/assets/photos/part-marking-traceability.jpg.asset.json";
+import sensorMatSection from "@/assets/photos/hlg-rtd-sensor-mat-section.png";
 
 export type HlgPhoto = {
   src: string;
@@ -22,6 +23,15 @@ export const heaterMatSectionPhoto: HlgPhoto = {
     "Heated interlayer section — fine sinusoidal tungsten wire, low-profile busbar and braided copper lead exit.",
   label: "Heater architecture",
   note: "Representative engineering visual — section view only, not a full mat. Construction is program specific.",
+};
+
+export const sensorMatSectionPhoto: HlgPhoto = {
+  src: sensorMatSection,
+  alt: "Section of an HLG dual-zone RTD sensor mat showing two fine serpentine sensing elements, four parallel leads and low-profile terminations",
+  caption:
+    "Dual-zone RTD sensor mat — fine serpentine sensing elements, parallel lead routing and low-profile terminations.",
+  label: "Embedded temperature sensing",
+  note: "Representative engineering visual based on HLG sensor-mat construction. Final layout and sensing locations are program specific.",
 };
 
 export const connectorPhotos: HlgPhoto[] = [

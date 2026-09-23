@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { Section, SectionHeading, Eyebrow, CtaLink } from "@/components/Section";
-import { ConductorField, HeatSenseChain, LaminateStack } from "@/components/Graphics";
+import { HeatSenseChain, LaminateStack } from "@/components/Graphics";
 import Seo, { orgSchema, breadcrumbSchema } from "@/components/Seo";
 import { libraryTopics, markets, processSteps, qualityProof, solutions, technologies } from "@/data/hlg";
 import Figure from "@/components/Figure";
-import { heaterMatSectionPhoto } from "@/data/hlgPhotos";
+import { heaterMatSectionPhoto, sensorMatSectionPhoto } from "@/data/hlgPhotos";
 
 const Home = () => (
   <>
@@ -115,9 +115,7 @@ const Home = () => (
               <div className="mono text-primary-glow mb-4">System architecture</div>
               <HeatSenseChain />
             </div>
-            <div className="border border-silver/15 p-6">
-              <ConductorField invert />
-            </div>
+            <Figure photo={sensorMatSectionPhoto} invert aspect="aspect-[16/10]" />
           </div>
         </div>
       </div>
