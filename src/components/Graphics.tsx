@@ -117,32 +117,24 @@ export const LaminateStack = ({ invert = false }: { invert?: boolean }) => {
 };
 
 /** Hairline conductor field with a labeled enlarged detail inset. */
-export const ConductorField = ({ invert = false }: { invert?: boolean }) => {
-  const line = invert ? "hsl(210 20% 92%)" : "hsl(215 12% 26%)";
-  const frame = invert ? "hsl(213 18% 78% / 0.35)" : "hsl(213 20% 84%)";
-  const label = invert ? "hsl(213 18% 78%)" : "hsl(215 16% 42%)";
+export const ConductorField = ({ imageSrc }: { imageSrc: string }) => {
   return (
-    <svg viewBox="0 0 420 220" className="w-full h-auto" role="img" aria-label="Hairline conductor field with enlarged detail inset">
-      <rect x="8" y="8" width="270" height="180" fill="none" stroke={frame} strokeWidth="0.75" />
-      {Array.from({ length: 60 }).map((_, i) => (
-        <line key={i} x1="14" y1={14 + i * 2.9} x2="272" y2={14 + i * 2.9} stroke={line} strokeWidth="0.35" opacity="0.6" />
-      ))}
-      <rect x="8" y="8" width="270" height="7" fill={frame} opacity="0.7" />
-      <rect x="8" y="181" width="270" height="7" fill={frame} opacity="0.7" />
-      <rect x="120" y="80" width="46" height="34" fill="none" stroke="hsl(22 92% 52%)" strokeWidth="0.75" />
-      <line x1="166" y1="80" x2="300" y2="40" stroke={frame} strokeWidth="0.5" />
-      <line x1="166" y1="114" x2="300" y2="150" stroke={frame} strokeWidth="0.5" />
-      <rect x="300" y="40" width="110" height="110" fill="none" stroke={frame} strokeWidth="0.75" />
-      {Array.from({ length: 9 }).map((_, i) => (
-        <line key={i} x1="304" y1={48 + i * 12} x2="406" y2={48 + i * 12} stroke={line} strokeWidth="0.7" />
-      ))}
-      <text x="300" y="164" fill={label} fontSize="6" fontFamily="JetBrains Mono, monospace">
-        ENLARGED DETAIL
-      </text>
-      <text x="8" y="204" fill={label} fontSize="6" fontFamily="JetBrains Mono, monospace">
-        SCHEMATIC ONLY — NOT TO SCALE
-      </text>
-    </svg>
+    <figure>
+      <div className="relative overflow-hidden border border-border bg-navy-deep">
+        <img
+          src={imageSrc}
+          alt="Actual HLG heated-interlayer wire field showing uniform fine sinusoidal tungsten conductors"
+          loading="lazy"
+          className="aspect-[16/10] w-full object-cover"
+        />
+        <div className="absolute bottom-0 left-0 border-r border-t border-border bg-navy-deep/95 px-3 py-2">
+          <span className="mono text-silver">Actual HLG wire field</span>
+        </div>
+      </div>
+      <p className="mt-3 text-xs leading-relaxed text-muted-foreground">
+        Fine sinusoidal tungsten wire shown at close range. Final conductor spacing and layout are program specific.
+      </p>
+    </figure>
   );
 };
 

@@ -112,10 +112,10 @@ const TechnologyDetail = () => {
                 </dl>
               </div>
             )}
-            {tech.code !== "SENSE" && (
+            {(tech.code === "HEAT" || tech.code === "CONDUCT") && (
               <div className="panel p-7">
                 <div className="mono text-primary mb-5">Conductor detail</div>
-                <ConductorField />
+                <ConductorField imageSrc={heaterMatSectionPhoto.src} />
               </div>
             )}
             <div className="panel p-7">
