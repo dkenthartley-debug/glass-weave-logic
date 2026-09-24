@@ -4,7 +4,7 @@ import Seo, { breadcrumbSchema, orgSchema } from "@/components/Seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { processSteps, qualityProof } from "@/data/hlg";
 import Figure from "@/components/Figure";
-import { traceabilityPhoto } from "@/data/hlgPhotos";
+import { traceabilityPhoto, facilityLeadPhoto, facilityManufacturingPhotos } from "@/data/hlgPhotos";
 
 const crumbs = [
   { name: "Home", path: "/" },
@@ -27,6 +27,16 @@ const EngineeringQuality = () => (
     >
       <CtaLink to="/engineering-review">Start an Engineering Review</CtaLink>
     </PageHero>
+
+    <Section>
+      <SectionHeading eyebrow="Manufacturing" title="Inside the HLG clean room" />
+      <Figure photo={facilityLeadPhoto} aspect="aspect-[21/9]" />
+      <div className="grid md:grid-cols-3 gap-6 mt-6">
+        {facilityManufacturingPhotos.map((p) => (
+          <Figure key={p.label} photo={p} />
+        ))}
+      </div>
+    </Section>
 
     <Section>
       <SectionHeading eyebrow="Proof points" title="How the work is controlled" />

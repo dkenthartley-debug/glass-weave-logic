@@ -3,6 +3,8 @@ import { LaminateStack } from "@/components/Graphics";
 import Seo, { breadcrumbSchema, orgSchema } from "@/components/Seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { technologies } from "@/data/hlg";
+import Figure from "@/components/Figure";
+import { facilityAboutPhotos } from "@/data/hlgPhotos";
 
 const crumbs = [
   { name: "Home", path: "/" },
@@ -63,6 +65,15 @@ const About = () => (
             <LaminateStack />
           </div>
         </aside>
+      </div>
+    </Section>
+
+    <Section>
+      <SectionHeading eyebrow="Butler, Pennsylvania" title="Where the work happens" />
+      <div className="grid md:grid-cols-2 gap-6">
+        {facilityAboutPhotos.map((p) => (
+          <Figure key={p.label} photo={p} />
+        ))}
       </div>
     </Section>
 

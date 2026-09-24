@@ -8,6 +8,12 @@ import connectorMoldedHarness from "@/assets/photos/connector-molded-two-pin-har
 import partMarking from "@/assets/photos/part-marking-traceability.jpg.asset.json";
 import sensorMatSection from "@/assets/photos/hlg-rtd-sensor-mat-section-v2.png";
 import itoFilmSection from "@/assets/photos/hlg-ito-conductive-film-section-v4.png";
+import facilityCleanroomWide from "@/assets/photos/facility-cleanroom-wide.jpg";
+import facilityWirePlacement from "@/assets/photos/facility-wire-placement.jpg";
+import facilityLightTable from "@/assets/photos/facility-light-table-inspection.jpg";
+import facilityThermalTest from "@/assets/photos/facility-thermal-test.jpg";
+import facilityExterior from "@/assets/photos/facility-exterior-butler.jpg";
+import facilityCleanroom2 from "@/assets/photos/facility-cleanroom-2.jpg";
 
 export type HlgPhoto = {
   src: string;
@@ -72,3 +78,49 @@ export const traceabilityPhoto: HlgPhoto = {
     "Part marking applied to the interlayer — part number and HLG identification. Barcodes can be applied for lot-number traceability.",
   label: "Traceability",
 };
+
+// ============= Facility photography (real HLG shots) =============
+
+export const facilityLeadPhoto: HlgPhoto = {
+  src: facilityCleanroomWide,
+  alt: "Wide view of the HLG clean-room manufacturing environment in Butler, Pennsylvania",
+  caption: "Clean-room manufacturing environment — Butler, Pennsylvania.",
+  label: "HLG facility",
+};
+
+export const facilityManufacturingPhotos: HlgPhoto[] = [
+  {
+    src: facilityWirePlacement,
+    alt: "Technician placing fine heater wire on the interlayer line at HLG",
+    caption: "Fine wire placement on the interlayer line.",
+    label: "Wire placement",
+  },
+  {
+    src: facilityLightTable,
+    alt: "Interlayer inspection at the light table at HLG",
+    caption: "Interlayer inspection at the light table — part of 100% interlayer inspection.",
+    label: "100% inspection",
+  },
+  {
+    src: facilityThermalTest,
+    alt: "Thermal evaluation of a heater design on the HLG test bench",
+    caption: "Thermal evaluation of a new heater design on the test bench.",
+    label: "Thermal validation",
+  },
+];
+
+export const facilityAboutPhotos: HlgPhoto[] = [
+  {
+    src: facilityExterior,
+    alt: "Exterior of the HLG facility in Butler, Pennsylvania",
+    caption: "HLG — Butler, Pennsylvania. Engineered here. Manufactured here. Inspected here.",
+    label: "Butler, Pennsylvania",
+  },
+  {
+    src: facilityCleanroom2,
+    alt: "Second view of the HLG clean-room processing environment",
+    caption:
+      "A precision temperature- and humidity-controlled clean-room environment designed for processing laminated-glass interlayer materials.",
+    label: "Clean room",
+  },
+];
