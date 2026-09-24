@@ -14,6 +14,8 @@ import facilityLightTable from "@/assets/photos/facility-light-table-inspection.
 import facilityThermalTest from "@/assets/photos/facility-thermal-test.jpg";
 import facilityExterior from "@/assets/photos/facility-exterior-butler.jpg";
 import facilityCleanroom2 from "@/assets/photos/facility-cleanroom-2.jpg";
+import facilityRoom3 from "@/assets/photos/hlg-room-3-cleanroom.jpg.asset.json";
+import shieldMeshSection from "@/assets/photos/hlg-shield-mesh-interlayer-v6.png";
 
 export type HlgPhoto = {
   src: string;
@@ -48,6 +50,15 @@ export const itoFilmPhoto: HlgPhoto = {
     "Transparent conductive film on interlayer — a continuous coated film with low-profile busbar collection along both opposing edges.",
   label: "Conductive film",
   note: "Representative engineering visual. Film type, sheet resistance and busbar geometry are program specific.",
+};
+
+export const shieldMeshPhoto: HlgPhoto = {
+  src: shieldMeshSection,
+  alt: "Fine metal mesh embedded in a slightly opaque interlayer with a thin perimeter busbar and one braided lead at each corner",
+  caption:
+    "Fine-mesh shielding interlayer — perimeter busbar collection with one durable braided electrical exit at each corner.",
+  label: "Embedded shielding mesh",
+  note: "Representative engineering visual. Mesh material, opening count, busbar geometry and electrical exits are program specific.",
 };
 
 export const connectorPhotos: HlgPhoto[] = [
@@ -122,5 +133,11 @@ export const facilityAboutPhotos: HlgPhoto[] = [
     caption:
       "A precision temperature- and humidity-controlled clean-room environment designed for processing laminated-glass interlayer materials.",
     label: "Clean room",
+  },
+  {
+    src: facilityRoom3.url,
+    alt: "Wide interior view of HLG Room 3 with clean-room processing equipment and work tables",
+    caption: "Room 3 — clean-room processing equipment and production work area at HLG.",
+    label: "Room 3",
   },
 ];
