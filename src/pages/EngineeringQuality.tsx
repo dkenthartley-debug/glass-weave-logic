@@ -38,7 +38,7 @@ const EngineeringQuality = () => (
       </div>
     </Section>
 
-    <Section tone="gray">
+    <Section>
       <SectionHeading eyebrow="Proof points" title="How the work is controlled" />
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border">
         {qualityProof.map((q) => (
