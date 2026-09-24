@@ -3,6 +3,8 @@ import { LaminateStack } from "@/components/Graphics";
 import Seo, { breadcrumbSchema, orgSchema } from "@/components/Seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { technologies } from "@/data/hlg";
+import Figure from "@/components/Figure";
+import { facilityAboutPhotos } from "@/data/hlgPhotos";
 
 const crumbs = [
   { name: "Home", path: "/" },
