@@ -101,8 +101,8 @@ export const LaminateStack = ({ invert = false }: { invert?: boolean }) => {
             <circle cx="408" cy="316" r="2.5" fill="hsl(var(--silver))" />
             <text x="487" y="319" fill="hsl(var(--silver))">INNER GLASS</text>
 
-            <path d="M 486 221 L 516 221 L 516 237" fill="none" stroke="hsl(var(--accent))" strokeOpacity="0.9" />
-            <text x="487" y="250" fill="hsl(var(--silver))" fontSize="7">EDGE EXIT</text>
+            <path d="M 486 221 L 478 221" fill="none" stroke="hsl(var(--accent))" strokeOpacity="0.9" />
+            <text x="487" y="224" fill="hsl(var(--accent))" fontSize="7">ELECTRICAL EXIT</text>
           </g>
         </svg>
       </div>
