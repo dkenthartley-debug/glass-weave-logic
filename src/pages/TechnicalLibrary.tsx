@@ -39,9 +39,10 @@ const TechnicalLibrary = () => (
                 <p className="text-sm text-muted-foreground mt-2 leading-relaxed flex-1">{doc.summary}</p>
                 {doc.pdf && (
                   <a
-                    href={doc.pdf}
+                    href={`https://glass-weave-logic.lovable.app${doc.pdf}`}
                     target="_blank"
                     rel="noopener noreferrer"
+                    download
                     className="mono text-accent mt-4 inline-block hover:underline"
                   >
                     Download PDF →
