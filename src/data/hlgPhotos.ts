@@ -7,7 +7,7 @@ import connectorEdgeAttached from "@/assets/photos/connector-edge-attached-busba
 import connectorMoldedHarness from "@/assets/photos/connector-molded-two-pin-harness.jpg.asset.json";
 import partMarking from "@/assets/photos/part-marking-traceability.jpg.asset.json";
 import sensorMatSection from "@/assets/photos/hlg-rtd-sensor-mat-section-v2.png";
-import itoFilmSection from "@/assets/photos/hlg-ito-conductive-film-section.png";
+import itoFilmSection from "@/assets/photos/hlg-ito-conductive-film-section-v3.png";
 
 export type HlgPhoto = {
   src: string;
@@ -37,11 +37,11 @@ export const sensorMatSectionPhoto: HlgPhoto = {
 
 export const itoFilmPhoto: HlgPhoto = {
   src: itoFilmSection,
-  alt: "Section of interlayer carrying a transparent conductive ITO coating with a subtle iridescent sheen and a low-profile busbar along the long edge",
+  alt: "Section of interlayer carrying a transparent conductive film with a subtle iridescent sheen and matching low-profile busbars along both opposing edges",
   caption:
-    "Transparent conductive coating on interlayer — a continuous ITO film with low-profile busbar collection along the edge.",
-  label: "Transparent conductive film",
-  note: "Representative engineering visual. Coating type, sheet resistance and busbar geometry are program specific.",
+    "Transparent conductive film on interlayer — a continuous coated film with low-profile busbar collection along both opposing edges.",
+  label: "Conductive film",
+  note: "Representative engineering visual. Film type, sheet resistance and busbar geometry are program specific.",
 };
 
 export const connectorPhotos: HlgPhoto[] = [
