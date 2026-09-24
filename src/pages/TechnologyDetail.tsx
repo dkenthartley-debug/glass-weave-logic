@@ -113,18 +113,14 @@ const TechnologyDetail = () => {
                 </dl>
               </div>
             )}
-            {(tech.code === "HEAT" || tech.code === "CONDUCT") && (
+            {tech.code === "CONDUCT" && (
               <div className="panel p-7">
                 <div className="mono text-primary mb-5">Conductor detail</div>
                 <ConductorField
-                  imageSrc={tech.code === "CONDUCT" ? itoFilmPhoto.src : heaterMatSectionPhoto.src}
-                  label={tech.code === "CONDUCT" ? "Conductive film" : undefined}
-                  alt={tech.code === "CONDUCT" ? itoFilmPhoto.alt : undefined}
-                  note={
-                    tech.code === "CONDUCT"
-                      ? "Continuous transparent conductive film with matching busbar collection along both opposing edges. Film type and geometry are program specific."
-                      : undefined
-                  }
+                  imageSrc={itoFilmPhoto.src}
+                  label="Conductive film"
+                  alt={itoFilmPhoto.alt}
+                  note="Continuous transparent conductive film with matching busbar collection along both opposing edges. Film type and geometry are program specific."
                 />
               </div>
             )}
