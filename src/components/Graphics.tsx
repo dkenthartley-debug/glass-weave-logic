@@ -9,23 +9,15 @@ export const STACK_NOTE =
 
 /** Stepped isometric laminate cross-section, schematic. */
 export const LaminateStack = ({ invert = false }: { invert?: boolean }) => {
-  const layers = [
-    { n: "01", name: "Outer glass ply" },
-    { n: "02", name: "Interlayer material" },
-    { n: "03", name: "Embedded function plane" },
-    { n: "04", name: "Interlayer material" },
-    { n: "05", name: "Inner glass ply" },
-  ];
-
   return (
     <figure className="w-full text-silver">
       <div className="relative overflow-hidden border border-silver/10 bg-navy-deep/45">
-        <div className="absolute inset-0 grid-bg-fine opacity-25" aria-hidden />
+        <div className="absolute inset-0 grid-bg-fine opacity-15" aria-hidden />
         <svg
-          viewBox="0 0 520 330"
+          viewBox="0 0 600 400"
           className="relative block h-auto w-full"
           role="img"
-          aria-label="Exploded isometric schematic of a laminated glass stack with two glass plies, interlayer material, an embedded functional plane, perimeter collection and an edge electrical exit"
+          aria-label="Clearly labeled exploded schematic showing an embedded electrical function enclosed between two interlayer films and two glass plies"
         >
           <defs>
             <linearGradient id="glassTop" x1="0" y1="0" x2="1" y2="1">
@@ -38,82 +30,85 @@ export const LaminateStack = ({ invert = false }: { invert?: boolean }) => {
               <stop offset="1" stopColor="hsl(var(--navy-deep))" stopOpacity="0.8" />
             </linearGradient>
             <linearGradient id="filmTop" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0" stopColor="hsl(var(--silver))" stopOpacity="0.11" />
-              <stop offset="0.5" stopColor="hsl(var(--primary))" stopOpacity="0.07" />
-              <stop offset="1" stopColor="hsl(var(--silver))" stopOpacity="0.11" />
+              <stop offset="0" stopColor="hsl(var(--primary-glow))" stopOpacity="0.13" />
+              <stop offset="0.5" stopColor="hsl(var(--silver))" stopOpacity="0.08" />
+              <stop offset="1" stopColor="hsl(var(--primary-glow))" stopOpacity="0.13" />
             </linearGradient>
             <clipPath id="functionPlaneClip">
-              <polygon points="106,158 325,96 436,151 217,213" />
+              <polygon points="80,205 315,139 435,199 200,265" />
             </clipPath>
           </defs>
 
           <g className="schematic-layer schematic-layer-1">
-            <polygon points="78,96 297,34 408,89 189,151" fill="url(#glassTop)" stroke="hsl(var(--silver))" strokeOpacity="0.55" />
-            <polygon points="189,151 408,89 408,101 189,163" fill="url(#glassEdge)" stroke="hsl(var(--primary))" strokeOpacity="0.3" />
-            <polygon points="78,96 189,151 189,163 78,108" fill="hsl(var(--primary))" fillOpacity="0.07" stroke="hsl(var(--silver))" strokeOpacity="0.24" />
-            <circle cx="82" cy="91" r="10" fill="hsl(var(--navy-deep))" stroke="hsl(var(--primary-glow))" />
-            <text x="82" y="94" textAnchor="middle" fill="hsl(var(--primary-glow))" fontSize="7" fontFamily="JetBrains Mono, monospace">01</text>
+            <polygon points="54,76 289,10 409,70 174,136" fill="url(#glassTop)" stroke="hsl(var(--silver))" strokeOpacity="0.85" strokeWidth="1.2" />
+            <polygon points="174,136 409,70 409,85 174,151" fill="url(#glassEdge)" stroke="hsl(var(--primary-glow))" strokeOpacity="0.45" />
+            <polygon points="54,76 174,136 174,151 54,91" fill="hsl(var(--primary))" fillOpacity="0.1" stroke="hsl(var(--silver))" strokeOpacity="0.35" />
           </g>
 
           <g className="schematic-layer schematic-layer-2">
-            <polygon points="92,132 311,70 422,125 203,187" fill="url(#filmTop)" stroke="hsl(var(--silver))" strokeOpacity="0.34" strokeDasharray="3 3" />
-            <circle cx="96" cy="127" r="10" fill="hsl(var(--navy-deep))" stroke="hsl(var(--primary-glow))" />
-            <text x="96" y="130" textAnchor="middle" fill="hsl(var(--primary-glow))" fontSize="7" fontFamily="JetBrains Mono, monospace">02</text>
+            <polygon points="67,143 302,77 422,137 187,203" fill="url(#filmTop)" stroke="hsl(var(--primary-glow))" strokeOpacity="0.52" strokeDasharray="4 3" />
           </g>
 
           <g className="schematic-layer schematic-layer-3">
-            <polygon points="106,158 325,96 436,151 217,213" fill="hsl(var(--primary))" fillOpacity="0.055" stroke="hsl(var(--primary-glow))" strokeOpacity="0.7" />
-            <g clipPath="url(#functionPlaneClip)" opacity="0.75">
-              {Array.from({ length: 15 }).map((_, i) => {
-                const y = 117 + i * 6.2;
+            <polygon points="80,205 315,139 435,199 200,265" fill="hsl(var(--accent))" fillOpacity="0.08" stroke="hsl(var(--accent))" strokeOpacity="0.95" strokeWidth="1.5" />
+            <g clipPath="url(#functionPlaneClip)" opacity="0.9">
+              {Array.from({ length: 12 }).map((_, i) => {
+                const y = 159 + i * 7.2;
                 return (
                   <path
                     key={i}
-                    d={`M 76 ${y} C 112 ${y - 7}, 150 ${y + 7}, 188 ${y} S 264 ${y - 7}, 302 ${y} S 378 ${y + 7}, 456 ${y}`}
+                    d={`M 58 ${y} C 92 ${y - 5}, 126 ${y + 5}, 160 ${y} S 228 ${y - 5}, 262 ${y} S 330 ${y + 5}, 364 ${y} S 432 ${y - 5}, 466 ${y}`}
                     fill="none"
-                    stroke="hsl(var(--graphite))"
-                    strokeWidth="0.6"
+                    stroke="hsl(var(--silver))"
+                    strokeWidth="0.75"
                     vectorEffect="non-scaling-stroke"
                   />
                 );
               })}
             </g>
-            <path d="M 122 170 L 217 217 L 426 158" fill="none" stroke="hsl(var(--primary-glow))" strokeOpacity="0.7" strokeWidth="2.2" />
-            <path className="schematic-current" d="M 426 158 C 452 164, 461 174, 484 175" fill="none" stroke="hsl(var(--primary-glow))" strokeWidth="1.2" strokeDasharray="5 5" />
-            <circle cx="110" cy="153" r="10" fill="hsl(var(--navy-deep))" stroke="hsl(var(--accent))" />
-            <text x="110" y="156" textAnchor="middle" fill="hsl(var(--accent))" fontSize="7" fontFamily="JetBrains Mono, monospace">03</text>
+            <path d="M 96 213 L 200 265 L 426 202" fill="none" stroke="hsl(var(--accent))" strokeOpacity="0.9" strokeWidth="2.3" />
+            <path className="schematic-current" d="M 426 202 C 456 206, 462 220, 486 221" fill="none" stroke="hsl(var(--accent))" strokeWidth="1.4" strokeDasharray="5 5" />
           </g>
 
           <g className="schematic-layer schematic-layer-4">
-            <polygon points="120,196 339,134 450,189 231,251" fill="url(#filmTop)" stroke="hsl(var(--silver))" strokeOpacity="0.3" strokeDasharray="3 3" />
-            <circle cx="124" cy="191" r="10" fill="hsl(var(--navy-deep))" stroke="hsl(var(--primary-glow))" />
-            <text x="124" y="194" textAnchor="middle" fill="hsl(var(--primary-glow))" fontSize="7" fontFamily="JetBrains Mono, monospace">04</text>
+            <polygon points="93,267 328,201 448,261 213,327" fill="url(#filmTop)" stroke="hsl(var(--primary-glow))" strokeOpacity="0.52" strokeDasharray="4 3" />
           </g>
 
           <g className="schematic-layer schematic-layer-5">
-            <polygon points="134,228 353,166 464,221 245,283" fill="url(#glassTop)" stroke="hsl(var(--silver))" strokeOpacity="0.48" />
-            <polygon points="245,283 464,221 464,233 245,295" fill="url(#glassEdge)" stroke="hsl(var(--primary))" strokeOpacity="0.28" />
-            <polygon points="134,228 245,283 245,295 134,240" fill="hsl(var(--primary))" fillOpacity="0.06" stroke="hsl(var(--silver))" strokeOpacity="0.2" />
-            <circle cx="138" cy="223" r="10" fill="hsl(var(--navy-deep))" stroke="hsl(var(--primary-glow))" />
-            <text x="138" y="226" textAnchor="middle" fill="hsl(var(--primary-glow))" fontSize="7" fontFamily="JetBrains Mono, monospace">05</text>
+            <polygon points="106,329 341,263 461,323 226,389" fill="url(#glassTop)" stroke="hsl(var(--silver))" strokeOpacity="0.85" strokeWidth="1.2" />
+            <polygon points="226,389 461,323 461,337 226,399" fill="url(#glassEdge)" stroke="hsl(var(--primary-glow))" strokeOpacity="0.45" />
           </g>
 
-          <path d="M 484 175 L 500 175" stroke="hsl(var(--primary-glow))" strokeWidth="0.8" />
-          <circle cx="500" cy="175" r="2.5" fill="hsl(var(--primary-glow))" />
-        </svg>
-        <div className="absolute bottom-3 right-3 border border-primary/25 bg-navy-deep/90 px-3 py-2">
-          <span className="mono text-primary-glow">Electrical exit at edge</span>
-        </div>
-      </div>
+          <g fontFamily="JetBrains Mono, monospace" fontSize="9">
+            <path d="M 356 48 L 478 48" stroke="hsl(var(--silver))" strokeOpacity="0.65" />
+            <circle cx="356" cy="48" r="2.5" fill="hsl(var(--silver))" />
+            <text x="487" y="51" fill="hsl(var(--silver))">OUTER GLASS</text>
 
-      <ol className="mt-4 grid grid-cols-2 gap-x-5 gap-y-2 sm:grid-cols-3">
-        {layers.map((layer) => (
-          <li key={layer.n} className="flex items-baseline gap-2 text-xs text-silver/70">
-            <span className={`mono ${layer.n === "03" ? "text-accent" : "text-primary-glow"}`}>{layer.n}</span>
-            <span>{layer.name}</span>
-          </li>
-        ))}
-      </ol>
+            <path d="M 369 118 L 478 118" stroke="hsl(var(--primary-glow))" strokeOpacity="0.8" />
+            <circle cx="369" cy="118" r="2.5" fill="hsl(var(--primary-glow))" />
+            <text x="487" y="121" fill="hsl(var(--primary-glow))">INTERLAYER</text>
+
+            <path d="M 382 185 L 478 185" stroke="hsl(var(--accent))" strokeOpacity="0.95" />
+            <circle cx="382" cy="185" r="3" fill="hsl(var(--accent))" />
+            <text x="487" y="181" fill="hsl(var(--accent))" fontWeight="700">EMBEDDED</text>
+            <text x="487" y="193" fill="hsl(var(--accent))" fontWeight="700">FUNCTION</text>
+
+            <path d="M 395 251 L 478 251" stroke="hsl(var(--primary-glow))" strokeOpacity="0.8" />
+            <circle cx="395" cy="251" r="2.5" fill="hsl(var(--primary-glow))" />
+            <text x="487" y="254" fill="hsl(var(--primary-glow))">INTERLAYER</text>
+
+            <path d="M 408 316 L 478 316" stroke="hsl(var(--silver))" strokeOpacity="0.65" />
+            <circle cx="408" cy="316" r="2.5" fill="hsl(var(--silver))" />
+            <text x="487" y="319" fill="hsl(var(--silver))">INNER GLASS</text>
+
+            <path d="M 486 221 L 478 221" fill="none" stroke="hsl(var(--accent))" strokeOpacity="0.9" />
+            <text x="487" y="224" fill="hsl(var(--accent))" fontSize="7">ELECTRICAL EXIT</text>
+          </g>
+        </svg>
+      </div>
+      <p className="mt-4 border-l border-accent pl-3 text-sm leading-relaxed text-silver/85">
+        The electrical function is engineered into the laminate—not applied to the finished glass surface.
+      </p>
       <figcaption className={`mono mt-4 leading-relaxed ${invert ? "text-silver/70" : "text-muted-foreground"}`}>
         {STACK_NOTE}
       </figcaption>
