@@ -116,24 +116,27 @@ export const LaminateStack = ({ invert = false }: { invert?: boolean }) => {
   );
 };
 
-/** Hairline conductor field with a labeled enlarged detail inset. */
-export const ConductorField = ({ imageSrc }: { imageSrc: string }) => {
+/** Framed conductor visual with a corner label and program-specific note. */
+export const ConductorField = ({
+  imageSrc,
+  label = "Actual HLG wire field",
+  alt = "Actual HLG heated-interlayer wire field showing uniform fine sinusoidal tungsten conductors",
+  note = "Fine sinusoidal tungsten wire shown at close range. Final conductor spacing and layout are program specific.",
+}: {
+  imageSrc: string;
+  label?: string;
+  alt?: string;
+  note?: string;
+}) => {
   return (
     <figure>
       <div className="relative overflow-hidden border border-border bg-navy-deep">
-        <img
-          src={imageSrc}
-          alt="Actual HLG heated-interlayer wire field showing uniform fine sinusoidal tungsten conductors"
-          loading="lazy"
-          className="aspect-[16/10] w-full object-cover"
-        />
+        <img src={imageSrc} alt={alt} loading="lazy" className="aspect-[16/10] w-full object-cover" />
         <div className="absolute bottom-0 left-0 border-r border-t border-border bg-navy-deep/95 px-3 py-2">
-          <span className="mono text-silver">Actual HLG wire field</span>
+          <span className="mono text-silver">{label}</span>
         </div>
       </div>
-      <p className="mt-3 text-xs leading-relaxed text-muted-foreground">
-        Fine sinusoidal tungsten wire shown at close range. Final conductor spacing and layout are program specific.
-      </p>
+      <p className="mt-3 text-xs leading-relaxed text-muted-foreground">{note}</p>
     </figure>
   );
 };
