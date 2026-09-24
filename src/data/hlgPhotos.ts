@@ -17,7 +17,7 @@ import facilityCleanroom2 from "@/assets/photos/facility-cleanroom-2.jpg";
 import facilityRoom3 from "@/assets/photos/hlg-room-3-cleanroom.jpg.asset.json";
 import facilityProgramSetup from "@/assets/photos/facility-program-setup-blurred.jpg.asset.json";
 import facilityControlledProcessing from "@/assets/photos/facility-controlled-processing.jpg.asset.json";
-import shieldMeshSection from "@/assets/photos/hlg-shield-mesh-interlayer-v10.png";
+import shieldMeshSection from "@/assets/photos/hlg-shield-mesh-interlayer-v11.png";
 
 export type HlgPhoto = {
   src: string;
