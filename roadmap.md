@@ -15,7 +15,7 @@
 - [x] SEO metadata, Organization schema, sitemap
 - [x] Route + mobile verification, form submission tested end to end
 - [x] Highlight SENSE as a growth technology with embedded-wire imagery and positioning
-- [ ] Publish V1 (awaiting owner approval)
+- [x] Publish V1 (owner approved; republished with approved visuals, facility photos, and security cleanup)
 - [ ] Publish technical papers in the Technical Library (deferred by spec)
 - [x] Replace the heater architecture visual with an authentic, clean HLG-based detail
-- [ ] Review and improve website images one at a time, using actual HLG photos as the controlling visual reference
+- [x] Review and improve website images one at a time, using actual HLG photos as the controlling visual reference
