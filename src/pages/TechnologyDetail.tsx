@@ -1,5 +1,5 @@
 import { Navigate, useParams, Link } from "react-router-dom";
-import { PageHero, Section, SectionHeading, CtaLink, Eyebrow } from "@/components/Section";
+import { PageHero, Section, SectionHeading, CtaLink } from "@/components/Section";
 import { ConductorField, LaminateStack, ThermalBand } from "@/components/Graphics";
 import Seo, { breadcrumbSchema, techArticleSchema } from "@/components/Seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
