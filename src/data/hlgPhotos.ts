@@ -78,3 +78,49 @@ export const traceabilityPhoto: HlgPhoto = {
     "Part marking applied to the interlayer — part number and HLG identification. Barcodes can be applied for lot-number traceability.",
   label: "Traceability",
 };
+
+// ============= Facility photography (real HLG shots) =============
+
+export const facilityLeadPhoto: HlgPhoto = {
+  src: facilityCleanroomWide,
+  alt: "Wide view of the HLG clean-room manufacturing environment in Butler, Pennsylvania",
+  caption: "Clean-room manufacturing environment — Butler, Pennsylvania.",
+  label: "HLG facility",
+};
+
+export const facilityManufacturingPhotos: HlgPhoto[] = [
+  {
+    src: facilityWirePlacement,
+    alt: "Technician placing fine heater wire on the interlayer line at HLG",
+    caption: "Fine wire placement on the interlayer line.",
+    label: "Wire placement",
+  },
+  {
+    src: facilityLightTable,
+    alt: "Interlayer inspection at the light table at HLG",
+    caption: "Interlayer inspection at the light table — part of 100% interlayer inspection.",
+    label: "100% inspection",
+  },
+  {
+    src: facilityThermalTest,
+    alt: "Thermal evaluation of a heater design on the HLG test bench",
+    caption: "Thermal evaluation of a new heater design on the test bench.",
+    label: "Thermal validation",
+  },
+];
+
+export const facilityAboutPhotos: HlgPhoto[] = [
+  {
+    src: facilityExterior,
+    alt: "Exterior of the HLG facility in Butler, Pennsylvania",
+    caption: "HLG — Butler, Pennsylvania. Engineered here. Manufactured here. Inspected here.",
+    label: "Butler, Pennsylvania",
+  },
+  {
+    src: facilityCleanroom2,
+    alt: "Second view of the HLG clean-room processing environment",
+    caption:
+      "A precision temperature- and humidity-controlled clean-room environment designed for processing laminated-glass interlayer materials.",
+    label: "Clean room",
+  },
+];
