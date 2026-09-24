@@ -15,7 +15,7 @@ import facilityThermalTest from "@/assets/photos/facility-thermal-test.jpg";
 import facilityExterior from "@/assets/photos/facility-exterior-butler.jpg";
 import facilityCleanroom2 from "@/assets/photos/facility-cleanroom-2.jpg";
 import facilityRoom3 from "@/assets/photos/hlg-room-3-cleanroom.jpg.asset.json";
-import shieldMeshSection from "@/assets/photos/hlg-shield-mesh-interlayer-v9.png";
+import shieldMeshSection from "@/assets/photos/hlg-shield-mesh-interlayer-v10.png";
 
 export type HlgPhoto = {
   src: string;
