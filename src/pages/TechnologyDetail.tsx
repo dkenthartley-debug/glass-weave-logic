@@ -5,7 +5,7 @@ import Seo, { breadcrumbSchema, techArticleSchema } from "@/components/Seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { getTech, technologies } from "@/data/hlg";
 import Figure from "@/components/Figure";
-import { connectorPhotos, heaterMatSectionPhoto, sensorMatSectionPhoto } from "@/data/hlgPhotos";
+import { connectorPhotos, heaterMatSectionPhoto, itoFilmPhoto, sensorMatSectionPhoto } from "@/data/hlgPhotos";
 
 const TechnologyDetail = () => {
   const { slug } = useParams();
@@ -89,6 +89,7 @@ const TechnologyDetail = () => {
                 </p>
               </div>
             )}
+            {tech.code === "CONDUCT" && <Figure photo={itoFilmPhoto} aspect="aspect-[16/10]" />}
             {tech.code === "CONNECT" && (
               <div className="grid sm:grid-cols-2 gap-6">
                 {connectorPhotos.slice(0, 2).map((p) => (
@@ -115,7 +116,16 @@ const TechnologyDetail = () => {
             {(tech.code === "HEAT" || tech.code === "CONDUCT") && (
               <div className="panel p-7">
                 <div className="mono text-primary mb-5">Conductor detail</div>
-                <ConductorField imageSrc={heaterMatSectionPhoto.src} />
+                <ConductorField
+                  imageSrc={tech.code === "CONDUCT" ? itoFilmPhoto.src : heaterMatSectionPhoto.src}
+                  label={tech.code === "CONDUCT" ? "Transparent conductive film" : undefined}
+                  alt={tech.code === "CONDUCT" ? itoFilmPhoto.alt : undefined}
+                  note={
+                    tech.code === "CONDUCT"
+                      ? "Continuous transparent conductive coating with edge busbar collection. Coating type and geometry are program specific."
+                      : undefined
+                  }
+                />
               </div>
             )}
             <div className="panel p-7">
