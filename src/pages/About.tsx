@@ -68,6 +68,15 @@ const About = () => (
       </div>
     </Section>
 
+    <Section>
+      <SectionHeading eyebrow="Butler, Pennsylvania" title="Where the work happens" />
+      <div className="grid md:grid-cols-2 gap-6">
+        {facilityAboutPhotos.map((p) => (
+          <Figure key={p.label} photo={p} />
+        ))}
+      </div>
+    </Section>
+
     <Section tone="gray">
       <SectionHeading eyebrow="How work moves" title="Requirement to production" />
       <ol className="grid md:grid-cols-3 lg:grid-cols-5 gap-px bg-border border border-border">
