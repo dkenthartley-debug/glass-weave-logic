@@ -15,6 +15,8 @@ import facilityThermalTest from "@/assets/photos/facility-thermal-test.jpg";
 import facilityExterior from "@/assets/photos/facility-exterior-butler.jpg";
 import facilityCleanroom2 from "@/assets/photos/facility-cleanroom-2.jpg";
 import facilityRoom3 from "@/assets/photos/hlg-room-3-cleanroom.jpg.asset.json";
+import facilityProgramSetup from "@/assets/photos/facility-program-setup-blurred.jpg.asset.json";
+import facilityControlledProcessing from "@/assets/photos/facility-controlled-processing.jpg.asset.json";
 import shieldMeshSection from "@/assets/photos/hlg-shield-mesh-interlayer-v10.png";
 
 export type HlgPhoto = {
@@ -117,6 +119,22 @@ export const facilityManufacturingPhotos: HlgPhoto[] = [
     alt: "Thermal evaluation of a heater design on the HLG test bench",
     caption: "Thermal evaluation of a new heater design on the test bench.",
     label: "Thermal validation",
+  },
+];
+
+export const facilityProcessPhotos: HlgPhoto[] = [
+  {
+    src: facilityProgramSetup.url,
+    alt: "HLG technician working beside automated interlayer processing equipment in the clean room",
+    caption: "Controlled equipment setup for a program-specific interlayer configuration.",
+    label: "Program setup",
+    note: "Customer-specific geometry intentionally obscured.",
+  },
+  {
+    src: facilityControlledProcessing.url,
+    alt: "HLG technicians performing hands-on interlayer processing and inspection in the clean room",
+    caption: "Hands-on processing and inspection within the controlled clean-room environment.",
+    label: "Controlled processing",
   },
 ];
 

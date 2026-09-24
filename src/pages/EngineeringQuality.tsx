@@ -4,7 +4,12 @@ import Seo, { breadcrumbSchema, orgSchema } from "@/components/Seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { processSteps, qualityProof } from "@/data/hlg";
 import Figure from "@/components/Figure";
-import { traceabilityPhoto, facilityLeadPhoto, facilityManufacturingPhotos } from "@/data/hlgPhotos";
+import {
+  traceabilityPhoto,
+  facilityLeadPhoto,
+  facilityManufacturingPhotos,
+  facilityProcessPhotos,
+} from "@/data/hlgPhotos";
 
 const crumbs = [
   { name: "Home", path: "/" },
@@ -34,6 +39,11 @@ const EngineeringQuality = () => (
       <div className="grid md:grid-cols-3 gap-6 mt-6">
         {facilityManufacturingPhotos.map((p) => (
           <Figure key={p.label} photo={p} />
+        ))}
+      </div>
+      <div className="grid md:grid-cols-2 gap-6 mt-6">
+        {facilityProcessPhotos.map((p) => (
+          <Figure key={p.label} photo={p} aspect="aspect-[16/9]" />
         ))}
       </div>
     </Section>
