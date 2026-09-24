@@ -118,11 +118,11 @@ const TechnologyDetail = () => {
                 <div className="mono text-primary mb-5">Conductor detail</div>
                 <ConductorField
                   imageSrc={tech.code === "CONDUCT" ? itoFilmPhoto.src : heaterMatSectionPhoto.src}
-                  label={tech.code === "CONDUCT" ? "Transparent conductive film" : undefined}
+                  label={tech.code === "CONDUCT" ? "Conductive film" : undefined}
                   alt={tech.code === "CONDUCT" ? itoFilmPhoto.alt : undefined}
                   note={
                     tech.code === "CONDUCT"
-                      ? "Continuous transparent conductive coating with edge busbar collection. Coating type and geometry are program specific."
+                      ? "Continuous transparent conductive film with matching busbar collection along both opposing edges. Film type and geometry are program specific."
                       : undefined
                   }
                 />

@@ -142,8 +142,8 @@ var technologies = [
         body: "Mature, demonstrated HLG capability. Very fine tungsten conductors placed to a controlled geometry \u2014 high current capability with minimal optical footprint."
       },
       {
-        title: "ITO and conductive coatings",
-        body: "Mature capability. Uniform area conduction and heating with no discrete conductor lines; sheet resistance governs achievable power."
+        title: "Conductive film (ITO and conductive coatings)",
+        body: "Mature capability. A continuous transparent conductive film \u2014 ITO and related coatings \u2014 for uniform area conduction and heating with no discrete conductor lines; sheet resistance governs achievable power."
       },
       {
         title: "Fine conductive mesh",
