@@ -2,6 +2,7 @@ import { PageHero, Section, SectionHeading, CtaLink } from "@/components/Section
 import Seo, { breadcrumbSchema, orgSchema } from "@/components/Seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { libraryTopics } from "@/data/hlg";
+import { librarySeries } from "@/data/library";
 
 const crumbs = [
   { name: "Home", path: "/" },
@@ -24,10 +25,38 @@ const TechnicalLibrary = () => (
     />
 
     <Section>
-      <div className="border border-accent/40 bg-accent/5 px-6 py-6">
-        <div className="mono text-accent">Technical papers and application notes coming soon.</div>
+      {librarySeries.map((series) => (
+        <div key={series.code} className="mb-14 last:mb-0">
+          <SectionHeading eyebrow={series.scope} title={series.name} align="left" />
+          <p className="text-sm text-muted-foreground leading-relaxed max-w-3xl -mt-6 mb-8">{series.purpose}</p>
+          <div className="grid sm:grid-cols-2 gap-px bg-border border border-border">
+            {series.docs.map((doc) => (
+              <div key={doc.id} className="bg-background p-6 flex flex-col">
+                <div className="mono text-muted-foreground">
+                  {doc.id} · {doc.revision}
+                </div>
+                <div className="font-display text-base font-semibold mt-2">{doc.title}</div>
+                <p className="text-sm text-muted-foreground mt-2 leading-relaxed flex-1">{doc.summary}</p>
+                {doc.pdf && (
+                  <a
+                    href={doc.pdf}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mono text-accent mt-4 inline-block hover:underline"
+                  >
+                    Download PDF →
+                  </a>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+
+      <div className="border border-accent/40 bg-accent/5 px-6 py-6 mt-14">
+        <div className="mono text-accent">Additional technical papers and application notes in preparation.</div>
         <p className="text-sm text-muted-foreground mt-3 leading-relaxed max-w-2xl">
-          Papers are being prepared for release. To discuss a specific engineering topic before publication, start an
+          The library is expanding. To discuss a specific engineering topic before publication, start an
           engineering review — technical detail is shared under a mutual NDA where appropriate.
         </p>
       </div>
