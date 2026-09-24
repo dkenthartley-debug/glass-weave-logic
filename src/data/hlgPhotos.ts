@@ -8,6 +8,12 @@ import connectorMoldedHarness from "@/assets/photos/connector-molded-two-pin-har
 import partMarking from "@/assets/photos/part-marking-traceability.jpg.asset.json";
 import sensorMatSection from "@/assets/photos/hlg-rtd-sensor-mat-section-v2.png";
 import itoFilmSection from "@/assets/photos/hlg-ito-conductive-film-section-v4.png";
+import facilityCleanroomWide from "@/assets/photos/facility-cleanroom-wide.jpg";
+import facilityWirePlacement from "@/assets/photos/facility-wire-placement.jpg";
+import facilityLightTable from "@/assets/photos/facility-light-table-inspection.jpg";
+import facilityThermalTest from "@/assets/photos/facility-thermal-test.jpg";
+import facilityExterior from "@/assets/photos/facility-exterior-butler.jpg";
+import facilityCleanroom2 from "@/assets/photos/facility-cleanroom-2.jpg";
 
 export type HlgPhoto = {
   src: string;
