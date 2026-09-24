@@ -159,4 +159,28 @@
   .btn-outline-invert {
     @apply inline-flex items-center justify-center gap-2 px-6 py-3.5 border border-silver/30 text-silver mono hover:border-primary-glow hover:text-primary-glow transition-colors;
   }
+
+  .schematic-layer {
+    transition: opacity 300ms ease, transform 450ms ease;
+    transform-box: fill-box;
+    transform-origin: center;
+  }
+
+  figure:hover .schematic-layer-1 { transform: translate(-2px, -3px); }
+  figure:hover .schematic-layer-2 { transform: translate(-1px, -1px); }
+  figure:hover .schematic-layer-4 { transform: translate(1px, 1px); }
+  figure:hover .schematic-layer-5 { transform: translate(2px, 3px); }
+
+  .schematic-current {
+    animation: schematic-current-flow 5s linear infinite;
+  }
+}
+
+@keyframes schematic-current-flow {
+  to { stroke-dashoffset: -20; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .schematic-layer { transition: none; }
+  .schematic-current { animation: none; }
 }
