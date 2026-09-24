@@ -1,11 +1,17 @@
 import { Navigate, useParams, Link } from "react-router-dom";
-import { PageHero, Section, SectionHeading, CtaLink, Eyebrow } from "@/components/Section";
-import { ConductorField, LaminateStack, ShieldPath, ThermalBand } from "@/components/Graphics";
+import { PageHero, Section, SectionHeading, CtaLink } from "@/components/Section";
+import { ConductorField, LaminateStack, ThermalBand } from "@/components/Graphics";
 import Seo, { breadcrumbSchema, techArticleSchema } from "@/components/Seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { getTech, technologies } from "@/data/hlg";
 import Figure from "@/components/Figure";
-import { connectorPhotos, heaterMatSectionPhoto, itoFilmPhoto, sensorMatSectionPhoto } from "@/data/hlgPhotos";
+import {
+  connectorPhotos,
+  heaterMatSectionPhoto,
+  itoFilmPhoto,
+  sensorMatSectionPhoto,
+  shieldMeshPhoto,
+} from "@/data/hlgPhotos";
 
 const TechnologyDetail = () => {
   const { slug } = useParams();
@@ -69,10 +75,7 @@ const TechnologyDetail = () => {
             ))}
 
             {tech.code === "SHIELD" && (
-              <div>
-                <Eyebrow>Electrical path</Eyebrow>
-                <ShieldPath />
-              </div>
+              <Figure photo={shieldMeshPhoto} aspect="aspect-[16/10]" />
             )}
             {tech.code === "HEAT" && (
               <>

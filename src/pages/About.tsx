@@ -70,7 +70,7 @@ const About = () => (
 
     <Section>
       <SectionHeading eyebrow="Butler, Pennsylvania" title="Where the work happens" />
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {facilityAboutPhotos.map((p) => (
           <Figure key={p.label} photo={p} />
         ))}
