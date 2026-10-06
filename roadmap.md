@@ -17,6 +17,7 @@
 - [x] Highlight SENSE as a growth technology with embedded-wire imagery and positioning
 - [x] Publish V1 (owner approved; republished with approved visuals, facility photos, and security cleanup)
 - [ ] Review and finalize technical papers one at a time, then publish in the Technical Library (in progress — target today)
+- [ ] Revise QS-1724: customer sample evaluations, explicitly HLG-defined OMI, Marine applications, two-page layout; await owner sign-off
 - [ ] Republish site after paper review is complete
 - [x] Replace the heater architecture visual with an authentic, clean HLG-based detail
 - [x] Review and improve website images one at a time, using actual HLG photos as the controlling visual reference
