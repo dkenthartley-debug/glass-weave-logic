@@ -2,7 +2,7 @@ import { PageHero, Section, SectionHeading, CtaLink } from "@/components/Section
 import { LaminateStack } from "@/components/Graphics";
 import Seo, { breadcrumbSchema, orgSchema } from "@/components/Seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import { solutions } from "@/data/hlg";
+import { solutions, multiFunctionSystems } from "@/data/hlg";
 import Figure from "@/components/Figure";
 import { connectorPhotos } from "@/data/hlgPhotos";
 
@@ -66,6 +66,23 @@ const Solutions = () => (
     </Section>
 
     <Section tone="gray">
+      <SectionHeading
+        eyebrow="Multi-function systems"
+        title="One laminate. Multiple functions."
+        subtitle="HLG can engineer two or more electrical functions into a single interlayer assembly, so heating, sensing, shielding, switching and antenna elements work together instead of competing for space."
+      />
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border">
+        {multiFunctionSystems.map((m) => (
+          <div key={m.combo} className="bg-background p-6">
+            <div className="mono text-primary">{m.combo}</div>
+            <p className="text-sm text-muted-foreground mt-3 leading-relaxed">{m.body}</p>
+          </div>
+        ))}
+      </div>
+      <p className="mono text-muted-foreground mt-6">Combinations are program-specific and confirmed through engineering review.</p>
+    </Section>
+
+    <Section>
       <SectionHeading
         eyebrow="Connectors & electrical exits"
         title="The connector is part of the interlayer, not an afterthought."

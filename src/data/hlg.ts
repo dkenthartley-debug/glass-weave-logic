@@ -137,6 +137,22 @@ export const technologies: Tech[] = [
         ],
       },
       {
+        title: "Shielding approaches compared",
+        bullets: [
+          "Fine conductive mesh: continuous conductive grid with strong area coverage; a very fine mesh keeps the visual footprint low, but some effect on light transmission and clarity is part of the trade-off",
+          "Conductive film (ITO and related coatings): no discrete lines and a clean optical appearance; sheet resistance limits how much conduction the layer can provide",
+          "Custom shielded laminates: mesh or film combined with heating, sensing or other functions in one engineered stack, selected around the program's optical and electrical needs",
+        ],
+      },
+      {
+        title: "Clarity versus shielding",
+        body: "Every transparent shielding layer balances optical clarity against electrical conduction. The right choice depends on the viewing requirement, the aperture size and the enclosure it connects to. HLG helps define that balance early in the engineering review.",
+      },
+      {
+        title: "Why perimeter grounding matters",
+        body: "A shielding layer only works as well as its connection to the surrounding structure. Continuous, low-resistance contact around the perimeter carries collected current to the frame and enclosure. Gaps, high-resistance joints or poorly terminated edges can undermine an otherwise good conductive layer. HLG engineers the perimeter termination as part of the interlayer, with program-specific details shared under a mutual NDA.",
+      },
+      {
         title: "V1 disclosure",
         body: "Specific shielding attenuation values and compliance statements are program- and construction-dependent and are not published here. HLG discusses shielding performance under a mutual NDA in the context of a defined assembly.",
       },
@@ -465,4 +481,19 @@ export const libraryTopics = [
   "Wiper-park heating",
   "Optical performance",
   "Validation",
+  "How transparent heated glass works",
+  "Designing uniform heating patterns",
+  "EMI/RFI shielded glass fundamentals",
+  "Fine mesh vs. conductive film for EMI shielding",
+  "Why perimeter grounding matters in shielded glass",
+  "Preventing delamination in heated laminates",
+];
+
+export const multiFunctionSystems = [
+  { combo: "HEAT + SENSE", body: "Heated interlayer with embedded RTD sensing for closed-loop temperature control in a single laminate." },
+  { combo: "HEAT + SHIELD", body: "Defrost or de-ice heating combined with a transparent shielding layer and its perimeter grounding path." },
+  { combo: "SHIELD + CONNECT", body: "Shielded aperture integrated with antenna or signal elements, with the electrical exits engineered together." },
+  { combo: "HEAT + SWITCH", body: "Switchable glazing paired with heating for cold-environment performance and clear viewing." },
+  { combo: "HEAT + CONNECT", body: "Heated transparency with integrated antenna elements, laid out so heating and signal paths work together." },
+  { combo: "Custom stacks", body: "Multiple functions combined around the program's electrical, optical and thermal requirements." },
 ];
