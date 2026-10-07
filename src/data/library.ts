@@ -1,5 +1,4 @@
 import tb001 from "@/assets/documents/hlg-tb-001.pdf.asset.json";
-import qs1724 from "@/assets/documents/hlg-qs-1724.pdf.asset.json";
 import ag001 from "@/assets/documents/hlg-ag-001.pdf.asset.json";
 import er001 from "@/assets/documents/hlg-er-001.pdf.asset.json";
 
@@ -10,6 +9,8 @@ export type LibraryDoc = {
   summary: string;
   pdf?: string;
   path?: string;
+  /** Available to customers on request only — no public download. */
+  requestOnly?: boolean;
 };
 
 export type LibrarySeries = {
@@ -53,7 +54,7 @@ export const librarySeries: LibrarySeries[] = [
         revision: "Revision A",
         summary:
           "Purpose, scope, engineering principle, and methodology behind the HLG standard for evaluating optical behavior in the energized condition.",
-        pdf: qs1724.url,
+        requestOnly: true,
         path: "/qualification-standards/hlg-qs-1724",
       },
     ],

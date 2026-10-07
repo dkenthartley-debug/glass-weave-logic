@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { PageHero, Section, SectionHeading, CtaLink } from "@/components/Section";
 import Seo, { breadcrumbSchema, orgSchema } from "@/components/Seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -47,6 +48,14 @@ const TechnicalLibrary = () => (
                   >
                     Download PDF →
                   </a>
+                )}
+                {doc.requestOnly && (
+                  <Link
+                    to={`/engineering-review?document=${encodeURIComponent(doc.id)}`}
+                    className="mono text-accent mt-4 inline-block hover:underline"
+                  >
+                    Available to customers on request →
+                  </Link>
                 )}
               </div>
             ))}
