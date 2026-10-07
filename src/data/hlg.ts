@@ -494,6 +494,6 @@ export const multiFunctionSystems = [
   { combo: "HEAT + SHIELD", body: "Defrost or de-ice heating combined with a transparent shielding layer and its perimeter grounding path." },
   { combo: "SHIELD + CONNECT", body: "Shielded aperture integrated with antenna or signal elements, with the electrical exits engineered together." },
   { combo: "HEAT + SWITCH", body: "Switchable glazing paired with heating for cold-environment performance and clear viewing." },
-  { combo: "SENSE + CONNECT", body: "Embedded sensing with engineered connectors and traceable exit leads attached directly to the interlayer." },
+  { combo: "HEAT + CONNECT", body: "Heated transparency with integrated antenna elements, laid out so heating and signal paths work together." },
   { combo: "Custom stacks", body: "Multiple functions combined around the program's electrical, optical and thermal requirements." },
 ];
