@@ -31,8 +31,9 @@
 - [x] ER-001 review and matching Library layout; owner changes applied
 - [ ] Review S.03–S.05, ATPD-2352, EMI/RFI bulletin after S.02 approval
 - [x] Draft S.02 mesh/printed-copper assembly sheet: positive searchable SCIF scope, 80 OPI, testing/results TBD; PDF and readable preview page checked
-- [ ] Owner approval of S.02 draft wording
-- [ ] Confirm "Coplema" film supplier/grade and requirements, then prepare companion film assembly sheet
+- [x] Owner approval of S.02 draft wording
+- [x] Confirm Compelma as the film supplier
+- [ ] Confirm Compelma film grade using frequency, attenuation and optical requirements, then prepare companion film assembly sheet (waiting on application targets or owner-selected grade)
 - [x] Add multi-function systems, shielding approaches, perimeter grounding, safe library topics
 - [ ] Republish site after paper review is complete
 - [x] Replace the heater architecture visual with an authentic, clean HLG-based detail
