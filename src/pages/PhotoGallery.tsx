@@ -45,7 +45,7 @@ const PhotoGallery = () => (
       <CtaLink to="/engineering-review">Start an Engineering Review</CtaLink>
     </PageHero>
     {groups.map((g, i) => (
-      <Section key={g.id} id={g.id} tone={i % 2 ? "gray" : undefined}>
+      <Section key={g.id} id={g.id} tone={i % 2 ? "gray" : "light"}>
         <SectionHeading eyebrow={g.eyebrow} title={g.title} />
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
           {unique(g.photos).map((p) => (
