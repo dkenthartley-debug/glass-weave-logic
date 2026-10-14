@@ -27,6 +27,7 @@ export const NAV: NavItem[] = [
     children: [
       { label: "Engineering & Quality", to: "/engineering-quality" },
       { label: "Technical Library", to: "/technical-library" },
+      { label: "Photo Gallery", to: "/photo-gallery" },
       { label: "HLG Mutual NDA", to: "/engineering-review#nda" },
     ],
   },
@@ -187,6 +188,7 @@ const Layout = () => {
               <li><Link to="/solutions" className="text-silver/70 hover:text-primary-glow">Solutions &amp; Integration</Link></li>
               <li><Link to="/engineering-quality" className="text-silver/70 hover:text-primary-glow">Engineering &amp; Quality</Link></li>
               <li><Link to="/technical-library" className="text-silver/70 hover:text-primary-glow">Technical Library</Link></li>
+              <li><Link to="/photo-gallery" className="text-silver/70 hover:text-primary-glow">Photo Gallery</Link></li>
               <li><Link to="/engineering-review" className="text-silver/70 hover:text-primary-glow">Start an Engineering Review</Link></li>
               <li><Link to="/engineering-review#nda" className="text-silver/70 hover:text-primary-glow">HLG Mutual NDA</Link></li>
               <li><Link to="/about" className="text-silver/70 hover:text-primary-glow">About HLG</Link></li>
