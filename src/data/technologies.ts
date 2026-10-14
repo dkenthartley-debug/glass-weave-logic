@@ -59,7 +59,7 @@ export const technologies: Technology[] = [
     performance: [
       { label: "Typical wire diameters", value: "~20-50 µm range", note: "Selected per application; finer wire lowers visibility, coarser wire lowers resistance." },
       { label: "Typical pitch range", value: "~2-20 mm", note: "Driven by uniformity, power density, and optical targets." },
-      { label: "Supply voltages supported", value: "12 V to 400 V class designs", note: "Design target only; the circuit is engineered to the customer's available supply." },
+      { label: "Supply voltages supported", value: "12 V to 440 V DC", note: "Custom designs; each circuit is engineered to the customer's specified supply." },
       { label: "Zoning", value: "Single or multi-zone", note: "Independent zones can be defined for camera, wiper park, or partial-aperture heating." },
     ],
     applications: [
