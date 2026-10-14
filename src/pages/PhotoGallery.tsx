@@ -55,6 +55,24 @@ const PhotoGallery = () => (
         </div>
       </Section>
     ))}
+    <Section id="switch" tone={groups.length % 2 ? "gray" : "light"}>
+      <SectionHeading eyebrow="SWITCH" title="Switchable PDLC film" />
+      <div className="max-w-3xl">
+        <video
+          src={pdlcVideo.url}
+          controls
+          loop
+          muted
+          playsInline
+          preload="metadata"
+          className="w-full rounded-lg border border-border bg-card"
+        />
+        <p className="mt-3 text-sm text-muted-foreground">
+          PDLC switchable film transitioning between opaque and clear states. Actual HLG material; switching
+          performance is program specific.
+        </p>
+      </div>
+    </Section>
   </>
 );
 
