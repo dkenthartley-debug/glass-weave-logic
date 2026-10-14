@@ -11,6 +11,7 @@ import {
   airportTugPhoto, antennaPhotos, dualAntennaPhoto, fullHeaterMatPhoto, heaterDetails, legacyCleanRoomPhoto,
   railEvaluationPhotos, railPhotos, straightHeaterPhotos, wiggleHeaterPhoto, wiggleScalePhoto, wiperParkPhotos,
 } from "@/data/legacyPhotos";
+import pdlcVideo from "@/assets/videos/pdlc-film-on-off.mp4.asset.json";
 
 const crumbs = [
   { name: "Home", path: "/" },
