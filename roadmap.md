@@ -30,6 +30,8 @@
 - [x] AG-001 review: owner answers received and applied (Hernan's email, softened ITO comparison, termination failure-point line, sensor-embedding sentence); revised copy live in the Library
 - [x] ER-001 review and matching Library layout; owner changes applied
 - [ ] Review S.05, ATPD-2352, EMI/RFI bulletin after S.04 approval
+- [x] Create and verify S.05 readable page and matching spec sheet; confirmed methods separated from results TBD; page, download and inquiry link checked
+- [ ] Owner approval of S.05 draft wording (awaiting review)
 - [x] S.04 wording approved; matching one-page sheet visually checked and readable Library page verified through engineering-review link
 - [x] S.03 scope confirmed: 12–440 V DC and requirement-led wording approved
 - [x] Prepare and verify S.03 matching one-page sheet and readable Library page; voltage wording aligned

@@ -576,8 +576,8 @@ var librarySeries = [
       {
         id: "S.05",
         title: "Thermal Validation",
-        revision: "Revision A",
-        summary: "Each design is thermally tested in-house for thermal uniformity.",
+        revision: "Draft for review",
+        summary: "Confirmed thermal imaging and temperature uniformity evaluation methods; application-specific measurements and acceptance results TBD.",
         path: "/specifications/s-05-thermal-validation"
       }
     ]
