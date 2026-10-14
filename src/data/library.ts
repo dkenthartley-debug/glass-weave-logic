@@ -118,10 +118,10 @@ export const librarySeries: LibrarySeries[] = [
       },
       {
         id: "S.04",
-        title: "Sensor Mats — Custom Layouts for Accurate Placement and Lower-Stress Laminates",
+        title: "Custom Embedded Sensor Mats",
         revision: "Revision A",
         summary:
-          "Sensor mats are engineered with custom layouts for accurate placement and lower-stress laminates.",
+          "Fine sensing wire embedded into the interlayer, with custom placement and layouts supporting lower-stress laminate construction.",
         path: "/specifications/s-04-sensor-mat-custom-layouts",
       },
       {
