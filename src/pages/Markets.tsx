@@ -4,6 +4,7 @@ import { LaminateStack } from "@/components/Graphics";
 import Seo, { breadcrumbSchema, orgSchema } from "@/components/Seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { getMarket, markets, technologies } from "@/data/hlg";
+import { AntennaPhotos, AirportTugPhoto, RailPhotos, WiperParkPhotos } from "@/components/LegacyPhotoSections";
 
 export const MarketsIndex = () => {
   const crumbs = [
@@ -114,6 +115,10 @@ export const MarketDetail = () => {
           </aside>
         </div>
       </Section>
+
+      {market.slug === "automotive" && <><WiperParkPhotos /><AntennaPhotos /></>}
+      {market.slug === "rail-transportation" && <RailPhotos />}
+      {market.slug === "off-road-commercial-equipment" && <AirportTugPhoto />}
 
       <Section tone="navy">
         <SectionHeading

@@ -5,6 +5,7 @@ import Seo, { breadcrumbSchema, techArticleSchema } from "@/components/Seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { getTech, technologies } from "@/data/hlg";
 import Figure from "@/components/Figure";
+import { AntennaPhotos, HeaterPhotos } from "@/components/LegacyPhotoSections";
 import {
   connectorPhotos,
   heaterMatSectionPhoto,
@@ -134,6 +135,9 @@ const TechnologyDetail = () => {
           </aside>
         </div>
       </Section>
+
+      {tech.code === "HEAT" && <HeaterPhotos />}
+      {tech.code === "CONNECT" && <AntennaPhotos />}
 
       {tech.closing && (
         <section className="bg-navy-deep">
