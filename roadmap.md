@@ -29,6 +29,8 @@
 - [x] Owner sign-off on revised QS-1724 (approved)
 - [x] AG-001 review: owner answers received and applied (Hernan's email, softened ITO comparison, termination failure-point line, sensor-embedding sentence); revised copy live in the Library
 - [ ] ER-001 review, then S.02–S.05, ATPD-2352, EMI/RFI bulletin
+- [ ] Draft and approve S.02 mesh/printed-copper assembly sheet: positive searchable SCIF scope, 80 OPI, testing/results TBD
+- [ ] Confirm "Coplema" film supplier/grade and requirements, then prepare companion film assembly sheet
 - [x] Add multi-function systems, shielding approaches, perimeter grounding, safe library topics
 - [ ] Republish site after paper review is complete
 - [x] Replace the heater architecture visual with an authentic, clean HLG-based detail
