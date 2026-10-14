@@ -14,11 +14,20 @@ import logger from "@/assets/library/inspection-data-logger.jpg.asset.json";
 import overhead from "@/assets/library/inspection-overhead.jpg.asset.json";
 import thermal from "@/assets/library/inspection-thermal-profile.jpg.asset.json";
 import film from "@/assets/library/inspection-busbar-thermal-film.jpg.asset.json";
+import antennaMat from "@/assets/library/20261008_063700.jpg.asset.json";
+import antennaWindshield from "@/assets/library/20240509_130046.jpg.asset.json";
+import singleAntenna from "@/assets/library/20261008_063709.jpg.asset.json";
 
 const photo = (asset: { url: string }, label: string, caption: string, note?: string): HlgPhoto => ({
   src: asset.url, label, caption, alt: caption, note,
 });
 const protectedNote = "Customer-identifying information intentionally obscured.";
+
+export const recentAntennaPhotos = [
+  photo(antennaMat, "Antenna interlayer mat", "Actual HLG antenna mat showing fine embedded antenna elements and electrical exits."),
+  photo(antennaWindshield, "Windshield — antennas at both A-pillars", "Finished windshield with an antenna at each A-pillar."),
+  photo(singleAntenna, "Single antenna and barcode", "Single embedded antenna with an electrical exit connector and barcode label."),
+];
 
 export const barcodeTraceabilityPhoto = photo(
   barcode,
