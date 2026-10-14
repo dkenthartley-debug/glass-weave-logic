@@ -5,6 +5,7 @@ import {
   railEvaluationPhotos, railPhotos, straightHeaterPhotos,
   wiggleHeaterPhoto, wiggleScalePhoto, fullHeaterMatPhoto, wiperParkPhotos, zonedHeaterPhoto,
 } from "@/data/legacyPhotos";
+import { recentWiperParkPhotos } from "@/data/libraryPhotos";
 
 export const WiperParkPhotos = () => (
   <Section tone="gray" id="wiper-park">
@@ -15,6 +16,11 @@ export const WiperParkPhotos = () => (
         <Figure photo={wiperParkPhotos[1]} fit="contain" aspect="aspect-[16/10]" />
         <Figure photo={wiperParkPhotos[2]} fit="contain" aspect="aspect-[3/1]" />
       </div>
+    </div>
+    <div className="grid md:grid-cols-2 gap-6 items-start mt-6">
+      {recentWiperParkPhotos.map((photo) => (
+        <Figure key={photo.src} photo={photo} fit="contain" aspect="aspect-[16/9]" />
+      ))}
     </div>
   </Section>
 );
