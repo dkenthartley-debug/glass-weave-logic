@@ -89,6 +89,21 @@ export const recentHeaterPhotos = [
   photo(wireC, "Fine sinusoidal wire pattern", "Actual fine wiggle-wire pattern within the interlayer, shown with a measuring scale."),
 ];
 
+export const vehicleApplicationPhotos = [
+  photo(fordGt, "Ford GT", "Ford GT — a vehicle application using HLG product."),
+  photo(fordGtFront, "Ford GT — front view", "Ford GT front view — a vehicle application using HLG product."),
+  photo(fordRanger, "Ford Ranger", "Ford Ranger — a vehicle application using HLG product."),
+  photo(mercedesS, "Mercedes-Benz S-Class", "Mercedes-Benz S-Class — a vehicle application using HLG product."),
+  photo(mercedesSRear, "Mercedes-Benz S-Class — rear window", "Mercedes-Benz S-Class rear window view — a vehicle application using HLG product."),
+];
+
+export const recentWiperParkPhotos = [
+  photo(wiperMatFull, "Wiper-park heated interlayer — full mat", "Full windshield interlayer with a localized heated wiper-park area along the lower edge and its electrical exit."),
+  photo(wiperConnectorBarcode, "Wiper-park connectors and 2D barcode", "Wiper-park heater wire termination with dual connectors and an HLG part label with 2D barcode for lot traceability."),
+  photo(wiperWireConnectors, "Wiper-park heater wire and connectors", "Fine wiper-park heating wire routed along the interlayer edge, terminated to dual electrical exit connectors with HLG part marking and 2D barcode."),
+  photo(wiperMatWide, "Wiper-park heated interlayer — wide view", "Wide view of a windshield interlayer with the heated wiper-park area and electrical exit leads."),
+];
+
 export const inspectionPhotos = [
   photo(station, "Instrumented inspection station", "HLG heater evaluation station with independently positioned power supplies and instrument connections."),
   photo(supplyA, "Power supply — test station", "Power supply and electrical connections at one side of the heater evaluation station."),
