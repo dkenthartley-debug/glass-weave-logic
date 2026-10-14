@@ -29,6 +29,15 @@ import shopTable from "@/assets/library/20230808_123117-2.jpg.asset.json";
 import shopEquipment from "@/assets/library/20230808_123143-2.jpg.asset.json";
 import shopEnclosure from "@/assets/library/20230808_123328-2.jpg.asset.json";
 import shopLine from "@/assets/library/20230808_152126-2.jpg.asset.json";
+import fordGt from "@/assets/vehicles/ford-gt.jpg.asset.json";
+import fordGtFront from "@/assets/vehicles/ford-gt-front.jpg.asset.json";
+import fordRanger from "@/assets/vehicles/ford-ranger.jpg.asset.json";
+import mercedesS from "@/assets/vehicles/mercedes-s-class.jpg.asset.json";
+import mercedesSRear from "@/assets/vehicles/mercedes-s-class-rear.jpg.asset.json";
+import wiperMatFull from "@/assets/library/wiper-park-mat-full.jpg.asset.json";
+import wiperConnectorBarcode from "@/assets/library/wiper-park-connector-barcode.jpg.asset.json";
+import wiperWireConnectors from "@/assets/library/wiper-park-wire-connectors.jpg.asset.json";
+import wiperMatWide from "@/assets/library/wiper-park-mat-wide.jpg.asset.json";
 
 const photo = (asset: { url: string }, label: string, caption: string, note?: string): HlgPhoto => ({
   src: asset.url, label, caption, alt: caption, note,
@@ -78,6 +87,21 @@ export const recentHeaterPhotos = [
   photo(wireB, "Wiggle-wire inspection detail", "Close-up of the actual wiggle-wire pattern and measuring scale."),
   photo(matC, "Heated mat at the work table", "Full heated mat at the HLG work table, with edge busbars and exit leads.", protectedNote),
   photo(wireC, "Fine sinusoidal wire pattern", "Actual fine wiggle-wire pattern within the interlayer, shown with a measuring scale."),
+];
+
+export const vehicleApplicationPhotos = [
+  photo(fordGt, "Ford GT", "Ford GT — a vehicle application using HLG product."),
+  photo(fordGtFront, "Ford GT — front view", "Ford GT front view — a vehicle application using HLG product."),
+  photo(fordRanger, "Ford Ranger", "Ford Ranger — a vehicle application using HLG product."),
+  photo(mercedesS, "Mercedes-Benz S-Class", "Mercedes-Benz S-Class — a vehicle application using HLG product."),
+  photo(mercedesSRear, "Mercedes-Benz S-Class — rear window", "Mercedes-Benz S-Class rear window view — a vehicle application using HLG product."),
+];
+
+export const recentWiperParkPhotos = [
+  photo(wiperMatFull, "Wiper-park heated interlayer — full mat", "Full windshield interlayer with a localized heated wiper-park area along the lower edge and its electrical exit."),
+  photo(wiperConnectorBarcode, "Wiper-park connectors and 2D barcode", "Wiper-park heater wire termination with dual connectors and an HLG part label with 2D barcode for lot traceability."),
+  photo(wiperWireConnectors, "Wiper-park heater wire and connectors", "Fine wiper-park heating wire routed along the interlayer edge, terminated to dual electrical exit connectors with HLG part marking and 2D barcode."),
+  photo(wiperMatWide, "Wiper-park heated interlayer — wide view", "Wide view of a windshield interlayer with the heated wiper-park area and electrical exit leads."),
 ];
 
 export const inspectionPhotos = [

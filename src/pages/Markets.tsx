@@ -5,6 +5,8 @@ import Seo, { breadcrumbSchema, orgSchema } from "@/components/Seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { getMarket, markets, technologies } from "@/data/hlg";
 import { AntennaPhotos, AirportTugPhoto, RailPhotos, WiperParkPhotos } from "@/components/LegacyPhotoSections";
+import Figure from "@/components/Figure";
+import { vehicleApplicationPhotos } from "@/data/libraryPhotos";
 
 const vehicleApplications: Record<string, { title: string; vehicles: string[] }> = {
   automotive: {
@@ -141,6 +143,13 @@ export const MarketDetail = () => {
               <li key={vehicle} className="border-b border-border py-4 text-foreground font-medium">{vehicle}</li>
             ))}
           </ul>
+          {market.slug === "automotive" && (
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 items-start mt-10">
+              {vehicleApplicationPhotos.map((p) => (
+                <Figure key={p.src} photo={p} fit="contain" aspect="aspect-[16/10]" />
+              ))}
+            </div>
+          )}
         </Section>
       )}
 
