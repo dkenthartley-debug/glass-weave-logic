@@ -29,7 +29,8 @@
 - [x] Owner sign-off on revised QS-1724 (approved)
 - [x] AG-001 review: owner answers received and applied (Hernan's email, softened ITO comparison, termination failure-point line, sensor-embedding sentence); revised copy live in the Library
 - [x] ER-001 review and matching Library layout; owner changes applied
-- [ ] Review S.03–S.05, ATPD-2352, EMI/RFI bulletin after S.02 approval
+- [ ] Review S.04–S.05, ATPD-2352, EMI/RFI bulletin after S.03 approval
+- [ ] S.04 wording review: custom embedded sensor mats, placement and lower-stress laminate intent (waiting on owner approval before preparing the matching sheet)
 - [x] S.03 scope confirmed: 12–440 V DC and requirement-led wording approved
 - [x] Prepare and verify S.03 matching one-page sheet and readable Library page; voltage wording aligned
 - [x] Draft S.02 mesh/printed-copper assembly sheet: positive searchable SCIF scope, 80 OPI, testing/results TBD; PDF and readable preview page checked
