@@ -1,5 +1,6 @@
 # HLG V1 Website Rebuild
 
+- [x] Add approved antenna/connector photos and capacitance/handling inspection photos; keep unidentified 906 private
 - [x] Add latest heater and wiggle-wire photos to the gallery with customer identifiers irreversibly blurred
 - [x] Feature connector / 2D barcode photo in quality and inspection and gallery
 - [x] Extract seven useful inspection-presentation pictures into the gallery's quality and inspection group; omit obsolete setup
