@@ -19,6 +19,7 @@ import NotFound from "./pages/NotFound";
 import ShieldingSpecification from "./pages/ShieldingSpecification";
 import HeatedSpecification from "./pages/HeatedSpecification";
 import SensorSpecification from "./pages/SensorSpecification";
+import ThermalSpecification from "./pages/ThermalSpecification";
 
 const queryClient = new QueryClient();
 
@@ -43,6 +44,7 @@ const App = () => (
             <Route path="/specifications/s-02-emi-rfi-scif-shielding" element={<ShieldingSpecification />} />
             <Route path="/specifications/s-03-heated-interlayer-voltage-range" element={<HeatedSpecification />} />
             <Route path="/specifications/s-04-sensor-mat-custom-layouts" element={<SensorSpecification />} />
+            <Route path="/specifications/s-05-thermal-validation" element={<ThermalSpecification />} />
 
             <Route path="/markets" element={<MarketsIndex />} />
             <Route path="/markets/aerospace" element={<Aerospace />} />
