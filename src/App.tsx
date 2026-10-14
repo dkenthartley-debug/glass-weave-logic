@@ -13,6 +13,7 @@ import { MarketsIndex, MarketDetail } from "./pages/Markets";
 import Aerospace from "./pages/Aerospace";
 import About from "./pages/About";
 import TechnicalLibrary from "./pages/TechnicalLibrary";
+import PhotoGallery from "./pages/PhotoGallery";
 import EngineeringReview from "./pages/EngineeringReview";
 import NotFound from "./pages/NotFound";
 
@@ -34,6 +35,7 @@ const App = () => (
             <Route path="/solutions" element={<Solutions />} />
             <Route path="/engineering-quality" element={<EngineeringQuality />} />
             <Route path="/technical-library" element={<TechnicalLibrary />} />
+            <Route path="/photo-gallery" element={<PhotoGallery />} />
             <Route path="/engineering-review" element={<EngineeringReview />} />
 
             <Route path="/markets" element={<MarketsIndex />} />
