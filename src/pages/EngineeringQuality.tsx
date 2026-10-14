@@ -4,6 +4,7 @@ import Seo, { breadcrumbSchema, orgSchema } from "@/components/Seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { processSteps, qualityProof } from "@/data/hlg";
 import Figure from "@/components/Figure";
+import { legacyCleanRoomPhoto, railEvaluationPhotos } from "@/data/legacyPhotos";
 import {
   traceabilityPhoto,
   facilityLeadPhoto,
@@ -45,6 +46,7 @@ const EngineeringQuality = () => (
         {facilityProcessPhotos.map((p) => (
           <Figure key={p.label} photo={p} aspect="aspect-[16/9]" />
         ))}
+        <Figure photo={legacyCleanRoomPhoto} fit="contain" aspect="aspect-[16/9]" />
       </div>
     </Section>
 
@@ -126,6 +128,15 @@ const EngineeringQuality = () => (
             scope.
           </p>
         </div>
+      </div>
+    </Section>
+
+    <Section tone="gray">
+      <SectionHeading eyebrow="Actual HLG evaluation" title="Heated rail-window inspection" />
+      <div className="grid md:grid-cols-2 gap-6 items-start">
+        {railEvaluationPhotos.map((photo) => (
+          <Figure key={photo.src} photo={photo} fit="contain" aspect="aspect-[16/9]" />
+        ))}
       </div>
     </Section>
 

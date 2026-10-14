@@ -9,11 +9,13 @@ const Figure = ({
   invert = false,
   className = "",
   aspect = "aspect-[4/3]",
+  fit = "cover",
 }: {
   photo: HlgPhoto;
   invert?: boolean;
   className?: string;
   aspect?: string;
+  fit?: "cover" | "contain";
 }) => (
   <figure
     className={`border ${invert ? "border-silver/15 bg-navy-deep" : "border-border bg-surface"} ${className}`}
@@ -28,7 +30,7 @@ const Figure = ({
         src={photo.src}
         alt={photo.alt}
         loading="lazy"
-        className={`w-full ${aspect} object-cover`}
+        className={`w-full ${aspect} ${fit === "contain" ? "object-contain" : "object-cover"}`}
       />
     </div>
     <div className="px-5 pb-5">
