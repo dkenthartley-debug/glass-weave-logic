@@ -37,9 +37,6 @@ const Figure = ({
       <p className={`text-sm leading-relaxed ${invert ? "text-silver/80" : "text-muted-foreground"}`}>
         {photo.caption}
       </p>
-      {photo.note && (
-        <p className={`mono mt-3 ${invert ? "text-silver/45" : "text-muted-foreground/70"}`}>{photo.note}</p>
-      )}
     </div>
   </figure>
 );

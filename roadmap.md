@@ -1,5 +1,6 @@
 # HLG V1 Website Rebuild
 
+- [ ] Remove photo disclaimer footnotes and add nonduplicate shop photos to the gallery
 - [x] Add owner-approved 512 magnified shielding-pattern photo to SHIELD gallery; exclude HDR and duplicate; describe reduced moiré as development testing
 - [x] Add approved antenna/connector photos and capacitance/handling inspection photos; keep unidentified 906 private
 - [x] Add latest heater and wiggle-wire photos to the gallery with customer identifiers irreversibly blurred
