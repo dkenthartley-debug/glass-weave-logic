@@ -18,6 +18,8 @@ import dualAntenna from "@/assets/legacy/Inspection-Table-1024x577.jpg.asset.jso
 import railInstalled from "@/assets/legacy/Rail-1_compressed.png.asset.json";
 import railWindow from "@/assets/legacy/Rail-2--770x1024.jpg.asset.json";
 import railTest from "@/assets/legacy/Testing-1024x481.jpg.asset.json";
+import fullMat from "@/assets/legacy/heated-mat-full.jpg.asset.json";
+import wiggleScale from "@/assets/legacy/wiggle-wire-scale.jpg.asset.json";
 import railThermal from "@/assets/legacy/Thermal-Imaging_cropped-1024x481.png.asset.json";
 
 function photo(src: string, label: string, caption: string): HlgPhoto {
@@ -57,3 +59,5 @@ export const railEvaluationPhotos = [
   photo(railTest.url, "Rail-window evaluation", "Instrumented evaluation setup for the same heated rail-window design."),
   photo(railThermal.url, "Thermal inspection", "Thermal image recorded during evaluation of the same heated rail-window design. Colors show the thermal distribution, not a published performance rating."),
 ];
+export const fullHeaterMatPhoto = photo(fullMat.url, "Full windshield heater mat", "Complete HLG windshield heater mat with busbar collection along opposing edges and an electrical exit lead. Final geometry is program specific.");
+export const wiggleScalePhoto = photo(wiggleScale.url, "Sinusoidal wire under magnification", "Fine sinusoidal heating wire embedded in the interlayer, viewed against a measuring scale.");

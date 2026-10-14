@@ -3,7 +3,7 @@ import { Section, SectionHeading } from "@/components/Section";
 import {
   antennaPhotos, airportTugPhoto, dualAntennaPhoto, heaterDetails,
   railEvaluationPhotos, railPhotos, straightHeaterPhotos,
-  wiggleHeaterPhoto, wiperParkPhotos, zonedHeaterPhoto,
+  wiggleHeaterPhoto, wiggleScalePhoto, fullHeaterMatPhoto, wiperParkPhotos, zonedHeaterPhoto,
 } from "@/data/legacyPhotos";
 
 export const WiperParkPhotos = () => (
@@ -21,6 +21,10 @@ export const WiperParkPhotos = () => (
 
 export const HeaterPhotos = () => (
   <>
+    <Section id="full-heater-mat">
+      <SectionHeading eyebrow="Actual HLG heater mat" title="Complete windshield heater mat" />
+      <Figure photo={fullHeaterMatPhoto} fit="contain" aspect="aspect-[16/9]" />
+    </Section>
     <Section id="fine-wire-details">
       <SectionHeading eyebrow="Actual HLG construction" title="Fine-wire heating details" />
       <div className="grid md:grid-cols-12 gap-6 items-start">
@@ -46,6 +50,7 @@ export const HeaterPhotos = () => (
         <Figure photo={wiggleHeaterPhoto} fit="contain" aspect="aspect-[4/3]" />
         <Figure photo={straightHeaterPhotos[1]} fit="contain" aspect="aspect-[16/10]" />
         <Figure photo={straightHeaterPhotos[2]} fit="contain" aspect="aspect-[16/10]" />
+        <Figure photo={wiggleScalePhoto} fit="contain" aspect="aspect-[4/3]" className="md:col-span-2 md:max-w-3xl" />
       </div>
     </Section>
     <WiperParkPhotos />
