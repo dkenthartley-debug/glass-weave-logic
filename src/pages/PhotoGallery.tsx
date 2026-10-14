@@ -12,7 +12,7 @@ import {
   railEvaluationPhotos, railPhotos, straightHeaterPhotos, wiggleHeaterPhoto, wiggleScalePhoto, wiperParkPhotos,
 } from "@/data/legacyPhotos";
 import pdlcVideo from "@/assets/videos/pdlc-film-on-off.mp4.asset.json";
-import { barcodeTraceabilityPhoto, inspectionPhotos, recentHeaterPhotos } from "@/data/libraryPhotos";
+import { barcodeTraceabilityPhoto, inspectionPhotos, recentHeaterPhotos, recentAntennaPhotos } from "@/data/libraryPhotos";
 
 const crumbs = [
   { name: "Home", path: "/" },
@@ -23,7 +23,7 @@ const groups: { id: string; eyebrow: string; title: string; photos: HlgPhoto[] }
   { id: "heat", eyebrow: "HEAT", title: "Heated interlayers", photos: [fullHeaterMatPhoto, ...recentHeaterPhotos, heaterMatSectionPhoto, ...heaterDetails, wiggleScalePhoto, wiggleHeaterPhoto, ...straightHeaterPhotos, ...wiperParkPhotos.slice(1)] },
   { id: "sense", eyebrow: "SENSE", title: "Temperature sensing", photos: [sensorMatSectionPhoto, ...railPhotos, ...railEvaluationPhotos] },
   { id: "shield-conduct", eyebrow: "SHIELD · CONDUCT", title: "Shielding and conductive film", photos: [shieldMeshPhoto, itoFilmPhoto] },
-  { id: "connect", eyebrow: "CONNECT", title: "Connectors, antennas and traceability", photos: [barcodeTraceabilityPhoto, ...connectorPhotos, traceabilityPhoto, ...antennaPhotos, dualAntennaPhoto] },
+  { id: "connect", eyebrow: "CONNECT", title: "Connectors, antennas and traceability", photos: [...recentAntennaPhotos, barcodeTraceabilityPhoto, ...connectorPhotos, traceabilityPhoto, ...antennaPhotos, dualAntennaPhoto] },
   { id: "applications", eyebrow: "Applications", title: "Installed applications", photos: [airportTugPhoto] },
   { id: "facility", eyebrow: "Facility", title: "Butler, Pennsylvania facility", photos: [legacyCleanRoomPhoto, ...facilityManufacturingPhotos, ...facilityProcessPhotos, ...facilityAboutPhotos] },
   { id: "quality-inspection", eyebrow: "Quality & inspection", title: "Inspection and thermal evaluation", photos: [barcodeTraceabilityPhoto, ...inspectionPhotos] },
