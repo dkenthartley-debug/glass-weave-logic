@@ -18,7 +18,8 @@
 - [x] Publish V1 (owner approved; republished with approved visuals, facility photos, and security cleanup)
 - [ ] Review and finalize technical papers one at a time, then publish in the Technical Library (in progress — target today)
 - [x] Revise and upload QS-1724: customer sample evaluations, explicitly HLG-defined OMI, Marine applications, two-page layout; visually checked both pages
-- [ ] Owner sign-off on revised QS-1724 (awaiting review)
+- [x] Owner sign-off on revised QS-1724 (approved)
+- [ ] AG-001 review (owner answers pending), then ER-001, S.02–S.05, ATPD-2352, EMI/RFI bulletin
 - [x] Add multi-function systems, shielding approaches, perimeter grounding, safe library topics
 - [ ] Republish site after paper review is complete
 - [x] Replace the heater architecture visual with an authentic, clean HLG-based detail
