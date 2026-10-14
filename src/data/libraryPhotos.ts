@@ -23,11 +23,19 @@ import capacitance from "@/assets/library/20170720_101627.jpg.asset.json";
 import antennaPrepared from "@/assets/library/20200311_154920.jpg.asset.json";
 import fullAntennaWindow from "@/assets/library/20240509_130039.jpg.asset.json";
 import inspectionHandling from "@/assets/library/20170606_090935.jpg.asset.json";
+import shieldPatternMonitor from "@/assets/library/shield-pattern-magnified-monitor.jpg.asset.json";
 
 const photo = (asset: { url: string }, label: string, caption: string, note?: string): HlgPhoto => ({
   src: asset.url, label, caption, alt: caption, note,
 });
 const protectedNote = "Customer-identifying information intentionally obscured.";
+
+export const shieldPatternInspectionPhoto = photo(
+  shieldPatternMonitor,
+  "SHIELD — magnified pattern evaluation",
+  "Monitor view of a magnified pattern in laminated glass or polycarbonate, currently under testing for advanced EMI/RFI shielding with greatly reduced moiré as a development objective.",
+  "Development testing in progress; no verified shielding or moiré-reduction performance result is implied.",
+);
 
 export const antennaCapacitancePhoto = photo(capacitance, "100% electrical inspection", "All mats are 100% inspected for electrical function against the customer-supplied specification or, when designed by HLG, the Hotlineglass specification.");
 export const interlayerInspectionPhoto = photo(inspectionHandling, "100% inspection before shipping", "Every mat is 100% inspected for defects and debris before shipping. Both surfaces of every interlayer are rolled with a tack roller before packing.");
