@@ -4,6 +4,7 @@ import Seo, { breadcrumbSchema, orgSchema } from "@/components/Seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { processSteps, qualityProof } from "@/data/hlg";
 import Figure from "@/components/Figure";
+import { barcodeTraceabilityPhoto } from "@/data/libraryPhotos";
 import { legacyCleanRoomPhoto, railEvaluationPhotos } from "@/data/legacyPhotos";
 import {
   traceabilityPhoto,
@@ -62,12 +63,15 @@ const EngineeringQuality = () => (
       </div>
 
       <div className="grid lg:grid-cols-2 gap-10 items-center mt-14">
-        <Figure photo={traceabilityPhoto} aspect="aspect-[16/9]" />
+        <div className="grid gap-6">
+          <Figure photo={barcodeTraceabilityPhoto} fit="contain" aspect="aspect-[4/3]" />
+          <Figure photo={traceabilityPhoto} fit="contain" aspect="aspect-[16/9]" />
+        </div>
         <div>
           <h2 className="font-display text-2xl font-bold uppercase">Part marking and lot traceability</h2>
           <p className="mt-4 text-muted-foreground leading-relaxed">
-            Interlayers can carry part number and HLG identification marking, and barcodes can be applied for lot
-            number traceability and tracking through production.
+            Interlayers can carry part numbers, HLG identification and 2D barcode labels for full ISO traceability.
+            These markings support lot tracking through production, quality and inspection.
           </p>
         </div>
       </div>
