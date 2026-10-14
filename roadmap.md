@@ -31,7 +31,7 @@
 - [x] ER-001 review and matching Library layout; owner changes applied
 - [ ] Review S.03–S.05, ATPD-2352, EMI/RFI bulletin after S.02 approval
 - [x] S.03 scope confirmed: 12–440 V DC and requirement-led wording approved
-- [ ] Prepare and verify S.03 matching one-page sheet and readable Library page
+- [x] Prepare and verify S.03 matching one-page sheet and readable Library page; voltage wording aligned
 - [x] Draft S.02 mesh/printed-copper assembly sheet: positive searchable SCIF scope, 80 OPI, testing/results TBD; PDF and readable preview page checked
 - [x] Owner approval of S.02 draft wording
 - [x] Confirm Compelma as the film supplier
