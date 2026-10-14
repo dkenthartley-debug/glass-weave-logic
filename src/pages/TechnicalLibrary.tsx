@@ -57,6 +57,11 @@ const TechnicalLibrary = () => (
                     Available to customers on request →
                   </Link>
                 )}
+                {doc.id === "S.02" && doc.path && (
+                  <Link to={doc.path} className="mono text-accent mt-4 inline-block hover:underline">
+                    Read draft specification →
+                  </Link>
+                )}
               </div>
             ))}
           </div>

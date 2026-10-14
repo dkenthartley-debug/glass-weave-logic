@@ -57,7 +57,7 @@
       {
         "name": "search_technical_library",
         "title": "Search technical library",
-        "description": "Search the HLG Technical Library coverage by keyword. The V1 library is a framework: HLG maintains an expanding library of engineering resources covering the design and integration of electrical functionality into laminated glass, and technical papers and application notes are coming soon. Returns matching resource topics; no papers are published yet.",
+        "description": "Search HLG Technical Library papers, specifications and resource topics, including EMI/RFI shielding and SCIF applications. Draft specifications identify testing/results as TBD; they are not certification or measured-performance claims.",
         "annotations": {
           "readOnlyHint": true,
           "idempotentHint": true,

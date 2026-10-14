@@ -102,10 +102,10 @@ export const librarySeries: LibrarySeries[] = [
     docs: [
       {
         id: "S.02",
-        title: "EMI/RFI SCIF Shielding",
-        revision: "Revision A",
+        title: "EMI/RFI Shielding Interlayer Assemblies",
+        revision: "Draft for review",
         summary:
-          "Fine copper mesh to printed copper interlayers ready to laminate.",
+          "Engineered fine copper mesh and printed-copper assemblies for EMI/RFI shielding, including SCIF applications. 80 OPI mesh option; testing and results TBD.",
         path: "/specifications/s-02-emi-rfi-scif-shielding",
       },
       {
