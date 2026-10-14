@@ -28,8 +28,10 @@
 - [x] Revise and upload QS-1724: customer sample evaluations, explicitly HLG-defined OMI, Marine applications, two-page layout; visually checked both pages
 - [x] Owner sign-off on revised QS-1724 (approved)
 - [x] AG-001 review: owner answers received and applied (Hernan's email, softened ITO comparison, termination failure-point line, sensor-embedding sentence); revised copy live in the Library
-- [ ] ER-001 review, then S.02–S.05, ATPD-2352, EMI/RFI bulletin
-- [ ] Draft and approve S.02 mesh/printed-copper assembly sheet: positive searchable SCIF scope, 80 OPI, testing/results TBD
+- [x] ER-001 review and matching Library layout; owner changes applied
+- [ ] Review S.03–S.05, ATPD-2352, EMI/RFI bulletin after S.02 approval
+- [x] Draft S.02 mesh/printed-copper assembly sheet: positive searchable SCIF scope, 80 OPI, testing/results TBD; PDF and readable preview page checked
+- [ ] Owner approval of S.02 draft wording
 - [ ] Confirm "Coplema" film supplier/grade and requirements, then prepare companion film assembly sheet
 - [x] Add multi-function systems, shielding approaches, perimeter grounding, safe library topics
 - [ ] Republish site after paper review is complete
