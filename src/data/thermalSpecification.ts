@@ -1,0 +1,12 @@
+export const thermalSpecification = {
+  title: "Thermal Validation",
+  status: "Draft for review — application results TBD",
+  overview: "HLG thermally evaluates new heater designs using thermal imaging and temperature uniformity evaluation. Test methods are distinguished from application-specific results, which remain TBD until testing is completed and reviewed.",
+  sections: [
+    { title: "Confirmed test methods", text: "Thermal imaging of new heater designs and temperature uniformity evaluation are part of HLG’s thermal evaluation process. Electrical, thermal, and optical measurements are recorded during evaluation, with imaging data and analysis outputs used to document observations. Synchronized acquisition and formally calibrated imaging are not claimed." },
+    { title: "Confirmed production inspection", text: "All mats are 100% inspected for electrical function against the customer-supplied specification or, when designed by HLG, the Hotlineglass specification. Every mat is inspected for defects and debris; both interlayer surfaces are tack-rolled before packing. Production electrical inspection is distinct from thermal evaluation of a design." },
+    { title: "Application test plan — to be agreed", text: "Define the sample and laminate construction, supply voltage and current limits, heating zones, ambient conditions, measurement locations, test duration, and acceptance criteria before evaluation. These are application-specific inputs, not a universal HLG test condition or published acceptance limit." },
+    { title: "Results and acceptance — TBD", text: "Measured temperatures, temperature variation across the heated area, warm-up and recovery times, electrical readings, and pass/fail findings are TBD for the application. No numerical thermal performance, completed qualification, or acceptance result is stated in this sheet. Historical thermal images illustrate the method, not a current application result." },
+    { title: "Reporting scope", text: "Application reports identify the sample, test conditions, recorded measurements, imaging data and analysis outputs, and findings against the agreed criteria. Final results and conclusions require completed testing and review." },
+  ],
+};
