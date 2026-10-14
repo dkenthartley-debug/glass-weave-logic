@@ -29,8 +29,8 @@ const photo = (asset: { url: string }, label: string, caption: string, note?: st
 });
 const protectedNote = "Customer-identifying information intentionally obscured.";
 
-export const antennaCapacitancePhoto = photo(capacitance, "Antenna capacitance measurement", "HLG antenna mat connected to instruments for capacitance measurement.", "Historical inspection photograph; no acceptance criterion or performance result is implied.");
-export const interlayerInspectionPhoto = photo(inspectionHandling, "Interlayer inspection and handling", "Gloved handling of an HLG interlayer at the inspection table, with embedded wire and an edge connector visible.");
+export const antennaCapacitancePhoto = photo(capacitance, "100% electrical inspection", "All mats are 100% inspected for electrical function against the customer-supplied specification or, when designed by HLG, the Hotlineglass specification.");
+export const interlayerInspectionPhoto = photo(inspectionHandling, "100% inspection before shipping", "Every mat is 100% inspected for defects and debris before shipping. Both surfaces of every interlayer are rolled with a tack roller before packing.");
 
 export const recentAntennaPhotos = [
   photo(connectorDetail, "Connector detail", "Close-up of an HLG electrical exit showing contact pads and fine-wire connections."),
