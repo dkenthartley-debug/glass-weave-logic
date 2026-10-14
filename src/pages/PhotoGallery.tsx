@@ -12,7 +12,7 @@ import {
   railEvaluationPhotos, railPhotos, straightHeaterPhotos, wiggleHeaterPhoto, wiggleScalePhoto, wiperParkPhotos,
 } from "@/data/legacyPhotos";
 import pdlcVideo from "@/assets/videos/pdlc-film-on-off.mp4.asset.json";
-import { barcodeTraceabilityPhoto, inspectionPhotos, recentHeaterPhotos, recentAntennaPhotos, antennaCapacitancePhoto, interlayerInspectionPhoto, shieldPatternInspectionPhoto, recentShopPhotos } from "@/data/libraryPhotos";
+import { barcodeTraceabilityPhoto, inspectionPhotos, recentHeaterPhotos, recentAntennaPhotos, antennaCapacitancePhoto, interlayerInspectionPhoto, shieldPatternInspectionPhoto, recentShopPhotos, recentWiperParkPhotos, vehicleApplicationPhotos } from "@/data/libraryPhotos";
 
 const crumbs = [
   { name: "Home", path: "/" },
@@ -20,11 +20,11 @@ const crumbs = [
 ];
 
 const groups: { id: string; eyebrow: string; title: string; photos: HlgPhoto[] }[] = [
-  { id: "heat", eyebrow: "HEAT", title: "Heated interlayers", photos: [fullHeaterMatPhoto, ...recentHeaterPhotos, heaterMatSectionPhoto, ...heaterDetails, wiggleScalePhoto, wiggleHeaterPhoto, ...straightHeaterPhotos, ...wiperParkPhotos.slice(1)] },
+  { id: "heat", eyebrow: "HEAT", title: "Heated interlayers", photos: [fullHeaterMatPhoto, ...recentHeaterPhotos, heaterMatSectionPhoto, ...heaterDetails, wiggleScalePhoto, wiggleHeaterPhoto, ...straightHeaterPhotos, ...wiperParkPhotos.slice(1), ...recentWiperParkPhotos] },
   { id: "sense", eyebrow: "SENSE", title: "Temperature sensing", photos: [sensorMatSectionPhoto, ...railPhotos, ...railEvaluationPhotos] },
   { id: "shield-conduct", eyebrow: "SHIELD · CONDUCT", title: "Shielding and conductive film", photos: [shieldPatternInspectionPhoto, shieldMeshPhoto, itoFilmPhoto] },
   { id: "connect", eyebrow: "CONNECT", title: "Connectors, antennas and traceability", photos: [...recentAntennaPhotos, barcodeTraceabilityPhoto, ...connectorPhotos, traceabilityPhoto, ...antennaPhotos, dualAntennaPhoto] },
-  { id: "applications", eyebrow: "Applications", title: "Installed applications", photos: [airportTugPhoto] },
+  { id: "applications", eyebrow: "Applications", title: "Installed applications", photos: [airportTugPhoto, ...vehicleApplicationPhotos] },
   { id: "facility", eyebrow: "Facility", title: "Butler, Pennsylvania facility", photos: [...recentShopPhotos, legacyCleanRoomPhoto, ...facilityManufacturingPhotos, ...facilityProcessPhotos, ...facilityAboutPhotos] },
   { id: "quality-inspection", eyebrow: "Quality & inspection", title: "Inspection and thermal evaluation", photos: [interlayerInspectionPhoto, antennaCapacitancePhoto, barcodeTraceabilityPhoto, ...inspectionPhotos] },
 ];
