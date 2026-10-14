@@ -44,3 +44,4 @@
 - [x] Replace the heater architecture visual with an authentic, clean HLG-based detail
 - [x] Review and improve website images one at a time, using actual HLG photos as the controlling visual reference
 - [x] Place owner-selected legacy photos on HEAT, wiper-park, antenna, automotive, off-road, rail and Engineering & Quality sections; verified hosted image loading and desktop/mobile layouts
+- [x] Vehicle + wiper-park photos (Oct 14): 5 vehicle shots (Ford GT x2, Ranger, S-Class x2) on Automotive page + Gallery Applications; 4 wiper-park interlayer pics (full mat, connector+2D barcode P1-24134-50, wire/connectors, wide) in WiperParkPhotos section + Gallery HEAT group. Verified in preview; not republished.
