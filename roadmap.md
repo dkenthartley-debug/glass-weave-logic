@@ -1,8 +1,8 @@
 # HLG V1 Website Rebuild
 
-- [ ] Add latest heater and wiggle-wire photos to the gallery with customer identifiers irreversibly blurred
-- [ ] Feature connector / 2D barcode photo in quality and inspection and gallery
-- [ ] Extract approved inspection-presentation pictures into appropriate gallery groups
+- [x] Add latest heater and wiggle-wire photos to the gallery with customer identifiers irreversibly blurred
+- [x] Feature connector / 2D barcode photo in quality and inspection and gallery
+- [x] Extract seven useful inspection-presentation pictures into the gallery's quality and inspection group; omit obsolete setup
 
 - [x] V1 design system (light + navy, HLG blue/orange, fine technical linework)
 - [x] Content model (six technologies, solutions, markets, process, quality, library topics)
