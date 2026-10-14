@@ -24,6 +24,11 @@ import antennaPrepared from "@/assets/library/20200311_154920.jpg.asset.json";
 import fullAntennaWindow from "@/assets/library/20240509_130039.jpg.asset.json";
 import inspectionHandling from "@/assets/library/20170606_090935.jpg.asset.json";
 import shieldPatternMonitor from "@/assets/library/shield-pattern-magnified-monitor.jpg.asset.json";
+import shopWide from "@/assets/library/20230808_122846.jpg.asset.json";
+import shopTable from "@/assets/library/20230808_123117-2.jpg.asset.json";
+import shopEquipment from "@/assets/library/20230808_123143-2.jpg.asset.json";
+import shopEnclosure from "@/assets/library/20230808_123328-2.jpg.asset.json";
+import shopLine from "@/assets/library/20230808_152126-2.jpg.asset.json";
 
 const photo = (asset: { url: string }, label: string, caption: string, note?: string): HlgPhoto => ({
   src: asset.url, label, caption, alt: caption, note,
@@ -36,6 +41,14 @@ export const shieldPatternInspectionPhoto = photo(
   "Monitor view of a magnified pattern in laminated glass or polycarbonate, currently under testing for advanced EMI/RFI shielding with greatly reduced moiré as a development objective.",
   "Development testing in progress; no verified shielding or moiré-reduction performance result is implied.",
 );
+
+export const recentShopPhotos = [
+  photo(shopWide, "Clean-room production floor", "Wide view of the HLG clean room, with technicians working at interlayer processing tables."),
+  photo(shopTable, "Interlayer preparation area", "Long work table and material-handling equipment in the HLG clean room."),
+  photo(shopEquipment, "Processing equipment and work tables", "Alternate view of the HLG processing equipment, preparation tables and clean-room work area."),
+  photo(shopEnclosure, "Clean-room enclosure", "Exterior view of the enclosed clean-room area within the HLG shop."),
+  photo(shopLine, "Interlayer processing line", "HLG interlayer processing equipment and the adjoining preparation table."),
+];
 
 export const antennaCapacitancePhoto = photo(capacitance, "100% electrical inspection", "All mats are 100% inspected for electrical function against the customer-supplied specification or, when designed by HLG, the Hotlineglass specification.");
 export const interlayerInspectionPhoto = photo(inspectionHandling, "100% inspection before shipping", "Every mat is 100% inspected for defects and debris before shipping. Both surfaces of every interlayer are rolled with a tack roller before packing.");
