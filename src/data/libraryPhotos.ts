@@ -17,13 +17,27 @@ import film from "@/assets/library/inspection-busbar-thermal-film.jpg.asset.json
 import antennaMat from "@/assets/library/20261008_063700.jpg.asset.json";
 import antennaWindshield from "@/assets/library/20240509_130046.jpg.asset.json";
 import singleAntenna from "@/assets/library/20261008_063709.jpg.asset.json";
+import connectorDetail from "@/assets/library/20170606_090858.jpg.asset.json";
+import antennaTable from "@/assets/library/20170720_095642.jpg.asset.json";
+import capacitance from "@/assets/library/20170720_101627.jpg.asset.json";
+import antennaPrepared from "@/assets/library/20200311_154920.jpg.asset.json";
+import fullAntennaWindow from "@/assets/library/20240509_130039.jpg.asset.json";
+import inspectionHandling from "@/assets/library/20170606_090935.jpg.asset.json";
 
 const photo = (asset: { url: string }, label: string, caption: string, note?: string): HlgPhoto => ({
   src: asset.url, label, caption, alt: caption, note,
 });
 const protectedNote = "Customer-identifying information intentionally obscured.";
 
+export const antennaCapacitancePhoto = photo(capacitance, "Antenna capacitance measurement", "HLG antenna mat connected to instruments for capacitance measurement.", "Historical inspection photograph; no acceptance criterion or performance result is implied.");
+export const interlayerInspectionPhoto = photo(inspectionHandling, "Interlayer inspection and handling", "Gloved handling of an HLG interlayer at the inspection table, with embedded wire and an edge connector visible.");
+
 export const recentAntennaPhotos = [
+  photo(connectorDetail, "Connector detail", "Close-up of an HLG electrical exit showing contact pads and fine-wire connections."),
+  photo(antennaTable, "Full antenna mat", "HLG windshield antenna mat on the work table with embedded elements and electrical exits."),
+  photo(antennaPrepared, "Antenna mat — embedded wire", "Actual HLG antenna interlayer with fine embedded antenna wire and edge connectors."),
+  photo(fullAntennaWindow, "Full antenna windshield", "Finished windshield incorporating an HLG antenna interlayer."),
+  antennaCapacitancePhoto,
   photo(antennaMat, "Antenna interlayer mat", "Actual HLG antenna mat showing fine embedded antenna elements and electrical exits."),
   photo(antennaWindshield, "Windshield — antennas at both A-pillars", "Finished windshield with an antenna at each A-pillar."),
   photo(singleAntenna, "Single antenna and barcode", "Single embedded antenna with an electrical exit connector and barcode label."),

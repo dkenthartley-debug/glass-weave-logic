@@ -4,7 +4,7 @@ import Seo, { breadcrumbSchema, orgSchema } from "@/components/Seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { processSteps, qualityProof } from "@/data/hlg";
 import Figure from "@/components/Figure";
-import { barcodeTraceabilityPhoto } from "@/data/libraryPhotos";
+import { barcodeTraceabilityPhoto, antennaCapacitancePhoto, interlayerInspectionPhoto } from "@/data/libraryPhotos";
 import { legacyCleanRoomPhoto, railEvaluationPhotos } from "@/data/legacyPhotos";
 import {
   traceabilityPhoto,
@@ -132,6 +132,14 @@ const EngineeringQuality = () => (
             scope.
           </p>
         </div>
+      </div>
+    </Section>
+
+    <Section tone="gray">
+      <SectionHeading eyebrow="Actual HLG inspection" title="Interlayer handling and antenna evaluation" />
+      <div className="grid md:grid-cols-2 gap-6 items-start">
+        <Figure photo={interlayerInspectionPhoto} fit="contain" aspect="aspect-[16/9]" />
+        <Figure photo={antennaCapacitancePhoto} fit="contain" aspect="aspect-[16/9]" />
       </div>
     </Section>
 

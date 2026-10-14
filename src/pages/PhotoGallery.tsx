@@ -12,7 +12,7 @@ import {
   railEvaluationPhotos, railPhotos, straightHeaterPhotos, wiggleHeaterPhoto, wiggleScalePhoto, wiperParkPhotos,
 } from "@/data/legacyPhotos";
 import pdlcVideo from "@/assets/videos/pdlc-film-on-off.mp4.asset.json";
-import { barcodeTraceabilityPhoto, inspectionPhotos, recentHeaterPhotos, recentAntennaPhotos } from "@/data/libraryPhotos";
+import { barcodeTraceabilityPhoto, inspectionPhotos, recentHeaterPhotos, recentAntennaPhotos, antennaCapacitancePhoto, interlayerInspectionPhoto } from "@/data/libraryPhotos";
 
 const crumbs = [
   { name: "Home", path: "/" },
@@ -26,7 +26,7 @@ const groups: { id: string; eyebrow: string; title: string; photos: HlgPhoto[] }
   { id: "connect", eyebrow: "CONNECT", title: "Connectors, antennas and traceability", photos: [...recentAntennaPhotos, barcodeTraceabilityPhoto, ...connectorPhotos, traceabilityPhoto, ...antennaPhotos, dualAntennaPhoto] },
   { id: "applications", eyebrow: "Applications", title: "Installed applications", photos: [airportTugPhoto] },
   { id: "facility", eyebrow: "Facility", title: "Butler, Pennsylvania facility", photos: [legacyCleanRoomPhoto, ...facilityManufacturingPhotos, ...facilityProcessPhotos, ...facilityAboutPhotos] },
-  { id: "quality-inspection", eyebrow: "Quality & inspection", title: "Inspection and thermal evaluation", photos: [barcodeTraceabilityPhoto, ...inspectionPhotos] },
+  { id: "quality-inspection", eyebrow: "Quality & inspection", title: "Inspection and thermal evaluation", photos: [interlayerInspectionPhoto, antennaCapacitancePhoto, barcodeTraceabilityPhoto, ...inspectionPhotos] },
 ];
 
 const unique = (list: HlgPhoto[]) => list.filter((p, i) => list.findIndex((q) => q.src === p.src) === i);
