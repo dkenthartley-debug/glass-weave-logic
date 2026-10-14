@@ -29,6 +29,15 @@ import shopTable from "@/assets/library/20230808_123117-2.jpg.asset.json";
 import shopEquipment from "@/assets/library/20230808_123143-2.jpg.asset.json";
 import shopEnclosure from "@/assets/library/20230808_123328-2.jpg.asset.json";
 import shopLine from "@/assets/library/20230808_152126-2.jpg.asset.json";
+import fordGt from "@/assets/vehicles/ford-gt.jpg.asset.json";
+import fordGtFront from "@/assets/vehicles/ford-gt-front.jpg.asset.json";
+import fordRanger from "@/assets/vehicles/ford-ranger.jpg.asset.json";
+import mercedesS from "@/assets/vehicles/mercedes-s-class.jpg.asset.json";
+import mercedesSRear from "@/assets/vehicles/mercedes-s-class-rear.jpg.asset.json";
+import wiperMatFull from "@/assets/library/wiper-park-mat-full.jpg.asset.json";
+import wiperConnectorBarcode from "@/assets/library/wiper-park-connector-barcode.jpg.asset.json";
+import wiperWireConnectors from "@/assets/library/wiper-park-wire-connectors.jpg.asset.json";
+import wiperMatWide from "@/assets/library/wiper-park-mat-wide.jpg.asset.json";
 
 const photo = (asset: { url: string }, label: string, caption: string, note?: string): HlgPhoto => ({
   src: asset.url, label, caption, alt: caption, note,
