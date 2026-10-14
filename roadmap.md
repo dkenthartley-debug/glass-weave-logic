@@ -23,4 +23,4 @@
 - [ ] Republish site after paper review is complete
 - [x] Replace the heater architecture visual with an authentic, clean HLG-based detail
 - [x] Review and improve website images one at a time, using actual HLG photos as the controlling visual reference
-- [ ] Place owner-selected legacy photos on HEAT, wiper-park, antenna, automotive, off-road, rail and Engineering & Quality sections; verify images and captions
+- [x] Place owner-selected legacy photos on HEAT, wiper-park, antenna, automotive, off-road, rail and Engineering & Quality sections; verified hosted image loading and desktop/mobile layouts
