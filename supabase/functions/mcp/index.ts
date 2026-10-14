@@ -478,10 +478,140 @@ ${payload.closing}` : "")
 // src/lib/mcp/tools/search-technical-library.ts
 import { defineTool as defineTool3 } from "npm:@lovable.dev/mcp-js@0.26.1";
 import { z as z2 } from "npm:zod@^3.25.76";
+
+// src/data/library.ts
+import tb001 from "npm:@/assets/documents/hlg-tb-001.pdf.asset.json";
+import ag001 from "npm:@/assets/documents/hlg-ag-001.pdf.asset.json";
+import er001 from "npm:@/assets/documents/hlg-er-001.pdf.asset.json";
+var librarySeries = [
+  {
+    code: "TB",
+    name: "HLG Technical Bulletins",
+    scope: "TB Series",
+    purpose: "Educational papers on industry challenges and engineering concepts affecting electrically active transparent systems.",
+    docs: [
+      {
+        id: "TB-001",
+        title: "Optical Performance Under Electrical Load",
+        revision: "Revision A",
+        summary: "Why dynamic optical qualification under electrical load should be part of every heated transparency approval process.",
+        pdf: tb001.url,
+        path: "/technical-bulletins/tb-001-optical-performance-under-electrical-load"
+      }
+    ]
+  },
+  {
+    code: "QS",
+    name: "HLG Qualification Standards",
+    scope: "QS Series",
+    purpose: "Public overviews of the Hotlineglass qualification philosophy and the standards used to evaluate energized transparent systems.",
+    docs: [
+      {
+        id: "HLG-QS-1724",
+        title: "Optical Performance Under Electrical Load \u2014 Public Overview",
+        revision: "Revision A",
+        summary: "Purpose, scope, engineering principle, and methodology behind the HLG standard for evaluating optical behavior in the energized condition.",
+        requestOnly: true,
+        path: "/qualification-standards/hlg-qs-1724"
+      }
+    ]
+  },
+  {
+    code: "AG",
+    name: "HLG Application Guides",
+    scope: "AG Series",
+    purpose: "Design guidance for engineers and OEMs specifying embedded-conductor heated, sensing, and shielded transparencies.",
+    docs: [
+      {
+        id: "AG-001",
+        title: "Designing Heated Laminated Glass",
+        revision: "Revision A",
+        summary: "Requirement-first design sequence: voltage, power density, conductor format, bus bars, zoning, sensing, and the validation path.",
+        pdf: ag001.url
+      }
+    ]
+  },
+  {
+    code: "ER",
+    name: "HLG Engineering Reports",
+    scope: "ER Series",
+    purpose: "Sample qualification reports demonstrating the output format of the HLG proprietary evaluation platform.",
+    docs: [
+      {
+        id: "ER-001",
+        title: "Sample Qualification Report \u2014 Energized Optical Evaluation",
+        revision: "Revision A",
+        summary: "Illustrative report structure covering article configuration, test conditions, reported measurements, and delivered contents.",
+        pdf: er001.url
+      }
+    ]
+  },
+  {
+    code: "S",
+    name: "HLG Product Specifications",
+    scope: "S Series",
+    purpose: "Concise product and design specifications for HLG conductive interlayers, heater mats, sensor mats, and shielding subassemblies.",
+    docs: [
+      {
+        id: "S.02",
+        title: "EMI/RFI Shielding Interlayer Assemblies",
+        revision: "Draft for review",
+        summary: "Engineered fine copper mesh and printed-copper assemblies for EMI/RFI shielding, including SCIF applications. 80 OPI mesh option; testing and results TBD.",
+        path: "/specifications/s-02-emi-rfi-scif-shielding"
+      },
+      {
+        id: "S.03",
+        title: "Current Heated Interlayer Voltage Range",
+        revision: "Revision A",
+        summary: "Current heated interlayer voltage range: 12 V to 440 V DC.",
+        path: "/specifications/s-03-heated-interlayer-voltage-range"
+      },
+      {
+        id: "S.04",
+        title: "Sensor Mats \u2014 Custom Layouts for Accurate Placement and Lower-Stress Laminates",
+        revision: "Revision A",
+        summary: "Sensor mats are engineered with custom layouts for accurate placement and lower-stress laminates.",
+        path: "/specifications/s-04-sensor-mat-custom-layouts"
+      },
+      {
+        id: "S.05",
+        title: "Thermal Validation",
+        revision: "Revision A",
+        summary: "Each design is thermally tested in-house for thermal uniformity.",
+        path: "/specifications/s-05-thermal-validation"
+      }
+    ]
+  }
+];
+
+// src/data/shieldingSpecification.ts
+var shieldingSpecification = {
+  id: "S.02",
+  title: "EMI/RFI Shielding Interlayer Assemblies",
+  status: "Draft for review \u2014 testing and results TBD",
+  overview: "HLG engineers and assembles fine copper mesh and printed-copper conductive interlayers, supplied ready to laminate to a customer-defined specification.",
+  scif: "HLG supports SCIF (Sensitive Compartmented Information Facility) and secure-facility glazing projects with shielding interlayer assemblies engineered to the project's electromagnetic, optical, and integration requirements. Material selection, perimeter grounding, and qualification testing are coordinated against the specified shielding envelope and installation.",
+  fields: [
+    { label: "Supply format", value: "Engineered and assembled interlayer, ready to laminate" },
+    { label: "Conductor options", value: "Fine copper mesh or printed-copper conductive film" },
+    { label: "Mesh option", value: "80 openings per inch (OPI); final construction defined per project" },
+    { label: "Film grade", value: "TBD following supplier and application review" },
+    { label: "Perimeter interface", value: "Grounding and termination layout defined for the assembly and frame" },
+    { label: "Shielding test", value: "Method, frequency range, and acceptance criteria TBD" },
+    { label: "Shielding results", value: "TBD \u2014 no measured attenuation reported in this draft" },
+    { label: "Optical evaluation", value: "Transmission, haze, conductor visibility, and moir\xE9: testing/results TBD" },
+    { label: "Lamination evaluation", value: "Stack-up and processing compatibility: testing/results TBD" }
+  ],
+  engineering: "Conductor selection balances the required shielding performance with optical transmission, visibility, and moir\xE9 behavior. HLG defines the assembly geometry, conductor integration, perimeter termination, and grounding interface against the agreed specification.",
+  qualification: "Qualification is established by testing the representative laminate and its grounding/frame interface against project acceptance criteria. This draft defines the proposed supply and evaluation scope; it does not report completed testing or SCIF certification.",
+  inputs: "Provide the frequency range and attenuation target, test method, aperture and laminate construction, optical requirements, grounding/frame details, environment, and quantity. The companion film assembly sheet will identify the selected grade and distinguish supplier material data from HLG assembly test results."
+};
+
+// src/lib/mcp/tools/search-technical-library.ts
 var search_technical_library_default = defineTool3({
   name: "search_technical_library",
   title: "Search technical library",
-  description: "Search the HLG Technical Library coverage by keyword. The V1 library is a framework: HLG maintains an expanding library of engineering resources covering the design and integration of electrical functionality into laminated glass, and technical papers and application notes are coming soon. Returns matching resource topics; no papers are published yet.",
+  description: "Search HLG Technical Library papers, specifications and resource topics, including EMI/RFI shielding and SCIF applications. Draft specifications identify testing/results as TBD; they are not certification or measured-performance claims.",
   inputSchema: {
     query: z2.string().trim().optional().describe("Keyword matched against resource topics, e.g. 'busbar', 'RTD', 'EMI'. Omit to list all topics.")
   },
@@ -489,9 +619,19 @@ var search_technical_library_default = defineTool3({
   handler: ({ query }) => {
     const q = query?.toLowerCase() ?? "";
     const matches = libraryTopics.filter((t) => !q || t.toLowerCase().includes(q));
-    const status = "TECHNICAL PAPERS AND APPLICATION NOTES COMING SOON \u2014 the V1 Technical Library is framework only; no papers are published yet.";
+    const documents = librarySeries.flatMap((series) => series.docs).filter(
+      (doc) => !q || `${doc.id} ${doc.title} ${doc.summary}`.toLowerCase().includes(q)
+    );
+    const shieldingMatches = !q || JSON.stringify(shieldingSpecification).toLowerCase().includes(q);
+    const status = "The library contains technical papers and specifications; additional topics are in preparation. S.02 is a draft with testing/results TBD. QS-1724 is available to customers on request only.";
     const text = (matches.length ? `HLG Technical Library \u2014 resource topics${query ? ` matching "${query}"` : ""}:
 ` + matches.map((t) => `- ${t}`).join("\n") : `No library topics matching "${query}".`) + `
+
+Documents:
+${documents.map((doc) => `- ${doc.id}: ${doc.title} (${doc.revision}) \u2014 ${doc.summary}`).join("\n")}` + (shieldingMatches ? `
+
+S.02 SCIF scope: ${shieldingSpecification.scif}
+${shieldingSpecification.qualification}` : "") + `
 
 ${status}
 Full topic list:
@@ -499,10 +639,12 @@ ${libraryTopics.map((t) => `- ${t}`).join("\n")}`;
     return {
       content: [{ type: "text", text }],
       structuredContent: {
-        status: "coming-soon",
+        status: "papers-and-draft-specifications",
         query: query ?? null,
         matches,
-        allTopics: libraryTopics
+        allTopics: libraryTopics,
+        documents,
+        shieldingSpecification: shieldingMatches ? shieldingSpecification : null
       }
     };
   }
