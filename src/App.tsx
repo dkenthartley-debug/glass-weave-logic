@@ -16,6 +16,7 @@ import TechnicalLibrary from "./pages/TechnicalLibrary";
 import PhotoGallery from "./pages/PhotoGallery";
 import EngineeringReview from "./pages/EngineeringReview";
 import NotFound from "./pages/NotFound";
+import ShieldingSpecification from "./pages/ShieldingSpecification";
 
 const queryClient = new QueryClient();
 
@@ -37,6 +38,7 @@ const App = () => (
             <Route path="/technical-library" element={<TechnicalLibrary />} />
             <Route path="/photo-gallery" element={<PhotoGallery />} />
             <Route path="/engineering-review" element={<EngineeringReview />} />
+            <Route path="/specifications/s-02-emi-rfi-scif-shielding" element={<ShieldingSpecification />} />
 
             <Route path="/markets" element={<MarketsIndex />} />
             <Route path="/markets/aerospace" element={<Aerospace />} />
