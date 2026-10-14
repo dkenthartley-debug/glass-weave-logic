@@ -6,6 +6,17 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import { getMarket, markets, technologies } from "@/data/hlg";
 import { AntennaPhotos, AirportTugPhoto, RailPhotos, WiperParkPhotos } from "@/components/LegacyPhotoSections";
 
+const vehicleApplications: Record<string, { title: string; vehicles: string[] }> = {
+  automotive: {
+    title: "Vehicle applications",
+    vehicles: ["Ford GT", "Ford Ranger", "Nissan Kicks", "Mercedes-Benz S-Class", "Mercedes-Benz GLE-Class", "Cadillac LYRIQ", "Hummer H1"],
+  },
+  defense: {
+    title: "Armoured vehicle applications",
+    vehicles: ["AM General HMMWV", "GDLS RG31", "Oshkosh M-ATV", "BAE RG33", "Oshkosh LVSR", "Navistar MaxxPro", "Oshkosh FMTV", "Oshkosh JLTV", "Force Protection Cougar", "Force Protection Buffalo", "Textron Marine & Land Systems M1117", "MTVR", "M915"],
+  },
+};
+
 export const MarketsIndex = () => {
   const crumbs = [
     { name: "Home", path: "/" },
@@ -53,6 +64,7 @@ export const MarketDetail = () => {
   const { slug } = useParams();
   const market = getMarket(slug);
   if (!market) return <Navigate to="/markets" replace />;
+  const applications = vehicleApplications[market.slug];
   const path = `/markets/${market.slug}`;
   const crumbs = [
     { name: "Home", path: "/" },
@@ -115,6 +127,22 @@ export const MarketDetail = () => {
           </aside>
         </div>
       </Section>
+
+      {applications && (
+        <Section tone="gray" id="vehicle-applications">
+          <SectionHeading eyebrow="HLG applications" title={applications.title} />
+          <p className="text-muted-foreground leading-relaxed mb-8 max-w-3xl">
+            {market.slug === "defense"
+              ? "HLG supplies products for armoured models of the following vehicle platforms."
+              : "HLG supplies products used in the following vehicle applications."}
+          </p>
+          <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-10">
+            {applications.vehicles.map((vehicle) => (
+              <li key={vehicle} className="border-b border-border py-4 text-foreground font-medium">{vehicle}</li>
+            ))}
+          </ul>
+        </Section>
+      )}
 
       {market.slug === "automotive" && <><WiperParkPhotos /><AntennaPhotos /></>}
       {market.slug === "rail-transportation" && <RailPhotos />}
