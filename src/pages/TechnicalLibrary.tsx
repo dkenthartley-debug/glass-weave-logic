@@ -57,9 +57,9 @@ const TechnicalLibrary = () => (
                     Available to customers on request →
                   </Link>
                 )}
-                {doc.id === "S.02" && doc.path && (
+                {(doc.id === "S.02" || doc.id === "S.03") && doc.path && (
                   <Link to={doc.path} className="mono text-accent mt-4 inline-block hover:underline">
-                    Read draft specification →
+                    {doc.id === "S.02" ? "Read draft specification →" : "Read specification →"}
                   </Link>
                 )}
               </div>
