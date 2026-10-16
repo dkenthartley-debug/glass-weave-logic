@@ -498,9 +498,6 @@ import { defineTool as defineTool3 } from "npm:@lovable.dev/mcp-js@0.26.1";
 import { z as z2 } from "npm:zod@^3.25.76";
 
 // src/data/library.ts
-import tb001 from "npm:@/assets/documents/hlg-tb-001.pdf.asset.json";
-import ag001 from "npm:@/assets/documents/hlg-ag-001.pdf.asset.json";
-import er001 from "npm:@/assets/documents/hlg-er-001.pdf.asset.json";
 var librarySeries = [
   {
     code: "TB",
@@ -513,7 +510,7 @@ var librarySeries = [
         title: "Optical Performance Under Electrical Load",
         revision: "Revision A",
         summary: "Why dynamic optical qualification under electrical load should be part of every heated transparency approval process.",
-        pdf: tb001.url,
+        pdf: "/documents/HLG-TB-001.pdf",
         path: "/technical-bulletins/tb-001-optical-performance-under-electrical-load"
       },
       {
@@ -583,7 +580,7 @@ var librarySeries = [
         title: "Designing Heated Laminated Glass",
         revision: "Revision A",
         summary: "Requirement-first design sequence: voltage, power density, conductor format, bus bars, zoning, sensing, and the validation path.",
-        pdf: ag001.url
+        pdf: "/documents/HLG-AG-001.pdf"
       }
     ]
   },
@@ -598,7 +595,7 @@ var librarySeries = [
         title: "Sample Qualification Report \u2014 Energized Optical Evaluation",
         revision: "Revision A",
         summary: "Illustrative report structure covering article configuration, test conditions, reported measurements, and delivered contents.",
-        pdf: er001.url
+        pdf: "/documents/HLG-ER-001.pdf"
       }
     ]
   },
