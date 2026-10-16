@@ -6,6 +6,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import { getTech, technologies } from "@/data/hlg";
 import Figure from "@/components/Figure";
 import { AntennaPhotos, HeaterPhotos } from "@/components/LegacyPhotoSections";
+import MriFeature from "@/components/MriFeature";
 import {
   connectorPhotos,
   heaterMatSectionPhoto,
@@ -133,6 +134,7 @@ const TechnologyDetail = () => {
       </Section>
 
       {tech.code === "HEAT" && <HeaterPhotos />}
+      {tech.code === "SHIELD" && <MriFeature />}
       {tech.code === "CONNECT" && <AntennaPhotos />}
 
       {tech.closing && (
