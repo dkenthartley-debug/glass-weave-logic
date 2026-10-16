@@ -1,5 +1,5 @@
+import heroWire from "@/assets/photos/hlg-authentic-heater-wire-field.jpg.asset.json";
 import { PageHero, Section, SectionHeading, CtaLink } from "@/components/Section";
-import { LaminateStack } from "@/components/Graphics";
 import Seo, { breadcrumbSchema, orgSchema } from "@/components/Seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { technologies } from "@/data/hlg";
@@ -60,10 +60,10 @@ const About = () => (
           </p>
         </div>
         <aside className="lg:col-span-5">
-          <div className="panel p-7">
-            <div className="mono text-primary mb-5">Functional interlayer — schematic</div>
-            <LaminateStack />
-          </div>
+          <figure className="panel p-3">
+            <img src={heroWire.url} alt="HLG embedded heater wire field on interlayer" className="w-full aspect-[4/5] object-cover" loading="lazy" />
+            <figcaption className="mono text-muted-foreground px-2 pt-3">HLG embedded wire field · Butler, PA</figcaption>
+          </figure>
         </aside>
       </div>
     </Section>

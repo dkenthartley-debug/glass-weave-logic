@@ -1,5 +1,4 @@
 import { PageHero, Section, SectionHeading, CtaLink } from "@/components/Section";
-import { LaminateStack } from "@/components/Graphics";
 import Seo, { breadcrumbSchema, orgSchema } from "@/components/Seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { solutions, multiFunctionSystems } from "@/data/hlg";
@@ -57,9 +56,6 @@ const Solutions = () => (
                 </li>
               ))}
             </ol>
-            <div className="mt-8">
-              <LaminateStack />
-            </div>
           </div>
         </aside>
       </div>

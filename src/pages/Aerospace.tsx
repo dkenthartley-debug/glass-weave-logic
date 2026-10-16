@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { PageHero, Section, SectionHeading, CtaLink, Eyebrow } from "@/components/Section";
-import { HeatSenseChain, LaminateStack, ThermalBand } from "@/components/Graphics";
+import { HeatSenseChain, ThermalBand } from "@/components/Graphics";
 import Seo, { breadcrumbSchema, orgSchema, techArticleSchema } from "@/components/Seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import Figure from "@/components/Figure";
@@ -132,10 +132,6 @@ const Aerospace = () => (
           </p>
         </div>
         <div className="lg:col-span-6 space-y-8">
-          <div className="panel p-7">
-            <div className="mono text-primary mb-5">Laminate stack</div>
-            <LaminateStack />
-          </div>
           <div className="panel p-7">
             <div className="mono text-primary mb-5">Thermal evaluation</div>
             <ThermalBand />

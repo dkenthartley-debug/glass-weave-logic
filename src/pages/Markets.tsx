@@ -1,6 +1,5 @@
 import { Link, Navigate, useParams } from "react-router-dom";
 import { PageHero, Section, SectionHeading, CtaLink } from "@/components/Section";
-import { LaminateStack } from "@/components/Graphics";
 import Seo, { breadcrumbSchema, orgSchema } from "@/components/Seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { getMarket, markets, technologies } from "@/data/hlg";
@@ -121,10 +120,6 @@ export const MarketDetail = () => {
                   </li>
                 ))}
               </ul>
-            </div>
-            <div className="panel p-7">
-              <div className="mono text-primary mb-5">Laminate stack</div>
-              <LaminateStack />
             </div>
           </aside>
         </div>
