@@ -1,6 +1,3 @@
-import tb001 from "@/assets/documents/hlg-tb-001.pdf.asset.json";
-import ag001 from "@/assets/documents/hlg-ag-001.pdf.asset.json";
-import er001 from "@/assets/documents/hlg-er-001.pdf.asset.json";
 
 export type LibraryDoc = {
   id: string;
@@ -36,7 +33,7 @@ export const librarySeries: LibrarySeries[] = [
         revision: "Revision A",
         summary:
           "Why dynamic optical qualification under electrical load should be part of every heated transparency approval process.",
-        pdf: tb001.url,
+        pdf: "/documents/HLG-TB-001.pdf",
         path: "/technical-bulletins/tb-001-optical-performance-under-electrical-load",
       },
       {
@@ -115,7 +112,7 @@ export const librarySeries: LibrarySeries[] = [
         revision: "Revision A",
         summary:
           "Requirement-first design sequence: voltage, power density, conductor format, bus bars, zoning, sensing, and the validation path.",
-        pdf: ag001.url,
+        pdf: "/documents/HLG-AG-001.pdf",
       },
     ],
   },
@@ -132,7 +129,7 @@ export const librarySeries: LibrarySeries[] = [
         revision: "Revision A",
         summary:
           "Illustrative report structure covering article configuration, test conditions, reported measurements, and delivered contents.",
-        pdf: er001.url,
+        pdf: "/documents/HLG-ER-001.pdf",
       },
     ],
   },
