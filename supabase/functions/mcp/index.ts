@@ -517,6 +517,28 @@ var librarySeries = [
     ]
   },
   {
+    code: "TA",
+    name: "HLG Technical Articles & White Papers",
+    scope: "TA / WP Series",
+    purpose: "Public article summaries of HLG white papers. Full white papers are available to customers on request.",
+    docs: [
+      {
+        id: "TA-001",
+        title: "Preserving ATPD-2352 Revision U Durability in Operational Service",
+        revision: "Revision A",
+        summary: "Summary article: embedded laminate temperature sensing and closed-loop heater control for heated transparent armor windshields.",
+        path: "/technical-articles/ta-001-atpd-2352-embedded-sensing"
+      },
+      {
+        id: "WP-001",
+        title: "Ensuring ATPD-2352 Revision U Durability Gains Are Preserved in Operational Service \u2014 Full White Paper",
+        revision: "16 pages",
+        summary: "The complete white paper, including the operational thermal envelope appendix.",
+        requestOnly: true
+      }
+    ]
+  },
+  {
     code: "AG",
     name: "HLG Application Guides",
     scope: "AG Series",
