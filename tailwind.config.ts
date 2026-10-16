@@ -26,6 +26,7 @@ export default {
         "surface-elevated": "hsl(var(--surface-elevated))",
         steel: "hsl(var(--steel))",
         silver: "hsl(var(--silver))",
+        "photo-matte": "hsl(var(--photo-matte))",
         "navy-deep": "hsl(var(--navy-deep))",
         navy: "hsl(var(--navy))",
         graphite: "hsl(var(--graphite))",
