@@ -14,7 +14,7 @@ export default function MriBulletin() {
     <PageHero eyebrow="HLG Technical Bulletins · TB-003 · Revision A" title={b.title} subtitle={b.overview} />
     <Section>
       <article className="max-w-4xl">
-        <a href={tb003pdf.url} download className="mono text-accent inline-block mb-8 hover:underline">Download TB-003 PDF →</a>
+        <a href={tb003pdf} download className="mono text-accent inline-block mb-8 hover:underline">Download TB-003 PDF →</a>
         <Figure photo={mriSuitePhoto} aspect="aspect-[16/10]" className="mb-10" />
         {b.sections.map(s => <section key={s.title} className="mb-8">
           <h2 className="font-display text-2xl font-semibold mb-3">{s.title}</h2>
