@@ -2,7 +2,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import Seo, { breadcrumbSchema, techArticleSchema } from "@/components/Seo";
 import { CtaLink, PageHero, Section } from "@/components/Section";
 import { emiBulletin as b } from "@/data/emiBulletin";
-import tb002pdf from "@/assets/documents/hlg-tb-002.pdf.asset.json";
+const tb002pdf = "/documents/HLG-TB-002.pdf";
 
 const path = "/technical-bulletins/tb-002-emi-rfi-shielding-glass";
 const crumbs = [{ name: "Home", path: "/" }, { name: "Technical Library", path: "/technical-library" }, { name: "TB-002", path }];

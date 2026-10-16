@@ -3,7 +3,7 @@ import Figure from "@/components/Figure";
 import Seo, { breadcrumbSchema, techArticleSchema } from "@/components/Seo";
 import { CtaLink, PageHero, Section } from "@/components/Section";
 import { mriBulletin as b, mriSuitePhoto } from "@/data/mriBulletin";
-import tb003pdf from "@/assets/documents/hlg-tb-003.pdf.asset.json";
+const tb003pdf = "/documents/HLG-TB-003.pdf";
 
 const crumbs = [{ name: "Home", path: "/" }, { name: "Technical Library", path: "/technical-library" }, { name: "TB-003", path: b.path }];
 
