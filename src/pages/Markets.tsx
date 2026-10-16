@@ -146,7 +146,7 @@ export const MarketDetail = () => {
           {market.slug === "automotive" && (
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 items-start mt-10">
               {vehicleApplicationPhotos.map((p) => (
-                <Figure key={p.src} photo={p} fit="contain" aspect="aspect-[16/10]" />
+                <Figure key={p.src} photo={p} fit="contain" matte aspect="aspect-[16/10]" />
               ))}
             </div>
           )}

@@ -10,12 +10,14 @@ const Figure = ({
   className = "",
   aspect = "aspect-[4/3]",
   fit = "cover",
+  matte = false,
 }: {
   photo: HlgPhoto;
   invert?: boolean;
   className?: string;
   aspect?: string;
   fit?: "cover" | "contain";
+  matte?: boolean;
 }) => (
   <figure
     className={`border ${invert ? "border-silver/15 bg-navy-deep" : "border-border bg-surface"} ${className}`}
@@ -25,7 +27,7 @@ const Figure = ({
         {photo.label}
       </figcaption>
     )}
-    <div className={`m-5 overflow-hidden border ${invert ? "border-silver/10" : "border-border"}`}>
+    <div className={`m-5 overflow-hidden border ${matte ? "bg-photo-matte " : ""}${invert ? "border-silver/10" : "border-border"}`}>
       <img
         src={photo.src}
         alt={photo.alt}
