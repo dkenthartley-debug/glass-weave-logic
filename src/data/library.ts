@@ -39,6 +39,14 @@ export const librarySeries: LibrarySeries[] = [
         pdf: tb001.url,
         path: "/technical-bulletins/tb-001-optical-performance-under-electrical-load",
       },
+      {
+        id: "TB-002",
+        title: "Engineered EMI/RFI Shielding Glass for Data Centers, SCIFs & Federal Facilities",
+        revision: "Draft for review",
+        summary:
+          "Shielded glazing as a complete electrical assembly: conductive layers, engineered busbars and connector systems, 100% electrical inspection, and Architectural EMI/RFI Security applications including SCIF and TEMPEST-related projects.",
+        path: "/technical-bulletins/tb-002-emi-rfi-shielding-glass",
+      },
     ],
   },
   {

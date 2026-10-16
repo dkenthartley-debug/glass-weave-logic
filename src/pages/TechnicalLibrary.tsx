@@ -57,9 +57,9 @@ const TechnicalLibrary = () => (
                     Available to customers on request →
                   </Link>
                 )}
-                {(doc.id === "S.02" || doc.id === "S.03" || doc.id === "S.04" || doc.id === "S.05" || doc.id === "TA-001") && doc.path && (
+                {(doc.id === "S.02" || doc.id === "S.03" || doc.id === "S.04" || doc.id === "S.05" || doc.id === "TA-001" || doc.id === "TB-002") && doc.path && (
                   <Link to={doc.path} className="mono text-accent mt-4 inline-block hover:underline">
-                    {doc.id === "TA-001" ? "Read article →" : doc.id === "S.02" || doc.id === "S.05" ? "Read draft specification →" : "Read specification →"}
+                    {doc.id === "TB-002" ? "Read draft bulletin →" : doc.id === "TA-001" ? "Read article →" : doc.id === "S.02" || doc.id === "S.05" ? "Read draft specification →" : "Read specification →"}
                   </Link>
                 )}
               </div>

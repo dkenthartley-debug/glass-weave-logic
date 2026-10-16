@@ -6,7 +6,7 @@ import connectorDualLead from "@/assets/photos/connector-dual-lead-busbar-exit.j
 import connectorEdgeAttached from "@/assets/photos/connector-edge-attached-busbar.jpg.asset.json";
 import connectorMoldedHarness from "@/assets/photos/connector-molded-two-pin-harness.jpg.asset.json";
 import partMarking from "@/assets/photos/part-marking-traceability.jpg.asset.json";
-import sensorMatSection from "@/assets/photos/hlg-rtd-sensor-mat-section-v2.png";
+import sensorMatSection from "@/assets/photos/hlg-rtd-sensor-mat-section-v3.png";
 import itoFilmSection from "@/assets/photos/hlg-ito-conductive-film-section-v4.png";
 import facilityCleanroomWide from "@/assets/photos/facility-cleanroom-wide.jpg";
 import facilityWirePlacement from "@/assets/photos/facility-wire-placement.jpg";

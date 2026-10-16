@@ -19,6 +19,7 @@ import NotFound from "./pages/NotFound";
 import ShieldingSpecification from "./pages/ShieldingSpecification";
 import HeatedSpecification from "./pages/HeatedSpecification";
 import SensorSpecification from "./pages/SensorSpecification";
+import EmiBulletin from "./pages/EmiBulletin";
 import ThermalSpecification from "./pages/ThermalSpecification";
 import AtpdArticle from "./pages/AtpdArticle";
 
@@ -45,6 +46,7 @@ const App = () => (
             <Route path="/specifications/s-02-emi-rfi-scif-shielding" element={<ShieldingSpecification />} />
             <Route path="/specifications/s-03-heated-interlayer-voltage-range" element={<HeatedSpecification />} />
             <Route path="/specifications/s-04-sensor-mat-custom-layouts" element={<SensorSpecification />} />
+            <Route path="/technical-bulletins/tb-002-emi-rfi-shielding-glass" element={<EmiBulletin />} />
             <Route path="/specifications/s-05-thermal-validation" element={<ThermalSpecification />} />
             <Route path="/technical-articles/ta-001-atpd-2352-embedded-sensing" element={<AtpdArticle />} />
 
