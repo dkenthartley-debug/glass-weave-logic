@@ -499,6 +499,8 @@ import { z as z2 } from "npm:zod@^3.25.76";
 
 // src/data/library.ts
 import tb001 from "npm:@/assets/documents/hlg-tb-001.pdf.asset.json";
+import tb002 from "npm:@/assets/documents/hlg-tb-002.pdf.asset.json";
+import tb003 from "npm:@/assets/documents/hlg-tb-003.pdf.asset.json";
 import ag001 from "npm:@/assets/documents/hlg-ag-001.pdf.asset.json";
 import er001 from "npm:@/assets/documents/hlg-er-001.pdf.asset.json";
 var librarySeries = [
@@ -519,15 +521,17 @@ var librarySeries = [
       {
         id: "TB-002",
         title: "Engineered EMI/RFI Shielding Glass for Data Centers, SCIFs & Federal Facilities",
-        revision: "Draft for review",
+        revision: "Revision A",
         summary: "Shielded glazing as a complete electrical assembly: conductive layers, engineered busbars and connector systems, 100% electrical inspection, and Architectural EMI/RFI Security applications including SCIF and TEMPEST-related projects.",
+        pdf: tb002.url,
         path: "/technical-bulletins/tb-002-emi-rfi-shielding-glass"
       },
       {
         id: "TB-003",
         title: "RF-Shielded Windows for MRI Suites & Medical Imaging",
-        revision: "Draft for review",
+        revision: "Revision A",
         summary: "Engineered RF-shielded MRI observation windows: shielding layers, perimeter grounding, optical clarity for patient viewing and 100% inspection, built to the customer, equipment or architectural supplied specification.",
+        pdf: tb003.url,
         path: "/technical-bulletins/tb-003-mri-rf-shielded-windows"
       }
     ]

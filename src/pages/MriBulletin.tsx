@@ -10,7 +10,7 @@ export default function MriBulletin() {
   return <>
     <Seo title="TB-003 — RF-Shielded MRI Windows & Medical Imaging Glazing | HLG" description={b.overview} path={b.path} type="article" schema={[breadcrumbSchema(crumbs), techArticleSchema({ name: b.title, description: b.overview, path: b.path })]} />
     <Breadcrumbs items={crumbs} />
-    <PageHero eyebrow="HLG Technical Bulletins · TB-003 · Draft for review" title={b.title} subtitle={b.overview} />
+    <PageHero eyebrow="HLG Technical Bulletins · TB-003 · Revision A" title={b.title} subtitle={b.overview} />
     <Section>
       <article className="max-w-4xl">
         <Figure photo={mriSuitePhoto} aspect="aspect-[16/10]" className="mb-10" />
