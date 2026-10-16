@@ -40,7 +40,7 @@
 - [x] Confirm Compelma as the film supplier
 - [ ] Confirm Compelma film grade using frequency, attenuation and optical requirements, then prepare companion film assembly sheet (waiting on application targets or owner-selected grade)
 - [x] Add multi-function systems, shielding approaches, perimeter grounding, safe library topics
-- [ ] Republish site after paper review is complete
+- [x] Republished (Oct 16) after removing generic interlayer schematic from all pages
 - [x] Replace the heater architecture visual with an authentic, clean HLG-based detail
 - [x] Review and improve website images one at a time, using actual HLG photos as the controlling visual reference
 - [x] Place owner-selected legacy photos on HEAT, wiper-park, antenna, automotive, off-road, rail and Engineering & Quality sections; verified hosted image loading and desktop/mobile layouts
