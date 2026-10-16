@@ -1,7 +1,8 @@
+import heroWire from "@/assets/photos/hlg-authentic-heater-wire-field.jpg.asset.json";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { Section, SectionHeading, Eyebrow, CtaLink } from "@/components/Section";
-import { HeatSenseChain, LaminateStack } from "@/components/Graphics";
+import { HeatSenseChain } from "@/components/Graphics";
 import Seo, { orgSchema, breadcrumbSchema } from "@/components/Seo";
 import { libraryTopics, markets, processSteps, qualityProof, solutions, technologies } from "@/data/hlg";
 import Figure from "@/components/Figure";
@@ -50,10 +51,10 @@ const Home = () => (
             </dl>
           </div>
           <div className="lg:col-span-5">
-            <div className="panel p-6 md:p-8">
-              <div className="mono text-primary mb-5">Functional interlayer — schematic</div>
-              <LaminateStack />
-            </div>
+            <figure className="panel p-3">
+              <img src={heroWire.url} alt="HLG embedded heater wire field on interlayer" className="w-full aspect-[4/5] object-cover" />
+              <figcaption className="mono text-muted-foreground px-2 pt-3">HLG embedded wire field · Butler, PA</figcaption>
+            </figure>
           </div>
         </div>
       </div>

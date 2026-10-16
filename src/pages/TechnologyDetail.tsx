@@ -1,6 +1,6 @@
 import { Navigate, useParams, Link } from "react-router-dom";
 import { PageHero, Section, SectionHeading, CtaLink } from "@/components/Section";
-import { ConductorField, LaminateStack, ThermalBand } from "@/components/Graphics";
+import { ConductorField, ThermalBand } from "@/components/Graphics";
 import Seo, { breadcrumbSchema, techArticleSchema } from "@/components/Seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { getTech, technologies } from "@/data/hlg";
@@ -128,10 +128,6 @@ const TechnologyDetail = () => {
                 />
               </div>
             )}
-            <div className="panel p-7">
-              <div className="mono text-primary mb-5">Laminate stack</div>
-              <LaminateStack />
-            </div>
           </aside>
         </div>
       </Section>
