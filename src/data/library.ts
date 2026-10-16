@@ -14,7 +14,7 @@ export type LibraryDoc = {
 };
 
 export type LibrarySeries = {
-  code: "TB" | "QS" | "AG" | "ER" | "S";
+  code: "TB" | "QS" | "TA" | "AG" | "ER" | "S";
   name: string;
   scope: string;
   purpose: string;
@@ -56,6 +56,31 @@ export const librarySeries: LibrarySeries[] = [
           "Purpose, scope, engineering principle, and methodology behind the HLG standard for evaluating optical behavior in the energized condition.",
         requestOnly: true,
         path: "/qualification-standards/hlg-qs-1724",
+      },
+    ],
+  },
+  {
+    code: "TA",
+    name: "HLG Technical Articles & White Papers",
+    scope: "TA / WP Series",
+    purpose:
+      "Public article summaries of HLG white papers. Full white papers are available to customers on request.",
+    docs: [
+      {
+        id: "TA-001",
+        title: "Preserving ATPD-2352 Revision U Durability in Operational Service",
+        revision: "Revision A",
+        summary:
+          "Summary article: embedded laminate temperature sensing and closed-loop heater control for heated transparent armor windshields.",
+        path: "/technical-articles/ta-001-atpd-2352-embedded-sensing",
+      },
+      {
+        id: "WP-001",
+        title: "Ensuring ATPD-2352 Revision U Durability Gains Are Preserved in Operational Service — Full White Paper",
+        revision: "16 pages",
+        summary:
+          "The complete white paper, including the operational thermal envelope appendix.",
+        requestOnly: true,
       },
     ],
   },
