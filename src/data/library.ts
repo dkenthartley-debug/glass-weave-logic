@@ -14,7 +14,7 @@ export type LibraryDoc = {
 };
 
 export type LibrarySeries = {
-  code: "TB" | "QS" | "AG" | "ER" | "S";
+  code: "TB" | "QS" | "TA" | "AG" | "ER" | "S";
   name: string;
   scope: string;
   purpose: string;

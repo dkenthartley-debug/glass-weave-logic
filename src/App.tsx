@@ -20,6 +20,7 @@ import ShieldingSpecification from "./pages/ShieldingSpecification";
 import HeatedSpecification from "./pages/HeatedSpecification";
 import SensorSpecification from "./pages/SensorSpecification";
 import ThermalSpecification from "./pages/ThermalSpecification";
+import AtpdArticle from "./pages/AtpdArticle";
 
 const queryClient = new QueryClient();
 
@@ -45,6 +46,7 @@ const App = () => (
             <Route path="/specifications/s-03-heated-interlayer-voltage-range" element={<HeatedSpecification />} />
             <Route path="/specifications/s-04-sensor-mat-custom-layouts" element={<SensorSpecification />} />
             <Route path="/specifications/s-05-thermal-validation" element={<ThermalSpecification />} />
+            <Route path="/technical-articles/ta-001-atpd-2352-embedded-sensing" element={<AtpdArticle />} />
 
             <Route path="/markets" element={<MarketsIndex />} />
             <Route path="/markets/aerospace" element={<Aerospace />} />
