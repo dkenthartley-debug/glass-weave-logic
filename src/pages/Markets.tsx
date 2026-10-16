@@ -5,6 +5,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import { getMarket, markets, technologies } from "@/data/hlg";
 import { AntennaPhotos, AirportTugPhoto, RailPhotos, WiperParkPhotos } from "@/components/LegacyPhotoSections";
 import Figure from "@/components/Figure";
+import MriFeature from "@/components/MriFeature";
 import { vehicleApplicationPhotos } from "@/data/libraryPhotos";
 
 const vehicleApplications: Record<string, { title: string; vehicles: string[] }> = {
@@ -151,6 +152,7 @@ export const MarketDetail = () => {
       {market.slug === "automotive" && <><WiperParkPhotos /><AntennaPhotos /></>}
       {market.slug === "rail-transportation" && <RailPhotos />}
       {market.slug === "off-road-commercial-equipment" && <AirportTugPhoto />}
+      {(market.slug === "medical-mri" || market.slug === "architectural-smart-glass") && <MriFeature />}
 
       <Section tone="navy">
         <SectionHeading

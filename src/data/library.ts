@@ -47,6 +47,14 @@ export const librarySeries: LibrarySeries[] = [
           "Shielded glazing as a complete electrical assembly: conductive layers, engineered busbars and connector systems, 100% electrical inspection, and Architectural EMI/RFI Security applications including SCIF and TEMPEST-related projects.",
         path: "/technical-bulletins/tb-002-emi-rfi-shielding-glass",
       },
+      {
+        id: "TB-003",
+        title: "RF-Shielded Windows for MRI Suites & Medical Imaging",
+        revision: "Draft for review",
+        summary:
+          "Engineered RF-shielded MRI observation windows: shielding layers, perimeter grounding, optical clarity for patient viewing and 100% inspection, built to the customer, equipment or architectural supplied specification.",
+        path: "/technical-bulletins/tb-003-mri-rf-shielded-windows",
+      },
     ],
   },
   {
