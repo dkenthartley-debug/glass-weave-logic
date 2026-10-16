@@ -45,3 +45,5 @@
 - [x] Review and improve website images one at a time, using actual HLG photos as the controlling visual reference
 - [x] Place owner-selected legacy photos on HEAT, wiper-park, antenna, automotive, off-road, rail and Engineering & Quality sections; verified hosted image loading and desktop/mobile layouts
 - [x] Vehicle + wiper-park photos (Oct 14): 5 vehicle shots (Ford GT x2, Ranger, S-Class x2) on Automotive page + Gallery Applications; 4 wiper-park interlayer pics (full mat, connector+2D barcode P1-24134-50, wire/connectors, wide) in WiperParkPhotos section + Gallery HEAT group. S-Class rear shot: hand-drawn blue arrow removed from the uploaded pixels and re-uploaded (owner asked). Verified in preview; not republished.
+- [x] ATPD-2352: TA-001 two-page summary article (no byline, softened tone) + readable page; full 16-page WP-001 request-only; cleaned file properties
+- [ ] After website wrap-up: discuss WP-001 ownership tracking and possible grant to prove the concept (owner request)
