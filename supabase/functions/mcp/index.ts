@@ -134,6 +134,10 @@ var technologies = [
         body: "Every transparent shielding layer balances optical clarity against electrical conduction. The right choice depends on the viewing requirement, the aperture size and the enclosure it connects to. HLG helps define that balance early in the engineering review."
       },
       {
+        title: "Medical & MRI RF shielding",
+        body: "MRI windows work the opposite way to security glazing: they keep outside RF noise from entering the scan room so it cannot degrade the image. HLG engineers RF-shielded MRI observation windows and vision panels \u2014 shielding layer, perimeter grounding and optical clarity \u2014 to the customer, equipment or architectural supplied specification. See TB-003 in the Technical Library."
+      },
+      {
         title: "Why perimeter grounding matters",
         body: "A shielding layer only works as well as its connection to the surrounding structure. Continuous, low-resistance contact around the perimeter carries collected current to the frame and enclosure. Gaps, high-resistance joints or poorly terminated edges can undermine an otherwise good conductive layer. HLG engineers the perimeter termination as part of the interlayer, with program-specific details shared under a mutual NDA."
       },
@@ -356,6 +360,20 @@ var markets = [
     ],
     seoTitle: "Architectural & Smart Glass Functional Interlayers | HLG",
     seoDescription: "HLG engineers architectural functional interlayers: EMI/RFI shielding, transparent conductors, PDLC integration, electrically heated glazing and specialty functional laminates."
+  },
+  {
+    slug: "medical-mri",
+    name: "Medical & MRI",
+    blurb: "RF-shielded observation windows that keep outside interference out of MRI scan rooms while preserving a clear view of the patient.",
+    bullets: [
+      "MRI observation windows",
+      "RF-shielded vision panels",
+      "Fine mesh and conductive-film shielding",
+      "Perimeter grounding to the RF enclosure",
+      "Built to customer, equipment or architectural spec"
+    ],
+    seoTitle: "MRI Windows & RF-Shielded Medical Glazing | HLG",
+    seoDescription: "HLG engineers RF-shielded MRI windows and medical imaging glazing: fine mesh or conductive-film shielding, perimeter grounding and 100% inspection, built to the supplied specification."
   }
 ];
 var libraryTopics = [
@@ -504,6 +522,13 @@ var librarySeries = [
         revision: "Draft for review",
         summary: "Shielded glazing as a complete electrical assembly: conductive layers, engineered busbars and connector systems, 100% electrical inspection, and Architectural EMI/RFI Security applications including SCIF and TEMPEST-related projects.",
         path: "/technical-bulletins/tb-002-emi-rfi-shielding-glass"
+      },
+      {
+        id: "TB-003",
+        title: "RF-Shielded Windows for MRI Suites & Medical Imaging",
+        revision: "Draft for review",
+        summary: "Engineered RF-shielded MRI observation windows: shielding layers, perimeter grounding, optical clarity for patient viewing and 100% inspection, built to the customer, equipment or architectural supplied specification.",
+        path: "/technical-bulletins/tb-003-mri-rf-shielded-windows"
       }
     ]
   },
