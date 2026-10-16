@@ -3,6 +3,7 @@ import Figure from "@/components/Figure";
 import Seo, { breadcrumbSchema, techArticleSchema } from "@/components/Seo";
 import { CtaLink, PageHero, Section } from "@/components/Section";
 import { mriBulletin as b, mriSuitePhoto } from "@/data/mriBulletin";
+const tb003pdf = "/documents/HLG-TB-003.pdf";
 
 const crumbs = [{ name: "Home", path: "/" }, { name: "Technical Library", path: "/technical-library" }, { name: "TB-003", path: b.path }];
 
@@ -10,9 +11,10 @@ export default function MriBulletin() {
   return <>
     <Seo title="TB-003 — RF-Shielded MRI Windows & Medical Imaging Glazing | HLG" description={b.overview} path={b.path} type="article" schema={[breadcrumbSchema(crumbs), techArticleSchema({ name: b.title, description: b.overview, path: b.path })]} />
     <Breadcrumbs items={crumbs} />
-    <PageHero eyebrow="HLG Technical Bulletins · TB-003 · Draft for review" title={b.title} subtitle={b.overview} />
+    <PageHero eyebrow="HLG Technical Bulletins · TB-003 · Revision A" title={b.title} subtitle={b.overview} />
     <Section>
       <article className="max-w-4xl">
+        <a href={tb003pdf} download className="mono text-accent inline-block mb-8 hover:underline">Download TB-003 PDF →</a>
         <Figure photo={mriSuitePhoto} aspect="aspect-[16/10]" className="mb-10" />
         {b.sections.map(s => <section key={s.title} className="mb-8">
           <h2 className="font-display text-2xl font-semibold mb-3">{s.title}</h2>

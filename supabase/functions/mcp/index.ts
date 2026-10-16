@@ -519,15 +519,17 @@ var librarySeries = [
       {
         id: "TB-002",
         title: "Engineered EMI/RFI Shielding Glass for Data Centers, SCIFs & Federal Facilities",
-        revision: "Draft for review",
+        revision: "Revision A",
         summary: "Shielded glazing as a complete electrical assembly: conductive layers, engineered busbars and connector systems, 100% electrical inspection, and Architectural EMI/RFI Security applications including SCIF and TEMPEST-related projects.",
+        pdf: "/documents/HLG-TB-002.pdf",
         path: "/technical-bulletins/tb-002-emi-rfi-shielding-glass"
       },
       {
         id: "TB-003",
         title: "RF-Shielded Windows for MRI Suites & Medical Imaging",
-        revision: "Draft for review",
+        revision: "Revision A",
         summary: "Engineered RF-shielded MRI observation windows: shielding layers, perimeter grounding, optical clarity for patient viewing and 100% inspection, built to the customer, equipment or architectural supplied specification.",
+        pdf: "/documents/HLG-TB-003.pdf",
         path: "/technical-bulletins/tb-003-mri-rf-shielded-windows"
       }
     ]
