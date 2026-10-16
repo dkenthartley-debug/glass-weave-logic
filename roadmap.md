@@ -48,4 +48,5 @@
 - [x] ATPD-2352: TA-001 two-page summary article (no byline, softened tone) + readable page; full 16-page WP-001 request-only; cleaned file properties
 - [ ] After website wrap-up: discuss WP-001 ownership tracking and possible grant to prove the concept (owner request)
 - [x] WP-001 request copy: bio replaced with short humble 33+ years line (v2 in Files)
-- [ ] EMI/RFI bulletin review: numbered points sent, awaiting owner answers
+- [x] EMI/RFI bulletin (TB-002): owner answers applied; readable draft page live in preview
+- [x] Sensor visual: two sensors disconnected (no wire between them)
