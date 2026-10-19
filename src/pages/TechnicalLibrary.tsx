@@ -13,7 +13,7 @@ const crumbs = [
 const TechnicalLibrary = () => (
   <>
     <Seo
-      title="HLG Technical Library — Functional Interlayer Engineering Resources"
+      title="Technical Library — Bulletins, Specifications & White Papers | Hotlineglass USA"
       description="The HLG Technical Library covers heated interlayer engineering, embedded RTD sensing, power density, busbar engineering, electrical exits, transparent conductors, EMI/RFI shielding, antenna integration and validation."
       path="/technical-library"
       schema={[orgSchema, breadcrumbSchema(crumbs)]}

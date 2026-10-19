@@ -11,7 +11,7 @@ import { heaterMatSectionPhoto, sensorMatSectionPhoto } from "@/data/hlgPhotos";
 const Home = () => (
   <>
     <Seo
-      title="Hotlineglass USA — Engineered Functional Interlayers for Laminated Glass"
+      title="Hotlineglass USA — Conductive Interlayers & Specialty Films for Laminated Glass"
       description="HLG engineers and manufactures electrically functional interlayers for laminated glass: heating, RTD temperature sensing, EMI/RFI shielding, transparent conductors, switchable glazing and integrated antennas. Butler, Pennsylvania. ISO 9001:2015."
       path="/"
       schema={[orgSchema, breadcrumbSchema([{ name: "Home", path: "/" }])]}

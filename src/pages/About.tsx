@@ -22,7 +22,7 @@ const flow = [
 const About = () => (
   <>
     <Seo
-      title="About Hotlineglass USA — U.S. Functional Interlayer Manufacturer | HLG"
+      title="About Hotlineglass USA — U.S. Conductive Interlayer Manufacturer, Butler PA"
       description="Hotlineglass USA is a U.S. manufacturer of engineered functional interlayers for laminated glass — heating, temperature sensing, transparent conductors, EMI/RFI shielding, switchable glazing and integrated antennas. Butler, Pennsylvania."
       path="/about"
       schema={[orgSchema, breadcrumbSchema(crumbs)]}

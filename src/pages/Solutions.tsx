@@ -13,7 +13,7 @@ const crumbs = [
 const Solutions = () => (
   <>
     <Seo
-      title="Solutions — Functional Interlayer Integration & Prelaminated Assemblies | HLG"
+      title="Solutions — Conductive Interlayer Integration & Prelaminated Assemblies | Hotlineglass USA"
       description="HLG solutions: functional interlayer integration, prelaminated functional assemblies, busbar engineering and electrical exit leads for advanced laminated glass."
       path="/solutions"
       schema={[orgSchema, breadcrumbSchema(crumbs)]}
