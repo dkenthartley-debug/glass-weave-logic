@@ -50,4 +50,4 @@
 - [x] WP-001 request copy: bio replaced with short humble 33+ years line (v2 in Files)
 - [x] EMI/RFI bulletin (TB-002): owner answers applied; readable draft page live in preview
 - [x] Sensor visual: two sensors disconnected (no wire between them)
-- [ ] Write AI review brief (Claude) for site
+- [x] Write AI review brief (Claude) for site
