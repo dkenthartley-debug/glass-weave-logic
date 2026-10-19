@@ -11,7 +11,7 @@ export default function HeatedSpecification() {
     <Seo title="S.03 — Heated Interlayers, 12–440 V DC | HLG" description={spec.overview} path={path} type="article" schema={[breadcrumbSchema(crumbs), techArticleSchema({ name: spec.title, description: spec.overview, path })]} />
     <Breadcrumbs items={crumbs} />
     <PageHero eyebrow="HLG Product Specifications · S.03 · Revision A" title={spec.title} subtitle={spec.overview} />
-    <Section>
+    <Section tone="navy" className="paper-dark">
       <article className="max-w-4xl">
         <h2 className="font-display text-2xl font-semibold mb-4">Assembly specification</h2>
         <dl className="border-t border-border mb-10">

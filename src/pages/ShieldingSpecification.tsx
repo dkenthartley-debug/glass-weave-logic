@@ -22,7 +22,7 @@ export default function ShieldingSpecification() {
       />
       <Breadcrumbs items={crumbs} />
       <PageHero eyebrow="HLG Product Specifications · S.02" title={spec.title} subtitle={spec.overview} />
-      <Section>
+      <Section tone="navy" className="paper-dark">
         <article className="max-w-4xl">
           <p className="mono text-accent mb-8">{spec.status}</p>
           <h2 className="font-display text-2xl font-semibold mb-4">SCIF and secure-facility applications</h2>

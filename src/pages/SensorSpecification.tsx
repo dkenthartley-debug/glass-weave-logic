@@ -11,7 +11,7 @@ export default function SensorSpecification() {
     <Seo title="S.04 — Custom Embedded Sensor Mats | HLG" description={spec.overview} path={path} type="article" schema={[breadcrumbSchema(crumbs), techArticleSchema({ name: spec.title, description: spec.overview, path })]} />
     <Breadcrumbs items={crumbs} />
     <PageHero eyebrow="HLG Product Specifications · S.04 · Revision A" title={spec.title} subtitle={spec.overview} />
-    <Section>
+    <Section tone="navy" className="paper-dark">
       <article className="max-w-4xl">
         {spec.sections.map(section => <section key={section.title} className="mb-8">
           <h2 className="font-display text-2xl font-semibold mb-3">{section.title}</h2>

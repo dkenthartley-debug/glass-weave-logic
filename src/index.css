@@ -185,3 +185,10 @@
   .schematic-layer { transition: none; }
   .schematic-current { animation: none; }
 }
+
+/* Readable paper pages on navy: lift muted/body text and borders for contrast */
+.paper-dark .text-muted-foreground { color: hsl(var(--silver) / 0.8); }
+.paper-dark h1, .paper-dark h2, .paper-dark h3, .paper-dark .text-foreground { color: hsl(0 0% 100%); }
+.paper-dark .border-border { border-color: hsl(var(--silver) / 0.15); }
+.paper-dark .text-accent, .paper-dark .text-primary { color: hsl(var(--primary-glow)); }
+.paper-dark .bg-background, .paper-dark .bg-surface, .paper-dark .bg-card { background-color: hsl(var(--silver) / 0.05); }

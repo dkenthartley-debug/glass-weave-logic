@@ -11,7 +11,7 @@ export default function AtpdArticle() {
     <Seo title={`${a.id} — ${a.title} | HLG`} description={a.overview} path={path} type="article" schema={[breadcrumbSchema(crumbs), techArticleSchema({ name: a.title, description: a.overview, path })]} />
     <Breadcrumbs items={crumbs} />
     <PageHero eyebrow={`HLG Technical Articles · ${a.id} · ${a.revision}`} title={a.title} subtitle={a.subtitle} />
-    <Section>
+    <Section tone="navy" className="paper-dark">
       <article className="max-w-4xl">
         <p className="text-muted-foreground leading-relaxed mb-10">{a.overview}</p>
         {a.sections.map(s => <section key={s.title} className="mb-8">
