@@ -358,8 +358,8 @@ var markets = [
       "Electrically heated glazing",
       "Specialty functional laminates"
     ],
-    seoTitle: "Architectural & Smart Glass Functional Interlayers | HLG",
-    seoDescription: "HLG engineers architectural functional interlayers: EMI/RFI shielding, transparent conductors, PDLC integration, electrically heated glazing and specialty functional laminates."
+    seoTitle: "Architectural EMI/RFI Security & Smart Glass Interlayers | Hotlineglass USA",
+    seoDescription: "HLG engineers and manufactures architectural interlayers for SCIF and secure facilities, MRI suites and smart glass: EMI/RFI shielding, transparent conductors, PDLC integration, electrically heated glazing and specialty functional laminates."
   },
   {
     slug: "medical-mri",
@@ -372,8 +372,8 @@ var markets = [
       "Perimeter grounding to the RF enclosure",
       "Built to customer, equipment or architectural spec"
     ],
-    seoTitle: "MRI Windows & RF-Shielded Medical Glazing | HLG",
-    seoDescription: "HLG engineers RF-shielded MRI windows and medical imaging glazing: fine mesh or conductive-film shielding, perimeter grounding and 100% inspection, built to the supplied specification."
+    seoTitle: "MRI RF-Shielded Windows & Room Glazing | Hotlineglass USA",
+    seoDescription: "HLG engineers and manufactures RF-shielded MRI observation and control-room windows, with optional switchable privacy: fine mesh or conductive-film shielding, perimeter grounding and 100% inspection, built to the supplied specification."
   }
 ];
 var libraryTopics = [

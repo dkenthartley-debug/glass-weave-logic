@@ -34,7 +34,7 @@ const blocks = [
 const Aerospace = () => (
   <>
     <Seo
-      title="Aerospace Functional Interlayers — Heated & RTD Sensing | HLG"
+      title="Aerospace Heated Windshield Interlayers & RTD Sensing | Hotlineglass USA"
       description="HLG engineers aerospace functional interlayers for transparency manufacturers: electrically heated interlayers, embedded RTD sensor mats, matched heater + sensor systems, electrical exits and validation."
       path="/markets/aerospace"
       type="article"
