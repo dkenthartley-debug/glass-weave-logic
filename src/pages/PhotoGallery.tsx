@@ -52,7 +52,7 @@ const PhotoGallery = () => (
         <SectionHeading eyebrow={g.eyebrow} title={g.title} />
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
           {unique(g.photos).map((p) => (
-            <Figure key={p.src} photo={p} fit="contain" aspect="aspect-[4/3]" />
+            <Figure key={p.src} photo={p} fit="contain" aspect="aspect-[4/3]" matte={vehicleApplicationPhotos.includes(p)} />
           ))}
         </div>
       </Section>
