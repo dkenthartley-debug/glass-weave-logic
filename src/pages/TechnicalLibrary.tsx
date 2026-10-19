@@ -36,6 +36,9 @@ const TechnicalLibrary = () => (
                 <div className="mono text-muted-foreground">
                   {doc.id} · {doc.revision}
                 </div>
+                <div className="mono text-[0.65rem] mt-1 text-primary">
+                  {doc.requestOnly ? "Access: request only" : doc.pdf ? "Access: public · PDF download" : "Access: public · web page"}
+                </div>
                 <div className="font-display text-base font-semibold mt-2">{doc.title}</div>
                 <p className="text-sm text-muted-foreground mt-2 leading-relaxed flex-1">{doc.summary}</p>
                 {doc.pdf && (
@@ -57,9 +60,9 @@ const TechnicalLibrary = () => (
                     Available to customers on request →
                   </Link>
                 )}
-                {(doc.id === "S.02" || doc.id === "S.03" || doc.id === "S.04" || doc.id === "S.05" || doc.id === "TA-001" || doc.id === "TB-002") && doc.path && (
+                {doc.path && !doc.requestOnly && doc.id !== "TB-001" && (
                   <Link to={doc.path} className="mono text-accent mt-4 inline-block hover:underline">
-                    {doc.id === "TB-002" ? "Read draft bulletin →" : doc.id === "TA-001" ? "Read article →" : doc.id === "S.02" || doc.id === "S.05" ? "Read draft specification →" : "Read specification →"}
+                    Read on the website →
                   </Link>
                 )}
               </div>

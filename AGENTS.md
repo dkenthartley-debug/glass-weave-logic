@@ -9,3 +9,4 @@
 - Keep S.04 sensor specification copy in a shared typed data module with a readable Library page, so approved embedded-sensor wording remains consistent and accessible without a PDF viewer.
 - Keep S.05 thermal validation copy in a shared typed data module with a readable Library page, so confirmed methods and pending application results remain consistently distinguished.- Keep TA-series article copy in a shared typed data module with a readable Library page; full white papers stay request-only, so public summaries and gated originals never diverge.
 - Keep TB-002 EMI/RFI bulletin copy in a shared typed data module with a readable Library page, so searchable SCIF/TEMPEST wording stays consistent.
+- Technical Library series are ordered TB, S, QS, TA, then AG/ER as supporting collections, with an access label on every card, so the hierarchy and request-only status stay clear.

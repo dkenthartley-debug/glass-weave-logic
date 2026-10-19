@@ -6,6 +6,7 @@ export type LibraryDoc = {
   summary: string;
   pdf?: string;
   path?: string;
+  /** Display order group: core hierarchy first, supporting collections after. */
   /** Available to customers on request only — no public download. */
   requestOnly?: boolean;
 };
@@ -25,7 +26,7 @@ export const librarySeries: LibrarySeries[] = [
     name: "HLG Technical Bulletins",
     scope: "TB Series",
     purpose:
-      "Educational papers on industry challenges and engineering concepts affecting electrically active transparent systems.",
+      "Engineering principles and application guidance for electrically active laminated transparencies.",
     docs: [
       {
         id: "TB-001",
@@ -57,88 +58,11 @@ export const librarySeries: LibrarySeries[] = [
     ],
   },
   {
-    code: "QS",
-    name: "HLG Qualification Standards",
-    scope: "QS Series",
-    purpose:
-      "Public overviews of the Hotlineglass qualification philosophy and the standards used to evaluate energized transparent systems.",
-    docs: [
-      {
-        id: "HLG-QS-1724",
-        title: "Optical Performance Under Electrical Load — Public Overview",
-        revision: "Revision A",
-        summary:
-          "Purpose, scope, engineering principle, and methodology behind the HLG standard for evaluating optical behavior in the energized condition.",
-        requestOnly: true,
-        path: "/qualification-standards/hlg-qs-1724",
-      },
-    ],
-  },
-  {
-    code: "TA",
-    name: "HLG Technical Articles & White Papers",
-    scope: "TA / WP Series",
-    purpose:
-      "Public article summaries of HLG white papers. Full white papers are available to customers on request.",
-    docs: [
-      {
-        id: "TA-001",
-        title: "Preserving ATPD-2352 Revision U Durability in Operational Service",
-        revision: "Revision A",
-        summary:
-          "Summary article: embedded laminate temperature sensing and closed-loop heater control for heated transparent armor windshields.",
-        path: "/technical-articles/ta-001-atpd-2352-embedded-sensing",
-      },
-      {
-        id: "WP-001",
-        title: "Ensuring ATPD-2352 Revision U Durability Gains Are Preserved in Operational Service — Full White Paper",
-        revision: "16 pages",
-        summary:
-          "The complete white paper, including the operational thermal envelope appendix.",
-        requestOnly: true,
-      },
-    ],
-  },
-  {
-    code: "AG",
-    name: "HLG Application Guides",
-    scope: "AG Series",
-    purpose:
-      "Design guidance for engineers and OEMs specifying embedded-conductor heated, sensing, and shielded transparencies.",
-    docs: [
-      {
-        id: "AG-001",
-        title: "Designing Heated Laminated Glass",
-        revision: "Revision A",
-        summary:
-          "Requirement-first design sequence: voltage, power density, conductor format, bus bars, zoning, sensing, and the validation path.",
-        pdf: "/documents/HLG-AG-001.pdf",
-      },
-    ],
-  },
-  {
-    code: "ER",
-    name: "HLG Engineering Reports",
-    scope: "ER Series",
-    purpose:
-      "Sample qualification reports demonstrating the output format of the HLG proprietary evaluation platform.",
-    docs: [
-      {
-        id: "ER-001",
-        title: "Sample Qualification Report — Energized Optical Evaluation",
-        revision: "Revision A",
-        summary:
-          "Illustrative report structure covering article configuration, test conditions, reported measurements, and delivered contents.",
-        pdf: "/documents/HLG-ER-001.pdf",
-      },
-    ],
-  },
-  {
     code: "S",
     name: "HLG Product Specifications",
     scope: "S Series",
     purpose:
-      "Concise product and design specifications for HLG conductive interlayers, heater mats, sensor mats, and shielding subassemblies.",
+      "Material and assembly configurations for HLG conductive interlayers, heater mats, sensor mats and shielding assemblies.",
     docs: [
       {
         id: "S.02",
@@ -174,5 +98,81 @@ export const librarySeries: LibrarySeries[] = [
       },
     ],
   },
+  {
+    code: "QS",
+    name: "HLG Qualification Standards",
+    scope: "QS Series",
+    purpose:
+      "Evaluation and acceptance methodology for energized transparent systems.",
+    docs: [
+      {
+        id: "HLG-QS-1724",
+        title: "Optical Performance Under Electrical Load — Public Overview",
+        revision: "Revision A",
+        summary:
+          "Purpose, scope, engineering principle, and methodology behind the HLG standard for evaluating optical behavior in the energized condition.",
+        requestOnly: true,
+        path: "/qualification-standards/hlg-qs-1724",
+      },
+    ],
+  },
+  {
+    code: "TA",
+    name: "HLG Technical Articles & White Papers",
+    scope: "TA / WP Series",
+    purpose:
+      "Deeper engineering discussions. Public article summaries are open; full white papers are available to customers on request.",
+    docs: [
+      {
+        id: "TA-001",
+        title: "Preserving ATPD-2352 Revision U Durability in Operational Service",
+        revision: "Revision A",
+        summary:
+          "Summary article: embedded laminate temperature sensing and closed-loop heater control for heated transparent armor windshields.",
+        path: "/technical-articles/ta-001-atpd-2352-embedded-sensing",
+      },
+      {
+        id: "WP-001",
+        title: "Ensuring ATPD-2352 Revision U Durability Gains Are Preserved in Operational Service — Full White Paper",
+        revision: "16 pages",
+        summary:
+          "The complete white paper, including the operational thermal envelope appendix.",
+        requestOnly: true,
+      },
+    ],
+  },
+  {
+    code: "AG",
+    name: "HLG Application Guides",
+    scope: "AG Series",
+    purpose:
+      "Supporting collection. Design guidance for engineers and OEMs specifying embedded-conductor heated, sensing, and shielded transparencies.",
+    docs: [
+      {
+        id: "AG-001",
+        title: "Designing Heated Laminated Glass",
+        revision: "Revision A",
+        summary:
+          "Requirement-first design sequence: voltage, power density, conductor format, bus bars, zoning, sensing, and the validation path.",
+        pdf: "/documents/HLG-AG-001.pdf",
+      },
+    ],
+  },
+  {
+    code: "ER",
+    name: "HLG Engineering Reports",
+    scope: "ER Series",
+    purpose:
+      "Supporting collection. Sample qualification reports demonstrating the output format of the HLG proprietary evaluation platform.",
+    docs: [
+      {
+        id: "ER-001",
+        title: "Sample Qualification Report — Energized Optical Evaluation",
+        revision: "Revision A",
+        summary:
+          "Illustrative report structure covering article configuration, test conditions, reported measurements, and delivered contents.",
+        pdf: "/documents/HLG-ER-001.pdf",
+      },
+    ],
+  },
 ];
-

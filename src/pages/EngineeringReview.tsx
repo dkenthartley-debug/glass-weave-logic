@@ -171,7 +171,7 @@ const EngineeringReview = () => {
                   name="description"
                   required
                   rows={5}
-                  placeholder="Describe the transparency, the electrical function required, the environment and the stage of the program."
+                  placeholder="Describe the transparency, the electrical function required, the environment and the stage of the program. For shielding or MRI windows, include frequency range, shielding target, optical clarity and privacy-film needs if known."
                 />
               </fieldset>
 

@@ -24,14 +24,17 @@ const Home = () => (
       <div className="container relative py-20 md:py-32">
         <div className="grid lg:grid-cols-12 gap-14 items-center">
           <div className="lg:col-span-7">
-            <Eyebrow>Hotlineglass USA</Eyebrow>
+            <Eyebrow>Hotlineglass USA · Conductive Interlayers &amp; Specialty Films</Eyebrow>
             <h1 className="font-display text-[2.1rem] sm:text-5xl lg:text-[3.65rem] font-bold uppercase leading-[1.03] tracking-tight">
-              Engineered functional interlayers for advanced laminated glass
+              Conductive interlayers engineered to your laminated-glass specification
             </h1>
             <p className="mt-7 text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
-              HLG engineers and manufactures electrically functional interlayer systems that integrate heating,
-              temperature sensing, transparent conductors, EMI/RFI shielding, switchable glazing and antenna
-              technologies into laminated transparencies.
+              HLG engineers and manufactures embedded-wire, conductive-film and sensor-interlayer assemblies for
+              aerospace, defense, medical imaging and specialty transportation applications.
+            </p>
+            <p className="mt-4 text-muted-foreground leading-relaxed max-w-2xl">
+              Heating, temperature sensing, EMI/RFI and MRI shielding, transparent conductors, switchable glazing and
+              antennas, delivered as laminate-ready assemblies.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
               <CtaLink to="/technologies">Explore Technologies</CtaLink>
@@ -208,6 +211,33 @@ const Home = () => (
             ))}
           </div>
         </div>
+      </div>
+    </Section>
+
+    {/* WORKING WITH HLG */}
+    <Section>
+      <SectionHeading
+        eyebrow="Working with HLG"
+        title="What HLG supplies and how a program runs"
+      />
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border">
+        {[
+          ["What HLG supplies", "Engineered, inspected conductive interlayer assemblies: heater mats, sensor mats, shielding assemblies, antennas and connectors, ready for lamination."],
+          ["Who laminates", "HLG supplies the glass laminator, OEM or RF-room integrator. HLG controls conductor placement, busbars, exits and connectors; the laminator controls the glass and lamination."],
+          ["Inputs to start", "Application, supply voltage, power or thermal target, dimensions and drawing, laminate construction, exit location, sensor or shielding requirement and annual quantity."],
+          ["Validation responsibilities", "HLG verifies electrical continuity and resistance, thermal imaging of heater designs and 100% interlayer inspection. Optical, RF and system qualification are defined per program with the customer."],
+          ["Prototype to production", "Requirement review, interlayer design, prototype build, customer lamination and evaluation, design release, then controlled production under ISO 9001:2015."],
+          ["Inspection & documentation", "100% defect, debris and electrical inspection, part marking and 2D barcode lot traceability on every production interlayer."],
+        ].map(([t, d]) => (
+          <div key={t} className="bg-background p-7">
+            <div className="mono text-primary">{t}</div>
+            <p className="text-sm text-muted-foreground mt-3 leading-relaxed">{d}</p>
+          </div>
+        ))}
+      </div>
+      <div className="mt-10 flex flex-wrap gap-3">
+        <CtaLink to="/engineering-review">Start an Engineering Review</CtaLink>
+        <CtaLink to="/markets/medical-mri" variant="outline">MRI &amp; RF-shielded windows</CtaLink>
       </div>
     </Section>
 
