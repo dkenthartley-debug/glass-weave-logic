@@ -60,7 +60,7 @@ const TechnicalLibrary = () => (
                     Available to customers on request →
                   </Link>
                 )}
-                {doc.path && !doc.requestOnly && (
+                {doc.path && !doc.requestOnly && doc.id !== "TB-001" && (
                   <Link to={doc.path} className="mono text-accent mt-4 inline-block hover:underline">
                     Read on the website →
                   </Link>
