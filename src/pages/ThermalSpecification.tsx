@@ -11,7 +11,7 @@ export default function ThermalSpecification() {
     <Seo title="S.05 — Thermal Validation | HLG" description={spec.overview} path={path} type="article" schema={[breadcrumbSchema(crumbs), techArticleSchema({ name: spec.title, description: spec.overview, path })]} />
     <Breadcrumbs items={crumbs} />
     <PageHero eyebrow="HLG Product Specifications · S.05 · Draft for review" title={spec.title} subtitle={spec.overview} />
-    <Section>
+    <Section tone="navy" className="paper-dark">
       <article className="max-w-4xl">
         <p className="mono text-accent mb-8">{spec.status}</p>
         {spec.sections.map(section => <section key={section.title} className="mb-8">
