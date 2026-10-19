@@ -98,7 +98,6 @@ export const librarySeries: LibrarySeries[] = [
       },
     ],
   },
-];,
   {
     code: "QS",
     name: "HLG Qualification Standards",
