@@ -21,11 +21,12 @@ const MriFeature = () => (
           ))}
         </ul>
         <p className="mt-6 text-sm text-muted-foreground leading-relaxed">
-          <span className="text-foreground font-medium">In development:</span> MRI windows that combine RF shielding with SWITCH switchable privacy, clear to private at the flip of a switch, engineered per customer, equipment or architectural supplied spec.
+          <span className="text-foreground font-medium">Switchable privacy:</span> HLG integrates SWITCH switchable privacy film with RF shielding in one laminated MRI window, clear to private at the flip of a switch. Each combined configuration is engineered and validated per customer, equipment or architectural supplied spec.
         </p>
         <div className="mt-8 flex flex-wrap gap-4">
           <CtaLink to={mriBulletin.path}>Read TB-003</CtaLink>
           <CtaLink to="/engineering-review?document=TB-003">Discuss an MRI Window Project</CtaLink>
+          <CtaLink to="/markets/medical-mri" variant="outline">Medical &amp; MRI market</CtaLink>
         </div>
       </div>
       <Figure photo={mriSuitePhoto} aspect="aspect-[16/10]" />
